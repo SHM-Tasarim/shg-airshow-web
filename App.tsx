@@ -13,23 +13,33 @@ import AboutShow from "./components/AboutShow";
 import AboutSHM from "./components/AboutSHM";
 import SpotterRegistration from "./components/SpotterRegistration";
 import Transport from "./components/Transport";
-import Contact from "./components/Contact"; // Yeni eklendi
+import Contact from "./components/Contact";
 
 export type Language = "TR" | "EN";
 
-// View tipine "contact" eklendi
 type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact";
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
   const [lang, setLang] = useState<Language>("TR");
+  // Otomatik kaydırma yapılacak katılımcının ID'sini tutan state
+  const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentView]);
+    // Sayfa değiştiğinde en yukarı çık, eğer bir hedef ID yoksa
+    if (!targetParticipantId) {
+      window.scrollTo(0, 0);
+    }
+  }, [currentView, targetParticipantId]);
 
-  const navigateTo = (view: View) => {
+  // Navigasyon fonksiyonu hedef ID alacak şekilde güncellendi
+  const navigateTo = (view: View, targetId?: string) => {
     setCurrentView(view);
+    if (targetId) {
+      setTargetParticipantId(targetId);
+    } else {
+      setTargetParticipantId(null);
+    }
   };
 
   const toggleLanguage = () => {
@@ -40,7 +50,12 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark font-sans transition-colors duration-300">
       <div className="flex-grow">
         <div className="fixed w-full bg-white dark:bg-gray-900 top-0 left-0 right-0 z-50 shadow-sm">
-          <Navbar onNavigate={navigateTo} currentView={currentView} lang={lang} onToggleLang={toggleLanguage} />
+          <Navbar 
+            onNavigate={navigateTo} 
+            currentView={currentView} 
+            lang={lang} 
+            onToggleLang={toggleLanguage} 
+          />
         </div>
 
         <main className="flex-grow pt-20">
@@ -64,19 +79,27 @@ const App: React.FC = () => {
           ) : currentView === "transport" ? ( 
             <Transport lang={lang} onNavigate={navigateTo} />
           ) : currentView === "program" ? (
-            <ShowProgram lang={lang} />
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <ShowProgram lang={lang} onNavigate={navigateTo} />
+            </div>
           ) : currentView === "participants" ? (
-            <Participants lang={lang} />
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              {/* TargetId prop'u eklendi */}
+              <Participants lang={lang} targetId={targetParticipantId} />
+            </div>
           ) : currentView === "partners" ? (
             <Partners lang={lang} />
           ) : (
             <Tickets lang={lang} />
           )}
 
-          {/* Ana sayfa dışındaki sayfalarda en altta ana sayfaya dön butonu (Opsiyonel, Contact içinde zaten var) */}
+          {/* Sayfa Altı Geri Dön Butonu */}
           {currentView !== "home" && currentView !== "contact" && (
             <div className="pb-16 text-center">
-              <button onClick={() => navigateTo("home")} className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em]">
+              <button 
+                onClick={() => navigateTo("home")} 
+                className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
+              >
                 <span className="material-icons text-lg">arrow_back</span>
                 {lang === "TR" ? "ANA SAYFAYA DÖN" : "BACK TO HOME"}
               </button>
