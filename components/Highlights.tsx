@@ -14,8 +14,8 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "about", // AboutShow.tsx sayfasını tetikler
       desc:
         lang === "TR"
-          ? "Sivrihisar Hava Gösterileri’nin tarihçesi, vizyonu ve bugüne kadarki başarıları hakkında detaylı bilgi."
-          : "Detailed information about the history, vision, and successes of Sivrihisar Airshow to date.",
+          ? "Sivrihisar Hava Gösterileri’nin tarihçesi ve vizyonu hakkında detaylı bilgi."
+          : "Detailed information about the history and vision of Sivrihisar Airshow to date.",
       image: "/images/shg-airshows.jpg",
     },
     {
@@ -41,7 +41,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "transport", // BURASI GÜNCELLENDİ: Transport.tsx sayfasını tetikler
       desc:
         lang === "TR"
-          ? "Sivrihisar Hava Gösterilerine nasıl ulaşılır?"
+          ? "Sivrihisar Hava Gösterileri'ne nasıl ulaşılır?"
           : "How to get to Sivrihisar Airshow?",
       image: "/images/shg-ulasim.jpg",
     },
@@ -53,7 +53,6 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
         {highlights.map((item, idx) => (
           <div
             key={idx}
-            // Karta tıklandığında ilgili id'ye gider
             onClick={() => onNavigate(item.id as any)}
             className="group bg-white dark:bg-gray-800/20 rounded-xl overflow-hidden shadow-xl border border-transparent hover:border-primary/30 transition-all duration-300 cursor-pointer"
           >
@@ -61,7 +60,6 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
               <img
                 src={item.image}
                 alt={item.title}
-                // Renkli ve zoom efektli
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>

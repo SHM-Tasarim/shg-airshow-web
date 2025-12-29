@@ -3,21 +3,25 @@ import { Language } from "../App";
 
 interface GalleryProps {
   lang: Language;
+  onNavigate: (view: any) => void;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ lang }) => {
+const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
   const images = [
     {
       src: "https://images.unsplash.com/photo-1464039397811-476f652a343b?auto=format&fit=crop&q=80&w=1000",
       text: lang === "TR" ? "ÖNERİLER" : "SUGGESTIONS",
+      id: "suggestions", 
     },
     {
       src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=1000",
-      text: lang === "TR" ? "GÖNÜLLÜLÜK" : "VOLUNTEERING",
+      text: lang === "TR" ? "GÖNÜLLÜ" : "VOLUNTEER",
+      id: "volunteer", 
     },
     {
       src: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1000",
-      text: lang === "TR" ? "KAMP" : "CAMPING",
+      text: lang === "TR" ? "STANT" : "STAND",
+      id: "camping", 
     },
   ];
 
@@ -27,6 +31,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang }) => {
         {images.map((item, idx) => (
           <div
             key={idx}
+            onClick={() => onNavigate(item.id)}
             className="group relative overflow-hidden rounded-xl h-64 md:h-96 cursor-pointer shadow-2xl"
           >
             <img

@@ -59,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000">
           <button
-            onClick={() => onNavigate("tickets")} // Bilet Al butonu için de yönlendirme eklendi
+            onClick={() => onNavigate("tickets")}
             className="bg-white text-secondary font-extrabold py-4 px-12 rounded-md hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-2xl uppercase text-sm tracking-widest flex items-center justify-center gap-2 group/btn"
           >
             <span className="material-icons text-lg group-hover/btn:rotate-12 transition-transform">

@@ -14,25 +14,24 @@ import AboutSHM from "./components/AboutSHM";
 import SpotterRegistration from "./components/SpotterRegistration";
 import Transport from "./components/Transport";
 import Contact from "./components/Contact";
+import Volunteer from "./components/Volunteer";
+import Suggestions from "./components/Suggestions";
 
 export type Language = "TR" | "EN";
 
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact";
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions";
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
   const [lang, setLang] = useState<Language>("TR");
-  // Otomatik kaydırma yapılacak katılımcının ID'sini tutan state
   const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
 
   useEffect(() => {
-    // Sayfa değiştiğinde en yukarı çık, eğer bir hedef ID yoksa
     if (!targetParticipantId) {
       window.scrollTo(0, 0);
     }
   }, [currentView, targetParticipantId]);
 
-  // Navigasyon fonksiyonu hedef ID alacak şekilde güncellendi
   const navigateTo = (view: View, targetId?: string) => {
     setCurrentView(view);
     if (targetId) {
@@ -64,11 +63,19 @@ const App: React.FC = () => {
               <Hero onNavigate={navigateTo} lang={lang} />
               <Countdown targetDate="2026-09-19T09:00:00" lang={lang} />
               <Highlights lang={lang} onNavigate={navigateTo} />
-              <Gallery lang={lang} />
+              <Gallery lang={lang} onNavigate={navigateTo} />
             </>
           ) : currentView === "contact" ? (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
               <Contact lang={lang} onNavigate={navigateTo} />
+            </div>
+          ) : currentView === "volunteer" ? ( 
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <Volunteer lang={lang} />
+            </div>
+          ) : currentView === "suggestions" ? ( 
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <Suggestions lang={lang} />
             </div>
           ) : currentView === "about" ? ( 
             <AboutShow lang={lang} />
@@ -84,14 +91,13 @@ const App: React.FC = () => {
             </div>
           ) : currentView === "participants" ? (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              {/* TargetId prop'u eklendi */}
               <Participants lang={lang} targetId={targetParticipantId} />
             </div>
           ) : currentView === "partners" ? (
             <Partners lang={lang} />
-          ) : (
+          ) : currentView === "tickets" ? (
             <Tickets lang={lang} />
-          )}
+          ) : null}
 
           {/* Sayfa Altı Geri Dön Butonu */}
           {currentView !== "home" && currentView !== "contact" && (

@@ -72,13 +72,13 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
-      <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
+      <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
           src="/images/seyirci.jpg" 
-          className="w-full h-full object-cover opacity-70 saturate-50"
+          className="w-full h-full object-cover grayscale opacity-80"
           alt="Partnership Background"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/30"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 -mt-32 relative z-10">
