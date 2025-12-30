@@ -16,7 +16,7 @@ interface SuggestionsProps {
 
 const Suggestions: React.FC<SuggestionsProps> = ({ lang, onNavigate }) => {
   const translations = {
-    title: lang === 'TR' ? "ÖNERİLER" : "SUGGESTIONS",
+    title: lang === 'TR' ? "Öneriler" : "Suggestions",
     intro: lang === 'TR' 
       ? "Değerli SHG Airshow izleyicileri, SHG Airshow'u en rahat ve en keyifli şekilde izlemeniz için aşağıdakileri yanınızda getirmenizi öneririz."
       : "Dear SHG Airshow spectators, we recommend bringing the following with you to watch the SHG Airshow in the most comfortable and enjoyable way.",
@@ -53,7 +53,10 @@ const Suggestions: React.FC<SuggestionsProps> = ({ lang, onNavigate }) => {
 
       <div className="max-w-5xl mx-auto px-6 -mt-32 relative z-10">
         <header className="mb-16">
-          <h1 className="text-6xl md:text-9xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
+            {translations.tagline}
+          </p>
+          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {translations.title}<span className="text-primary">.</span>
           </h1>
           <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-8 rounded-r-3xl mb-12">

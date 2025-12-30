@@ -16,10 +16,11 @@ import Transport from "./components/Transport";
 import Contact from "./components/Contact";
 import Volunteer from "./components/Volunteer";
 import Suggestions from "./components/Suggestions";
+import Stand from "./components/Stand";
 
 export type Language = "TR" | "EN";
 
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions";
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand";
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
@@ -81,6 +82,8 @@ const App: React.FC = () => {
             <AboutShow lang={lang} />
           ) : currentView === "shm" ? ( 
             <AboutSHM lang={lang} onNavigate={navigateTo} />
+          ) : currentView === "stand" ? ( 
+            <Stand lang={lang} onNavigate={navigateTo} />
           ) : currentView === "spotter" ? ( 
             <SpotterRegistration lang={lang} onNavigate={navigateTo} />
           ) : currentView === "transport" ? ( 

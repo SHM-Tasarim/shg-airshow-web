@@ -10,9 +10,9 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
   const content = {
     TR: {
       tagline: "HAVA FOTOĞRAFÇILIĞI",
-      title: "SPOTTER KAYDI",
-      greeting: "Sevgili “Spotter” arkadaşlarımız,",
-      body1: "19–20 Eylül 2026 tarihlerinde onbirincisi düzenlenecek olan “SHG Airshow 2026 / Sivrihisar Hava Gösterileri” organizasyonuna “SPOTTER” olarak katılmak isteyen arkadaşlarımızın, info@shm.aero adresine e-posta göndermeleri rica olunur.",
+      title: "Spotter Kaydı",
+      greeting: `Sevgili "Spotter" arkadaşlarımız,`,
+      body1: `19–20 Eylül 2026 tarihlerinde onbirincisi düzenlenecek olan "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" organizasyonuna "SPOTTER" olarak katılmak isteyen arkadaşlarımızın, info@shm.aero adresine e-posta göndermeleri rica olunur.`,
       body2: "E-posta içeriğinde aşağıdaki bilgilerin yer alması gerekmektedir:",
       requirements: [
         "Ad Soyad",
@@ -20,7 +20,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Doğum Tarihi",
         "İrtibat Bilgileri (telefon ve e-posta)"
       ],
-      note: "“SPOTTER” arkadaşlarımız organizasyona biletli giriş yapabileceklerdir.",
+      note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir.`,
       signature: "SHG Airshows Organizasyon Komitesi",
       back: "ANA SAYFAYA DÖN",
       emailBtn: "E-POSTA GÖNDER",
@@ -29,8 +29,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
     EN: {
       tagline: "AVIATION PHOTOGRAPHY",
       title: "SPOTTER REGISTRATION",
-      greeting: "Dear “Spotter” friends,",
-      body1: "For those who wish to participate as a “SPOTTER” in the 11th “SHG Airshow 2026 / Sivrihisar Airshow” to be held on September 19–20, 2026, please send an e-mail to info@shm.aero.",
+      greeting: `Dear "Spotter" friends,`,
+      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Airshow" to be held on September 19–20, 2026, please send an e-mail to info@shm.aero.`,
       body2: "The following information must be included in the e-mail content:",
       requirements: [
         "Full Name",
@@ -38,7 +38,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Date of Birth",
         "Contact Information (phone and e-mail)"
       ],
-      note: "Our “SPOTTER” friends will be able to enter the organization with a ticket.",
+      note: `Our "SPOTTER" friends will be able to enter the organization with a ticket.`,
       signature: "SHG Airshows Organizing Committee",
       back: "BACK TO HOME",
       emailBtn: "SEND E-MAIL",
@@ -48,11 +48,11 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
-      {/* Hero Image - Siyah-beyaz kaldırıldı, Zoom eklendi */}
-      <div className="w-full h-[40vh] md:h-[55vh] overflow-hidden relative group">
+      {/* Hero Image */}
+      <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
         <img 
           src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1600" 
-          className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover grayscale opacity-80"
           alt="Spotter Lens View"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent"></div>
@@ -63,7 +63,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
             {content.tagline}
           </p>
-          <h1 className="text-5xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>
@@ -102,7 +102,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           </p>
         </div>
 
-        {/* Action Button - ORTALANDI VE MAIL KONUSU EKLENDİ */}
+        {/* Action Button */}
         <div className="mb-32 flex justify-center">
           <a 
             href={`mailto:info@shm.aero?subject=${content.emailSubject}`} 

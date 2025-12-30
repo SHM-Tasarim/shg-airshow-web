@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Language } from '../App';
 
@@ -9,48 +8,49 @@ interface VolunteeringProps {
 
 const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
   const translations = {
-    title: lang === 'TR' ? "GÖNÜLLÜ TASVİRİ" : "VOLUNTEER DESCRIPTION",
+    title: lang === 'TR' ? "Gönüllü Tasviri" : "Volunteering Description",
     intro: lang === 'TR' 
       ? "19-20 Eylül 2026 tarihlerinde 11.cisi düzenlenecek olan SHG Airshow 2026 / Sivrihisar Hava Gösterileri Organizasyonunda gönüllü olarak görev almak isteyen arkadaşlarımızın; isim, soy isim, yaş ve iletişim bilgilerini içeren başvuru e-postasını 15 Temmuz 2026 tarihine kadar info@shm.aero adresine göndermeleri rica olunur."
       : "For those who wish to participate as a volunteer in the 11th SHG Airshow 2026 / Sivrihisar Airshow to be held on September 19–20, 2026, please send a business e-mail containing your name, surname, age and contact information to info@shm.aero by July 15, 2026.",
     principles: lang === 'TR' ? [
       {
-        text: "“Gönüllü” sıfatıyla, SHG Airshow organizasyonlarında görev almak isteyen kişilerin, tecrübelerini, maddi ve manevi imkanlarını hiçbir karşılık beklemeden paylaşmaya niyetli ve istekli oldukları kabul edilir…",
+        text: `"Gönüllü" sıfatıyla, SHG Airshow organizasyonlarında görev almak isteyen kişilerin, tecrübelerini, maddi ve manevi imkanlarını hiçbir karşılık beklemeden paylaşmaya niyetli ve istekli oldukları kabul edilir…`,
         icon: "volunteer_activism"
       },
       {
-        text: "“Gönüllü” sıfatıyla görev alan kişilerden, SHG Airshow tarafından düzenlenen her türlü etkinlik ve organizasyona katkı sağlamak amacıyla, verilen görevleri ayrım yapmaksızın kendi istek ve iradeleriyle yerine getirmeleri beklenir…",
+        text: `"Gönüllü" sıfatıyla görev alan kişilerden, SHG Airshow tarafından düzenlenen her türlü etkinlik ve organizasyona katkı sağlamak amacıyla, verilen görevleri ayrım yapmaksızın kendi istek ve iradeleriyle yerine getirmeleri beklenir…`,
         icon: "assignment_turned_in"
       },
       {
-        text: "“Gönüllü” sıfatıyla görev alan kişiler, SHG Airshow tarafından verilen görevlerin icrası sebebiyle oluşan her türlü masrafları kendileri karşılarlar… Organizasyona ilave maddi yükler getirmezler…",
+        text: `"Gönüllü" sıfatıyla görev alan kişiler, SHG Airshow tarafından verilen görevlerin icrası sebebiyle oluşan her türlü masrafları kendileri karşılarlar… Organizasyona ilave maddi yükler getirmezler…`,
         icon: "account_balance_wallet"
       },
       {
-        text: "“Gönüllü” sıfatıyla görev almak isteyen kişilerden, SHG Airshow’un profesyonel bir çalışanı olmamakla birlikte, üstlendikleri görev ne kadar basit olursa olsun bunu “Profesyonelce” yerine getirmeleri beklenir…",
+        text: `"Gönüllü" sıfatıyla görev almak isteyen kişilerden, SHG Airshow'un profesyonel bir çalışanı olmamakla birlikte, üstlendikleri görev ne kadar basit olursa olsun bunu "Profesyonelce" yerine getirmeleri beklenir…`,
         icon: "military_tech"
       }
     ] : [
       {
-        text: "Under the title of 'Volunteer', it is accepted that persons wishing to take part in SHG Airshow organizations are willing to share their experiences and resources without expecting any compensation...",
+        text: `Under the title of "Volunteer", it is accepted that persons wishing to take part in SHG Airshow organizations are willing to share their experiences and resources without expecting any compensation...`,
         icon: "volunteer_activism"
       },
       {
-        text: "Volunteers are expected to fulfill the tasks given without any discrimination, with their own will and desire, in order to contribute to all kinds of events and organizations organized by SHG Airshow...",
+        text: `Volunteers are expected to fulfill the tasks given without any discrimination, with their own will and desire, in order to contribute to all kinds of events and organizations organized by SHG Airshow...`,
         icon: "assignment_turned_in"
       },
       {
-        text: "Volunteers cover all kinds of expenses arising from the performance of the duties given by SHG Airshow... They do not bring additional financial burdens to the organization...",
+        text: `Volunteers cover all kinds of expenses arising from the performance of the duties given by SHG Airshow... They do not bring additional financial burdens to the organization...`,
         icon: "account_balance_wallet"
       },
       {
-        text: "Even though they are not professional employees of SHG Airshow, volunteers are expected to fulfill their tasks 'Professionally', no matter how simple the task is...",
+        text: `Even though they are not professional employees of SHG Airshow, volunteers are expected to fulfill their tasks "Professionally", no matter how simple the task is...`,
         icon: "military_tech"
       }
     ],
     signature: lang === 'TR' ? "SHG Airshows Organizasyon Komitesi" : "SHG Airshows Organizing Committee",
     applyTitle: lang === 'TR' ? "EKİBE KATILIN" : "JOIN THE TEAM",
     applyBtn: lang === 'TR' ? "BAŞVURU İÇİN E-POSTA GÖNDER" : "SEND E-MAIL TO APPLY",
+    emailSubject: lang === 'TR' ? "SHG Airshow 2026 Gönüllü Başvurusu" : "SHG Airshow 2026 Volunteer Application",
     back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
   };
 
@@ -71,7 +71,7 @@ const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4 text-center md:text-left">
             {translations.tagline}
           </p>
-          <h1 className="text-5xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 text-center md:text-left uppercase">
+          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 text-center md:text-left">
             {translations.title}<span className="text-primary">.</span>
           </h1>
           
@@ -113,9 +113,27 @@ const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
 
         {/* Committee Signature */}
         <div className="mb-24 text-right">
-          <p className="text-sm font-black tracking-[0.3em] text-primary uppercase italic">
+          <p className="text-sm font-black tracking-[0.2em] text-primary italic">
             {translations.signature}
           </p>
+        </div>
+
+        {/* Application CTA */}
+        <section className="mb-32 text-center">
+          <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
+            {translations.applyTitle}
+          </h3>
+          <a 
+            href={`mailto:info@shm.aero?subject=${translations.emailSubject}`}
+            className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
+          >
+            <span className="material-icons text-2xl">alternate_email</span>
+            {translations.applyBtn}
+          </a>
+        </section>
+
+        {/* Footer Navigation */}
+        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
         </div>
       </div>
     </div>

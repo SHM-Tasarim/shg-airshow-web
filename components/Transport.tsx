@@ -9,8 +9,8 @@ interface TransportProps {
 const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
   const content = {
     TR: {
-      tagline: "SİVRİHİSAR HAVA GÖSTERİLERİ'NE ULAŞIM",
-      title: "ULAŞIM",
+      tagline: "SİVRİHİSAR HAVA GÖSTERİLERİ'NE",
+      title: "Ulaşım",
       landTitle: "Karadan Ulaşım",
       landWarning: "Gösteri emniyeti sebebiyle, eski yol üzerinde araç parkına artık izin verilmeyecektir.",
       airTitle: "Havadan Ulaşım",
