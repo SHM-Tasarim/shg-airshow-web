@@ -3,7 +3,18 @@ import { Language } from "../App";
 
 interface HeroProps {
   // onNavigate tipine diğer sayfaları da ekledik ki hata vermesin
-  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport") => void;
+  onNavigate: (
+    view:
+      | "home"
+      | "program"
+      | "participants"
+      | "tickets"
+      | "partners"
+      | "about"
+      | "shm"
+      | "spotter"
+      | "transport"
+  ) => void;
   lang: Language;
 }
 
@@ -41,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           <source src="/images/shg-airshow-2025.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
         </video>
-        
+
         <div className="absolute inset-0 bg-secondary/65 group-hover:bg-secondary/55 transition-colors duration-1000"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90"></div>
       </div>
@@ -67,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
             </span>
             {translations.buyTicket}
           </button>
-          
+
           {/* GÖSTERİ PROGRAMI BUTONU */}
           <button
             onClick={() => onNavigate("program")}
@@ -81,7 +92,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-secondary via-secondary/60 to-transparent z-10 opacity-90"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary via-secondary/60 to-transparent  lg:z-10 opacity-90"></div>
     </section>
   );
 };
