@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           </button>
 
           {/* GÖSTERİ PROGRAMI BUTONU */}
-          <button
+          {/*  <button
             onClick={() => onNavigate("program")}
             className="bg-primary text-white font-extrabold py-4 px-12 rounded-md hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-2xl uppercase text-sm tracking-widest border border-primary/20 flex items-center justify-center gap-2 group/btn"
           >
@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
               flight_takeoff
             </span>
             {translations.program}
-          </button>
+          </button> */}
         </div>
       </div>
 
