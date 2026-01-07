@@ -3,7 +3,6 @@ import Logo from "./Logo";
 import { Language } from "../App";
 
 interface NavbarProps {
-  // onNavigate tipine contact ve diğer sayfalar eklendi
   onNavigate: (
     view:
       | "home"
@@ -31,7 +30,6 @@ const Navbar: React.FC<NavbarProps> = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const translations = {
-    // program: lang === "TR" ? "GÖSTERİ PROGRAMI" : "SHOW PROGRAM",
     participants: lang === "TR" ? "KATILIMCILAR" : "PARTICIPANTS",
     partners: lang === "TR" ? "ÇÖZÜM ORTAKLARI" : "PARTNERS",
     tickets: lang === "TR" ? "BİLETLER" : "TICKETS",
@@ -40,7 +38,6 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   const navLinks = [
-    // { name: translations.program, action: () => onNavigate("program"), id: "program" },
     {
       name: translations.participants,
       action: () => onNavigate("participants"),
@@ -56,7 +53,6 @@ const Navbar: React.FC<NavbarProps> = ({
       action: () => onNavigate("tickets"),
       id: "tickets",
     },
-    // Eylem eklendi:
     {
       name: translations.contact,
       action: () => onNavigate("contact"),

@@ -3,15 +3,14 @@ import { Language } from "../App";
 
 interface HighlightsProps {
   lang: Language;
-  // Navigasyon tipine "transport" eklendi
-  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport") => void;
+  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "museum" | "transport") => void;
 }
 
 const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
   const highlights = [
     {
-      title: lang === "TR" ? "SHG AIRSHOW Hakkında" : "About SHG AIRSHOW",
-      id: "about", // AboutShow.tsx sayfasını tetikler
+      title: lang === "TR" ? "Sivrihisar Hava Gösterileri" : "SHG AIRSHOW",
+      id: "about", 
       desc:
         lang === "TR"
           ? "Sivrihisar Hava Gösterileri’nin tarihçesi ve vizyonu hakkında detaylı bilgi."
@@ -19,8 +18,8 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       image: "/images/shg-airshows.jpg",
     },
     {
-      title: lang === "TR" ? "SHM Hakkında" : "About SHM",
-      id: "shm", // AboutSHM.tsx sayfasını tetikler
+      title: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "Sivrihisar Aviation Center",
+      id: "shm",
       desc:
         lang === "TR"
           ? "Türkiye’nin sivil hava parkı olan Sivrihisar Havacılık Merkezi’ni ve sunduğu imkanları keşfedin."
@@ -28,22 +27,22 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       image: "/images/shm-about.jpg",
     },
     {
-      title: lang === "TR" ? "Spotter Kaydı" : "Spotter Registration",
-      id: "spotter", // SpotterRegistration.tsx'i tetikler
+      title: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi" : "M.S.Ö. Air and Space Museum",
+      id: "museum",
       desc:
         lang === "TR"
-          ? "En iyi kareyi yakalamak isteyen fotoğraf tutkunları için özel kayıt süreci ve alan bilgileri."
-          : "Special registration process and area information for photography enthusiasts who want to capture the best shot.",
-      image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800",
+          ? "Türkiye'nin Uçan Havacılık Müzesi"
+          : "Turkiye's Flying Aviation Museum",
+      image: "/images/mso.jpg",
     },
     {
-      title: lang === "TR" ? "Ulaşım" : "Transportation",
-      id: "transport", // BURASI GÜNCELLENDİ: Transport.tsx sayfasını tetikler
+      title: lang === "TR" ? "Acromach" : "Acromach",
+      id: "acromach",
       desc:
         lang === "TR"
-          ? "Sivrihisar Hava Gösterileri'ne nasıl ulaşılır?"
-          : "How to get to Sivrihisar Airshow?",
-      image: "/images/shg-ulasim.jpg",
+          ? "Acromach Hava Akrobasi Grubu hakkında bilgi edinin."
+          : "Learn more about Acromach Aerobatics Team.",
+      image: "/images/acromach.jpg",
     },
   ];
 

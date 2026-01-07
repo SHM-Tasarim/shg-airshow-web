@@ -7,7 +7,6 @@ interface AboutShowProps {
 }
 
 const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
-  // Yıllar ve ilgili web siteleri
   const pastYears = [
     { year: "2025", url: "https://www.shgairshow2025.com/" },
     { year: "2024", url: "https://www.shgairshow2024.com/" },
@@ -23,10 +22,9 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
 
   const content = {
     TR: {
-      title: "Hakkında",
+      title: "SHG Airshow",
       tagline: "Sivrihisar Hava Gösterileri",
       archiveTitle: "GEÇMİŞ YILLAR",
-      archiveSubtitle: "Havacılık tutkumuzun kilometre taşlarını keşfedin.",
       mainText: [
         "Sivrihisar Havacılık Kulübü Derneği tarafından, her yıl Sivrihisar Havacılık Merkezi Necati Artan Tesisleri'nde uluslararası boyutta düzenlenen, \"Sivrihisar Hava Gösterileri\" / \"SHG Airshow\", her yaştan havacılık sevdalısına hitap eden bir organizasyon. \"Sivrihisar Hava Gösterileri\", havacılığın önemini vurgularken, özellikle gençlere ve çocuklara havacılık hakkında bilgi edinmek için birçok fırsat sunmakta. İlk kez 2015 yılında düzenlenen ve çok ilgi çeken organizasyon, her yıl daha da büyüyerek uluslararası alanda adını duyurdu. Bugün Uluslararası Hava Gösterilerinin bulunduğu beynelmilel takvimlerde de \"SHG Airshows\" adıyla yer almaktadır.",
         "Sivrihisar Hava Gösterileri, ülkemizde sportif ve genel havacılığın gelişmesine katkı sağlamak, M.S.Ö. Hava ve Uzay Müzesi'ne ait tarihi değeri olan uçakları havacılık tutkunlarıyla buluşturmak ve havacılık kültürünü arttırmak adına her yıl on binlerce kişiyi bir araya getirmekte ve seyircilerine keyifli, heyecanlı anlar yaşatmakta.",
@@ -41,7 +39,6 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
       title: "About",
       tagline: "Sivrihisar Airshow",
       archiveTitle: "PAST YEARS",
-      archiveSubtitle: "Explore the milestones of our aviation passion.",
       mainText: [
         "Organized annually by the Sivrihisar Aviation Club Association at the Sivrihisar Aviation Center Necati Artan Facilities on an international scale, \"Sivrihisar Airshow\" / \"SHG Airshow\" is an organization that appeals to aviation enthusiasts of all ages. \"Sivrihisar Airshow\" emphasizes the importance of aviation while offering numerous opportunities for young people and children to learn about aviation. First held in 2015, the organization attracted great interest and has grown each year, making a name for itself internationally. Today, it is listed as \"SHG Airshows\" in international airshow calendars worldwide.",
         "Sivrihisar Airshow brings together tens of thousands of people every year to contribute to the development of sport and general aviation in our country, to unite aviation enthusiasts with historic aircraft belonging to the MSÖ Air and Space Museum, and to enhance aviation culture, providing audiences with enjoyable and exciting moments.",
@@ -60,7 +57,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
         <img 
           src="/images/shg-seyirci.jpg"
-          className="w-full h-full object-cover grayscale opacity-80"
+          className="w-full h-full object-cover"
           alt="Aviation Background"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent"></div>
@@ -71,7 +68,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
             {content.tagline}
           </p>
-          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>

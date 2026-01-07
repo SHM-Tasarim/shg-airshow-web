@@ -3,18 +3,16 @@ import { Language } from "../App";
 
 interface ParticipantsProps {
   lang: Language;
-  targetId?: string | null; // Otomatik kaydırma için gerekli
+  targetId?: string | null;
 }
 
 const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
-  // ÖZELLİK 1: Sayfa açıldığında veya targetId değiştiğinde ilgili karta kaydırır
   useEffect(() => {
     if (targetId) {
       const element = document.getElementById(targetId);
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // Vurgu efekti: Kartın etrafında geçici bir kırmızı parlama oluşturur
           element.classList.add('ring-4', 'ring-primary', 'ring-opacity-50');
           setTimeout(() => element.classList.remove('ring-4', 'ring-primary', 'ring-opacity-50'), 2000);
         }, 100);
@@ -145,14 +143,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       image: "/images/dukkan.jpg",
     },
     {
-      id: "p51-mustang", // Programdaki ID ile eşleşti
+      id: "p51-mustang",
       name: "NORTH AMERICAN MUSTANG P-51 D",
       desc: lang === "TR" ? "Türkiye'deki ilk ve tek North American P-51 Mustang: Ferocious Frankie!" : "Turkey's first and only P-51 Mustang: Ferocious Frankie!",
       image: "/images/mustang-p51d.jpg",
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/",
     },
     {
-      id: "t6-texan", // Programdaki ID ile eşleşti
+      id: "t6-texan", 
       name: "NORTH AMERICAN T-6G TEXAN",
       desc: lang === "TR" ? "Türkiye’nin ilk sivil T-6G Harvard uçağı: Happy Hour." : "Turkey's first civilian T-6G Harvard: Happy Hour.",
       image: "/images/t6-texan.jpg",
@@ -185,7 +183,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       url: seminUrl,
     },
     {
-      id: "pitts-s2b", // Programdaki ID ile eşleşti
+      id: "pitts-s2b", 
       name: "YENİ MENEKŞE (PITTS S-2B)",
       desc: lang === "TR" ? 'Semin Öztürk Şener ile göklerdeki serüvenine devam ediyor.' : 'Continuing its adventure in the skies with Semin Öztürk Şener.',
       image: "/images/yeni-menekse.jpg",
@@ -209,7 +207,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
         {participants.map((p, index) => (
           <div
             key={p.id}
-            id={p.id} // ÖZELLİK 3: Otomatik kaydırma ve vurgu için ID atandı
+            id={p.id} 
             className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
           >
             <div className={`lg:flex ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>

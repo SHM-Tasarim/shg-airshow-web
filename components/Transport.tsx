@@ -22,7 +22,8 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
         runwayLen: "Pist Uzunluğu",
         asphalt: "Asfalt"
       },
-      downloadAip: "AIP dökümanını indir",
+      //downloadAip: "AIP dökümanını indir",
+      visitWeb: "S.H.M. WEB SİTESİ",
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
@@ -39,7 +40,8 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
         runwayLen: "Runway Length",
         asphalt: "Asphalt"
       },
-      downloadAip: "Download AIP Document",
+      //downloadAip: "Download AIP Document",
+      visitWeb: "OFFICIAL WEBSITE",
       back: "BACK TO HOME"
     }
   }[lang];
@@ -50,7 +52,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
         <img 
           src="/images/05-pist-shm.jpg" 
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover"
           alt="Aerial Transportation"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/20"></div>
@@ -61,7 +63,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
             {content.tagline}
           </p>
-          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>
@@ -136,7 +138,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
               </div>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-white/10">
+            {/* <div className="mt-12 pt-8 border-t border-white/10">
               <a 
                 href="/SHM_AIP.pdf" 
                 download="SHM_AIP.pdf"
@@ -151,9 +153,22 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
                   {content.downloadAip}
                 </span>
               </a>
-            </div>
+            </div> */}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+            <a 
+              href="https://shm.aero/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-primary text-white font-black py-5 px-12 rounded-xl hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-sm"
+            >
+              {content.visitWeb}
+            </a>
           </div>
         </section>
+        
 
         {/* Live Map Area - GÜNCEL KONUM BİLGİSİ İLE */}
         <section className="mb-24">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Language } from '../App';
 
 interface StandProps {
@@ -7,88 +7,89 @@ interface StandProps {
 }
 
 const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
+  const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>('sponsor');
+
   const content = {
     TR: {
-      tagline: "10. YIL: GÖKYÜZÜNDE DEV BULUŞMA",
-      title: "Stand & Katılım",
-      introTitle: "SHG AIRSHOW 2026",
-      introText: "SHG Airshow / Sivrihisar Hava Gösterileri, her sene S.H.M. / Sivrihisar Havacılık Merkezi'nde organize edilmekte ve birbirinden değerli katılımcıları ile uluslararası boyutta sesini duyurmaktadır. Avrupa Hava Gösterileri Konseyi listesinde yer alan organizasyonumuz, Türkiye adına bir gurur kaynağıdır.",
+      title: "Ticari Fırsatlar",
+      
+      standIntroTitle: "SHG AIRSHOW 2026",
+      standIntroText: "Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa’da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı’nın efsanevi uçaklarından en modern hava taşıtlarına, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine kapılarını açıyor!",
+      
+      sponsorTitle: "SPONSORLUK",
+      sponsorDesc: "Markanızı gökyüzüne taşıyın ve havacılığın prestijini paylaşın.",
+      sponsorFeatures: [
+        "Global Marka Görünürlüğü",
+        "Özel VIP Protokol Alanı",
+        "Medya ve Canlı Yayın Hakları",
+        "Kurumsal Prestij Ortaklığı"
+      ],
+
+      standTypesTitle: "STANT TÜRLERİ",
+      standTypesDesc: "SHG Airshow, her sene birbirinden değerli katılımcıları ile uluslararası boyutta sesini duyurmaktadır. Bugüne kadar 100'ü aşkın kurum ve şirket, stant alanlarında yer alarak markalarını tanıtmış ve ticari fırsatlar elde etmiştir.",
+      standCommonFeatures: [
+      ],
+      
+      promotionalTitle: "TANITIM STANDI",
+      promotionalInfo: "Marka bilinirliği ve doğrudan iletişim odaklı.",
+      commercialTitle: "SATIŞ STANDI",
+      commercialInfo: "Ürün satışı ve ticari hacim genişletme odaklı.",
+      
       stats: [
         { label: "TOPLAM ZİYARETÇİ", value: "100.000+", icon: "groups" },
         { label: "CANLI YAYIN ERİŞİMİ", value: "8 Milyon", icon: "sensors" },
         { label: "GÜNCEL SEYİRCİ", value: "68.000", icon: "trending_up" }
       ],
-      standTitle: "STAND KATILIM ŞARTLARI",
-      standDesc: "Bugüne kadar 100'ü aşkın kurum ve şirket, SHG Airshow organizasyonlarında stant alanlarında yer alarak markalarını tanıtmış ve ticari fırsatlar elde etmiştir.",
-      pricing: [
-        {
-          type: "Tanıtım Standı",
-          desc: "Apronda tahsis edilecek 9 m² çadır stant.",
-          features: ["Marka Tanıtımı", "Network", "Nitelikli Ziyaretçi"]
-        },
-        {
-          type: "Ticari Satış Standı",
-          desc: "Apronda tahsis edilecek 9 m² çadır stant.",
-          features: ["Doğrudan Satış Yetkisi", "Ürün Sergileme", "Yüksek Trafik"]
-        }
-      ],
-      additions: {
-        title: "İLAVE SEÇENEKLER",
-        items: [
-          { name: "İlave Alan" },
-          { name: "Ek Çadır" },
-          { name: "Elektrik Bağlantısı" }
-        ]
-      },
-      perks: "Her stant katılımcısına 19-20 Eylül tarihlerinde geçerli 3 adet ücretsiz bilet sağlanacaktır.",
-      deadlineTitle: "ÖNEMLİ TARİHLER",
       deadline: "15 Ağustos 2026",
       deadlineDesc: "Yoğunluk sebebiyle katılım durumunuzu bu tarihe kadar bildirmenizi rica ederiz.",
-      contractNote: "Stant tahsisi talebinize istinaden, firmalara resmi bir teklif gönderilecektir.",
       back: "ANA SAYFAYA DÖN",
-      applyBtn: "BAŞVURU İÇİN E-POSTA GÖNDER"
+      applyBtn: "E-POSTA GÖNDER",
+      clickToOpen: "DETAYLARI GÖRMEK İÇİN TIKLAYIN"
     },
     EN: {
-      tagline: "10TH YEAR: GIANT MEETING IN THE SKY",
-      title: "Stand & Exhibition",
-      introTitle: "SHG AIRSHOW 2026",
-      introText: "SHG Airshow / Sivrihisar Airshows is organized annually at S.H.M. and makes its voice heard internationally. Being listed by the European Airshow Council, it is a source of pride for Turkey.",
+      title: "Commercial Opportunities",
+      
+      standIntroTitle: "SHG AIRSHOW 2026",
+      standIntroText: "Recognized as a global brand by being listed among airshows in Europe by the European Airshow Council (EAC), SHG Airshow opens its doors to visitors with a unique visual feast ranging from legendary aircraft of World War II to the most modern air vehicles, breathtaking aerobatic displays to formation flights!",
+
+      hierarchyTitle: "COMMERCIAL OPPORTUNITIES",
+
+      sponsorTitle: "SPONSORSHIP",
+      sponsorDesc: "Take your brand to the skies and share the prestige of aviation.",
+      sponsorFeatures: [
+        "Global Brand Visibility",
+        "Exclusive VIP Protocol Area",
+        "Media & Live Stream Rights",
+        "Corporate Prestige Partnership"
+      ],
+
+      standTypesTitle: "STAND TYPES",
+      standTypesDesc: "Each year, SHG Airshow makes its voice heard internationally with its valuable participants. To date, over 100 institutions and companies have promoted their brands and gained commercial opportunities by taking place in stand areas.",
+      standCommonFeatures: [
+      
+      ],
+
+      promotionalTitle: "PROMOTIONAL STAND",
+      promotionalInfo: "Focus on brand awareness and direct engagement.",
+      commercialTitle: "COMMERCIAL STAND",
+      commercialInfo: "Focus on product sales and commercial volume.",
+
       stats: [
         { label: "TOTAL VISITORS", value: "100,000+", icon: "groups" },
         { label: "LIVE STREAM REACH", value: "8 Million", icon: "sensors" },
         { label: "CURRENT SPECTATORS", value: "68,000", icon: "trending_up" }
       ],
-      standTitle: "STAND PARTICIPATION TERMS",
-      standDesc: "To date, more than 100 institutions and companies have promoted their brands and gained commercial opportunities in SHG Airshow stand areas.",
-      pricing: [
-        {
-          type: "Promotional Stand",
-          desc: "9 m² tent stand to be allocated on the apron.",
-          features: ["Brand Promotion", "Network", "Qualified Visitors"]
-        },
-        {
-          type: "Commercial Sales Stand",
-          desc: "9 m² tent stand to be allocated on the apron.",
-          features: ["Direct Sales Authorization", "Product Display", "High Traffic"]
-        }
-      ],
-      additions: {
-        title: "ADDITIONAL OPTIONS",
-        items: [
-          { name: "Additional Space (m²)" },
-          { name: "Extra Tent (9 m²)" },
-          { name: "Electricity Connection" }
-        ]
-      },
-      perks: "Each stand participant will be provided with 3 free tickets valid for September 19-20.",
-      deadlineTitle: "IMPORTANT DATES",
       deadline: "August 15, 2026",
       deadlineDesc: "Please notify your participation status by this date due to high demand.",
-      contractNote: "Following your stand allocation request, a formal contract will be sent to companies.",
       back: "BACK TO HOME",
-      applyBtn: "SEND E-MAIL FOR APPLICATION"
+      applyBtn: "SEND E-MAIL",
+      clickToOpen: "CLICK TO VIEW DETAILS"
     }
   }[lang];
+
+  const toggleAccordion = (id: 'sponsor' | 'types') => {
+    setActiveAccordion(activeAccordion === id ? null : id);
+  };
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
@@ -96,7 +97,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
         <img 
           src="/images/stand.jpg" 
-          className="w-full h-full object-cover grayscale opacity-80"
+          className="w-full h-full object-cover"
           alt="SHG Airshow Crowd"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/40"></div>
@@ -104,113 +105,158 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
 
       <div className="max-w-6xl mx-auto px-6 -mt-32 relative z-10">
         <header className="mb-20">
-          <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
-            {content.tagline}
-          </p>
-          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-24 h-2 bg-primary"></div>
         </header>
 
-        {/* Intro & Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-32">
-          <div className="lg:col-span-2 space-y-8">
-            <h2 className="text-3xl md:text-5xl font-black text-secondary dark:text-white uppercase tracking-tight">
-              {content.introTitle}
-            </h2>
-            <p className="text-xl md:text-2xl leading-relaxed text-gray-700 dark:text-gray-200 font-bold border-l-8 border-primary pl-8 italic">
-              {content.introText}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-4">
-            {content.stats.map((stat, idx) => (
-              <div key={idx} className="bg-gray-50 dark:bg-white/5 p-6 rounded-2xl border border-gray-100 dark:border-white/5 flex items-center gap-6">
-                <span className="material-icons text-primary text-3xl">{stat.icon}</span>
-                <div>
-                  <div className="text-2xl font-black text-secondary dark:text-white leading-none">{stat.value}</div>
-                  <div className="text-[10px] font-bold text-gray-500 tracking-widest uppercase mt-1">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Pricing Cards */}
+        {/* 1. TOP: Stand Participation Section */}
         <section className="mb-24">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-4 uppercase tracking-tight">
-              {content.standTitle}
-            </h2>
-            <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto">
-              {content.standDesc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {content.pricing.map((p, idx) => (
-              <div key={idx} className="bg-white dark:bg-gray-900/60 p-12 rounded-[3rem] border-2 border-gray-100 dark:border-white/5 shadow-2xl relative overflow-hidden group hover:border-primary transition-all duration-500">
-                <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
-                  <span className="material-icons text-[150px]">storefront</span>
-                </div>
-                <h3 className="text-2xl font-black text-primary mb-2 uppercase">{p.type}</h3>
-                <p className="text-gray-500 dark:text-gray-400 font-bold mb-8 italic">{p.desc}</p>
-                <ul className="space-y-4">
-                  {p.features.map((f, i) => (
-                    <li key={i} className="flex items-center gap-3">
-                      <span className="material-icons text-primary text-sm">verified</span>
-                      <span className="text-sm font-bold text-gray-700 dark:text-gray-300">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Additional Options Table */}
-          <div className="bg-secondary dark:bg-black/40 rounded-3xl p-10 md:p-16 border border-white/5 shadow-3xl">
-            <h3 className="text-xl font-black text-white mb-10 uppercase tracking-widest flex items-center gap-4">
-              <span className="w-8 h-px bg-primary"></span>
-              {content.additions.title}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {content.additions.items.map((item, idx) => (
-                <div key={idx} className="border-l-2 border-white/10 pl-6 group">
-                  <div className="text-sm font-black text-white uppercase tracking-widest mb-1">{item.name}</div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2 space-y-8">
+              <h2 className="text-3xl md:text-5xl font-black text-secondary dark:text-white uppercase tracking-tight">
+                {content.standIntroTitle}
+              </h2>
+              <p className="text-xl md:text-2xl leading-relaxed text-gray-700 dark:text-gray-200 font-bold italic border-l-8 border-primary pl-8">
+                {content.standIntroText}
+              </p>
+            </div>
+            {/* Stats Sidebar */}
+            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-6 self-start shadow-xl">
+              {content.stats.map((stat, idx) => (
+                <div key={idx} className="flex items-center gap-6">
+                  <span className="material-icons text-primary text-3xl">{stat.icon}</span>
+                  <div>
+                    <div className="text-2xl font-black text-secondary dark:text-white leading-none">{stat.value}</div>
+                    <div className="text-[10px] font-bold text-gray-500 tracking-widest uppercase mt-1">{stat.label}</div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Perk & Deadline Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-32">
-          <div className="bg-primary/5 dark:bg-primary/10 p-10 rounded-[2.5rem] border border-primary/20">
-             <span className="material-icons text-primary text-4xl mb-6">local_activity</span>
-             <p className="text-xl font-black text-secondary dark:text-white leading-tight">
-               {content.perks}
-             </p>
+        {/* 2. HIERARCHY: TİCARİ FIRSATLAR */}
+        <div className="text-center mb-16 relative">
+          <h2 className="text-4xl md:text-6xl font-black text-secondary dark:text-white mb-6 uppercase tracking-tighter">
+            {content.hierarchyTitle}
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        {/* Accordion Sections */}
+        <div className="max-w-5xl mx-auto space-y-6 mb-32">
+          
+          {/* ACCORDION 1: SPONSOR */}
+          <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'sponsor' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
+            <button 
+              onClick={() => toggleAccordion('sponsor')}
+              className="w-full flex items-center justify-between p-8 md:p-12 text-left outline-none"
+            >
+              <div className="flex items-center gap-6">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${activeAccordion === 'sponsor' ? 'bg-primary' : 'bg-primary/20'}`}>
+                  <span className={`material-icons text-3xl transition-colors ${activeAccordion === 'sponsor' ? 'text-white' : 'text-primary'}`}>verified</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight leading-none">{content.sponsorTitle}</h3>
+                  {activeAccordion !== 'sponsor' && (
+                    <p className="text-[10px] font-bold text-primary tracking-widest uppercase mt-2">{content.clickToOpen}</p>
+                  )}
+                </div>
+              </div>
+              <span className={`material-icons text-4xl text-primary transition-transform duration-500 ${activeAccordion === 'sponsor' ? 'rotate-180' : ''}`}>expand_more</span>
+            </button>
+            
+            <div className={`transition-all duration-500 overflow-hidden ${activeAccordion === 'sponsor' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="p-8 md:p-12 pt-0 border-t border-white/5">
+                <p className="text-lg text-gray-400 font-bold italic mb-10 border-l-4 border-primary pl-6">
+                  {content.sponsorDesc}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {content.sponsorFeatures.map((f, i) => (
+                    <div key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-2xl border border-white/5 group">
+                      <span className="material-icons text-primary group-hover:scale-125 transition-transform">check_circle</span>
+                      <span className="text-white font-bold text-sm tracking-wide">{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* ACCORDION 2: STANT TÜRLERİ */}
+          <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'types' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
+            <button 
+              onClick={() => toggleAccordion('types')}
+              className="w-full flex items-center justify-between p-8 md:p-12 text-left outline-none"
+            >
+              <div className="flex items-center gap-6">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${activeAccordion === 'types' ? 'bg-primary' : 'bg-primary/20'}`}>
+                  <span className={`material-icons text-3xl transition-colors ${activeAccordion === 'types' ? 'text-white' : 'text-primary'}`}>grid_view</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight leading-none">{content.standTypesTitle}</h3>
+                  {activeAccordion !== 'types' && (
+                    <p className="text-[10px] font-bold text-primary tracking-widest uppercase mt-2">{content.clickToOpen}</p>
+                  )}
+                </div>
+              </div>
+              <span className={`material-icons text-4xl text-primary transition-transform duration-500 ${activeAccordion === 'types' ? 'rotate-180' : ''}`}>expand_more</span>
+            </button>
+            
+            <div className={`transition-all duration-500 overflow-hidden ${activeAccordion === 'types' ? 'max-h-[1200px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="p-8 md:p-12 pt-0 border-t border-white/5">
+                
+                {/* Sub-Branches Card Style (Promotional vs Commercial) - NOW FIRST */}
+                <div className="grid grid-cols-2 gap-4 mb-10">
+                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary transition-colors group text-center">
+                    <h4 className="text-sm font-black text-white uppercase">{content.promotionalTitle}</h4>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary transition-colors group text-center">
+                    <h4 className="text-sm font-black text-white uppercase">{content.commercialTitle}</h4>
+                  </div>
+                </div>
+
+                {/* Description Text - NOW AFTER CARDS */}
+                <p className="text-lg text-gray-400 font-bold italic mb-10 border-l-4 border-primary pl-6">
+                  {content.standTypesDesc}
+                </p>
+                
+                {/* Common Features for Stand Types */}
+                {content.standCommonFeatures.length > 0 && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {content.standCommonFeatures.map((f, i) => (
+                      <div key={i} className="flex items-center gap-3 p-4 bg-white/5 rounded-xl border border-white/5">
+                        <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        <span className="text-white font-black text-[10px] tracking-widest uppercase">{f}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Perk & Deadline Info */}
+        <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-32">
           <div className="bg-primary/5 dark:bg-primary/10 p-10 rounded-[2.5rem] border border-primary/20 relative overflow-hidden">             
             <div className="relative z-10">
               <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{content.deadlineTitle}</h4>
               <div className="text-4xl font-black text-secondary dark:text-white mb-4">{content.deadline}</div>
               <p className="text-gray-500 dark:text-gray-400 font-bold">{content.deadlineDesc}</p>
             </div>
-            <span className="absolute -bottom-10 -right-10 material-icons text-[150px] opacity-5 text-gray-400">event_available</span>
           </div>
         </div>
 
         {/* Application CTA */}
         <section className="mb-32 text-center">
-          <p className="text-lg font-bold text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto italic">
-            "{content.contractNote}"
-          </p>
           <a 
             href="mailto:info@shm.aero" 
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
           >
-            <span className="material-icons text-2xl">alternate_email</span>
+            <span className="material-icons text-2xl">send</span>
             {content.applyBtn}
           </a>
         </section>

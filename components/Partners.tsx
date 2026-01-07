@@ -13,8 +13,18 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     companiesSubtitle: lang === 'TR' ? "ÇÖZÜM ORTAKLARIMIZ" : "SUPPORTERS",
     alphabeticalHint: lang === 'TR' ? "(ALFABETİK SIRAYLA)" : "(IN ALPHABETICAL ORDER)",
     fuelSponsorsTitle: lang === 'TR' ? "BİREYSEL YAKIT SPONSORLARI" : "INDIVIDUAL FUEL SPONSORS",
+    fuelSponsorsDonationInfo: lang === 'TR' 
+      ? 'SHG Airshow 2025 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
+      : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2025, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
+    fuelSponsorsDonationContact: "info@shm.aero",
+    fuelSponsorsDonationContactLabel: lang === 'TR'
+      ? "Detaylı bilgi için:"
+      : "For more information:",
+    fuelSponsorsDonationThanks: lang === 'TR'
+      ? "Teşekkürlerimizle, Sivrihisar Havacılık Kulübü Yönetim Kurulu"
+      : "With our gratitude, Sivrihisar Aviation Club Board of Directors",
     fuelSponsorsHeading: lang === 'TR' 
-      ? "SHG Airshow 2026 'Bireysel Yakıt Sponsorlarını' şükranla sunar:" 
+      ? "SHG Airshow 2026 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
       : "SHG Airshow 2026 gratefully presents 'Individual Fuel Sponsors':",
     fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(In alphabetical order by surname)",
     back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
@@ -75,7 +85,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
           src="/images/seyirci.jpg" 
-          className="w-full h-full object-cover grayscale opacity-80"
+          className="w-full h-full object-cover"
           alt="Partnership Background"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/30"></div>
@@ -83,7 +93,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
       <div className="max-w-6xl mx-auto px-6 -mt-32 relative z-10">
         <header className="mb-20">
-          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 uppercase">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 uppercase">
             {translations.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>
@@ -114,7 +124,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
           </div>
         </section>
 
-        {/* KISIM 2: Sponsor Şirketler (LOGOLAR BÜYÜTÜLDÜ) */}
+        {/* KISIM 2: Sponsor Şirketler */}
         <section className="mb-32">
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-12">
             <h2 className="text-xl md:text-2xl font-black text-secondary dark:text-white uppercase tracking-widest leading-none">
@@ -126,7 +136,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
             <div className="flex-grow h-px bg-gray-100 dark:bg-white/5 min-w-[50px]"></div>
           </div>
 
-          {/* Grid aralığı (gap-8) ve kutu paddingi (p-6) optimize edildi */}
+          {/* Company Logos Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {companyLogos.map((company, idx) => (
               <div 
@@ -139,7 +149,6 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                     <img 
                       src={company.logo} 
                       alt={company.name} 
-                      // max-h-20 (80px) yapılarak %60'tan fazla büyütüldü
                       className="max-h-20 md:max-h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                 )}
@@ -155,9 +164,29 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
             
             <div className="relative z-10">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight uppercase">
+                <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">
                   {translations.fuelSponsorsTitle}
                 </h2>
+                
+                {/* Bağış Bilgi Kutusu */}
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-10 border border-white/10 max-w-3xl mx-auto">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                    {translations.fuelSponsorsDonationInfo}
+                  </p>
+                  <p className="text-gray-400 text-sm md:text-base mb-2">
+                    {translations.fuelSponsorsDonationContactLabel}{' '}
+                    <a 
+                      href="mailto:info@shm.aero" 
+                      className="text-primary hover:text-primary/80 font-bold transition-colors"
+                    >
+                      {translations.fuelSponsorsDonationContact}
+                    </a>
+                  </p>
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                    {translations.fuelSponsorsDonationThanks}
+                  </p>
+                </div>
+
                 <p className="text-xl text-gray-400 font-bold max-w-2xl mx-auto leading-relaxed">
                   {translations.fuelSponsorsHeading}
                 </p>

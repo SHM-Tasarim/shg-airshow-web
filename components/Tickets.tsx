@@ -10,8 +10,8 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
     subtitle:
       lang === "TR"
-        ? "Gökyüzünün limitlerini zorlayan gösteriye yerinizi ayırtın. Unutulmaz bir deneyim için biletinizi şimdi alın!"
-        : "Reserve your spot for the show that pushes the limits of the sky. Get your ticket now for an unforgettable experience!",
+        ? "Gökyüzünün sınırlarını zorlayan gösterilerde yerinizi ayırtın. Unutulmaz bir deneyim için biletinizi hemen alın!"
+        : "Secure your spot at the breathtaking aerial displays that push the limits of the sky. Get your ticket now for an unforgettable experience!",
     faqTitle:
       lang === "TR" ? "Sıkça Sorulan Sorular" : "Frequently Asked Questions",
     faqSubtitle:
@@ -29,12 +29,12 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
           ? [
               "Gösteri alanına tam gün erişim",
               "Stant alanlarını ziyaret etme fırsatı",
-              "Yiyecek ve içecek stantları",
+              "Yiyecek ve içecek alanlarından faydalanma imkanı",
             ]
           : [
               "Full day access to the show area",
               "Opportunity to visit static displays",
-              "Food and beverage stands",
+              "Food and beverage stands access",
             ],
     },
     {
@@ -42,18 +42,20 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
       features:
         lang === "TR"
           ? [
-              "Tüm Genel Giriş avantajları",
-              "Özel VIP izleme alanı",
-              "Ücretsiz ikramlar ve içecekler",
-              "Pilotlarla tanışma fırsatı",
-              "Özel otopark alanı",
+              "Özel Giriş",
+              "Güneşlikli veranda alanında ve/veya klimalı salonda VIP oturma alanı",
+              "Salonda bulunan VIP tuvaletlerine erişim imkanı",
+              "VIP salonuna ait özel mutfaktan sunulan Türk mutfağı seçkisi",
+              "Gün boyu sunulan ücretsiz yiyecek ve içecekler ikramı",
+              "VIP otopark",
             ]
           : [
-              "All General Admission benefits",
-              "Exclusive VIP viewing area",
-              "Complimentary snacks and drinks",
-              "Opportunity to meet the pilots",
-              "Private parking area",
+              "Private Entrance",
+              "VIP seating area in shaded veranda and/or air-conditioned lounge",
+              "Access to VIP restrooms located in the lounge",
+              "Selection of Turkish cuisine served from the lounge's private kitchen",
+              "Complimentary food and beverages served throughout the day",
+              "VIP parking",
             ],
     },
   ];
@@ -62,39 +64,19 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
     {
       q:
         lang === "TR"
-          ? "Biletleri iade edebilir miyim?"
-          : "Can I refund my tickets?",
-      a:
-        lang === "TR"
-          ? "Etkinliğe 7 günden az bir süre kalana kadar bilet iadesi yapılabilmektedir. İade koşulları hakkında detaylı bilgi için lütfen destek ekibimizle iletişime geçin."
-          : "Ticket refunds can be made up to 7 days before the event. Please contact our support team for detailed information on refund conditions.",
-    },
-    {
-      q:
-        lang === "TR"
-          ? "Organizasyon alanına yiyecek ve içecek getirebilir miyim?"
-          : "Can I bring food and drinks to the organisation area?",
-      a:
-        lang === "TR"
-          ? "Organizasyon alanına dışarıdan yiyecek ve içecek getirilmesi uygundur. Alan içerisinde çok sayıda yiyecek ve içecek standı bulunmaktadır."
-          : "Bringing outside food and beverages into the event area is permitted. There are numerous food and beverage stands within the area.",
-    },
-    {
-      q:
-        lang === "TR"
           ? "Çocuklar için yaş sınırı var mı?"
           : "Is there an age limit for children?",
       a:
         lang === "TR"
-          ? "Etkinliğimiz her yaşa açıktır. 6 yaş ve altındaki çocuklar için giriş ücretsizdir."
-          : "Our event is open to all ages. Entry is free for children aged 6 and under.",
+          ? "Organizasyonumuz tüm yaş grupları için uygundur; 6 yaş ve altı çocuklar ücretsizdir."
+          : "Our event is suitable for all age groups; children aged 6 and under are free of charge.",
     },
     {
       q: lang === "TR" ? "Otopark mevcut mu?" : "Is parking available?",
       a:
         lang === "TR"
-          ? "Evet, etkinlik alanı çevresinde ücretsiz otopark alanları mevcuttur. VIP bilet sahipleri için özel otopark alanı bulunmaktadır."
-          : "Yes, free parking areas are available around the event site. There is a private parking area for VIP ticket holders.",
+          ? "Etkinlik alanında ücretsiz otopark alanları mevcuttur. Ayrıca, VIP bilet alan seyircilerimiz için özel otopark alanı ayrılmıştır."
+          : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our VIP ticket holders.",
     },
   ];
 

@@ -35,11 +35,10 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
     }
   }[lang];
 
-  // Navigasyon linklerini ve gidecekleri id'leri tanımladık
   const navLinks = [
     { name: lang === 'TR' ? 'KATIMCILAR' : 'PARTICIPANTS', id: 'participants' as const },
     { name: lang === 'TR' ? 'ÇÖZÜM ORTAKLARI' : 'PARTNERS', id: 'partners' as const },
-    { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const },
+    // { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const },
     { name: lang === 'TR' ? 'BİLETLER' : 'TICKETS', id: 'tickets' as const },
   ];
 
@@ -64,7 +63,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             </p>
           </div>
 
-          {/* Column 2: Navigation (GÜNCELLENDİ) */}
+          {/* Column 2: Navigation */}
           <div className="lg:pl-10">
             <h4 className="text-xs font-black tracking-[0.3em] text-white mb-8 uppercase flex items-center gap-3">
               <span className="w-4 h-px bg-primary"></span>

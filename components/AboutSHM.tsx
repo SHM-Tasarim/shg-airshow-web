@@ -10,7 +10,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
   const content = {
     TR: {
       tagline: "NECATİ ARTAN TESİSLERİ",
-      title: "S.H.M",
+      title: "Sivrihisar Havacılık Merkezi (S.H.M)",
       history: "Sivrihisar Havacılık Merkezi S.H.M., Necati Artan Tesisleri, 2014 yılının Mart ayında Hava Parkı olarak faaliyetlerine başladı. Tesis, yaklaşık 1000 dönüm arazi üzerine kuruludur. Arazinin deniz seviyesinden yüksekliği 2790 feet’tir.",
       runway: "Tesislerde 1810 m. uzunluğunda, 32 m. genişliğinde ana asfalt pist bulunmakta olup pist yönü 05’e 23’tür. Ana pistin yanında planör ve diğer hafif hava araçları için çim pist bulunuyor.",
       activity: "''Batı Apronu” ve “Doğu Apronu” olmak üzere iki apron alanında yıl boyunca çeşitli havacılık faaliyetleri gerçekleşmektedir. S.H.M.'de uçuşların yanı sıra paraşüt atlayışları, uçuş eğitim okulları ve akademik birimlerin düzenlediği eğitimler ve kamplar ile model uçak eğitimleri, model uçak gösterileri, airshow ve akrobasi gösterileri de yapılmaktadır.",
@@ -20,7 +20,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
       coords: "Koordinatlar",
       elev: "Rakım",
       downloadPdf: "AIP dosyasını indirmek için tıklayın",
-      visitWeb: "S.H.M. RESMİ SİTESİ",
+      visitWeb: "Shm.aero",
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
@@ -46,7 +46,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
           src="/images/shm-apron.jpg" 
-          className="w-full h-full object-cover grayscale opacity-80"
+          className="w-full h-full object-cover"
           alt="SHM Aerial View"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent"></div>
@@ -57,7 +57,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
             {content.tagline}
           </p>
-          <h1 className="text-6xl md:text-9xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>
@@ -70,17 +70,17 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
             {content.history}
           </p>
 
-          {/* 2. YAZI: RUNWAY (Eksikti, Geri Eklendi) */}
+          {/* 2. YAZI: RUNWAY */}
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 font-medium">
             {content.runway}
           </p>
 
-          {/* 3. YAZI: ACTIVITY (Eksikti, Geri Eklendi) */}
+          {/* 3. YAZI: ACTIVITY */}
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 font-medium">
             {content.activity}
           </p>
 
-          {/* 2. RESİM ALANI (İKİLİ) - RENKLİ VE ZOOM EFEKTLİ */}
+          {/* 2. RESİM ALANI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
               <img 
@@ -91,7 +91,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
               <img 
-                src="/images/shm-pist-2.jpg"
+                src="/images/shm-photo-3.jpg"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 alt="Training" 
               />
@@ -139,7 +139,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-white/10">
+          {/* <div className="mt-12 pt-8 border-t border-white/10">
             <a 
               href="/SHM_AIP.pdf" 
               download="SHM_AIP.pdf"
@@ -154,7 +154,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
                 {content.downloadPdf}
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Action Buttons */}

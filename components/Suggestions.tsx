@@ -53,9 +53,6 @@ const Suggestions: React.FC<SuggestionsProps> = ({ lang, onNavigate }) => {
 
       <div className="max-w-5xl mx-auto px-6 -mt-32 relative z-10">
         <header className="mb-16">
-          <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
-            {translations.tagline}
-          </p>
           <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {translations.title}<span className="text-primary">.</span>
           </h1>

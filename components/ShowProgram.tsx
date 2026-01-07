@@ -6,15 +6,14 @@ interface ProgramItem {
   time: string;
   aircraft: string;
   duration: string;
-  participantId?: string; // Tooltip ile eşleşecek ID
+  participantId?: string;
 }
 
 interface ShowProgramProps {
   lang: Language;
-  onNavigate?: (view: any, targetId?: string) => void; // Navigasyon işlevi için opsiyonel prop
+  onNavigate?: (view: any, targetId?: string) => void;
 }
 
-// Hover sırasında gösterilecek veri seti
 const participantQuickInfo: Record<string, { image: string, desc: string }> = {
   'p51-mustang': {
     image: '/images/mustang-p51d.jpg',

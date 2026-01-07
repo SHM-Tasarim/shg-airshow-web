@@ -2,7 +2,6 @@ import React from "react";
 import { Language } from "../App";
 
 interface HeroProps {
-  // onNavigate tipine diğer sayfaları da ekledik ki hata vermesin
   onNavigate: (
     view:
       | "home"
@@ -14,6 +13,8 @@ interface HeroProps {
       | "shm"
       | "spotter"
       | "transport"
+      | "museum"
+      | "acromach"
   ) => void;
   lang: Language;
 }
@@ -21,15 +22,9 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   const translations = {
     title:
-      lang === "TR" ? (
-        <>
-          Dünya Havacılığının <br className="hidden md:block" /> Buluşma Noktası
-        </>
-      ) : (
-        <>
-          The Meeting Point of <br className="hidden md:block" /> World Aviation
-        </>
-      ),
+      lang === "TR"
+        ? "Sivrihisar Hava Gösterileri"
+        : "SHG Airshows",
     badge:
       lang === "TR"
         ? "19-20 Eylül 2026 - Sivrihisar Havacılık Merkezi"
@@ -58,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
       </div>
 
       <div className="relative z-10 px-6 max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] uppercase">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] uppercase whitespace-nowrap">
           {translations.title}
         </h1>
 

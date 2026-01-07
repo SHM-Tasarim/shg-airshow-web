@@ -17,10 +17,11 @@ import Contact from "./components/Contact";
 import Volunteer from "./components/Volunteer";
 import Suggestions from "./components/Suggestions";
 import Stand from "./components/Stand";
+import AboutMSO from "./components/AboutMSO";
+import Acromach from "./components/Acromach";
 
 export type Language = "TR" | "EN";
-
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand";
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach"; 
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
@@ -34,6 +35,10 @@ const App: React.FC = () => {
   }, [currentView, targetParticipantId]);
 
   const navigateTo = (view: View, targetId?: string) => {
+    if (currentView === view && !targetId) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     setCurrentView(view);
     if (targetId) {
       setTargetParticipantId(targetId);
@@ -66,43 +71,25 @@ const App: React.FC = () => {
               <Highlights lang={lang} onNavigate={navigateTo} />
               <Gallery lang={lang} onNavigate={navigateTo} />
             </>
-          ) : currentView === "contact" ? (
+          ) : (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <Contact lang={lang} onNavigate={navigateTo} />
+              {currentView === "contact" && <Contact lang={lang} onNavigate={navigateTo} />}
+              {currentView === "volunteer" && <Volunteer lang={lang} />}
+              {currentView === "suggestions" && <Suggestions lang={lang} />}
+              {currentView === "spotter" && <SpotterRegistration lang={lang} onNavigate={navigateTo} />}
+              {currentView === "transport" && <Transport lang={lang} onNavigate={navigateTo} />}
+              {currentView === "about" && <AboutShow lang={lang} />}
+              {currentView === "shm" && <AboutSHM lang={lang} onNavigate={navigateTo} />}
+              {currentView === "stand" && <Stand lang={lang} onNavigate={navigateTo} />}
+              {currentView === "museum" && <AboutMSO lang={lang} onNavigate={navigateTo} />}
+              {currentView === "acromach" && <Acromach lang={lang} onNavigate={navigateTo} />}
+              {currentView === "program" && <ShowProgram lang={lang} onNavigate={navigateTo} />}
+              {currentView === "participants" && <Participants lang={lang} targetId={targetParticipantId} />}
+              {currentView === "partners" && <Partners lang={lang} onNavigate={navigateTo} />}
+              {currentView === "tickets" && <Tickets lang={lang} />}
             </div>
-          ) : currentView === "volunteer" ? ( 
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <Volunteer lang={lang} />
-            </div>
-          ) : currentView === "suggestions" ? ( 
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <Suggestions lang={lang} />
-            </div>
-          ) : currentView === "about" ? ( 
-            <AboutShow lang={lang} />
-          ) : currentView === "shm" ? ( 
-            <AboutSHM lang={lang} onNavigate={navigateTo} />
-          ) : currentView === "stand" ? ( 
-            <Stand lang={lang} onNavigate={navigateTo} />
-          ) : currentView === "spotter" ? ( 
-            <SpotterRegistration lang={lang} onNavigate={navigateTo} />
-          ) : currentView === "transport" ? ( 
-            <Transport lang={lang} onNavigate={navigateTo} />
-          ) : currentView === "program" ? (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <ShowProgram lang={lang} onNavigate={navigateTo} />
-            </div>
-          ) : currentView === "participants" ? (
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <Participants lang={lang} targetId={targetParticipantId} />
-            </div>
-          ) : currentView === "partners" ? (
-            <Partners lang={lang} />
-          ) : currentView === "tickets" ? (
-            <Tickets lang={lang} />
-          ) : null}
+          )}
 
-          {/* Sayfa Altı Geri Dön Butonu */}
           {currentView !== "home" && currentView !== "contact" && (
             <div className="pb-16 text-center">
               <button 

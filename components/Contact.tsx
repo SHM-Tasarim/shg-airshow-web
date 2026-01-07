@@ -64,7 +64,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
         <img 
           src="/images/contact.jpg" 
-          className="w-full h-full object-cover grayscale opacity-80"
+          className="w-full h-full object-cover"
           alt="Aviation Control Tower"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark via-transparent to-black/20"></div>
@@ -75,7 +75,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           <p className="text-primary font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">
             {content.tagline}
           </p>
-          <h1 className="text-6xl md:text-8xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
+          <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8">
             {content.title}<span className="text-primary">.</span>
           </h1>
           <div className="w-16 h-1 bg-primary"></div>
