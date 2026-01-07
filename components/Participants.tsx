@@ -38,9 +38,9 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       title: lang === "TR" ? "Tarihe Tanıklık Et" : "Witness the History",
       desc:
         lang === "TR"
-          ? "Biletler tükenmeden yerini ayır, havacılık tutkusunu en önden yaşa."
-          : "Reserve your spot before tickets sell out, experience the passion of aviation from the front row.",
-      button: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
+          ? "Unutulmaz bir deneyim için biletinizi hemen alın!"
+          : "Get your ticket now for an unforgettable experience!",
+      button: lang === "TR" ? "BİLETİNİ AL" : "BUY TICKETS",
     },
   };
 

@@ -60,7 +60,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
-      {/* Hero Header - */}
       <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
         <img 
           src="/images/contact.jpg" 
@@ -82,20 +81,17 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-24">
-          {/* Info Cards */}
           <div className="lg:col-span-1 space-y-6">
             <div className="bg-white dark:bg-gray-900/40 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl transition-all hover:border-primary group">
               <span className="material-icons text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">location_on</span>
               <h4 className="text-[10px] font-black text-gray-500 tracking-widest uppercase mb-2">{content.addressLabel}</h4>
               <p className="text-gray-900 dark:text-white font-bold leading-relaxed">{content.address}</p>
             </div>
-
             <div className="bg-white dark:bg-gray-900/40 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl transition-all hover:border-primary group">
               <span className="material-icons text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">call</span>
               <h4 className="text-[10px] font-black text-gray-500 tracking-widest uppercase mb-2">{content.phoneLabel}</h4>
               <a href="tel:+902227113132" className="text-gray-900 dark:text-white font-black text-xl hover:text-primary transition-colors">+90 222 711 31 32</a>
             </div>
-
             <div className="bg-white dark:bg-gray-900/40 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-xl transition-all hover:border-primary group">
               <span className="material-icons text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">mail</span>
               <h4 className="text-[10px] font-black text-gray-500 tracking-widest uppercase mb-2">{content.emailLabel}</h4>
@@ -103,7 +99,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-secondary dark:bg-black/40 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/5 relative overflow-hidden min-h-[500px] flex flex-col justify-center">
                {isSubmitted ? (
@@ -149,7 +144,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           </div>
         </div>
 
-        {/* Map Section - GÜNCEL KONUM BİLGİSİ İLE */}
         <section className="mb-24">
           <h2 className="text-3xl font-black text-secondary dark:text-white mb-8 flex items-center gap-4">
             <span className="w-1.5 h-8 bg-primary"></span>
@@ -169,13 +163,13 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           </div>
         </section>
 
-        {/* Footer Navigation */}
-        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Footer Navigation - ORTALANDI */}
+        <div className="pt-16 border-t border-gray-100 dark:border-white/5 text-center">
           <button 
-            onClick={() => onNavigate('home')}
-            className="group flex items-center gap-4 text-secondary dark:text-white hover:text-primary transition-colors font-black uppercase text-xs tracking-widest"
+            onClick={() => onNavigate("home")} 
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
           >
-            <span className="material-icons group-hover:-translate-x-2 transition-transform">west</span>
+            <span className="material-icons text-lg">arrow_back</span>
             {content.back}
           </button>
         </div>

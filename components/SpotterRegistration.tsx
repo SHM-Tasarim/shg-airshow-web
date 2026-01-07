@@ -18,7 +18,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Ad Soyad",
         "T.C. Kimlik Numarası",
         "Doğum Tarihi",
-        "İrtibat Bilgileri (telefon ve e-posta)"
+        "İrtibat Bilgileri (telefon ve e\u2011posta)"
       ],
       note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir.`,
       applyTitle: "Spotter Başvurusu İçin",
@@ -86,14 +86,14 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
             <p className="text-sm font-black tracking-widest text-primary mb-6 uppercase">
               {content.body2}
             </p>
-            <ul className="space-y-4">
-              {content.requirements.map((req, idx) => (
-                <li key={idx} className="flex items-center gap-4 group">
-                  <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform"></div>
-                  <span className="text-lg font-bold text-gray-800 dark:text-gray-200">{req}</span>
-                </li>
-              ))}
-            </ul>
+           <ul className="space-y-4">
+  {content.requirements.map((req, idx) => (
+    <li key={idx} className="flex items-start gap-4 group">
+      <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0 mt-2"></div>
+      <span className="text-lg font-bold text-gray-800 dark:text-gray-200 break-words">{req}</span>
+    </li>
+  ))}
+</ul>
           </div>
 
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-bold border-l-4 border-primary pl-6">

@@ -7,14 +7,14 @@ interface StandProps {
 }
 
 const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
-  const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>('sponsor');
+  const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>(null);
 
   const content = {
     TR: {
       title: "Ticari Fırsatlar",
       
       standIntroTitle: "SHG AIRSHOW 2026",
-      standIntroText: "Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa’da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı’nın efsanevi uçaklarından en modern hava taşıtlarına, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine kapılarını açıyor!",
+      standIntroText: "Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa’da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı’nın efsanevi uçaklarından en modern hava taşıtlerine, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine kapılarını açıyor!",
       
       sponsorTitle: "SPONSORLUK",
       sponsorDesc: "Markanızı gökyüzüne taşıyın ve havacılığın prestijini paylaşın.",

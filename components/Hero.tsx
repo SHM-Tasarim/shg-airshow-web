@@ -25,10 +25,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
         : "SHG Airshows",
-    badge:
-      lang === "TR"
-        ? "19-20 Eylül 2026 - Sivrihisar Havacılık Merkezi"
-        : "19-20 September 2026 - Sivrihisar Aviation Center",
+    badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 September 2026",
+    badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "Sivrihisar Aviation Center",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
     program: lang === "TR" ? "GÖSTERİ PROGRAMI" : "SHOW PROGRAM",
   };
@@ -43,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           playsInline
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105"
         >
-          {/* Video dosya adının doğru olduğundan emin olun (shg-airshow-2025.mp4) */}
+          {/* Video */}
           <source src="/images/shg-airshow-2025.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
         </video>
@@ -58,8 +56,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         </h1>
 
         <div className="mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-          <span className="inline-block py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-xl drop-shadow-md">
-            {translations.badge}
+          <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-xl drop-shadow-md">
+            <span>{translations.badgeDate}</span>
+            <span className="hidden md:inline">-</span>
+            <span>{translations.badgeLocation}</span>
           </span>
         </div>
 

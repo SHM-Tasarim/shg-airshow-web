@@ -14,10 +14,6 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
         : "Secure your spot at the breathtaking aerial displays that push the limits of the sky. Get your ticket now for an unforgettable experience!",
     faqTitle:
       lang === "TR" ? "Sıkça Sorulan Sorular" : "Frequently Asked Questions",
-    faqSubtitle:
-      lang === "TR"
-        ? "Biletlerle ilgili aklınıza takılan her şey burada."
-        : "Everything you need to know about tickets is right here.",
     addToCart: lang === "TR" ? "Biletini Al" : "Add to Cart",
   };
 
