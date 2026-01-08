@@ -155,7 +155,6 @@ const Tickets: React.FC<TicketsProps> = ({ lang }) => {
               {translations.faqTitle}
             </h2>
             <p className="text-base lg:text-lg text-gray-600 dark:text-gray-400 font-bold opacity-70">
-              {translations.faqSubtitle}
             </p>
           </div>
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">

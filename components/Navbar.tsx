@@ -15,6 +15,8 @@ interface NavbarProps {
       | "spotter"
       | "transport"
       | "contact"
+      | "gallery"
+      
   ) => void;
   currentView: string;
   lang: Language;
@@ -35,6 +37,8 @@ const Navbar: React.FC<NavbarProps> = ({
     tickets: lang === "TR" ? "BİLETLER" : "TICKETS",
     contact: lang === "TR" ? "İLETİŞİM" : "CONTACT",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
+    gallery: lang === "TR" ? "GALERİ" : "GALLERY",
+    
   };
 
   const navLinks = [
@@ -52,6 +56,11 @@ const Navbar: React.FC<NavbarProps> = ({
       name: translations.tickets,
       action: () => onNavigate("tickets"),
       id: "tickets",
+    },
+    {
+      name: translations.gallery,
+      action: () => onNavigate("gallery"),
+      id: "gallery",
     },
     {
       name: translations.contact,

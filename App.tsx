@@ -19,9 +19,10 @@ import Suggestions from "./components/Suggestions";
 import Stand from "./components/Stand";
 import AboutMSO from "./components/AboutMSO";
 import Acromach from "./components/Acromach";
+import GalleryPage from "./components/GalleryPage";
 
 export type Language = "TR" | "EN";
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach"; 
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "gallery-page"; 
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
@@ -87,6 +88,7 @@ const App: React.FC = () => {
               {currentView === "participants" && <Participants lang={lang} targetId={targetParticipantId} />}
               {currentView === "partners" && <Partners lang={lang} onNavigate={navigateTo} />}
               {currentView === "tickets" && <Tickets lang={lang} />}
+               {currentView === "gallery" && <GalleryPage lang={lang} onNavigate={navigateTo} />}
             </div>
           )}
 
