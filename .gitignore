@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.__capcut_export_temp_folder_*
+public/images/.__capcut_export_temp_folder__/
+public/images/.__capcut_export_temp_folder__/
+*.mp4
+public/images/.__capcut_export_temp_folder__/
+*.mp4

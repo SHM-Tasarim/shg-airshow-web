@@ -16,6 +16,7 @@ interface NavbarProps {
       | "transport"
       | "contact"
       | "gallery"
+      | "media-archive"
       
   ) => void;
   currentView: string;
@@ -38,6 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({
     contact: lang === "TR" ? "İLETİŞİM" : "CONTACT",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
     gallery: lang === "TR" ? "GALERİ" : "GALLERY",
+    mediaArchive: lang === "TR" ? "MEDYA" : "MEDIA",
     
   };
 
@@ -61,6 +63,11 @@ const Navbar: React.FC<NavbarProps> = ({
       name: translations.gallery,
       action: () => onNavigate("gallery"),
       id: "gallery",
+    },
+    {
+      name: translations.mediaArchive,
+      action: () => onNavigate("media-archive"),
+      id: "media-archive",
     },
     {
       name: translations.contact,
