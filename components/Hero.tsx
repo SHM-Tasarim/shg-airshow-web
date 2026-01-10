@@ -58,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         <div className="mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
           <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-xl drop-shadow-md">
             <span>{translations.badgeDate}</span>
-            <span className="hidden md:inline">-</span>
+            <span className="hidden md:inline">/</span>
             <span>{translations.badgeLocation}</span>
           </span>
         </div>

@@ -13,8 +13,8 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "about", 
       desc:
         lang === "TR"
-          ? "Sivrihisar Hava Gösterileri’nin tarihçesi ve vizyonu hakkında detaylı bilgi."
-          : "Detailed information about the history and vision of Sivrihisar Airshow to date.",
+          ? "SHG Airshow İlklerin Adresi"
+          : "SHG Airshow The Address of Firsts",
       image: "/images/shg-airshows.jpg",
     },
     {
@@ -22,8 +22,8 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "shm",
       desc:
         lang === "TR"
-          ? "Türkiye’nin sivil hava parkı olan Sivrihisar Havacılık Merkezi’ni ve sunduğu imkanları keşfedin."
-          : "Discover Sivrihisar Aviation Center, Türkiye’s private civil air park, and the facilities it offers.",
+          ? "Gökyüzü Sevdalılarının Adresi "
+          : "The Address of Sky Lovers",
       image: "/images/shm-about.jpg",
     },
     {
@@ -40,8 +40,8 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
       id: "acromach",
       desc:
         lang === "TR"
-          ? "Acromach Hava Akrobasi Grubu hakkında bilgi edinin."
-          : "Learn more about Acromach Aerobatics Team.",
+          ? "Gökyüzü Dansçıları - Hava Akrobasi Grubu"
+          : "Sky Dancers - Air Acrobatics Team",
       image: "/images/acromach.jpg",
     },
   ];

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Language } from "../App";
+import { url } from "inspector";
 
 interface ParticipantsProps {
   lang: Language;
@@ -56,6 +57,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       url: seminUrl,
     },
     {
+      id: "airparkhotel",
+      name: "AIRPARKHOTEL",
+      desc: lang === "TR" ? "Üzerinden Spitfire geçen dünyadaki TEK otel olma özelliğini taşıyan AirparkHotel SHG Airshow 2026'da!" : "AirparkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2026!",
+      image: "/images/airparkhotel.jpg",
+    },
+    {
       id: "antonov-an2",
       name: "ANTONOV AN-2",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterindeki 1957 model Antonov AN-2 dünya çapında birçok askeri ve sivil kullanıcı tarafından kullanıldı. Dünyanın en büyük çift kanatlı uçağı olan Annie / Annushka SHG Airshow'da!" : "The 1957 model Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
@@ -67,6 +74,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       name: "AVIAT HUSKY A-1B",
       desc: lang === "TR" ? "Pist dışındaki arazilere ve kısa mesafelere rahatlıkla iniş-kalkış yapabilme özelliğine sahip olan Husky, seyircilere keyifli anlar yaşatmaya devam ediyor." : "The Husky, which has the ability to take off and land easily on off-runway terrain and short distances, continues to provide pleasant moments to the audience.",
       image: "/images/aviat-husky.jpg",
+      url: "mach.aero",
     },
     {
       id: "uh1h",
@@ -87,11 +95,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       name: "CESSNA 172",
       desc: lang === "TR" ? "Yılların eskimeyen, dünyanın en meşhur uçaklarından Cessna 172, SHG Airshow'da!" : "Cessna 172, one of the world's most famous and timeless aircraft, is at SHG Airshow!",
       image: "/images/cessna-172.jpg",
+      url: "https://shm.aero/"
     },
     {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesinin koleksiyonundan 1950 model Cessna 195 A Businessliner güzelliği ile SHG Airshow'da sizleri büyüleyecek." : "The 1950 model Cessna 195 A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin koleksiyonundan 1950 model Cessna 195 A Businessliner güzelliği ile SHG Airshow'da sizleri büyüleyecek." : "The 1950 model Cessna 195 A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
       image: "/images/cessna-business.jpg",
       url: "https://msomuseum.com/cessna-195-a-businessliner/",
     },
@@ -108,6 +117,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin Türk havacılığına kazandırdığı 1940 Model DC-3 \"Turkish Delight\", 2017 yılında tam bir dünya turunu başarıyla tamamladı ve \"dünyayı dolaşan en yaşlı uçak\" ünvanını aldı. Bu muhteşem klasik hava aracı SHG Airshow'da sizlerle!" : "The 1940 Model DC-3 'Turkish Delight', brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of 'the oldest aircraft to travel the world'. This magnificent classic aircraft is with you at SHG Airshow!",
       image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
+    },
+     {
+      id: "dukkan",
+      name: "DÜKKAN",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi’nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
+      image: "/images/dukkan.jpg",
+      url: "https://shop.msomuseum.com/",
     },
     {
       id: "women-aviators",
@@ -136,13 +152,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       desc: lang === "TR" ? "Türkiye'nin Uçan Hava Müzesi M.S.Ö. Hava ve Uzay Müzesi, dünya havacılığı açısından tarihi değere sahip pek çok uçağı ile SHG Airshow'da!" : "Türkiye's Flying Aviation Museum, M.S.Ö. Air and Space Museum, is at SHG Airshow with its many aircraft of historical value for world aviation!",
       image: "/images/mso-air-space-museum.jpg",
       url: msomuseumUrl,
-    },
-    {
-      id: "dukkan",
-      name: "DÜKKAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi’nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
-      image: "/images/dukkan.jpg",
-      url: "https://shop.msomuseum.com/",
     },
     {
       id: "p51-mustang",
@@ -177,13 +186,35 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       name: "Pars ŞENER",
       desc: lang === "TR" ? "Pars Şener, ilk hava gösterisi deneyimini 4 yaşında, dedesi ve Türkiye’nin ilk profesyonel akrobasi pilotu Ali İsmet Öztürk ile birlikte SHG Airshow 2024’te yaşadı. Şimdi ise SHG Airshow 2026’da, sürpriz gösterisiyle izleyicilerin karşısında olacak!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
       image: "/images/pars-dede-1.jpg",
+      url: "mach.aero",
     },
     {
       id: "semin-ozturk",
       name: "Semin ÖZTÜRK ŞENER",
-      desc: lang === "TR" ? "Türkiye’nin ilk profesyonel kadın akrobasi pilotu Semin Öztürk Şener Muhteşem Akrobasi Gösterisi ile SHG Airshow 2026'da nefeslerinizi kesecek!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
+      desc: lang === "TR" ? "Türkiye’nin İlk Profesyonel Kadın Akrobasi Pilotu Semin Öztürk Şener muhteşem akrobasi gösterisi ile SHG Airshow 2026'da nefeslerinizi kesecek!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
       image: "/images/semin-ozturk-sener.jpg",
       url: seminUrl,
+    },
+    {
+      id: "sivrihisar-havacilik-kulubu",
+      name: "Sivrihisar Hvacılık Kulübü Derneği",
+      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
+      image: "/images/sivrihisar-havacilik-kulubu.jpg",
+      url: "https://shm.aero/",
+    },
+    {
+      id: "tecnam",
+      name: "TECNAM",
+      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
+      image: "/images/tecnam.jpg",
+      url: "https://www.havacikadinlar.org/",
+    },
+    {
+      id: "ultralight",
+      name: "ULTRALIGHT",
+      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
+      image: "/images/ultralight.jpg",
+      url: "https://www.havacikadinlar.org/",
     },
     {
       id: "vecihi-xiv",
