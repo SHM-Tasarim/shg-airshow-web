@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Language } from '../App';
 
 interface MediaArchiveProps {
@@ -14,17 +14,17 @@ interface MediaItem {
   src: string;
 }
 
-// Cloudflare R2 Base URL
+// Cloudflare Worker URL
 const R2_URL = "https://shg-videos.gulperiozblt.workers.dev";
 
 const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
   const [activeCategory, setActiveCategory] = useState<MediaCategory>('ALL');
   const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null);
 
-  // Veri Seti: Videolar R2'den, Görseller yerelden çekilecek şekilde güncellendi
   const mediaItems: MediaItem[] = [
     { type: 'TV', title: 'NOW TV 2025', src: `${R2_URL}/now-tv-2025.mp4` },
     { type: 'TV', title: 'NTV 2025', src: `${R2_URL}/ntv-2025.mp4` },
+    { type: 'TV', title: 'SZC 2025', src: `${R2_URL}/szc-2025.mp4` },
     { type: 'PRESS', title: 'HABER 1', src: '/images/SHG2025Haber1.jpg' },
     { type: 'PRESS', title: 'HABER 2', src: '/images/SHG2025Haber2.jpg' },
     { type: 'PRESS', title: 'HABER 3', src: '/images/SHG2025Haber3.jpg' },
@@ -49,8 +49,8 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     { type: 'PRESS', title: 'HABER 20', src: '/images/SHG2023Haber20.jpg' },
     { type: 'PRESS', title: 'HABER 21', src: '/images/SHG2023Haber21.jpg' },
     { type: 'TV', title: 'NTV 2022', src: `${R2_URL}/ntv-2022.mp4` },
-    { type: 'TV', title: 'TGRT HABER 2022', src: `${R2_URL}/tgrt-haber-2022.mp4` },
     { type: 'TV', title: 'A HABER 2022', src: `${R2_URL}/a-haber-2022.mp4` },
+    { type: 'TV', title: 'TGRT HABER 2022', src: `${R2_URL}/tgrt-haber-2022.mp4` },
     { type: 'PRESS', title: 'HABER 22', src: '/images/SHG2022Haber22.jpg' },
     { type: 'PRESS', title: 'HABER 23', src: '/images/SHG2022Haber23.jpg' },
     { type: 'PRESS', title: 'HABER 24', src: '/images/SHG2022Haber24.jpg' },
@@ -191,6 +191,92 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     }
   }, [selectedItem]);
 
+  // Video bileşeni - Lazy loading ile
+  const VideoCard: React.FC<{ item: MediaItem; idx: number }> = ({ item, idx }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        },
+        { rootMargin: '200px' }
+      );
+
+      if (containerRef.current) {
+        observer.observe(containerRef.current);
+      }
+
+      return () => observer.disconnect();
+    }, []);
+
+    const handleMouseEnter = () => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {});
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    };
+
+    return (
+      <div 
+        ref={containerRef}
+        onClick={() => setSelectedItem(item)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="break-inside-avoid group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer"
+      >
+        {isVisible ? (
+          <video 
+            ref={videoRef}
+            src={item.src} 
+            className="w-full h-auto block transition-all duration-1000 group-hover:scale-105"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
+        ) : (
+          <div className="w-full aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+            <div className="text-center">
+              <span className="material-icons text-primary text-5xl mb-2">play_circle</span>
+              <p className="text-[10px] font-mono font-black text-white/60 tracking-widest uppercase">{item.title}</p>
+            </div>
+          </div>
+        )}
+
+        <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+          <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-primary"></div>
+          <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-primary"></div>
+          <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-primary"></div>
+          <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-primary"></div>
+          
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-14 h-14 bg-primary/90 rounded-full flex items-center justify-center text-white shadow-lg">
+              <span className="material-icons">play_arrow</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent group-hover:opacity-0 transition-opacity">
+          <span className="text-[10px] font-mono font-black text-white/80 tracking-widest uppercase">
+            {item.title}
+          </span>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32 overflow-hidden relative">
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05] z-0">
@@ -228,55 +314,41 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
         <section className="mb-40">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
             {filteredItems.map((item, idx) => (
-              <div 
-                key={idx} 
-                onClick={() => setSelectedItem(item)}
-                className="break-inside-avoid group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer"
-              >
-                {item.type === 'TV' ? (
-                  <video 
-                    src={item.src} 
-                    className="w-full h-auto block transition-all duration-1000 group-hover:scale-105"
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata" // Performans için kritik: Sadece video bilgisini çeker, videoyu indirmez
-                    onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.pause();
-                      e.currentTarget.currentTime = 0;
-                    }}
-                  />
-                ) : (
+              item.type === 'TV' ? (
+                <VideoCard key={idx} item={item} idx={idx} />
+              ) : (
+                <div 
+                  key={idx} 
+                  onClick={() => setSelectedItem(item)}
+                  className="break-inside-avoid group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer"
+                >
                   <img 
                     src={item.src} 
                     alt={item.title} 
                     className="w-full h-auto block transition-all duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                     loading="lazy"
                   />
-                )}
 
-                <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-primary"></div>
-                  <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-primary"></div>
-                  <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-primary"></div>
-                  <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-primary"></div>
-                  
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 bg-primary/90 rounded-full flex items-center justify-center text-white shadow-lg">
-                      <span className="material-icons">
-                        {item.type === 'TV' ? 'play_arrow' : 'zoom_in'}
-                      </span>
+                  <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-primary"></div>
+                    <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-primary"></div>
+                    <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-primary"></div>
+                    <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-primary"></div>
+                    
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-14 h-14 bg-primary/90 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <span className="material-icons">zoom_in</span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent group-hover:opacity-0 transition-opacity">
-                  <span className="text-[10px] font-mono font-black text-white/80 tracking-widest uppercase">
-                    {item.title}
-                  </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent group-hover:opacity-0 transition-opacity">
+                    <span className="text-[10px] font-mono font-black text-white/80 tracking-widest uppercase">
+                      {item.title}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              )
             ))}
           </div>
         </section>
