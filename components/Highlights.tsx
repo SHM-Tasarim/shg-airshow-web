@@ -15,25 +15,25 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
         lang === "TR"
           ? "SHG Airshow İlklerin Adresi"
           : "SHG Airshow The Address of Firsts",
-      image: "/images/shg-airshows.jpg",
+      image: "/images/shg-gri.jpg",
     },
     {
-      title: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "Sivrihisar Aviation Center",
+      title: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
       id: "shm",
       desc:
         lang === "TR"
           ? "Gökyüzü Sevdalılarının Adresi "
           : "The Address of Sky Lovers",
-      image: "/images/shm-about.jpg",
+      image: "/images/shm-gri.jpg",
     },
     {
-      title: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi" : "M.S.Ö. Air and Space Museum",
+      title: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi" : "M.S.Ö. AIR AND SPACE MUSEUM",
       id: "museum",
       desc:
         lang === "TR"
           ? "Türkiye'nin Uçan Havacılık Müzesi"
           : "Turkiye's Flying Aviation Museum",
-      image: "/images/mso.jpg",
+      image: "/images/mso-gri.jpg",
     },
     {
       title: lang === "TR" ? "Acromach" : "Acromach",
@@ -42,7 +42,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
         lang === "TR"
           ? "Gökyüzü Dansçıları - Hava Akrobasi Grubu"
           : "Sky Dancers - Air Acrobatics Team",
-      image: "/images/acromach.jpg",
+      image: "/images/acromach-gri.jpg",
     },
   ];
 
@@ -55,7 +55,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
             onClick={() => onNavigate(item.id as any)}
             className="group bg-white dark:bg-gray-800/20 rounded-xl overflow-hidden shadow-xl border border-transparent hover:border-primary/30 transition-all duration-300 cursor-pointer"
           >
-            <div className="overflow-hidden h-48">
+            <div className="overflow-hidden aspect-[16/10] sm:h-48 sm:aspect-auto">
               <img
                 src={item.image}
                 alt={item.title}

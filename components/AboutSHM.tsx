@@ -24,7 +24,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
-      tagline: "NECATI ARTAN FACILITIES",
+      tagline: "NECATİ ARTAN FACILITIES",
       title: "S.H.M",
       history: "Sivrihisar Aviation Center (S.H.M.), Necati Artan Facilities, began operations as an Air Park in March 2014. The facility is built on approximately 1000 decares of land. The elevation of the terrain from sea level is 2790 feet.",
       runway: "The facilities feature a main asphalt runway 1810 m long and 32 m wide, with a runway heading of 05 to 23. Next to the main runway, there is a grass runway for gliders and other light aircraft.",

@@ -30,7 +30,7 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
-      tagline: "Turkiye's Flying Aviation Museum",
+      tagline: "TÜRKİYE'S FLYING AVIATION MUSEUM",
       title: (
         <>
           M.S.Ö.<br />Air and Space Museum

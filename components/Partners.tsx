@@ -14,7 +14,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     alphabeticalHint: lang === 'TR' ? "(ALFABETİK SIRAYLA)" : "(IN ALPHABETICAL ORDER)",
     fuelSponsorsTitle: lang === 'TR' ? "BİREYSEL YAKIT SPONSORLARI" : "INDIVIDUAL FUEL SPONSORS",
     fuelSponsorsDonationInfo: lang === 'TR' 
-      ? 'SHG Airshow 2025 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
+      ? 'SHG Airshow 2026 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
       : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2025, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
     fuelSponsorsDonationContact: "info@shm.aero",
     fuelSponsorsDonationContactLabel: lang === 'TR'
@@ -47,6 +47,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
   const companyLogos = [
     { name: "Acromach", logo: "/images/acromach.png" },
+    { name: "Agense 190", logo: "/images/agense190-2.png" },
     { name: "AirFlow Performance", logo: "/images/airflow.png" },
     { name: "Barry Controls", logo: "/images/barry-controls.png" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png" },
@@ -84,7 +85,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
-          src="/images/seyirci.jpg" 
+          src="/images/focke-spitfire.jpg" 
           className="w-full h-full object-cover"
           alt="Partnership Background"
         />
@@ -114,10 +115,10 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 key={idx}
                 className="bg-gray-50 dark:bg-gray-900/40 p-8 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all group"
               >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name} 
-                  className="max-h-14 w-auto object-contain transition-transform group-hover:scale-105"
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-24 w-auto object-contain transition-transform group-hover:scale-105"
                 />
               </div>
             ))}
@@ -146,10 +147,10 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 {company.logo.includes('company') ? (
                     <span className="text-gray-400 font-bold text-sm uppercase tracking-widest opacity-40 group-hover:opacity-100">{company.name}</span>
                 ) : (
-                    <img 
-                      src={company.logo} 
-                      alt={company.name} 
-                      className="max-h-20 md:max-h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                    <img
+                      src={company.logo}
+                      alt={company.name}
+                      className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                 )}
               </div>
@@ -173,11 +174,11 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
                     {translations.fuelSponsorsDonationInfo}
                   </p>
-                  <p className="text-gray-400 text-sm md:text-base mb-2">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
                     {translations.fuelSponsorsDonationContactLabel}{' '}
                     <a 
                       href="mailto:info@shm.aero" 
-                      className="text-primary hover:text-primary/80 font-bold transition-colors"
+                      className="text-primary underline font-bold"
                     >
                       {translations.fuelSponsorsDonationContact}
                     </a>

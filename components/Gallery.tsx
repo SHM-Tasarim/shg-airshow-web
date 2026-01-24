@@ -9,9 +9,14 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
   const images = [
     {
-      src: "/images/spotter-3.jpg",
-      text: lang === "TR" ? "SPOTTER KAYDI" : "SPOTTER REGISTRATION",
-      id: "spotter", 
+      src: "/images/sponsor-3.jpg",
+      text: lang === "TR" ? "SPONSORLUK" : "SPONSORSHIP",
+      id: "sponsor", 
+    },
+    {
+      src: "/images/seyirci-t.jpg",
+      text: lang === "TR" ? "TANITIM VE SATIŞ STANDLARI" : "PROMOTION AND SALES STANDS",
+      id: "stand", 
     },
     {
       src: "/images/volunteer.jpg",
@@ -19,14 +24,9 @@ const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
       id: "volunteer", 
     },
     {
-      src: "/images/stand-2.jpg",
-      text: lang === "TR" ? "TİCARİ FIRSATLAR" : "COMMERCIAL OPPORTUNITIES",
-      id: "stand", 
-    },
-    {
-      src: "/images/kids.jpg",
+      src: "/images/school-2.jpg",
       text: lang === "TR" ? "OKULLARA ÖZEL" : "SCHOOL PROGRAMS",
-      id: "camping", 
+      id: "schools", 
     },
   ];
 

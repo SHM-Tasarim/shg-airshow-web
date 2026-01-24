@@ -34,14 +34,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
           <span className="text-primary">Participants</span>
         </>
       ),
-    subtitle: lang === "TR" ? "(alfabetik sırayla)" : "(in alphabetical order)",
+    subtitle: lang === "TR" ? "(Alfabetik Sırayla)" : "(in alphabetical order)",
     cta: {
       title: lang === "TR" ? "Tarihe Tanıklık Et" : "Witness the History",
       desc:
         lang === "TR"
           ? "Unutulmaz bir deneyim için biletinizi hemen alın!"
           : "Get your ticket now for an unforgettable experience!",
-      button: lang === "TR" ? "BİLETİNİ AL" : "BUY TICKETS",
+      button: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     },
   };
 
@@ -53,14 +53,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       id: "acromach",
       name: "ACROMACH",
       desc: lang === "TR" ? "Acromach Gökyüzü Dansçıları - Hava Akrobasi Grubu SHG Airshow 2026'da!" : "Acromach Sky Dancers - Aerial Aerobatics Group at SHG Airshow 2026!",
-      image: "/images/acromach.jpg",
+      image: "/images/aio-sos.jpg",
       url: seminUrl,
     },
     {
       id: "airparkhotel",
-      name: "AIRPARKHOTEL",
-      desc: lang === "TR" ? "Üzerinden Spitfire geçen dünyadaki TEK otel olma özelliğini taşıyan AirparkHotel SHG Airshow 2026'da!" : "AirparkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2026!",
-      image: "/images/airparkhotel.jpg",
+      name: "AirParkHotel",
+      desc: lang === "TR" ? "Üzerinden Spitfire geçen dünyadaki TEK otel olma özelliğini taşıyan AirParkHotel SHG Airshow 2026'da!" : "AirParkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2026!",
+      image: "/images/aph-1.jpg",
     },
     {
       id: "antonov-an2",
@@ -120,21 +120,21 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
      {
       id: "dukkan",
-      name: "DÜKKAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi’nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
+      name: lang === "TR" ? "DÜKKAN" : "DÜKKAN",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
       image: "/images/dukkan.jpg",
       url: "https://shop.msomuseum.com/",
     },
     {
       id: "women-aviators",
-      name: "HAVACI KADINLAR DERNEĞİ",
-      desc: lang === "TR" ? "Asil vazifesi, “Türk Kadını’nın” havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of 'Turkish Women' and help all women interested in aviation, is at SHG Airshow!",
+      name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
+      desc: lang === "TR" ? "Asil vazifesi, 'Türk Kadını'nın' havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of 'Turkish Women' and help all women interested in aviation, is at SHG Airshow!",
       image: "/images/havaci-kadinlar-dernegi.jpg",
       url: "https://www.havacikadinlar.org/",
     },
     {
       id: "senan",
-      name: "LOKANTA SENAN",
+      name: lang === "TR" ? "LOKANTA SENAN" : "LOKANTA SENAN",
       desc: lang === "TR" ? "Enfes lezzetleri ve zengin menüsüyle Lokanta Senan SHG Airshow'da!" : "Lokanta Senan is at SHG Airshow with its delicious flavors and rich menu!",
       image: "/images/lokanta-senan.jpg",
       url: "https://www.lokantasenan.com/",
@@ -148,9 +148,9 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
     {
       id: "museum",
-      name: "M.S.Ö. HAVA ve UZAY MÜZESİ",
+      name: lang === "TR" ? "M.S.Ö. HAVA ve UZAY MÜZESİ" : "M.S.Ö. AIR AND SPACE MUSEUM",
       desc: lang === "TR" ? "Türkiye'nin Uçan Hava Müzesi M.S.Ö. Hava ve Uzay Müzesi, dünya havacılığı açısından tarihi değere sahip pek çok uçağı ile SHG Airshow'da!" : "Türkiye's Flying Aviation Museum, M.S.Ö. Air and Space Museum, is at SHG Airshow with its many aircraft of historical value for world aviation!",
-      image: "/images/mso-air-space-museum.jpg",
+      image: "/images/mso-lobby.jpg",
       url: msomuseumUrl,
     },
     {
@@ -183,49 +183,49 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
     {
       id: "pars-sener",
-      name: "Pars ŞENER",
+      name: "PARS ŞENER",
       desc: lang === "TR" ? "Pars Şener, ilk hava gösterisi deneyimini 4 yaşında, dedesi ve Türkiye’nin ilk profesyonel akrobasi pilotu Ali İsmet Öztürk ile birlikte SHG Airshow 2024’te yaşadı. Şimdi ise SHG Airshow 2026’da, sürpriz gösterisiyle izleyicilerin karşısında olacak!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
       image: "/images/pars-dede-1.jpg",
       url: "mach.aero",
     },
     {
       id: "semin-ozturk",
-      name: "Semin ÖZTÜRK ŞENER",
+      name: "SEMİN ÖZTÜRK ŞENER",
       desc: lang === "TR" ? "Türkiye’nin İlk Profesyonel Kadın Akrobasi Pilotu Semin Öztürk Şener muhteşem akrobasi gösterisi ile SHG Airshow 2026'da nefeslerinizi kesecek!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
       image: "/images/semin-ozturk-sener.jpg",
       url: seminUrl,
     },
     {
       id: "sivrihisar-havacilik-kulubu",
-      name: "Sivrihisar Hvacılık Kulübü Derneği",
+      name: lang === "TR" ? "SİVRİHİSAR HAVACILIK KULÜBÜ DERNEĞİ" : "SIVRIHISAR AVIATION CLUB ASSOCIATION",
       desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
       image: "/images/sivrihisar-havacilik-kulubu.jpg",
       url: "https://shm.aero/",
     },
     {
       id: "tecnam",
-      name: "TECNAM",
-      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
-      image: "/images/tecnam.jpg",
+      name: "TECNAM P92",
+      desc: lang === "TR" ? "İtalyan tasarımı, hafif ve çevik yapısıyla öne çıkan 2 adet Tecnam P92 Ultralight, Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği Kol Uçuşu’nda gökyüzünde buluşuyor!" : "Two Tecnam P92 Ultralights, designed in Italy and standing out with their light and agile structure, meet in the sky at the Sivrihisar Aviation",
+      image: "/images/tecnam-2.jpg",
       url: "https://www.havacikadinlar.org/",
     },
-    {
-      id: "ultralight",
-      name: "ULTRALIGHT",
-      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
-      image: "/images/ultralight.jpg",
-      url: "https://www.havacikadinlar.org/",
-    },
+    // {
+    //   id: "ultralight",
+    //   name: "ULTRALIGHT",
+    //   desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
+    //   image: "/images/ultralight.jpg",
+    //   url: "https://www.havacikadinlar.org/",
+    // },
     {
       id: "vecihi-xiv",
-      name: "VECİHİ XIV",
+      name: lang === "TR" ? "VECİHİ XIV" : "VECIHI XIV",
       desc: lang === "TR" ? "Türkiye'mizin \"İlk Sertifikalı Uçağı\" Vecihi XIV (14) replikası, M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün çalışmasıyla SHG Airshow 2026'da!" : "The replica of Türkiye's 'First Certified Aircraft' Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
     },
     {
-      id: "pitts-s2b", 
-      name: "YENİ MENEKŞE (PITTS S-2B)",
+      id: "pitts-s2b",
+      name: lang === "TR" ? "YENİ MENEKŞE (PITTS S-2B)" : "NEW VIOLET (PITTS S-2B)",
       desc: lang === "TR" ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmaları sonrası \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor." : "The 'Legendary Purple Violet' took the name 'New Violet' after the dedicated work of Mak Teknik and continues its new adventures in the skies with Semin Öztürk Şener.",
       image: "/images/yeni-menekse.jpg",
       url: seminUrl,
@@ -239,7 +239,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
         <h1 className="text-5xl md:text-7xl font-black text-secondary dark:text-white leading-tight tracking-tighter mb-4 uppercase">
           {translations.title}
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-sm md:text-base italic">
+        <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-base md:text-lg italic">
           {translations.subtitle}
         </p>
       </div>
@@ -251,23 +251,15 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
             id={p.id} 
             className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
           >
-            <div className={`lg:flex ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
+            <div className={`flex flex-col lg:flex-row ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
               {/* Image Side with HUD Design */}
-              <div className="lg:w-1/2 xl:w-2/5 relative overflow-hidden h-72 lg:h-auto min-h-[350px]">
+              <div className="w-full lg:w-1/2 xl:w-2/5 relative overflow-hidden aspect-[16/10] lg:aspect-auto lg:h-auto lg:min-h-[350px]">
                 <img
                   alt={p.name}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-110 saturate-[0.8] group-hover:saturate-100"
                   src={p.image}
                   loading="lazy"
                 />
-
-                {/* HUD Overlay Elements */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20">
-                  <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-primary/80"></div>
-                  <div className="absolute top-6 right-6 w-10 h-10 border-t-2 border-r-2 border-primary/80"></div>
-                  <div className="absolute bottom-6 left-6 w-10 h-10 border-b-2 border-l-2 border-primary/80"></div>
-                  <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-primary/80"></div>
-                </div>
 
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-60"></div>
               </div>
@@ -279,7 +271,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
                 </div>
 
                 <div className="relative z-20">
-                  <h3 className="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-6 uppercase tracking-tighter leading-tight group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-6 tracking-tighter leading-tight group-hover:text-primary transition-colors duration-300">
                     {p.name}
                   </h3>
 

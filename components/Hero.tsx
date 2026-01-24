@@ -21,13 +21,14 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   const translations = {
+    supertitle: "SHG AIRSHOW 2026",
     title:
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
-        : "SHG Airshows",
+        : "Sivrihisar Hava Gösterileri",
     badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 September 2026",
-    badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "Sivrihisar Aviation Center",
-    buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
+    badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
+    buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÖSTERİ PROGRAMI" : "SHOW PROGRAM",
   };
 
@@ -51,6 +52,9 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
       </div>
 
       <div className="relative z-10 px-6 max-w-5xl mx-auto">
+        <div className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 md:mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] uppercase">
+          {translations.supertitle}
+        </div>
         <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-8 duration-1000 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] uppercase whitespace-nowrap">
           {translations.title}
         </h1>

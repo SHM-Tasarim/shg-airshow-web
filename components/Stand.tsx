@@ -8,25 +8,43 @@ interface StandProps {
 
 const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
   const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>(null);
+  const [formData, setFormData] = useState({ company: '', name: '', email: '', interest: '', message: '' });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setIsSending(true);
+    try {
+      setIsSubmitted(true);
+      setFormData({ company: '', name: '', email: '', interest: '', message: '' });
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   const content = {
     TR: {
-      title: "Ticari Fırsatlar",
-      
+      title: "Tanıtım ve Satış Standları",
+
       standIntroTitle: "SHG AIRSHOW 2026",
-      standIntroText: "Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa’da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı’nın efsanevi uçaklarından en modern hava taşıtlerine, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine kapılarını açıyor!",
-      
-      sponsorTitle: "SPONSORLUK",
-      sponsorDesc: "Markanızı gökyüzüne taşıyın ve havacılığın prestijini paylaşın.",
-      sponsorFeatures: [
-        "Global Marka Görünürlüğü",
-        "Özel VIP Protokol Alanı",
-        "Medya ve Canlı Yayın Hakları",
-        "Kurumsal Prestij Ortaklığı"
-      ],
+      standIntroText: "100’ü aşkın kurum ve firma, SHG Airshow kapsamında ziyaretçilerle doğrudan etkileşim kurarak marka bilinirliğini artırmış ve yeni işbirlikleri için önemli fırsatlar yakalamıştır.",
+
+      // sponsorTitle: "SPONSORLUK",
+      // sponsorDesc: "Markanızı gökyüzüne taşıyın ve havacılığın prestijini paylaşın.",
+      // sponsorFeatures: [
+      //   "Global Marka Görünürlüğü",
+      //   "Özel VIP Protokol Alanı",
+      //   "Medya ve Canlı Yayın Hakları",
+      //   "Kurumsal Prestij Ortaklığı"
+      // ],
 
       standTypesTitle: "STANT TÜRLERİ",
-      standTypesDesc: "SHG Airshow, her sene birbirinden değerli katılımcıları ile uluslararası boyutta sesini duyurmaktadır. Bugüne kadar 100'ü aşkın kurum ve şirket, stant alanlarında yer alarak markalarını tanıtmış ve ticari fırsatlar elde etmiştir.",
+      standTypesDesc: "SHG Airshow, her sene birbirinden değerli katılımcıları ile uluslararası boyutta sesini duyurmaktadır.",
       standCommonFeatures: [
       ],
       
@@ -54,14 +72,14 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
 
       hierarchyTitle: "COMMERCIAL OPPORTUNITIES",
 
-      sponsorTitle: "SPONSORSHIP",
-      sponsorDesc: "Take your brand to the skies and share the prestige of aviation.",
-      sponsorFeatures: [
-        "Global Brand Visibility",
-        "Exclusive VIP Protocol Area",
-        "Media & Live Stream Rights",
-        "Corporate Prestige Partnership"
-      ],
+      // sponsorTitle: "SPONSORSHIP",
+      // sponsorDesc: "Take your brand to the skies and share the prestige of aviation.",
+      // sponsorFeatures: [
+      //   "Global Brand Visibility",
+      //   "Exclusive VIP Protocol Area",
+      //   "Media & Live Stream Rights",
+      //   "Corporate Prestige Partnership"
+      // ],
 
       standTypesTitle: "STAND TYPES",
       standTypesDesc: "Each year, SHG Airshow makes its voice heard internationally with its valuable participants. To date, over 100 institutions and companies have promoted their brands and gained commercial opportunities by taking place in stand areas.",
@@ -84,6 +102,45 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       back: "BACK TO HOME",
       applyBtn: "SEND E-MAIL",
       clickToOpen: "CLICK TO VIEW DETAILS"
+    }
+  }[lang];
+
+  const t = {
+    TR: {
+      formHeader: "Stand Başvuru Formu",
+      labelCompany: "KURUM / ŞİRKET",
+      labelContact: "İLETİŞİM ADI",
+      labelEmail: "E-POSTA",
+      labelInterest: "İLGİ ALANI",
+      labelMessage: "MESAJINIZ",
+      interests: [
+        "Tanıtım Standı",
+        "Satış Standı",
+      ],
+      btnSubmit: "GÖNDER",
+      btnSending: "Gönderiliyor...",
+      formSuccess: "Başvurunuz Alındı!",
+      formSuccessSub: "Ekibimiz en kısa sürede sizinle iletişime geçecek.",
+      newForm: "Yeni Başvuru",
+      deadlineTitle: "SON BAŞVURU TARİHİ"
+    },
+    EN: {
+      formHeader: "APPLICATION FORM",
+      labelCompany: "COMPANY / INSTITUTION",
+      labelContact: "CONTACT NAME",
+      labelEmail: "E-MAIL",
+      labelInterest: "INTEREST",
+      labelMessage: "YOUR MESSAGE",
+      interests: [
+        "Promotional Stand",
+        "Commercial Stand",
+      ],
+      btnSubmit: "SEND",
+      btnSending: "Sending...",
+      formSuccess: "Application Received!",
+      formSuccessSub: "Our team will contact you as soon as possible.",
+      newForm: "New Application",
+      deadlineTitle: "APPLICATION DEADLINE"
     }
   }[lang];
 
@@ -142,15 +199,14 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
           <h2 className="text-4xl md:text-6xl font-black text-secondary dark:text-white mb-6 uppercase tracking-tighter">
             {content.hierarchyTitle}
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
         {/* Accordion Sections */}
         <div className="max-w-5xl mx-auto space-y-6 mb-32">
-          
+
           {/* ACCORDION 1: SPONSOR */}
-          <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'sponsor' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
-            <button 
+          {/* <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'sponsor' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
+            <button
               onClick={() => toggleAccordion('sponsor')}
               className="w-full flex items-center justify-between p-8 md:p-12 text-left outline-none"
             >
@@ -167,7 +223,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
               </div>
               <span className={`material-icons text-4xl text-primary transition-transform duration-500 ${activeAccordion === 'sponsor' ? 'rotate-180' : ''}`}>expand_more</span>
             </button>
-            
+
             <div className={`transition-all duration-500 overflow-hidden ${activeAccordion === 'sponsor' ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="p-8 md:p-12 pt-0 border-t border-white/5">
                 <p className="text-lg text-gray-400 font-bold italic mb-10 border-l-4 border-primary pl-6">
@@ -183,7 +239,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* ACCORDION 2: STANT TÜRLERİ */}
           <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'types' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
@@ -239,30 +295,106 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
           </div>
         </div>
 
+       {/* --- Form Section --- */}
+        <section className="max-w-5xl mx-auto">
+          <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-8 md:p-16 shadow-2xl border border-white/5 relative overflow-hidden">
+            {isSubmitted ? (
+              <div className="text-center py-20 animate-in zoom-in duration-500">
+                <div className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                  <span className="material-icons text-white text-5xl">check</span>
+                </div>
+                <h2 className="text-4xl font-black text-white mb-4 uppercase">{t.formSuccess}</h2>
+                <p className="text-gray-400 font-bold">{t.formSuccessSub}</p>
+                <button onClick={() => setIsSubmitted(false)} className="mt-8 text-primary font-black uppercase tracking-widest text-xs hover:underline transition-all">
+                  {t.newForm}
+                </button>
+              </div>
+            ) : (
+              <div className="relative z-10">
+                <header className="mb-12">
+                  <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+                    {t.formHeader}
+                  </h2>
+                  <div className="w-16 h-1 bg-primary"></div>
+                </header>
+
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  {error && <div className="bg-red-500/10 border border-red-500/50 text-red-400 px-6 py-4 rounded-xl text-sm font-bold">{error}</div>}
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelCompany}</label>
+                      <input 
+                        type="text" required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                        onChange={(e) => setFormData({...formData, company: e.target.value})}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
+                      <input 
+                        type="text" required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
+                      <input 
+                        type="email" required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
+                      <select 
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                        onChange={(e) => setFormData({...formData, interest: e.target.value})}
+                      >
+                        {t.interests.map((opt, i) => (
+                          <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelMessage}</label>
+                    <textarea 
+                      rows={4}
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    ></textarea>
+                  </div>
+
+                  <button 
+                    type="submit" disabled={isSending}
+                    className="w-full bg-primary text-white font-black py-6 rounded-2xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50"
+                  >
+                    {isSending && <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>}
+                    {isSending ? t.btnSending : t.btnSubmit}
+                  </button>
+                </form>
+              </div>
+            )}
+            {/* Footer Navigation */}
+            <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+            </div>
+          </div>
+        </section>
+
         {/* Perk & Deadline Info */}
-        <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-32">
-          <div className="bg-primary/5 dark:bg-primary/10 p-10 rounded-[2.5rem] border border-primary/20 relative overflow-hidden">             
+        <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-32 mt-16">
+          <div className="bg-secondary dark:bg-black/40 p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden">
             <div className="relative z-10">
-              <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{content.deadlineTitle}</h4>
+              <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{t.deadlineTitle}</h4>
               <div className="text-4xl font-black text-secondary dark:text-white mb-4">{content.deadline}</div>
               <p className="text-gray-500 dark:text-gray-400 font-bold">{content.deadlineDesc}</p>
             </div>
           </div>
-        </div>
-
-        {/* Application CTA */}
-        <section className="mb-32 text-center">
-          <a 
-            href="mailto:info@shm.aero" 
-            className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
-          >
-            <span className="material-icons text-2xl">send</span>
-            {content.applyBtn}
-          </a>
-        </section>
-
-        {/* Footer Navigation */}
-        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">          
         </div>
       </div>
     </div>

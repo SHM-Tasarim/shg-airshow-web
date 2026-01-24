@@ -4,8 +4,7 @@ import { Language } from '../App';
 
 interface FooterProps {
   lang: Language;
-  // Navigasyon fonksiyonunu ekledik
-  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners") => void;
+  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners", targetId?: string) => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
@@ -36,10 +35,12 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
   }[lang];
 
   const navLinks = [
-    { name: lang === 'TR' ? 'KATIMCILAR' : 'PARTICIPANTS', id: 'participants' as const },
-    { name: lang === 'TR' ? 'ÇÖZÜM ORTAKLARI' : 'PARTNERS', id: 'partners' as const },
-    // { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const },
-    { name: lang === 'TR' ? 'BİLETLER' : 'TICKETS', id: 'tickets' as const },
+    { name: lang === 'TR' ? 'BİLETLER' : 'TICKETS', id: 'tickets' as const, targetId: undefined },
+    { name: lang === 'TR' ? 'KATILIMCILAR' : 'PARTICIPANTS', id: 'participants' as const, targetId: undefined },
+    { name: lang === 'TR' ? 'ÇÖZÜM ORTAKLARI' : 'PARTNERS', id: 'partners' as const, targetId: undefined },
+    // { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const, targetId: undefined },
+    { name: lang === 'TR' ? 'SIKÇA SORULAN SORULAR' : 'FAQ', id: 'tickets' as const, targetId: 'faq' },
+    { name: lang === 'TR' ? 'SPOTTER KAYDI' : 'SPOTTER REGISTRATION', id: 'spotter' as const, targetId: undefined },
   ];
 
   const socialIconClass = "w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-secondary text-white";
@@ -70,10 +71,10 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               {content.explore}
             </h4>
             <ul className="space-y-4">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <button 
-                    onClick={() => onNavigate(link.id)}
+              {navLinks.map((link, index) => (
+                <li key={`${link.id}-${index}`}>
+                  <button
+                    onClick={() => onNavigate(link.id, link.targetId)}
                     className="text-sm font-bold text-gray-400 hover:text-primary transition-all flex items-center group text-left"
                   >
                     <span className="material-icons text-[10px] mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all">chevron_right</span>

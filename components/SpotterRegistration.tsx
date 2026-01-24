@@ -30,7 +30,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       tagline: "AVIATION PHOTOGRAPHY",
       title: "Spotter Registration",
       greeting: `Dear "Spotter" friends,`,
-      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Airshow" to be held on September 19–20, 2026, please send your application to info@shm.aero.`,
+      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" to be held on September 19–20, 2026, please send your application to info@shm.aero.`,
       body2: "The following information must be included in the application:",
       requirements: [
         "Full Name",

@@ -37,7 +37,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       title: "About",
-      tagline: "Sivrihisar Airshow",
+      tagline: "SHG AIRSHOW",
       archiveTitle: "PAST YEARS",
       mainText: [
         "Organized annually by the Sivrihisar Aviation Club Association at the Sivrihisar Aviation Center Necati Artan Facilities on an international scale, \"Sivrihisar Airshow\" / \"SHG Airshow\" is an organization that appeals to aviation enthusiasts of all ages. \"Sivrihisar Airshow\" emphasizes the importance of aviation while offering numerous opportunities for young people and children to learn about aviation. First held in 2015, the organization attracted great interest and has grown each year, making a name for itself internationally. Today, it is listed as \"SHG Airshows\" in international airshow calendars worldwide.",

@@ -220,21 +220,9 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 opacity-100"
                   />
                   
-                  {/* Vizör Efekti */}
+                  {/* Teknik Etiket */}
                   <div className="absolute inset-0 p-4 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-primary"></div>
-                    <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-primary"></div>
-                    <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-primary"></div>
-                    <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-primary"></div>
-                    
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-10 h-10 border border-primary/30 rounded-full flex items-center justify-center">
-                         <div className="w-1 h-1 bg-primary rounded-full"></div>
-                      </div>
-                    </div>
-
-                    {/* Teknik Etiket */}
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-secondary/80 backdrop-blur-md px-6 py-2 rounded-lg text-[11px] font-mono font-black text-white tracking-[0.2em] border border-white/10 shadow-xl">
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-secondary/80 backdrop-blur-md px-6 py-2 rounded-lg text-[11px] font-mono font-black text-white tracking-[0.2em] border border-white/10 shadow-xl whitespace-nowrap">
                       SHG AIRSHOW <span className="text-primary">{item.year}</span>
                     </div>
                   </div>

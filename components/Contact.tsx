@@ -155,7 +155,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       formName: "Adınız Soyadınız",
       formEmail: "E-posta Adresiniz",
       formMessage: "Mesajınız",
-      formSubmit: "MESAJI GÖNDER",
+      formSubmit: "GÖNDER",
       formSending: "GÖNDERİLİYOR...",
       formSuccess: "Mesajınız Bize Ulaştı!",
       formSuccessSub: "Ekibimiz en kısa sürede size geri dönüş yapacaktır.",
