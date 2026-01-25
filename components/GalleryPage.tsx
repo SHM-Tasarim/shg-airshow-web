@@ -9,7 +9,7 @@ interface GalleryPageProps {
 const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
   const galleryItems = [
   { src: "/images/vecihi-1.jpg", year: "2025" },
-  { src: "/images/yeni-menekse-1.jpg", year: "2025" },
+  { src: "/images/yeni-menekse-6.jpg", year: "2025" },
   { src: "/images/spitfire-1.jpg", year: "2025" },
   { src: "/images/husky-1.jpg", year: "2025" },
   { src: "/images/uh1h-1.jpg", year: "2025" },

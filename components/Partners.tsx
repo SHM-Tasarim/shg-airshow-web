@@ -46,19 +46,19 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   ];
 
   const companyLogos = [
-    { name: "Acromach", logo: "/images/acromach.png" },
+    { name: "Acromach", logo: "/images/acromach.png", link: "https://www.seminozturk.com/" },
     { name: "Agense 190", logo: "/images/agense190-2.png" },
-    { name: "AirFlow Performance", logo: "/images/airflow.png" },
-    { name: "Barry Controls", logo: "/images/barry-controls.png" },
-    { name: "Cinema Pink", logo: "/images/cinemapink.png" },
-    { name: "Dükkan", logo: "/images/dukkan.png" },
-    { name: "Good Year", logo: "/images/goodyear.png" },
-    { name: "Google", logo: "/images/google.png" },
-    { name: "Keskinler", logo: "/images/keskinler.png" },
-    { name: "Ly-Con", logo: "/images/ly-con.png" },
-    { name: "Mach Aviation", logo: "/images/mach.png" },
-    { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png" },
-    { name: "Ofis Tekin", logo: "/images/ofis-tekin.png" },
+    { name: "AirFlow Performance", logo: "/images/airflow.png", link: "https://airflowperformance.com/" },
+    { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
+    { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },
+    { name: "Dükkan", logo: "/images/dukkan.png", link: "http://shop.msomuseum.com/" },
+    { name: "Good Year", logo: "/images/goodyear.png", link: "https://www.goodyear.eu/tr_tr/consumer.html#/" },
+    { name: "Google", logo: "/images/google.png", link: "https://www.google.com/" },
+    { name: "Keskinler", logo: "/images/keskinler.png", link: "https://www.keskinlerinsaat.com.tr/" },
+    { name: "Ly-Con", logo: "/images/ly-con.png", link: "https://www.lycon.com/" },
+    { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
+    { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
+    { name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
   ];
 
   const fuelSponsors = [
@@ -139,22 +139,31 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
           {/* Company Logos Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {companyLogos.map((company, idx) => (
-              <div 
-                key={idx}
-                className="bg-gray-50 dark:bg-gray-900/40 p-6 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary shadow-sm hover:shadow-xl transition-all group min-h-[160px]"
-              >
-                {company.logo.includes('company') ? (
-                    <span className="text-gray-400 font-bold text-sm uppercase tracking-widest opacity-40 group-hover:opacity-100">{company.name}</span>
-                ) : (
-                    <img
-                      src={company.logo}
-                      alt={company.name}
-                      className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
-                    />
-                )}
-              </div>
-            ))}
+            {companyLogos.map((company, idx) => {
+              const cardContent = (
+                <div
+                  className="bg-gray-50 dark:bg-gray-900/40 p-6 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary shadow-sm hover:shadow-xl transition-all group min-h-[160px]"
+                >
+                  {company.logo.includes('company') ? (
+                      <span className="text-gray-400 font-bold text-sm uppercase tracking-widest opacity-40 group-hover:opacity-100">{company.name}</span>
+                  ) : (
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                      />
+                  )}
+                </div>
+              );
+
+              return company.link ? (
+                <a key={idx} href={company.link} target="_blank" rel="noopener noreferrer">
+                  {cardContent}
+                </a>
+              ) : (
+                <div key={idx}>{cardContent}</div>
+              );
+            })}
           </div>
         </section>
 

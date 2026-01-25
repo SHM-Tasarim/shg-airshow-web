@@ -129,7 +129,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
       desc: lang === "TR" ? "Asil vazifesi, 'Türk Kadını'nın' havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of 'Turkish Women' and help all women interested in aviation, is at SHG Airshow!",
-      image: "/images/havaci-kadinlar-dernegi.jpg",
+      image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
     },
     {
