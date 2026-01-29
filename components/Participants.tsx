@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Language } from "../App";
-import { url } from "inspector";
+
+import { Club } from "lucide-react";
 
 interface ParticipantsProps {
   lang: Language;
@@ -36,7 +37,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       ),
     subtitle: lang === "TR" ? "(Alfabetik Sırayla)" : "(in alphabetical order)",
     cta: {
-      title: lang === "TR" ? "Tarihe Tanıklık Et" : "Witness the History",
+      // title: lang === "TR" ? "Tarihe Tanıklık Et" : "Witness the History",
       desc:
         lang === "TR"
           ? "Unutulmaz bir deneyim için biletinizi hemen alın!"
@@ -69,13 +70,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       image: "/images/antonov-an2.jpg",
       url: "https://msomuseum.com/antonov-an-2/",
     },
-    {
-      id: "aviat-husky",
-      name: "AVIAT HUSKY A-1B",
-      desc: lang === "TR" ? "Pist dışındaki arazilere ve kısa mesafelere rahatlıkla iniş-kalkış yapabilme özelliğine sahip olan Husky, seyircilere keyifli anlar yaşatmaya devam ediyor." : "The Husky, which has the ability to take off and land easily on off-runway terrain and short distances, continues to provide pleasant moments to the audience.",
-      image: "/images/aviat-husky.jpg",
-      url: "mach.aero",
-    },
+    // {
+    //   id: "aviat-husky",
+    //   name: "AVIAT HUSKY A-1B",
+    //   desc: lang === "TR" ? "Pist dışındaki arazilere ve kısa mesafelere rahatlıkla iniş-kalkış yapabilme özelliğine sahip olan Husky, seyircilere keyifli anlar yaşatmaya devam ediyor." : "The Husky, which has the ability to take off and land easily on off-runway terrain and short distances, continues to provide pleasant moments to the audience.",
+    //   image: "/images/aviat-husky.jpg",
+    //   url: "mach.aero",
+    // },
     {
       id: "uh1h",
       name: "BELL UH-1H (HUEY)",
@@ -118,7 +119,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
     },
-     {
+    {
       id: "dukkan",
       name: lang === "TR" ? "DÜKKAN" : "DÜKKAN",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin tarihi uçaklarıyla bağlantılı eşsiz kıyafet ve aksesuarlarıyla DÜKKAN, SHG Airshow'da!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow!",
@@ -161,7 +162,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/",
     },
     {
-      id: "t6-texan", 
+      id: "t6-texan",
       name: "NORTH AMERICAN T-6G TEXAN",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi’nin kazandırdığı Türkiye’nin ilk sivil T-6G Harvard uçağı SHG Airshow’da mükemmel bir gösteri için huzurlarınızda olacak." : "Türkiye's first civilian T-6G Harvard aircraft, brought by the M.S.Ö. Air and Space Museum, will be in your presence for a perfect show at SHG Airshow.",
       image: "/images/t6-texan.jpg",
@@ -183,8 +184,8 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
     {
       id: "pars-sener",
-      name: "PARS ŞENER",
-      desc: lang === "TR" ? "Pars Şener, ilk hava gösterisi deneyimini 4 yaşında, dedesi ve Türkiye’nin ilk profesyonel akrobasi pilotu Ali İsmet Öztürk ile birlikte SHG Airshow 2024’te yaşadı. Şimdi ise SHG Airshow 2026’da, sürpriz gösterisiyle izleyicilerin karşısında olacak!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
+      name: "PARS&DEDE AIRSHOW",
+      desc: lang === "TR" ? "Türkiye'nin ilk profesyonal Akrobasi Pilotu Ali İsmet Öztürk, 5 yaşındaki torunu Pars Şener ile Sivrihisar Hava Gösterileri’nde, “Husky A1-B” tipi çift kişilik uçak ile unutulmaz bir uçuşa imza atıyor." : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
       image: "/images/pars-dede-1.jpg",
       url: "mach.aero",
     },
@@ -196,19 +197,26 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       url: seminUrl,
     },
     {
+      id: "sivrihisar-havacilik-kulubu-2",
+      name: lang === "TR" ? "SİVRİHİSAR HAVACILIK KULÜBÜ VE HAVACI KADINLAR DERNEĞİ 3’LÜ KOL UÇUŞU" : "SIVRIHISAR AVIATION CLUB AND WOMEN AVIATORS ASSOCIATION 3-SHIP FORMATION FLIGHT",
+      desc: lang === "TR" ? "Asıl vazifesi, “Türk Kadını”nın havacılık kültürünü arttırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar arttırmayı hedefleyen \"Havacı Kadınlar Derneği\" ile \"Sivrihisar Havacılık Kulubü\" bu yıl ikinci kez heyecan verici bir kol uçuşu ile seyirciyle buluşuyor." : "The main mission of the \"Women Aviators Association\" is to increase the aviation culture of \"Turkish Women\", to help all women interested in aviation, and to increase the number of female pilots as much as possible. Together with the \"Sivrihisar Aviation Club\", they will meet the audience for the second time this year with an exciting formation flight.",
+      image: "/images/kol-ucusu-5.jpg",
+      url: "https://shm.aero/",
+    },
+    {
       id: "sivrihisar-havacilik-kulubu",
       name: lang === "TR" ? "SİVRİHİSAR HAVACILIK KULÜBÜ DERNEĞİ" : "SIVRIHISAR AVIATION CLUB ASSOCIATION",
       desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü Derneği tarafından kurulan S.H.M. 2013 yılından bu yana gökyüzü sevdalılarını  bir araya getiriyor!" : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
       image: "/images/sivrihisar-havacilik-kulubu.jpg",
       url: "https://shm.aero/",
     },
-    {
-      id: "tecnam",
-      name: "TECNAM P92",
-      desc: lang === "TR" ? "İtalyan tasarımı, hafif ve çevik yapısıyla öne çıkan 2 adet Tecnam P92 Ultralight, Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği Kol Uçuşu’nda gökyüzünde buluşuyor!" : "Two Tecnam P92 Ultralights, designed in Italy and standing out with their light and agile structure, meet in the sky at the Sivrihisar Aviation",
-      image: "/images/tecnam-2.jpg",
-      url: "https://www.havacikadinlar.org/",
-    },
+    // {
+    //   id: "tecnam",
+    //   name: "TECNAM P92",
+    //   desc: lang === "TR" ? "İtalyan tasarımı, hafif ve çevik yapısıyla öne çıkan 2 adet Tecnam P92 Ultralight, Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği Kol Uçuşu’nda gökyüzünde buluşuyor!" : "Two Tecnam P92 Ultralights, designed in Italy and standing out with their light and agile structure, meet in the sky at the Sivrihisar Aviation",
+    //   image: "/images/tecnam-2.jpg",
+    //   url: "https://www.havacikadinlar.org/",
+    // },
     // {
     //   id: "ultralight",
     //   name: "ULTRALIGHT",
@@ -218,14 +226,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     // },
     {
       id: "vecihi-xiv",
-      name: lang === "TR" ? "VECİHİ XIV" : "VECIHI XIV",
+      name: lang === "TR" ? "VECİHİ XIV (14)" : "VECIHI XIV (14)",
       desc: lang === "TR" ? "Türkiye'mizin \"İlk Sertifikalı Uçağı\" Vecihi XIV (14) replikası, M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün çalışmasıyla SHG Airshow 2026'da!" : "The replica of Türkiye's 'First Certified Aircraft' Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
     },
     {
-      id: "pitts-s2b",
-      name: lang === "TR" ? "YENİ MENEKŞE (PITTS S-2B)" : "NEW VIOLET (PITTS S-2B)",
+      id: "pitts-s2s",
+      name: lang === "TR" ? <>YENİ MENEKŞE - <br /> ACROMACH S2S</> : <>NEW VIOLET - <br /> ACROMACH S2S</>,
       desc: lang === "TR" ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmaları sonrası \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor." : "The 'Legendary Purple Violet' took the name 'New Violet' after the dedicated work of Mak Teknik and continues its new adventures in the skies with Semin Öztürk Şener.",
       image: "/images/yeni-menekse.jpg",
       url: seminUrl,
@@ -248,7 +256,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
         {participants.map((p, index) => (
           <div
             key={p.id}
-            id={p.id} 
+            id={p.id}
             className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
           >
             <div className={`flex flex-col lg:flex-row ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
@@ -303,13 +311,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       <section className="mt-32 px-4 max-w-5xl mx-auto">
         <div className="relative py-24 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">
+            {/* <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">
               {translations.cta.title}
-            </h2>
-            <p className="text-white/80 font-bold tracking-widest text-xs md:text-sm mb-12 uppercase">
+            </h2> */}
+            <p className="text-white/80 font-bold tracking-widest text-lg md:text-xl mb-12 uppercase">
               {translations.cta.desc}
             </p>
-            <button className="bg-white text-primary font-black py-5 px-16 rounded-lg hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-sm">
+            <button className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg">
               {translations.cta.button}
             </button>
           </div>

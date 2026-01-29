@@ -12,7 +12,11 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       tagline: "SİVRİHİSAR HAVA GÖSTERİLERİ'NE",
       title: "Ulaşım",
       landTitle: "Karadan Ulaşım",
-      landWarning: "Gösteri emniyeti sebebiyle, eski yol üzerinde araç parkına artık izin verilmeyecektir.",
+      shmArrival: "S.H.M. Varış",
+      shmArrivalImage: "/images/ulasim.jpeg",
+      airshowArrival: "SHG AIRSHOW ALANINA VARIŞ",
+      airshowArrivalImage: "/images/Yeni Yol - TR.jpeg",
+      landWarning: "SHG Airshow alanına geçişler, yukarıda gösterilen yeni yol üzerinden ve tek yönlü olarak sağlanacaktır. Araçlar, Batı Apronu'nun sağ tarafından ilerleyeceklerdir.\n\nSHG Airshow alanından çıkışlar ise yine yukarıda belirtilen eski yol üzerinden, tek yönlü olarak gerçekleştirilecektir.\n\nGösteri emniyeti sebebiyle, eski yol üzerinde araç parkına artık izin verilmeyecektir.",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",
@@ -30,7 +34,11 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       tagline: "JOURNEY TO SHG AIRSHOW",
       title: "TRANSPORTATION",
       landTitle: "Land Transportation",
-      landWarning: "Due to safety regulations, vehicle parking on the old road is no longer permitted.",
+      shmArrival: "S.H.M. Arrival",
+      shmArrivalImage: "/images/ulasim_en.jpeg",
+      airshowArrival: "SHG AIRSHOW AREA ARRIVAL",
+      airshowArrivalImage: "/images/Yeni Yol - EN.jpeg",
+      landWarning: "Access to the SHG Airshow area will be provided via the new road shown above, in one direction only. Vehicles will proceed from the right side of the West Apron.\n\nExits from the SHG Airshow area will also be made via the old road indicated above, in one direction only.\n\nDue to show safety, vehicle parking on the old road is no longer permitted.",
       airTitle: "Air Transportation",
       technical: {
         coords: "S.H.M. Coordinates",
@@ -50,8 +58,8 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
       {/* Hero Header */}
       <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
-        <img 
-          src="/images/05-pist-shm.jpg" 
+        <img
+          src="/images/05-pist-shm.jpg"
           className="w-full h-full object-cover"
           alt="Aerial Transportation"
         />
@@ -75,23 +83,38 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
             <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">1</span>
             {content.landTitle}
           </h2>
-          
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5 mb-8 group">
-            <img 
-              src="/images/ulasim.jpeg" 
+
+          <h3 className="text-2xl font-black text-secondary dark:text-white mb-4 text-center uppercase">
+            {content.shmArrival}
+          </h3>
+
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5 mb-12 group">
+            <img
+              src={content.shmArrivalImage}
               className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
               alt="Transportation Map"
-              onError={(e) => {
-                e.currentTarget.src = "https://static.wixstatic.com/media/12c382_e50d53c7c7a44f77975c74384a86b19a~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ulasim.jpg";
-              }}
             />
           </div>
-          
+
+          <h3 className="text-2xl font-black text-secondary dark:text-white mb-4 text-center uppercase">
+            {content.airshowArrival}
+          </h3>
+
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5 mb-8 group">
+            <img
+              src={content.airshowArrivalImage}
+              className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+              alt="New Road"
+            />
+          </div>
+
           <div className="bg-red-50 dark:bg-red-900/10 border-l-4 border-primary p-6 rounded-r-xl">
-            <p className="text-lg font-bold text-red-700 dark:text-red-400">
-              <span className="material-icons align-middle mr-2">error_outline</span>
-              {content.landWarning}
-            </p>
+            <div className="flex items-start gap-2">
+              <span className="material-icons text-red-700 dark:text-red-400 mt-0.5">error_outline</span>
+              <p className="text-base font-medium text-red-700 dark:text-red-400 whitespace-pre-line">
+                {content.landWarning}
+              </p>
+            </div>
           </div>
         </section>
 
@@ -101,12 +124,12 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
             <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm">2</span>
             {content.airTitle}
           </h2>
-          
+
           <div className="bg-secondary dark:bg-black/40 rounded-3xl p-10 shadow-2xl border border-white/5 relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
               <span className="material-icons text-[160px]">flight</span>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
               <div className="space-y-8">
                 <div>
@@ -119,7 +142,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
                   <p className="text-3xl font-black text-primary">131,625 MHz</p>
                 </div>
               </div>
-              
+
               <div className="space-y-8">
                 <div>
                   <h4 className="text-[10px] font-black text-gray-500 tracking-[0.3em] uppercase mb-2">{content.technical.elev}</h4>
@@ -137,7 +160,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
                 </div>
               </div>
             </div>
-            
+
             {/* <div className="mt-12 pt-8 border-t border-white/10">
               <a 
                 href="/SHM_AIP.pdf" 
@@ -158,9 +181,9 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
-            <a 
-              href="https://shm.aero/" 
-              target="_blank" 
+            <a
+              href="https://shm.aero/"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-primary text-white font-black py-5 px-12 rounded-xl hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-sm"
             >
@@ -168,19 +191,19 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
             </a>
           </div>
         </section>
-        
+
 
         {/* Live Map Area - GÜNCEL KONUM BİLGİSİ İLE */}
         <section className="mb-24">
           <div className="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
-            <iframe 
+            <iframe
               title="Sivrihisar Havacılık Merkezi"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1543.8064625175332!2d31.484231403337173!3d39.297027976231945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cdfd073d852337%3A0xd2f34784f222f435!2sSivrihisar%20Havac%C4%B1l%C4%B1k%20Merkezi!5e0!3m2!1str!2str!4v1766698409372!5m2!1str!2str" 
-              width="100%" 
-              height="450" 
-              style={{ border: 0 }} 
-              allowFullScreen={true} 
-              loading="lazy" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1543.8064625175332!2d31.484231403337173!3d39.297027976231945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cdfd073d852337%3A0xd2f34784f222f435!2sSivrihisar%20Havac%C4%B1l%C4%B1k%20Merkezi!5e0!3m2!1str!2str!4v1766698409372!5m2!1str!2str"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>

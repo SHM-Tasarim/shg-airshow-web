@@ -39,6 +39,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       { val: "5M+", lab: isTR ? "DİJİTAL ERİŞİM" : "DIGITAL REACH", icon: "sensors" },
       { val: "50.000+", lab: isTR ? "ZİYARETÇİ" : "VISITORS", icon: "groups" },
     ],
+    statsTitle: isTR ? "SHG AIRSHOW R.EŞDEĞERİ" : "SHG AIRSHOW AD. VALUE",
     // heritageTitleRed: isTR ? "2015" : "2015",
     // heritageTitle: isTR ? "'TEN BUGÜNE" : "SINCE",
     // galleryTitle: isTR ? "GÖSTERİDEN" : "SCENES FROM",
@@ -79,7 +80,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: "df1a22f9-ef96-462a-ae35-2131be9e366a", 
+          access_key: "df1a22f9-ef96-462a-ae35-2131be9e366a",
           subject: `New Sponsorship Application: ${formData.company}`,
           from_name: formData.name,
           ...formData
@@ -111,11 +112,11 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
-      
+
       {/* --- Hero Section --- */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
-        <img 
-          src="/images/sponsor-2.jpg" 
+        <img
+          src="/images/sponsor-2.jpg"
           className="w-full h-full object-cover"
           style={{ transform: `scale(1.1) translateY(${scrollY * 0.1}px)` }}
           alt="SHG Airshow Sponsor"
@@ -142,14 +143,17 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                 {t.introDesc}
               </p>
             </div>
-            
+
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-8 shadow-xl">
+              <h3 className="text-xl font-black text-center text-secondary dark:text-white uppercase tracking-tight border-b border-gray-200 dark:border-white/10 pb-6 mb-2">
+                {t.statsTitle}
+              </h3>
               {t.stats.map((stat, idx) => (
                 <div key={idx} className="flex items-center gap-6">
                   <span className="material-icons text-primary text-4xl">{stat.icon}</span>
                   <div>
                     <div className="text-2xl md:text-3xl font-black text-secondary dark:text-white leading-none uppercase">{stat.val}</div>
-                    <div className="text-[10px] font-bold text-gray-500 tracking-widest uppercase mt-1">{stat.lab}</div>
+                    <div className="text-[10px] md:text-sm font-bold text-gray-500 tracking-widest uppercase mt-1">{stat.lab}</div>
                   </div>
                 </div>
               ))}
@@ -175,10 +179,11 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                 </p>
               </div>
 
-              <div className="max-w-4xl mx-auto">
-                <div className="relative h-[300px] md:h-[350px] flex flex-col justify-end">
+              {/* Desktop View (Original Bar Chart) */}
+              <div className="hidden md:block max-w-4xl mx-auto">
+                <div className="relative h-[350px] flex flex-col justify-end">
                   {/* Trend Line - Golden/Red gradient */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{zIndex: 5}}>
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 5 }}>
                     <defs>
                       <linearGradient id="trendGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#9CA3AF" />
@@ -191,7 +196,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                       stroke="url(#trendGradient)"
                       strokeWidth="3"
                       strokeLinecap="round"
-                      style={{filter: 'drop-shadow(0 0 8px rgba(239, 68, 68, 0.5))'}}
+                      style={{ filter: 'drop-shadow(0 0 8px rgba(239, 68, 68, 0.5))' }}
                     />
                     {/* Arrow */}
                     <path
@@ -204,7 +209,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   </svg>
 
                   {/* Bars */}
-                  <div className="flex items-end justify-between gap-1 md:gap-2 px-2 h-full">
+                  <div className="flex items-end justify-between gap-2 px-2 h-full">
                     {[
                       { year: "2015", value: 9000, height: 18 },
                       { year: "2017", value: 6000, height: 36 },
@@ -217,7 +222,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                       { year: "2024", value: 20000, height: 82 },
                       { year: "2025", value: 30000, height: 85, isProjected: true }
                     ].map((item, idx) => (
-                      <div key={idx} className="flex-1 flex flex-col items-center justify-end group" style={{height: '100%'}}>
+                      <div key={idx} className="flex-1 flex flex-col items-center justify-end group" style={{ height: '100%' }}>
                         {/* Bar */}
                         <div
                           className={`w-full ${item.isProjected ? 'bg-primary' : item.year === '2020' || item.year === '2021' ? '' : 'bg-blue-900'} rounded-t-lg transition-all duration-700 ease-out hover:brightness-110 relative overflow-hidden`}
@@ -232,23 +237,66 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                           )}
                         </div>
 
+                        {/* Tooltip for 2020 & 2021 */}
+                        {(item.year === "2020" || item.year === "2021") && (
+                          <div className="absolute bottom-full mb-4 w-64 bg-black/90 text-white text-sm p-4 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20 text-center shadow-2xl border border-white/10 translate-y-2 group-hover:translate-y-0">
+                            {isTR
+                              ? "SHG Airshow pandemi sebebiyle 2020 ve 2021 senelerinde canlı yayınlanarak büyük kitlelere ulaştı."
+                              : "SHG Airshow reached large audiences through live broadcasts in 2020 and 2021 due to the pandemic."}
+                            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/90"></div>
+                          </div>
+                        )}
+
                         {/* Year label */}
-                        <div className="mt-2 text-white font-black text-[8px] md:text-[10px] tracking-wider">
+                        <div className="mt-2 text-white font-black text-[10px] tracking-wider">
                           {item.year}
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
+              </div>
 
-                {/* Pandemic Note */}
-                <div className="mt-8 text-center">
-                  <p className="text-gray-500 dark:text-gray-400 text-xs md:text-sm font-bold italic">
-                    {isTR
-                      ? "SHG Airshow pandemi sebebiyle 2021 ve 2022 senelerinde canlı yayınlanarak büyük kitlelere ulaştı."
-                      : "SHG Airshow reached large audiences through live broadcasts in 2021 and 2022 due to the pandemic."}
-                  </p>
-                </div>
+              {/* Mobile View (Horizontal Bar Chart) */}
+              <div className="md:hidden space-y-3 px-2">
+                {[
+                  { year: "2015", value: 9000, height: 18 },
+                  { year: "2017", value: 6000, height: 36 },
+                  { year: "2018", value: 9000, height: 47 },
+                  { year: "2019", value: 11000, height: 72 },
+                  { year: "2020", value: 13000, height: 100 },
+                  { year: "2021", value: 13000, height: 80 },
+                  { year: "2022", value: 13000, height: 79 },
+                  { year: "2023", value: 20000, height: 82 },
+                  { year: "2024", value: 20000, height: 82 },
+                  { year: "2025", value: 30000, height: 85, isProjected: true }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3">
+                    <span className="text-white font-bold text-xs w-8">{item.year}</span>
+                    <div className="flex-1 h-6 bg-white/5 rounded-full overflow-hidden relative">
+                      <div
+                        className={`h-full ${item.isProjected ? 'bg-primary' : item.year === '2020' || item.year === '2021' ? '' : 'bg-blue-900'} rounded-full relative`}
+                        style={{
+                          width: `${item.height}%`,
+                          ...(item.year === '2020' || item.year === '2021' ? { backgroundColor: '#9DA3AF' } : {})
+                        }}
+                      >
+                        {item.isProjected && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-red-700 to-primary animate-pulse"></div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Pandemic Note */}
+              <div className="mt-8 text-center">
+                <p className="text-gray-500 dark:text-gray-400 text-xs md:text-sm font-bold italic">
+                  {isTR
+                    ? "SHG Airshow pandemi sebebiyle 2021 ve 2022 senelerinde canlı yayınlanarak büyük kitlelere ulaştı."
+                    : "SHG Airshow reached large audiences through live broadcasts in 2021 and 2022 due to the pandemic."}
+                </p>
               </div>
             </div>
           </div>
@@ -264,7 +312,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
           {/* <div className="max-w-5xl mx-auto relative">
             {/* Vertical Center Line */}
-            {/* <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 hidden md:block"></div>
+          {/* <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 hidden md:block"></div>
 
             <div className="space-y-16 md:space-y-24">
               {t.milestones.map((m, i) => {
@@ -272,7 +320,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                 return (
                   <div key={i} className={`relative flex items-center ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     {/* Content Card */}
-                    {/* <div className={`w-full md:w-[calc(50%-3rem)] ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
+          {/* <div className={`w-full md:w-[calc(50%-3rem)] ${isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
                       <div className="border-2 rounded-2xl overflow-hidden transition-all duration-500 shadow-lg border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
                         <div className="px-6 py-5">
                           <div className="flex items-center justify-between w-full mb-3">
@@ -309,14 +357,14 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                     </div>
 
                     {/* Center Dot */}
-                    {/* <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-4 transition-all duration-500 z-10 bg-secondary dark:bg-white border-gray-200 dark:border-gray-800"></div>
+          {/* <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full border-4 transition-all duration-500 z-10 bg-secondary dark:bg-white border-gray-200 dark:border-gray-800"></div>
                   </div>
                 );
               })}
             </div>
 
             {/* More Achievements Text */}
-            {/* <div className="text-center mt-20">
+          {/* <div className="text-center mt-20">
               <h3 className="text-3xl md:text-5xl font-black text-secondary dark:text-white uppercase tracking-tight">
                 {t.moreAchievements}
               </h3>
@@ -349,7 +397,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   />
                 </div>
                 {/* İnce Alt Çizgi Efekti */}
-                {/* <div className="absolute bottom-0 left-0 w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+        {/* <div className="absolute bottom-0 left-0 w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
               </div>
             ))}
           </div>
@@ -381,22 +429,22 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {error && <div className="bg-red-500/10 border border-red-500/50 text-red-400 px-6 py-4 rounded-xl text-sm font-bold">{error}</div>}
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelCompany}</label>
-                      <input 
+                      <input
                         type="text" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, company: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
-                      <input 
+                      <input
                         type="text" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       />
                     </div>
                   </div>
@@ -404,17 +452,17 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
-                      <input 
+                      <input
                         type="email" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
-                      <select 
+                      <select
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
-                        onChange={(e) => setFormData({...formData, interest: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
                       >
                         {t.interests.map((opt, i) => (
                           <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
@@ -425,14 +473,14 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
                   <div className="space-y-2">
                     <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelMessage}</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     ></textarea>
                   </div>
 
-                  <button 
+                  <button
                     type="submit" disabled={isSending}
                     className="w-full bg-primary text-white font-black py-6 rounded-2xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50"
                   >
@@ -444,8 +492,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
             )}
           </div>
         </section>
-        </div>
-      </div>
+      </div >
+    </div >
   );
 };
 

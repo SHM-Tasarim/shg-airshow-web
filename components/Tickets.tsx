@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Language } from "../App";
 
 interface TicketsProps {
@@ -7,7 +7,7 @@ interface TicketsProps {
 }
 
 const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
 
   useEffect(() => {
     if (targetId === "faq") {
@@ -47,27 +47,27 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
   //             "Food and beverage stands access",
   //           ],
   //   },
-    // {
-    //   title: lang === "TR" ? "VIP Bilet" : "VIP Ticket",
-    //   features:
-    //     lang === "TR"
-    //       ? [
-    //           "Özel Giriş",
-    //           "Güneşlikli veranda alanında ve/veya klimalı salonda VIP oturma alanı",
-    //           "Salonda bulunan VIP tuvaletlerine erişim imkanı",
-    //           "VIP salonuna ait özel mutfaktan sunulan Türk mutfağı seçkisi",
-    //           "Gün boyu sunulan ücretsiz yiyecek ve içecekler ikramı",
-    //           "VIP otopark",
-    //         ]
-    //       : [
-    //           "Private Entrance",
-    //           "VIP seating area in shaded veranda and/or air-conditioned lounge",
-    //           "Access to VIP restrooms located in the lounge",
-    //           "Selection of Turkish cuisine served from the lounge's private kitchen",
-    //           "Complimentary food and beverages served throughout the day",
-    //           "VIP parking",
-    //         ],
-    // },
+  // {
+  //   title: lang === "TR" ? "VIP Bilet" : "VIP Ticket",
+  //   features:
+  //     lang === "TR"
+  //       ? [
+  //           "Özel Giriş",
+  //           "Güneşlikli veranda alanında ve/veya klimalı salonda VIP oturma alanı",
+  //           "Salonda bulunan VIP tuvaletlerine erişim imkanı",
+  //           "VIP salonuna ait özel mutfaktan sunulan Türk mutfağı seçkisi",
+  //           "Gün boyu sunulan ücretsiz yiyecek ve içecekler ikramı",
+  //           "VIP otopark",
+  //         ]
+  //       : [
+  //           "Private Entrance",
+  //           "VIP seating area in shaded veranda and/or air-conditioned lounge",
+  //           "Access to VIP restrooms located in the lounge",
+  //           "Selection of Turkish cuisine served from the lounge's private kitchen",
+  //           "Complimentary food and beverages served throughout the day",
+  //           "VIP parking",
+  //         ],
+  // },
   // ];
 
   const faqs = [
@@ -85,7 +85,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
     },
     {
       q: lang === "TR" ? "Ücretsiz Giriş İmkanı Var Mı?" : "IS THERE A FREE ENTRY OPTION?",
-      a: lang === "TR" ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir." : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees.",
+      a: lang === "TR" ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir." : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees.",
     },
     {
       q: lang === "TR" ? "Otopark mevcut mu?" : "IS PARKING AVAILABLE?",
@@ -206,31 +206,19 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="border border-gray-200 dark:border-white/5 rounded-2xl overflow-hidden bg-white dark:bg-gray-900/60 transition-all duration-300 shadow-sm"
               >
-                <button
-                  onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"
-                >
-                  <span className={`text-sm md:text-base font-black uppercase tracking-tight leading-tight transition-colors ${openIndex === idx ? 'text-primary' : 'text-secondary dark:text-white'}`}>
+                <div className="p-6 pb-3 text-left">
+                  <span className="text-sm md:text-base font-black uppercase tracking-tight leading-tight text-secondary dark:text-white">
                     {faq.q}
                   </span>
-                  <span className={`material-icons transition-transform duration-300 ${openIndex === idx ? 'rotate-180 text-primary' : 'text-gray-400'}`}>
-                    expand_more
-                  </span>
-                </button>
-                
-                <div 
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    openIndex === idx ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  <div className="p-6 pt-0 text-gray-600 dark:text-gray-400 text-sm md:text-base font-medium leading-relaxed">
-                    <div className="h-px bg-gray-100 dark:bg-white/5 mb-6"></div>
-                    {faq.a}
-                  </div>
+                </div>
+
+                <div className="px-6 pb-6 pt-0 text-gray-600 dark:text-gray-400 text-sm md:text-base font-medium leading-relaxed">
+                  <div className="h-px bg-gray-100 dark:bg-white/5 mb-4"></div>
+                  {faq.a}
                 </div>
               </div>
             ))}

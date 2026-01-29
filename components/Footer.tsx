@@ -4,7 +4,7 @@ import { Language } from '../App';
 
 interface FooterProps {
   lang: Language;
-  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners", targetId?: string) => void;
+  onNavigate: (view: "home" | "program" | "participants" | "tickets" | "partners" | "transport", targetId?: string) => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
     <footer className="bg-secondary text-white overflow-hidden relative border-t border-white/5">
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          
+
           {/* Column 1: Brand Profile */}
           <div className="space-y-8">
             <div className="flex items-center gap-4 cursor-pointer" onClick={() => onNavigate('home')}>
@@ -142,15 +142,13 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
                 </svg>
               </a>
             </div>
-            <a 
-              href={mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-lg hover:bg-white hover:text-secondary transition-all"
+            <button
+              onClick={() => onNavigate('transport')}
+              className="group flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-lg hover:bg-white hover:text-secondary transition-all w-full"
             >
               <span className="text-[11px] font-black tracking-widest uppercase">{content.mapBtn}</span>
               <span className="material-icons text-primary group-hover:text-secondary transition-colors">near_me</span>
-            </a>
+            </button>
           </div>
 
         </div>
@@ -161,9 +159,9 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             © {currentYear} SHG AIRSHOW • {content.rights}
           </div>
           <div className="flex items-center gap-6 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-             <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase hidden sm:block">SİVRİHİSAR HAVACILIK MERKEZİ</span>
-             <div className="hidden sm:block w-px h-4 bg-white/20"></div>
-             <img src="/images/shm.png" className="h-6 w-auto" alt="SHM Logo" />
+            <span className="text-[10px] font-bold tracking-widest text-gray-500 uppercase hidden sm:block">SİVRİHİSAR HAVACILIK MERKEZİ</span>
+            <div className="hidden sm:block w-px h-4 bg-white/20"></div>
+            <img src="/images/shm.png" className="h-6 w-auto" alt="SHM Logo" />
           </div>
         </div>
       </div>

@@ -9,24 +9,24 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
   const images = [
     {
+      src: "/images/kol-ucusu-4.jpg",
+      text: lang === "TR" ? "KATILIMCILAR" : "PARTICIPANTS",
+      id: "participants",
+    },
+    {
       src: "/images/sponsor-3.jpg",
       text: lang === "TR" ? "SPONSORLUK" : "SPONSORSHIP",
-      id: "sponsor", 
+      id: "sponsor",
     },
     {
       src: "/images/seyirci-t.jpg",
       text: lang === "TR" ? "TANITIM VE SATIŞ STANDLARI" : "PROMOTION AND SALES STANDS",
-      id: "stand", 
+      id: "stand",
     },
     {
-      src: "/images/volunteer.jpg",
-      text: lang === "TR" ? "GÖNÜLLÜ BAŞVURUSU" : "VOLUNTEER APPLICATION",
-      id: "volunteer", 
-    },
-    {
-      src: "/images/school-2.jpg",
-      text: lang === "TR" ? "OKULLARA ÖZEL" : "SCHOOL PROGRAMS",
-      id: "schools", 
+      src: "/images/shg-ulasim.jpg",
+      text: lang === "TR" ? "ULAŞIM" : "TRANSPORTATION",
+      id: "transport",
     },
   ];
 
@@ -45,8 +45,8 @@ const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-secondary/60 flex items-center justify-center transition-opacity duration-300 group-hover:bg-primary/40">
-              <h3 className="text-2xl font-extrabold text-white uppercase tracking-widest text-center px-4 transition-transform duration-300 group-hover:scale-110">
+            <div className="absolute inset-0 bg-secondary/40 flex items-center justify-center transition-all duration-300 group-hover:bg-secondary/40">
+              <h3 className="text-2xl font-extrabold text-white uppercase tracking-widest text-center px-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-lg">
                 {item.text}
               </h3>
             </div>
