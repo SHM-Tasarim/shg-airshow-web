@@ -72,32 +72,32 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const faqs = [
     {
+      q: lang === "TR" ? "Nasıl Bilet Satın Alabilirim?" : "HOW TO BUY TICKETS?",
+      a: lang === "TR" ? "SHG Airshow'a giriş işlemlerinizin hızlıca tamamlanabilmesi için biletlerinizi organizasyon öncesinde indirmenizi tavsiye ederiz. Biletlerinize e-posta, SMS veya Biletinial mobil uygulaması üzerinden ulaşabilirsiniz. Ayrıca, organizasyon günlerinde alanda bulunan SHG gişelerimizden de bilet satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via email, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
+    },
+    {
       q: lang === "TR" ? "Çocuklar için yaş sınırı var mı?" : "IS THERE AN AGE LIMIT FOR CHILDREN?",
       a: lang === "TR" ? "Organizasyonumuz tüm yaş grupları için uygundur; 6 yaş ve altı çocuklar ücretsizdir." : "Our event is suitable for all age groups; children aged 6 and under are free of charge.",
     },
     {
-      q: lang === "TR" ? "Nasıl Bilet Satın Alabilirim?" : "HOW TO BUY TICKETS?",
-      a: lang === "TR" ? "SHG Airshow’a giriş işlemlerinizin hızlıca tamamlanabilmesi için biletlerinizi organizasyon öncesinde indirmenizi tavsiye ederiz. Biletlerinize e-posta, SMS veya Biletinial mobil uygulaması üzerinden ulaşabilirsiniz. Ayrıca, organizasyon günlerinde alanda bulunan SHG gişelerimizden de bilet satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via email, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
+      q: lang === "TR" ? "Otopark mevcut mu?" : "IS PARKING AVAILABLE?",
+      a: lang === "TR" ? "Etkinlik alanında ücretsiz otopark alanları mevcuttur. Ayrıca, VIP bilet alan seyircilerimiz için özel otopark alanı ayrılmıştır." : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our VIP ticket holders.",
+    },
+    {
+      q: lang === "TR" ? "Nasıl Ulaşım Sağlayabilirim?" : "HOW CAN I GET THERE?",
+      a: lang === "TR" ? "Gösteri alanına ulaşım için navigasyon uygulamalarında lütfen \"Sivrihisar Havacılık Merkezi\" konumunu hedefleyin. Bölgeye ulaştığınızda yol kenarındaki \"SHG Airshow\" tabelaları size rehberlik edecektir. Ayrıca, Sivrihisar Belediye Binası önünden hareket eden ücretsiz ring seferlerini kullanarak ulaşım sağlayabilirsiniz." : "For directions to the show area, please set your navigation app to 'Sivrihisar Aviation Center'. Upon reaching the area, follow the 'SHG Airshow' signs along the roadside for guidance. Additionally, you can utilize the free shuttle services departing from in front of the Sivrihisar Municipality Building.",
     },
     {
       q: lang === "TR" ? "Gösteriye Nasıl Hızlı Giriş Yapabilirim?" : "HOW CAN I ENTER THE SHOW QUICKLY?",
-      a: lang === "TR" ? "SHG Airshow’a giriş işlemlerinizin hızlıca tamamlanabilmesi için biletlerinizi organizasyon öncesinde indirmenizi tavsiye ederiz. Biletlerinize e-posta, SMS veya Biletinial mobil uygulaması üzerinden ulaşabilirsiniz. Ayrıca, organizasyon günlerinde alanda bulunan SHG gişelerimizden de bilet satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via email, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
+      a: lang === "TR" ? "SHG Airshow'a giriş işlemlerinizin hızlıca tamamlanabilmesi için biletlerinizi organizasyon öncesinde indirmenizi tavsiye ederiz. Biletlerinize e-posta, SMS veya Biletinial mobil uygulaması üzerinden ulaşabilirsiniz. Ayrıca, organizasyon günlerinde alanda bulunan SHG gişelerimizden de bilet satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via email, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
     },
     // {
     //   q: lang === "TR" ? "Ücretsiz Giriş İmkanı Var Mı?" : "IS THERE A FREE ENTRY OPTION?",
     //   a: lang === "TR" ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir." : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees.",
     // },
     {
-      q: lang === "TR" ? "Otopark mevcut mu?" : "IS PARKING AVAILABLE?",
-      a: lang === "TR" ? "Etkinlik alanında ücretsiz otopark alanları mevcuttur. Ayrıca, VIP bilet alan seyircilerimiz için özel otopark alanı ayrılmıştır." : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our VIP ticket holders.",
-    },
-    {
       q: lang === "TR" ? "Yanımıza Ne Almamızı Önerirsiniz?" : "WHAT DO YOU RECOMMEND BRINGING WITH YOU?",
-      a: lang === "TR" ? "Sivrihisar Hava Gösterileri’ni kesintisiz seyredebilmek için güneş gözlüğü, şapka ve güneş kreminizi yanınızda bulundurmanızı öneririz." : "To fully enjoy the Sivrihisar Airshows, we recommend bringing sunglasses, a hat, and sunscreen with you.",
-    },
-    {
-      q: lang === "TR" ? "Nasıl Ulaşım Sağlayabilirim?" : "HOW CAN I GET THERE?",
-      a: lang === "TR" ? "Gösteri alanına ulaşım için navigasyon uygulamalarında lütfen 'Sivrihisar Havacılık Merkezi' konumunu hedefleyin. Bölgeye ulaştığınızda yol kenarındaki 'SHG Airshow' tabelaları size rehberlik edecektir. Ayrıca, Sivrihisar Belediye Binası önünden hareket eden ücretsiz ring seferlerini kullanarak ulaşım sağlayabilirsiniz." : "For directions to the show area, please set your navigation app to 'Sivrihisar Aviation Center'. Upon reaching the area, follow the 'SHG Airshow' signs along the roadside for guidance. Additionally, you can utilize the free shuttle services departing from in front of the Sivrihisar Municipality Building.",
+      a: lang === "TR" ? "Sivrihisar Hava Gösterileri'ni kesintisiz seyredebilmek için güneş gözlüğü, şapka ve güneş kreminizi yanınızda bulundurmanızı öneririz." : "To fully enjoy the Sivrihisar Airshows, we recommend bringing sunglasses, a hat, and sunscreen with you.",
     },
     {
       q: lang === "TR" ? "Bebek Bakım Odası var mı?" : "IS THERE A BABY CARE ROOM?",
@@ -121,7 +121,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
     },
     {
       q: lang === "TR" ? "Kamp Alanı Mevcut Mu?" : "IS THERE A CAMP AREA?",
-      a: lang === "TR" ? "Organizasyon alanının çevresinde, kamp yapmak isteyen misafirlerimiz için özel olarak ayrılmış bir alan bulunmaktadır. Kamp alanında portatif tuvaletler yer almaktadır. Airshow heyecanını gün boyu yaşamak ve etkinliğin atmosferini kamp deneyimiyle birleştirmek isteyen katılımcılar için bu alan tahsis edilmiştir." : "There is a designated area around the event venue for guests who wish to camp. Portable restrooms are available in the camping area. This area is allocated for participants who want to experience the excitement of the Airshow throughout the day and combine the event's atmosphere with a camping experience.",
+      a: lang === "TR" ? "Organizasyon alanının çevresinde, kamp yapmak isteyen misafirlerimiz için özel olarak ayrılmış bir alan bulunmaktadır." : "There is a designated area around the event venue for guests who wish to camp. Portable restrooms are available in the camping area. This area is allocated for participants who want to experience the excitement of the Airshow throughout the day and combine the event's atmosphere with a camping experience.",
     },
   ];
 
@@ -192,9 +192,9 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             arrow_forward
           </span>
         </a>
-        <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+        <p className="mt-10 max-w-3xl mx-auto text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed">
           {lang === "TR"
-            ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
+            ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
             : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees."}
         </p>
       </section>

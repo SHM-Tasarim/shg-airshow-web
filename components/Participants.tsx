@@ -40,8 +40,8 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       // title: lang === "TR" ? "Tarihe Tanıklık Et" : "Witness the History",
       desc:
         lang === "TR"
-          ? "Unutulmaz bir deneyim için biletinizi hemen alın!"
-          : "Get your ticket now for an unforgettable experience!",
+          ? "Ve çok daha fazlası için biletinizi hemen alın!"
+          : "And much more, buy your ticket now!",
       button: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     },
   };
@@ -198,7 +198,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
     {
       id: "sivrihisar-havacilik-kulubu-2",
-      name: lang === "TR" ? "SİVRİHİSAR HAVACILIK KULÜBÜ VE HAVACI KADINLAR DERNEĞİ 3’LÜ KOL UÇUŞU" : "SIVRIHISAR AVIATION CLUB AND WOMEN AVIATORS ASSOCIATION 3-SHIP FORMATION FLIGHT",
+      name: lang === "TR" ? <><span className="block">3'LÜ KOL UÇUŞU</span><span className="block text-lg font-bold text-white mt-3 leading-relaxed tracking-wide">Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği</span></> : <><span className="block">3-SHIP FORMATION FLIGHT</span><span className="block text-lg font-bold text-white mt-3 leading-relaxed tracking-wide">Sivrihisar Aviation Club and Women Aviators Association</span></>,
       desc: lang === "TR" ? "Asıl vazifesi, “Türk Kadını”nın havacılık kültürünü arttırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar arttırmayı hedefleyen \"Havacı Kadınlar Derneği\" ile \"Sivrihisar Havacılık Kulubü\" bu yıl ikinci kez heyecan verici bir kol uçuşu ile seyirciyle buluşuyor." : "The main mission of the \"Women Aviators Association\" is to increase the aviation culture of \"Turkish Women\", to help all women interested in aviation, and to increase the number of female pilots as much as possible. Together with the \"Sivrihisar Aviation Club\", they will meet the audience for the second time this year with an exciting formation flight.",
       image: "/images/kol-ucusu-5.jpg",
       url: "https://shm.aero/",
@@ -233,7 +233,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
     },
     {
       id: "pitts-s2s",
-      name: lang === "TR" ? <>YENİ MENEKŞE - <br /> ACROMACH S2S</> : <>NEW VIOLET - <br /> ACROMACH S2S</>,
+      name: lang === "TR" ? <>YENİ MENEKŞE <br /> ACROMACH S2S</> : <>NEW VIOLET <br /> ACROMACH S2S</>,
       desc: lang === "TR" ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmaları sonrası \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor." : "The 'Legendary Purple Violet' took the name 'New Violet' after the dedicated work of Mak Teknik and continues its new adventures in the skies with Semin Öztürk Şener.",
       image: "/images/yeni-menekse.jpg",
       url: seminUrl,

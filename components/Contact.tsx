@@ -50,6 +50,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
     email: "",
     message: "",
   });
@@ -151,10 +152,11 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         "Sivrihisar Havacılık Merkezi, Necati Artan Tesisleri, Sivrihisar / Eskişehir",
       phoneLabel: "TELEFON",
       emailLabel: "E-POSTA",
-      formTitle: "Mesaj Gönderin",
-      formName: "Adınız Soyadınız",
-      formEmail: "E-posta Adresiniz",
-      formMessage: "Mesajınız",
+      formTitle: "Mesaj",
+      formName: "Ad Soyad",
+      formPhone: "Telefon Numarası",
+      formEmail: "E-posta",
+      formMessage: "Mesaj",
       formSubmit: "GÖNDER",
       formSending: "GÖNDERİLİYOR...",
       formSuccess: "Mesajınız Bize Ulaştı!",
@@ -176,6 +178,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       emailLabel: "EMAIL",
       formTitle: "Send a Message",
       formName: "Full Name",
+      formPhone: "Phone Number",
       formEmail: "Email Address",
       formMessage: "Your Message",
       formSubmit: "SEND MESSAGE",
@@ -247,7 +250,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
 
       if (result.success) {
         setIsSubmitted(true);
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", phone: "", email: "", message: "" });
       } else {
         setError(
           lang === "TR"
@@ -394,21 +397,35 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
                         </div>
                         <div className='space-y-2'>
                           <label className='text-[10px] font-black text-gray-500 tracking-widest uppercase'>
-                            {content.formEmail}
+                            {content.formPhone}
                           </label>
                           <input
-                            type='email'
+                            type='tel'
                             required
-                            value={formData.email}
+                            value={formData.phone}
                             onChange={(e) =>
-                              setFormData({
-                                ...formData,
-                                email: e.target.value,
-                              })
+                              setFormData({ ...formData, phone: e.target.value })
                             }
                             className='w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors'
                           />
                         </div>
+                      </div>
+                      <div className='space-y-2'>
+                        <label className='text-[10px] font-black text-gray-500 tracking-widest uppercase'>
+                          {content.formEmail}
+                        </label>
+                        <input
+                          type='email'
+                          required
+                          value={formData.email}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              email: e.target.value,
+                            })
+                          }
+                          className='w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors'
+                        />
                       </div>
                       <div className='space-y-2'>
                         <label className='text-[10px] font-black text-gray-500 tracking-widest uppercase'>

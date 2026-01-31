@@ -24,7 +24,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
       id: "stand",
     },
     {
-      src: "/images/shg-ulasim.jpg",
+      src: "/images/otopark-deneme.jpg",
       text: lang === "TR" ? "ULAŞIM" : "TRANSPORTATION",
       id: "transport",
     },

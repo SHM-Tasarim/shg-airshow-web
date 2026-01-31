@@ -10,7 +10,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
   const highlights = [
     {
       title: lang === "TR" ? "Sivrihisar Hava Gösterileri" : "SHG AIRSHOW",
-      id: "about", 
+      id: "about",
       desc:
         lang === "TR"
           ? "SHG Airshow İlklerin Adresi"
@@ -47,7 +47,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
   ];
 
   return (
-    <section className="py-20 container mx-auto px-4 md:px-6 lg:px-8">
+    <section className="py-10 container mx-auto px-4 md:px-6 lg:px-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {highlights.map((item, idx) => (
           <div
@@ -69,7 +69,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
               <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {item.desc}
               </p>
-              
+
               <div className="mt-4 flex items-center text-primary font-bold text-[10px] tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
                 {lang === "TR" ? "İNCELE" : "VIEW DETAILS"}
                 <span className="material-icons text-sm ml-2">arrow_forward</span>

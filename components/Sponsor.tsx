@@ -16,9 +16,10 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
   const [formData, setFormData] = useState({
     company: "",
-    name: "",
+    fullName: "",
+    phone: "",
     email: "",
-    interest: isTR ? "Ana Sponsorluk" : "Main Sponsorship",
+    interest: isTR ? "Sponsorluk" : "Sponsorship",
     message: "",
   });
 
@@ -36,10 +37,13 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       ? "Sivrihisar Hava Gösterileri, markanızı gökyüzünden milyonlara ulaştıran benzersiz bir platform sunuyor."
       : "SHG Airshow offer a unique platform to elevate your brand to millions from the sky.",
     stats: [
-      { val: "5M+", lab: isTR ? "DİJİTAL ERİŞİM" : "DIGITAL REACH", icon: "sensors" },
-      { val: "50.000+", lab: isTR ? "ZİYARETÇİ" : "VISITORS", icon: "groups" },
+      { val: isTR ? "8 Milyon" : "8 Million", lab: isTR ? "CANLI YAYIN ERİŞİMİ" : "LIVE STREAM REACH", icon: "live_tv" },
+      { val: "5 Milyon +", lab: isTR ? "DİJİTAL ERİŞİM" : "DIGITAL REACH", icon: "sensors" },
+      //{ val: "50.000+", lab: isTR ? "ZİYARETÇİ" : "VISITORS", icon: "groups" },
+      //{ val: isTR ? "100.000+" : "100,000+", lab: isTR ? "TOPLAM ZİYARETÇİ" : "TOTAL VISITORS", icon: "people" },
+
     ],
-    statsTitle: isTR ? "SHG AIRSHOW R.EŞDEĞERİ" : "SHG AIRSHOW AD. VALUE",
+    statsTitle: isTR ? "SHG AIRSHOW REKLAM EŞDEĞERİ" : "SHG AIRSHOW AD. VALUE",
     // heritageTitleRed: isTR ? "2015" : "2015",
     // heritageTitle: isTR ? "'TEN BUGÜNE" : "SINCE",
     // galleryTitle: isTR ? "GÖSTERİDEN" : "SCENES FROM",
@@ -60,14 +64,15 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     formSuccess: isTR ? "BAŞVURU ALINDI" : "APPLICATION RECEIVED",
     formSuccessSub: isTR ? "Ekibimiz en kısa sürede sizinle iletişime geçecektir." : "Our team will contact you as soon as possible.",
     newForm: isTR ? "YENİ BAŞVURU" : "NEW APPLICATION",
-    labelCompany: isTR ? "Firma Adı" : "Company Name",
-    labelContact: isTR ? "Yetkili" : "Contact Person",
-    labelEmail: isTR ? "E-Posta" : "Email Address",
-    labelInterest: isTR ? "İlgi Alanı" : "Interest Type",
-    labelMessage: isTR ? "Mesajınız" : "Your Message",
+    labelCompany: isTR ? "ŞİRKET ADI" : "COMPANY NAME",
+    labelFullName: isTR ? "AD SOYAD" : "FULL NAME",
+    labelContact: isTR ? "TELEFON NUMARASI" : "PHONE NUMBER",
+    labelEmail: isTR ? "E-POSTA" : "E-MAIL",
+    labelInterest: isTR ? "İLGİ ALANI" : "INTEREST TYPE",
+    labelMessage: isTR ? "MESAJ" : "MESSAGE",
     btnSubmit: isTR ? "GÖNDER" : "SEND",
     btnSending: isTR ? "GÖNDERİLİYOR..." : "SENDING...",
-    interests: isTR ? ["Sponsorluk"] : ["Main Sponsorship"]
+    interests: isTR ? ["Sponsorluk"] : ["Sponsorship"]
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -90,7 +95,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       const result = await response.json();
       if (result.success) {
         setIsSubmitted(true);
-        setFormData({ company: "", name: "", email: "", interest: t.interests[0], message: "" });
+        setFormData({ company: "", fullName: "", phone: "", email: "", interest: t.interests[0], message: "" });
       } else {
         setError(isTR ? "Bir hata oluştu." : "An error occurred.");
       }
@@ -145,9 +150,14 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
             </div>
 
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-8 shadow-xl">
-              <h3 className="text-xl font-black text-center text-secondary dark:text-white uppercase tracking-tight border-b border-gray-200 dark:border-white/10 pb-6 mb-2">
-                {t.statsTitle}
-              </h3>
+              <div className="text-center mb-4">
+                <p className="text-lg md:text-xl font-black text-secondary dark:text-white uppercase tracking-tight">
+                  SHG AIRSHOW
+                </p>
+                <p className="text-sm md:text-base font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                  {isTR ? "REKLAM EŞDEĞERİ" : "AD. VALUE"}
+                </p>
+              </div>
               {t.stats.map((stat, idx) => (
                 <div key={idx} className="flex items-center gap-6">
                   <span className="material-icons text-primary text-4xl">{stat.icon}</span>
@@ -264,8 +274,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   { year: "2017", value: 6000, height: 36 },
                   { year: "2018", value: 9000, height: 47 },
                   { year: "2019", value: 11000, height: 72 },
-                  { year: "2020", value: 13000, height: 100 },
-                  { year: "2021", value: 13000, height: 80 },
+                  { year: "2020", value: 13000, height: 190 },
+                  { year: "2021", value: 13000, height: 100 },
                   { year: "2022", value: 13000, height: 79 },
                   { year: "2023", value: 20000, height: 82 },
                   { year: "2024", value: 20000, height: 82 },
@@ -440,16 +450,24 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelFullName}</label>
                       <input
                         type="text" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
+                      <input
+                        type="tel" required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      />
+                    </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
                       <input
@@ -458,17 +476,18 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
-                      <select
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
-                        onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                      >
-                        {t.interests.map((opt, i) => (
-                          <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
-                        ))}
-                      </select>
-                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
+                    <select
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                      onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
+                    >
+                      {t.interests.map((opt, i) => (
+                        <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
+                      ))}
+                    </select>
                   </div>
 
                   <div className="space-y-2">

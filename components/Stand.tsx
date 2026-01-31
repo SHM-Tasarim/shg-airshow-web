@@ -8,7 +8,7 @@ interface StandProps {
 
 const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
   const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>(null);
-  const [formData, setFormData] = useState({ company: '', name: '', email: '', interest: '', message: '' });
+  const [formData, setFormData] = useState({ company: '', fullName: '', phone: '', email: '', interest: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState('');
@@ -19,7 +19,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     setIsSending(true);
     try {
       setIsSubmitted(true);
-      setFormData({ company: '', name: '', email: '', interest: '', message: '' });
+      setFormData({ company: '', fullName: '', phone: '', email: '', interest: '', message: '' });
     } catch (err) {
       setError('An error occurred. Please try again.');
     } finally {
@@ -43,21 +43,22 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       //   "Kurumsal Prestij Ortaklığı"
       // ],
 
-      standTypesTitle: "STANT TÜRLERİ",
+      standTypesTitle: "STAND TÜRLERİ",
       standTypesDesc: "SHG Airshow, her sene birbirinden değerli katılımcıları ile uluslararası boyutta sesini duyurmaktadır.",
       standCommonFeatures: [
       ],
-      
+
       promotionalTitle: "TANITIM STANDI",
       promotionalInfo: "Marka bilinirliği ve doğrudan iletişim odaklı.",
       commercialTitle: "SATIŞ STANDI",
       commercialInfo: "Ürün satışı ve ticari hacim genişletme odaklı.",
-      
-      stats: [
-        { label: "TOPLAM ZİYARETÇİ", value: "100.000+", icon: "groups" },
-        { label: "CANLI YAYIN ERİŞİMİ", value: "8 Milyon", icon: "sensors" },
-        { label: "GÜNCEL SEYİRCİ", value: "68.000", icon: "trending_up" }
-      ],
+
+      // stats: [
+      //   { label: "TOPLAM ZİYARETÇİ", value: "100.000+", icon: "groups" },
+      //   { label: "CANLI YAYIN ERİŞİMİ", value: "8 Milyon", icon: "sensors" },
+      //   { label: "GÜNCEL SEYİRCİ", value: "68.000", icon: "trending_up" }
+      // ],
+      stats: [],
       deadline: "15 Ağustos 2026",
       deadlineDesc: "Yoğunluk sebebiyle katılım durumunuzu bu tarihe kadar bildirmenizi rica ederiz.",
       back: "ANA SAYFAYA DÖN",
@@ -66,7 +67,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       title: "Commercial Opportunities",
-      
+
       standIntroTitle: "SHG AIRSHOW 2026",
       standIntroText: "Recognized as a global brand by being listed among airshows in Europe by the European Airshow Council (EAC), SHG Airshow opens its doors to visitors with a unique visual feast ranging from legendary aircraft of World War II to the most modern air vehicles, breathtaking aerobatic displays to formation flights!",
 
@@ -84,7 +85,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       standTypesTitle: "STAND TYPES",
       standTypesDesc: "Each year, SHG Airshow makes its voice heard internationally with its valuable participants. To date, over 100 institutions and companies have promoted their brands and gained commercial opportunities by taking place in stand areas.",
       standCommonFeatures: [
-      
+
       ],
 
       promotionalTitle: "PROMOTIONAL STAND",
@@ -92,11 +93,12 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       commercialTitle: "COMMERCIAL STAND",
       commercialInfo: "Focus on product sales and commercial volume.",
 
-      stats: [
-        { label: "TOTAL VISITORS", value: "100,000+", icon: "groups" },
-        { label: "LIVE STREAM REACH", value: "8 Million", icon: "sensors" },
-        { label: "CURRENT SPECTATORS", value: "68,000", icon: "trending_up" }
-      ],
+      // stats: [
+      //   { label: "TOTAL VISITORS", value: "100,000+", icon: "groups" },
+      //   { label: "LIVE STREAM REACH", value: "8 Million", icon: "sensors" },
+      //   { label: "CURRENT SPECTATORS", value: "68,000", icon: "trending_up" }
+      // ],
+      stats: [],
       deadline: "August 15, 2026",
       deadlineDesc: "Please notify your participation status by this date due to high demand.",
       back: "BACK TO HOME",
@@ -108,11 +110,12 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
   const t = {
     TR: {
       formHeader: "Stand Başvuru Formu",
-      labelCompany: "KURUM / ŞİRKET",
-      labelContact: "İLETİŞİM ADI",
+      labelCompany: "ŞİRKET ADI",
+      labelFullName: "AD SOYAD",
+      labelContact: "TELEFON NUMARASI",
       labelEmail: "E-POSTA",
-      labelInterest: "İLGİ ALANI",
-      labelMessage: "MESAJINIZ",
+      labelInterest: "STAND TÜRÜ",
+      labelMessage: "MESAJ",
       interests: [
         "Tanıtım Standı",
         "Satış Standı",
@@ -127,9 +130,10 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     EN: {
       formHeader: "APPLICATION FORM",
       labelCompany: "COMPANY / INSTITUTION",
-      labelContact: "CONTACT NAME",
+      labelFullName: "FULL NAME",
+      labelContact: "PHONE NUMBER",
       labelEmail: "E-MAIL",
-      labelInterest: "INTEREST",
+      labelInterest: "STAND TYPE",
       labelMessage: "YOUR MESSAGE",
       interests: [
         "Promotional Stand",
@@ -152,8 +156,8 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
       {/* Hero Section */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
-        <img 
-          src="/images/stand.jpg" 
+        <img
+          src="/images/stand.jpg"
           className="w-full h-full object-cover"
           alt="SHG Airshow Crowd"
         />
@@ -179,7 +183,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
                 {content.standIntroText}
               </p>
             </div>
-            {/* Stats Sidebar */}
+            {/* Stats Sidebar - COMMENTED OUT
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-6 self-start shadow-xl">
               {content.stats.map((stat, idx) => (
                 <div key={idx} className="flex items-center gap-6">
@@ -191,11 +195,12 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
                 </div>
               ))}
             </div>
+            */}
           </div>
         </section>
 
         {/* 2. HIERARCHY: TİCARİ FIRSATLAR */}
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-8 relative">
           <h2 className="text-4xl md:text-6xl font-black text-secondary dark:text-white mb-6 uppercase tracking-tighter">
             {content.hierarchyTitle}
           </h2>
@@ -243,7 +248,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
 
           {/* ACCORDION 2: STANT TÜRLERİ */}
           <div className={`overflow-hidden rounded-[2.5rem] border transition-all duration-500 ${activeAccordion === 'types' ? 'border-primary bg-secondary shadow-2xl scale-[1.02]' : 'border-white/5 bg-secondary/60 hover:border-primary/30'}`}>
-            <button 
+            <button
               onClick={() => toggleAccordion('types')}
               className="w-full flex items-center justify-between p-8 md:p-12 text-left outline-none"
             >
@@ -260,25 +265,25 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
               </div>
               <span className={`material-icons text-4xl text-primary transition-transform duration-500 ${activeAccordion === 'types' ? 'rotate-180' : ''}`}>expand_more</span>
             </button>
-            
+
             <div className={`transition-all duration-500 overflow-hidden ${activeAccordion === 'types' ? 'max-h-[1200px] opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="p-8 md:p-12 pt-0 border-t border-white/5">
-                
+              <div className="px-8 md:px-12 pb-8 md:pb-12 pt-2">
+
                 {/* Sub-Branches Card Style (Promotional vs Commercial) - NOW FIRST */}
-                <div className="grid grid-cols-2 gap-4 mb-10">
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary transition-colors group text-center">
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
                     <h4 className="text-sm font-black text-white uppercase">{content.promotionalTitle}</h4>
                   </div>
-                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-primary transition-colors group text-center">
+                  <div className="bg-white/5 p-4 rounded-xl border border-white/10 text-center">
                     <h4 className="text-sm font-black text-white uppercase">{content.commercialTitle}</h4>
                   </div>
                 </div>
 
                 {/* Description Text - NOW AFTER CARDS */}
-                <p className="text-lg text-gray-400 font-bold italic mb-10 border-l-4 border-primary pl-6">
+                <p className="text-lg text-gray-400 font-bold italic mb-10 pl-6">
                   {content.standTypesDesc}
                 </p>
-                
+
                 {/* Common Features for Stand Types */}
                 {content.standCommonFeatures.length > 0 && (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -295,7 +300,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
           </div>
         </div>
 
-       {/* --- Form Section --- */}
+        {/* --- Form Section --- */}
         <section className="max-w-5xl mx-auto">
           <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-8 md:p-16 shadow-2xl border border-white/5 relative overflow-hidden">
             {isSubmitted ? (
@@ -320,57 +325,66 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
 
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {error && <div className="bg-red-500/10 border border-red-500/50 text-red-400 px-6 py-4 rounded-xl text-sm font-bold">{error}</div>}
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelCompany}</label>
-                      <input 
+                      <input
                         type="text" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, company: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
-                      <input 
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelFullName}</label>
+                      <input
                         type="text" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
-                      <input 
-                        type="email" required
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
+                      <input
+                        type="tel" required
                         className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
-                      <select 
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
-                        onChange={(e) => setFormData({...formData, interest: e.target.value})}
-                      >
-                        {t.interests.map((opt, i) => (
-                          <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
-                        ))}
-                      </select>
+                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
+                      <input
+                        type="email" required
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      />
                     </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
+                    <select
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
+                      onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
+                    >
+                      {t.interests.map((opt, i) => (
+                        <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
+                      ))}
+                    </select>
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelMessage}</label>
-                    <textarea 
+                    <textarea
                       rows={4}
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     ></textarea>
                   </div>
 
-                  <button 
+                  <button
                     type="submit" disabled={isSending}
                     className="w-full bg-primary text-white font-black py-6 rounded-2xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50"
                   >
@@ -388,7 +402,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
 
         {/* Perk & Deadline Info */}
         <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-32 mt-16">
-          <div className="bg-secondary dark:bg-black/40 p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden">
+          <div className="bg-white/5 p-10 rounded-[2.5rem] border border-white/10 relative overflow-hidden">
             <div className="relative z-10">
               <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{t.deadlineTitle}</h4>
               <div className="text-4xl font-black text-secondary dark:text-white mb-4">{content.deadline}</div>

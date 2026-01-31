@@ -11,13 +11,13 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     { year: "2025", url: "https://www.shgairshow2025.com/" },
     { year: "2024", url: "https://www.shgairshow2024.com/" },
     { year: "2023", url: "https://www.shgairshow2023.com/" },
-    { year: "2022", url: "https://shmaero.wixsite.com/shg2022"},
-    { year: "2021", url: "https://shmaero.wixsite.com/shgairshow2021"},
-    { year: "2020", url: "https://www.shgairshow2020.com/"},
-    { year: "2019", url: "https://shmaero.wixsite.com/shg2019"},
-    { year: "2018", url: "https://shmaero.wixsite.com/shg2018"},
-    { year: "2017", url: "https://shmaero.wixsite.com/shg-airshow-2017"},
-    { year: "2015", url: "https://shmaero.wixsite.com/shg2015"},
+    { year: "2022", url: "https://shmaero.wixsite.com/shg2022" },
+    { year: "2021", url: "https://shmaero.wixsite.com/shgairshow2021" },
+    { year: "2020", url: "https://www.shgairshow2020.com/" },
+    { year: "2019", url: "https://shmaero.wixsite.com/shg2019" },
+    { year: "2018", url: "https://shmaero.wixsite.com/shg2018" },
+    { year: "2017", url: "https://shmaero.wixsite.com/shg-airshow-2017" },
+    { year: "2015", url: "https://shmaero.wixsite.com/shg2015" },
   ];
 
   const content = {
@@ -33,7 +33,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
         "Sivrihisar Hava Gösterileri'nde, show günleri boyunca çalışan yaklaşık 100 kişilik gönüllü bir ekip de yer alıyor ve bu sayede organizasyon, havacılığın gelişmesi için katkıda bulunmak isteyen birçok kişiyi bir araya getirmiş oluyor. Ayrıca, Airshow'a katılan misafirlerin/katılımcıların çevredeki otellerde konaklamaları ve etkinlikte yiyecek-içecek stantlarının olması da, birçok yerel işletmeye fayda sağlıyor."
       ],
       back: "ANA SAYFAYA DÖN",
-      explore: "SİTEYE GİT"
+      explore: "WEB SİTESİ"
     },
     EN: {
       title: "About",
@@ -47,7 +47,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
         "Sivrihisar Airshow also features a volunteer team of approximately 100 people working throughout the show days, bringing together many individuals who want to contribute to the development of aviation. Furthermore, the accommodation of guests and participants at nearby hotels and the presence of food and beverage stands at the event also benefit many local businesses."
       ],
       back: "BACK TO HOME",
-      explore: "VISIT SITE"
+      explore: "WEB SITE"
     }
   }[lang];
 
@@ -55,7 +55,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
       {/* Hero Image */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
-        <img 
+        <img
           src="/images/shg-seyirci.jpg"
           className="w-full h-full object-cover"
           alt="Aviation Background"
@@ -77,8 +77,8 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
         {/* Narrative Text */}
         <div className="space-y-8 mb-32">
           {content.mainText.map((paragraph, idx) => (
-            <p 
-              key={idx} 
+            <p
+              key={idx}
               className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-medium"
             >
               {paragraph}
@@ -109,10 +109,10 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
                 <span className="block text-4xl font-black text-secondary dark:text-white group-hover:text-white transition-colors duration-300">
                   {item.year}
                 </span>
-                
+
                 {/* Subtle Hover Action Label */}
                 <div className="absolute bottom-4 left-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                   <span className="text-[9px] font-black text-white tracking-[0.3em] uppercase">{content.explore}</span>
+                  <span className="text-[9px] font-black text-white tracking-[0.3em] uppercase">{content.explore}</span>
                 </div>
               </a>
             ))}

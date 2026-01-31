@@ -174,51 +174,22 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     }
   }, [selectedItem]);
 
-  const useLazyLoad = (rootMargin: string = "200px") => {
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.disconnect();
-          }
-        },
-        { rootMargin }
-      );
-      if (containerRef.current) observer.observe(containerRef.current);
-      return () => observer.disconnect();
-    }, [rootMargin]);
-
-    return { containerRef, isVisible };
-  };
-
   const ImageCard: React.FC<{ item: MediaItem }> = ({ item }) => {
-    const { containerRef, isVisible } = useLazyLoad();
-
     return (
       <div
-        ref={containerRef}
         onClick={(e: React.MouseEvent) => {
           e.preventDefault();
           e.stopPropagation();
           setSelectedItem(item);
         }}
-        className='break-inside-avoid mb-4 group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
+        className='break-inside-avoid mb-6 group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
       >
-        {isVisible ? (
-          <img
-            src={item.src}
-            alt="Media Item"
-            className='w-full h-auto block transition-all duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100'
-          />
-        ) : (
-          <div className='w-full aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center'>
-            <span className="material-icons text-primary animate-pulse">image</span>
-          </div>
-        )}
+        <img
+          src={item.src}
+          alt="Media Item"
+          loading="lazy"
+          className='w-full h-auto block transition-all duration-1000 group-hover:scale-105 opacity-90 group-hover:opacity-100'
+        />
 
         {/* Hover Overlay - Sadece Büyüteç */}
         <div className='absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center pointer-events-none'>
@@ -243,8 +214,8 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
         {/* Tüm görseller */}
         <Masonry
           breakpointCols={{ default: 3, 1024: 2, 640: 1 }}
-          className='flex -ml-4 w-auto'
-          columnClassName='pl-4 bg-clip-padding'
+          className='flex -ml-6 w-auto'
+          columnClassName='pl-6 bg-clip-padding'
         >
           {mediaItems.map((item, idx) => (
             <ImageCard key={idx} item={item} />
