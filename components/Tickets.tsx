@@ -83,10 +83,10 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
       q: lang === "TR" ? "Gösteriye Nasıl Hızlı Giriş Yapabilirim?" : "HOW CAN I ENTER THE SHOW QUICKLY?",
       a: lang === "TR" ? "SHG Airshow’a giriş işlemlerinizin hızlıca tamamlanabilmesi için biletlerinizi organizasyon öncesinde indirmenizi tavsiye ederiz. Biletlerinize e-posta, SMS veya Biletinial mobil uygulaması üzerinden ulaşabilirsiniz. Ayrıca, organizasyon günlerinde alanda bulunan SHG gişelerimizden de bilet satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via email, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
     },
-    {
-      q: lang === "TR" ? "Ücretsiz Giriş İmkanı Var Mı?" : "IS THERE A FREE ENTRY OPTION?",
-      a: lang === "TR" ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir." : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees.",
-    },
+    // {
+    //   q: lang === "TR" ? "Ücretsiz Giriş İmkanı Var Mı?" : "IS THERE A FREE ENTRY OPTION?",
+    //   a: lang === "TR" ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir." : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees.",
+    // },
     {
       q: lang === "TR" ? "Otopark mevcut mu?" : "IS PARKING AVAILABLE?",
       a: lang === "TR" ? "Etkinlik alanında ücretsiz otopark alanları mevcuttur. Ayrıca, VIP bilet alan seyircilerimiz için özel otopark alanı ayrılmıştır." : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our VIP ticket holders.",
@@ -192,6 +192,11 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             arrow_forward
           </span>
         </a>
+        <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed">
+          {lang === "TR"
+            ? "Gazi, engelli ve basın kartı sahipleri için girişler ücretsizdir. Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
+            : "Entry is free for veterans, disabled individuals, and press card holders. Personnel from the Turkish Armed Forces (Air, Naval, and Land Forces), Gendarmerie General Command, and Police Department can enter free of charge upon presenting identification. However, their accompanying family members are subject to ticket fees."}
+        </p>
       </section>
 
       {/* FAQ Section - */}

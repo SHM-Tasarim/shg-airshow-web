@@ -91,13 +91,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       image: "/images/boeing-stearman.jpg",
       url: "https://msomuseum.com/a75n1-pt-17-boeing-stearman/",
     },
-    {
-      id: "cessna-172",
-      name: "CESSNA 172",
-      desc: lang === "TR" ? "Yılların eskimeyen, dünyanın en meşhur uçaklarından Cessna 172, SHG Airshow'da!" : "Cessna 172, one of the world's most famous and timeless aircraft, is at SHG Airshow!",
-      image: "/images/cessna-172.jpg",
-      url: "https://shm.aero/"
-    },
+    // {
+    //   id: "cessna-172",
+    //   name: "CESSNA 172",
+    //   desc: lang === "TR" ? "Yılların eskimeyen, dünyanın en meşhur uçaklarından Cessna 172, SHG Airshow'da!" : "Cessna 172, one of the world's most famous and timeless aircraft, is at SHG Airshow!",
+    //   image: "/images/cessna-172.jpg",
+    //   url: "https://shm.aero/"
+    // },
     {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
