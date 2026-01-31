@@ -206,7 +206,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
           e.stopPropagation();
           setSelectedItem(item);
         }}
-        className='break-inside-avoid mb-4 group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
+        className='break-inside-avoid mb-2 group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
       >
         {isVisible ? (
           <img
@@ -243,8 +243,8 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
         {/* Tüm görseller */}
         <Masonry
           breakpointCols={{ default: 3, 1024: 2, 640: 1 }}
-          className='flex -ml-4 w-auto'
-          columnClassName='pl-4 bg-clip-padding'
+          className='flex -ml-2 w-auto'
+          columnClassName='pl-2 bg-clip-padding'
         >
           {mediaItems.map((item, idx) => (
             <ImageCard key={idx} item={item} />
