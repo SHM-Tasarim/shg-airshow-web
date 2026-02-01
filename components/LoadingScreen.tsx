@@ -50,7 +50,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
 
   const label = lang === 'TR' ? 'GÜN KALDI' : 'DAYS TO GO';
   const sponsorTitle = lang === 'TR' ? 'SPONSORLARIMIZ' : 'OUR SPONSORS';
-  const alphabeticalText = lang === 'TR' ? 'Alfabetik Sırayla' : 'In Alphabetical Order';
+  // const alphabeticalText = lang === 'TR' ? 'Alfabetik Sırayla' : 'In Alphabetical Order';
 
   if (!isVisible && progress === 100) return null;
 
@@ -78,10 +78,13 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
         </div>
 
         {/* Branding */}
-        <div className="text-center opacity-40 mb-6 md:mb-12">
-          <h1 className="text-[10px] font-bold text-white tracking-[0.4em] uppercase">
+        <div className="text-center mb-6 md:mb-12">
+          <h1 className="text-xl md:text-3xl font-black text-white tracking-[0.2em] uppercase">
             SHG <span className="text-primary">AIRSHOW</span> 2026
           </h1>
+          <p className="text-sm md:text-lg font-semibold text-white/80 tracking-[0.15em] mt-2">
+            Sivrihisar Hava Gösterileri
+          </p>
         </div>
 
       </div>
@@ -93,7 +96,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
             <span className="w-12 h-px bg-primary/30"></span>
             <p className="text-[10px] font-black text-primary tracking-[0.8em] uppercase flex flex-col md:flex-row items-center gap-2">
               {sponsorTitle}
-              <span className="text-white/20 font-mono text-[8px] tracking-widest">[{alphabeticalText}]</span>
+              {/* <span className="text-white/20 font-mono text-[8px] tracking-widest">[alphabeticalText]</span> */}
             </p>
             <span className="w-12 h-px bg-primary/30"></span>
           </div>

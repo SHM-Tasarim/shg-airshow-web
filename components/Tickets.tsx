@@ -188,9 +188,6 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
           className="inline-flex items-center gap-3 bg-primary text-white font-extrabold py-4 px-10 lg:py-5 lg:px-12 rounded-xl hover:bg-red-700 hover:scale-105 transition-all duration-300 uppercase text-sm lg:text-base tracking-[0.2em] shadow-xl group"
         >
           {lang === "TR" ? "BİLET AL" : "BUY TICKETS"}
-          <span className="material-icons text-2xl group-hover:translate-x-1 transition-transform">
-            arrow_forward
-          </span>
         </a>
         <p className="mt-10 max-w-3xl mx-auto text-sm md:text-base text-gray-500 dark:text-gray-400 leading-relaxed">
           {lang === "TR"

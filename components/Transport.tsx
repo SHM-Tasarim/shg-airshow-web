@@ -14,9 +14,9 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       landTitle: "Karadan Ulaşım",
       //shmArrival: "S.H.M. Varış",
       shmArrivalImage: "/images/ulasim.jpeg",
-      airshowArrival: "SHG AIRSHOW ALANINA ULAŞIM",
-      airshowArrivalImage: "/images/Yeni Yol - TR.jpeg",
-      landWarning: "SHG Airshow alanına ulaşım, yukarıda gösterilen yol üzerinden çift yönlü giriş ve çıkışlar şeklinde sağlanacaktır.\n Gösteri emniyeti sebebiyle, yol üzerinde araç parkına artık izin verilmeyecektir.",
+      //airshowArrival: "SHG AIRSHOW ALANINA ULAŞIM",
+      //airshowArrivalImage: "/images/Yeni Yol - TR.jpeg",
+      //landWarning: "SHG Airshow alanına ulaşım, yukarıda gösterilen yol üzerinden çift yönlü giriş ve çıkışlar şeklinde sağlanacaktır.\n Gösteri emniyeti sebebiyle, yol üzerinde araç parkına artık izin verilmeyecektir.",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",
@@ -36,9 +36,9 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       landTitle: "Land Transportation",
       shmArrival: "S.H.M. Arrival",
       shmArrivalImage: "/images/ulasim_en.jpeg",
-      airshowArrival: "SHG AIRSHOW ARRIVAL",
-      airshowArrivalImage: "/images/Yeni Yol - EN.jpeg",
-      landWarning: "Access to the SHG Airshow area will be provided via the new road shown above, in one direction only. Vehicles will proceed from the right side of the West Apron.\n\nExits from the SHG Airshow area will also be made via the old road indicated above, in one direction only.\n\nDue to show safety, vehicle parking on the old road is no longer permitted.",
+      //airshowArrival: "SHG AIRSHOW ARRIVAL",
+      //airshowArrivalImage: "/images/Yeni Yol - EN.jpeg",
+      //landWarning: "Access to the SHG Airshow area will be provided via the new road shown above, in one direction only. Vehicles will proceed from the right side of the West Apron.\n\nExits from the SHG Airshow area will also be made via the old road indicated above, in one direction only.\n\nDue to show safety, vehicle parking on the old road is no longer permitted.",
       airTitle: "Air Transportation",
       technical: {
         coords: "S.H.M. Coordinates",
@@ -96,7 +96,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
             />
           </div>
 
-          <h3 className="text-2xl font-black text-secondary dark:text-white mb-4 text-center uppercase">
+          {/* <h3 className="text-2xl font-black text-secondary dark:text-white mb-4 text-center uppercase">
             {content.airshowArrival}
           </h3>
 
@@ -115,7 +115,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
                 {content.landWarning}
               </p>
             </div>
-          </div>
+          </div> */}
         </section>
 
         {/* 2- Air Transportation */}
