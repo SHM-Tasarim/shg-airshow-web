@@ -55,7 +55,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
   }[lang];
 
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Header */}
       <div className="w-full h-[35vh] md:h-[50vh] overflow-hidden relative">
         <img

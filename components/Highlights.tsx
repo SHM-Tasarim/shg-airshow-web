@@ -62,7 +62,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 text-center">
               <h3 className="text-xl font-extrabold text-gray-900 dark:text-white group-hover:text-primary transition-colors uppercase leading-tight">
                 {item.title}
               </h3>
@@ -70,7 +70,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
                 {item.desc}
               </p>
 
-              <div className="mt-4 flex items-center text-primary font-bold text-[10px] tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
+              <div className="mt-4 flex items-center justify-center text-primary font-bold text-[10px] tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
                 {lang === "TR" ? "İNCELE" : "VIEW DETAILS"}
                 <span className="material-icons text-sm ml-2">arrow_forward</span>
               </div>

@@ -153,7 +153,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Section */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
         <img
@@ -401,7 +401,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
         </section>
 
         {/* Perk & Deadline Info */}
-        <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-32 mt-16">
+        <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-16 mt-16">
           <div className="bg-white/5 p-10 rounded-[2.5rem] border border-white/10 relative overflow-hidden">
             <div className="relative z-10">
               <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{t.deadlineTitle}</h4>

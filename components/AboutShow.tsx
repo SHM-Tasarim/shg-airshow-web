@@ -52,7 +52,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
   }[lang];
 
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Image */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
         <img

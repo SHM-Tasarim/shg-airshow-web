@@ -192,7 +192,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 pt-16 relative z-10">
 
         {/* SADECE GALERİ BAŞLIĞI */}
@@ -204,7 +204,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
         </header>
 
         {/* Fotoğraf Izgarası */}
-        <section className="mb-40">
+        <section className="mb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {galleryItems.map((item, idx) => (
               <div key={idx} className="group relative">

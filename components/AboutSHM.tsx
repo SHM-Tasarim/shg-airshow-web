@@ -41,7 +41,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
   }[lang];
 
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Image */}
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 

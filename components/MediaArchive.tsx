@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import Masonry from "react-masonry-css";
+import { Masonry } from "antd";
 import { Language } from "../App";
 
 interface MediaArchiveProps {
@@ -29,7 +29,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     { src: "/images/SHG2025Haber1.jpg" },
 
     // 2024 Items
-    { src: "/images/SHG2024Haber15.jpg" },
+    //{ src: "/images/SHG2024Haber15.jpg" },
     { src: "/images/SHG2024Haber14.jpg" },
     { src: "/images/SHG2024Haber13.jpg" },
     { src: "/images/SHG2024Haber12.jpg" },
@@ -85,7 +85,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
 
     // 2018 Items
     { src: "/images/SHG2018Haber78.jpg" },
-    { src: "/images/SHG2018Haber77.jpg" },
+    //{ src: "/images/SHG2018Haber77.jpg" },
     //{ src: "/images/SHG2018Haber76.jpg" },
     //{ src: "/images/SHG2018Haber75.jpg" },
     // { src: "/images/SHG2018Haber74.jpg" },
@@ -124,21 +124,21 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     { src: "/images/SHG2017Haber89.jpg" },
     { src: "/images/SHG2017Haber88.jpg" },
     { src: "/images/SHG2017Haber87.jpg" },
-    { src: "/images/SHG2017Haber86.jpg" },
+    //{ src: "/images/SHG2017Haber86.jpg" },
     { src: "/images/SHG2017Haber85.jpg" },
     //{ src: "/images/SHG2017Haber84.jpg" },
-    { src: "/images/SHG2017Haber83.jpg" },
-    { src: "/images/SHG2017Haber82.jpg" },
+    //{ src: "/images/SHG2017Haber83.jpg" },
+    //{ src: "/images/SHG2017Haber82.jpg" },
     { src: "/images/SHG2017Haber81.jpg" },
     { src: "/images/SHG2017Haber80.jpg" },
     // { src: "/images/SHG2017Haber79.jpg" },
 
     // 2015 Items
-    { src: "/images/SHG2015Haber115.jpg" },
+    //{ src: "/images/SHG2015Haber115.jpg" },
     { src: "/images/SHG2015Haber114.jpg" },
-    { src: "/images/SHG2015Haber113.jpg" },
+    //{ src: "/images/SHG2015Haber113.jpg" },
     //{ src: "/images/SHG2015Haber112.jpg" },
-    { src: "/images/SHG2015Haber111.jpg" },
+    //{ src: "/images/SHG2015Haber111.jpg" },
     //{ src: "/images/SHG2015Haber110.jpg" },
     //{ src: "/images/SHG2015Haber109.jpg" },
     //{ src: "/images/SHG2015Haber108.jpg" },
@@ -154,6 +154,12 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
     TR: { title: "MEDYA", close: "KAPAT" },
     EN: { title: "MEDIA", close: "CLOSE" },
   }[lang];
+
+  // Ant Design Masonry için items formatı
+  const masonryItems = mediaItems.map((item, idx) => ({
+    key: idx,
+    data: item
+  }));
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -182,7 +188,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
           e.stopPropagation();
           setSelectedItem(item);
         }}
-        className='break-inside-avoid mb-6 group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
+        className='group relative overflow-hidden rounded-2xl border border-gray-100 dark:border-white/5 bg-gray-100 dark:bg-gray-900 transition-all duration-700 hover:shadow-[0_0_40px_rgba(220,38,38,0.15)] hover:border-primary/40 shadow-xl cursor-pointer'
       >
         <img
           src={item.src}
@@ -202,7 +208,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
   };
 
   return (
-    <div className='bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32 relative'>
+    <div className='bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 relative'>
       <div className='max-w-7xl mx-auto px-6 pt-16'>
         <header className='mb-24 text-center'>
           <h1 className='text-4xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter uppercase'>
@@ -213,14 +219,11 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
 
         {/* Tüm görseller */}
         <Masonry
-          breakpointCols={{ default: 3, 1024: 2, 640: 1 }}
-          className='flex -ml-6 w-auto'
-          columnClassName='pl-6 bg-clip-padding'
-        >
-          {mediaItems.map((item, idx) => (
-            <ImageCard key={idx} item={item} />
-          ))}
-        </Masonry>
+          columns={{ xs: 1, sm: 2, lg: 3 }}
+          gutter={12}
+          items={masonryItems}
+          itemRender={(itemInfo) => <ImageCard item={itemInfo.data} />}
+        />
       </div>
 
       {/* SAF GÖRSEL LIGHTBOX - Portal ile render ediliyor */}

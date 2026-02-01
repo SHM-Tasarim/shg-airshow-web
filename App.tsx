@@ -118,14 +118,16 @@ const App: React.FC = () => {
         
         {/* Alt Geri Dön Butonu (Sadece alt sayfalarda görünür) */}
         {currentView !== "contact" && (
-          <div className="py-16 text-center">
-            <button 
-              onClick={() => navigateTo("home")} 
-              className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
-            >
-              <span className="material-icons text-lg">arrow_back</span>
-              {lang === "TR" ? "ANA SAYFAYA DÖN" : "BACK TO HOME"}
-            </button>
+          <div className="max-w-6xl mx-auto px-6 pb-24">
+            <div className="pt-16 border-t border-gray-100 dark:border-white/5 text-center">
+              <button
+                onClick={() => navigateTo("home")}
+                className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
+              >
+                <span className="material-icons text-lg">arrow_back</span>
+                {lang === "TR" ? "ANA SAYFAYA DÖN" : "BACK TO HOME"}
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -133,7 +135,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark font-sans transition-colors duration-500 overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark font-sans transition-colors duration-500">
       {/* 1. YÜKLEME EKRANI */}
       {isLoading && (
         <LoadingScreen lang={lang} onComplete={handleLoadingComplete} targetDate={TARGET_DATE} />
@@ -152,7 +154,7 @@ const App: React.FC = () => {
       </header>
 
       {/* 3. ANA İÇERİK ALANI */}
-      <div className={`flex flex-col min-h-screen transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`flex flex-col flex-1 transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
 
         {/* Main etiketi padding-top (pt-20) ile menünün altında kalmasını sağlar */}
         <main className="flex-grow pt-20">

@@ -145,14 +145,14 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
 
   const content = {
     TR: {
-      tagline: "BİZE ULAŞIN",
+      //tagline: "BİZE ULAŞIN",
       title: "İLETİŞİM",
-      addressLabel: "MERKEZ ADRES",
+      addressLabel: "ADRES",
       address:
         "Sivrihisar Havacılık Merkezi, Necati Artan Tesisleri, Sivrihisar / Eskişehir",
       phoneLabel: "TELEFON",
       emailLabel: "E-POSTA",
-      formTitle: "Mesaj",
+      formTitle: "BİZİMLE İLETİŞİME GEÇİN",
       formName: "Ad Soyad",
       formPhone: "Telefon Numarası",
       formEmail: "E-posta",
@@ -169,14 +169,14 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       recaptchaApply: "geçerlidir.",
     },
     EN: {
-      tagline: "GET IN TOUCH",
+      //tagline: "GET IN TOUCH",
       title: "CONTACT",
-      addressLabel: "HEADQUARTERS",
+      addressLabel: "ADDRESS",
       address:
         "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
       phoneLabel: "PHONE",
       emailLabel: "EMAIL",
-      formTitle: "Send a Message",
+      formTitle: "GET IN TOUCH",
       formName: "Full Name",
       formPhone: "Phone Number",
       formEmail: "Email Address",
@@ -271,16 +271,13 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
 
   return (
     <>
-      {/* Hide reCAPTCHA badge */}
+      {/* Hide reCAPTCHA badge - using display:none to prevent scroll overflow */}
       <style>{`
         .grecaptcha-badge {
-          visibility: hidden !important;
-          opacity: 0 !important;
-          position: absolute !important;
-          bottom: -9999px !important;
+          display: none !important;
         }
       `}</style>
-      <div className='bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32'>
+      <div className='bg-white dark:bg-background-dark transition-colors duration-500'>
         <div className='w-full h-[35vh] md:h-[50vh] overflow-hidden relative'>
           <img
             src='/images/contact.jpg'
@@ -503,7 +500,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           </section>
 
           {/* Footer Navigation - ORTALANDI */}
-          <div className='pt-16 border-t border-gray-100 dark:border-white/5 text-center'>
+          <div className='pt-16 pb-24 border-t border-gray-100 dark:border-white/5 text-center'>
             <button
               onClick={() => onNavigate("home")}
               className='inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors'
