@@ -13,16 +13,16 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
   const [daysRemaining, setDaysRemaining] = useState(0);
 
   const sponsors = [
-    { name: "Acromach", logo: "/images/acromach.png" }, 
-    { name: "Agense190", logo: "/images/agense190.png" }, 
-    { name: "AirParkHotel", logo: "/images/airpark.png" }, 
-    { name: "CinemaPink", logo: "/images/cp-2.png" },
-    { name: "Dükkan", logo: "/images/dukkan.png" },
-    { name: "Keskinler", logo: "/images/kes-2.png" }, 
-    { name: "Lokanta Senan", logo: "/images/ls-2.png" }, 
-    { name: "Mach Air", logo: "/images/mach.png" }, 
+    { name: "Acromach", logo: "/images/acromach.png" },
     { name: "M.S.Ö. Hava ve Uzay Müzesi", logo: "/images/mso-2.png" },
+    { name: "Mach Air", logo: "/images/mach.png" }, 
     { name: "Sivrihisar Havacılık Kulübü Derneği", logo: "/images/sivhav.png" },
+    { name: "AirParkHotel", logo: "/images/airpark.png" }, 
+    { name: "Dükkan", logo: "/images/dukkan.png" },
+    { name: "Lokanta Senan", logo: "/images/ls-2.png" }, 
+    { name: "Agense190", logo: "/images/agense190.png" },  
+    { name: "CinemaPink", logo: "/images/cp-2.png" },  
+    { name: "Keskinler", logo: "/images/kes-2.png" },  
     { name: "Ofis Tekin", logo: "/images/ofis-tekin.png" },    
   ];
 
@@ -79,10 +79,10 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
 
         {/* Branding */}
         <div className="text-center mb-6 md:mb-12">
-          <h1 className="text-xl md:text-3xl font-black text-white tracking-[0.2em] uppercase">
-            SHG <span className="text-primary">AIRSHOW</span> 2026
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-tight uppercase whitespace-nowrap">
+            SHG AIRSHOW 2026
           </h1>
-          <p className="text-sm md:text-lg font-semibold text-white/80 tracking-[0.15em] mt-2">
+          <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight uppercase mt-2 whitespace-nowrap">
             Sivrihisar Hava Gösterileri
           </p>
         </div>
@@ -102,11 +102,11 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
           </div>
 
           {/* Logo Konteynırları */}
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 lg:gap-16">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 lg:gap-8">
             {sponsors.map((sponsor, idx) => (
               <div
                 key={idx}
-                className="h-8 md:h-16 flex items-center justify-center opacity-0 animate-logo-reveal"
+                className="h-10 md:h-20 flex items-center justify-center opacity-0 animate-logo-reveal"
                 style={{
                   animationDelay: `${700 + (idx * 150)}ms`,
                   animationFillMode: 'forwards'
@@ -126,10 +126,6 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
       {/* Arka Plan Detayları */}
       <div className="absolute top-1/2 left-0 right-0 h-px bg-white/5 pointer-events-none"></div>
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 pointer-events-none"></div>
-
-      <div className="absolute bottom-6 font-mono text-[8px] text-white/10 tracking-[1.5em] uppercase">
-        SHG AIRSHOW 2026
-      </div>
 
       <style>{`
         @keyframes logo-reveal {

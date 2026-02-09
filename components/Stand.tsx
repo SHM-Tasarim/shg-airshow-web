@@ -8,31 +8,13 @@ interface StandProps {
 
 const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
   const [activeAccordion, setActiveAccordion] = useState<'sponsor' | 'types' | null>(null);
-  const [formData, setFormData] = useState({ company: '', fullName: '', phone: '', email: '', interest: '', message: '' });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSending, setIsSending] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setIsSending(true);
-    try {
-      setIsSubmitted(true);
-      setFormData({ company: '', fullName: '', phone: '', email: '', interest: '', message: '' });
-    } catch (err) {
-      setError('An error occurred. Please try again.');
-    } finally {
-      setIsSending(false);
-    }
-  };
 
   const content = {
     TR: {
       title: "Tanıtım ve Satış Standları",
 
       standIntroTitle: "SHG AIRSHOW 2026",
-      standIntroText: "100’ü aşkın kurum ve firma, SHG Airshow kapsamında ziyaretçilerle doğrudan etkileşim kurarak marka bilinirliğini artırmış ve yeni işbirlikleri için önemli fırsatlar yakalamıştır.",
+      standIntroText: " \"Seyircilerimizle\" doğrudan etikileşim kurarak firma ve kuruluşlara, marka bilinirliğini arttırtmak ve yeni işbirlikleri için önemli fırsatlar sunuyor.",
 
       // sponsorTitle: "SPONSORLUK",
       // sponsorDesc: "Markanızı gökyüzüne taşıyın ve havacılığın prestijini paylaşın.",
@@ -107,47 +89,6 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     }
   }[lang];
 
-  const t = {
-    TR: {
-      formHeader: "Stand Başvuru Formu",
-      labelCompany: "ŞİRKET ADI",
-      labelFullName: "AD SOYAD",
-      labelContact: "TELEFON NUMARASI",
-      labelEmail: "E-POSTA",
-      labelInterest: "STAND TÜRÜ",
-      labelMessage: "MESAJ",
-      interests: [
-        "Tanıtım Standı",
-        "Satış Standı",
-      ],
-      btnSubmit: "GÖNDER",
-      btnSending: "Gönderiliyor...",
-      formSuccess: "Başvurunuz Alındı!",
-      formSuccessSub: "Ekibimiz en kısa sürede sizinle iletişime geçecek.",
-      newForm: "Yeni Başvuru",
-      deadlineTitle: "SON BAŞVURU TARİHİ"
-    },
-    EN: {
-      formHeader: "APPLICATION FORM",
-      labelCompany: "COMPANY / INSTITUTION",
-      labelFullName: "FULL NAME",
-      labelContact: "PHONE NUMBER",
-      labelEmail: "E-MAIL",
-      labelInterest: "STAND TYPE",
-      labelMessage: "YOUR MESSAGE",
-      interests: [
-        "Promotional Stand",
-        "Commercial Stand",
-      ],
-      btnSubmit: "SEND",
-      btnSending: "Sending...",
-      formSuccess: "Application Received!",
-      formSuccessSub: "Our team will contact you as soon as possible.",
-      newForm: "New Application",
-      deadlineTitle: "APPLICATION DEADLINE"
-    }
-  }[lang];
-
   const toggleAccordion = (id: 'sponsor' | 'types') => {
     setActiveAccordion(activeAccordion === id ? null : id);
   };
@@ -183,19 +124,27 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
                 {content.standIntroText}
               </p>
             </div>
-            {/* Stats Sidebar - COMMENTED OUT
-            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-6 self-start shadow-xl">
-              {content.stats.map((stat, idx) => (
-                <div key={idx} className="flex items-center gap-6">
-                  <span className="material-icons text-primary text-3xl">{stat.icon}</span>
-                  <div>
-                    <div className="text-2xl font-black text-secondary dark:text-white leading-none">{stat.value}</div>
-                    <div className="text-[10px] font-bold text-gray-500 tracking-widest uppercase mt-1">{stat.label}</div>
-                  </div>
+            {/* Stats Sidebar */}
+            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10 space-y-4 self-start shadow-xl">
+              <h3 className="text-lg font-black text-secondary dark:text-white uppercase tracking-widest mb-2 text-center">
+                SHG AIRSHOW<br />
+                {lang === 'TR' ? 'REKLAM EŞDEĞERİ' : 'AD EQUIVALENT'}
+              </h3>
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
+                <span className="material-icons text-primary text-3xl">sensors</span>
+                <div>
+                  <div className="text-2xl font-black text-secondary dark:text-white leading-none">8 M+</div>
+                  <div className="text-xs font-bold text-white tracking-widest uppercase mt-1">{lang === 'TR' ? 'CANLI YAYIN ERİŞİMİ' : 'LIVE STREAM REACH'}</div>
                 </div>
-              ))}
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
+                <span className="material-icons text-primary text-3xl">trending_up</span>
+                <div>
+                  <div className="text-2xl font-black text-secondary dark:text-white leading-none">5 M+</div>
+                  <div className="text-xs font-bold text-white tracking-widest uppercase mt-1">{lang === 'TR' ? 'DİJİTAL ERİŞİM' : 'DIGITAL REACH'}</div>
+                </div>
+              </div>
             </div>
-            */}
           </div>
         </section>
 
@@ -300,113 +249,16 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
           </div>
         </div>
 
-        {/* --- Form Section --- */}
-        <section className="max-w-5xl mx-auto">
-          <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-8 md:p-16 shadow-2xl border border-white/5 relative overflow-hidden">
-            {isSubmitted ? (
-              <div className="text-center py-20 animate-in zoom-in duration-500">
-                <div className="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
-                  <span className="material-icons text-white text-5xl">check</span>
-                </div>
-                <h2 className="text-4xl font-black text-white mb-4 uppercase">{t.formSuccess}</h2>
-                <p className="text-gray-400 font-bold">{t.formSuccessSub}</p>
-                <button onClick={() => setIsSubmitted(false)} className="mt-8 text-primary font-black uppercase tracking-widest text-xs hover:underline transition-all">
-                  {t.newForm}
-                </button>
-              </div>
-            ) : (
-              <div className="relative z-10">
-                <header className="mb-12">
-                  <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
-                    {t.formHeader}
-                  </h2>
-                  <div className="w-16 h-1 bg-primary"></div>
-                </header>
-
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  {error && <div className="bg-red-500/10 border border-red-500/50 text-red-400 px-6 py-4 rounded-xl text-sm font-bold">{error}</div>}
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelCompany}</label>
-                      <input
-                        type="text" required
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelFullName}</label>
-                      <input
-                        type="text" required
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelContact}</label>
-                      <input
-                        type="tel" required
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelEmail}</label>
-                      <input
-                        type="email" required
-                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors"
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelInterest}</label>
-                    <select
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer"
-                      onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                    >
-                      {t.interests.map((opt, i) => (
-                        <option key={i} value={opt} className="bg-secondary text-white">{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black text-gray-500 tracking-widest uppercase ml-2">{t.labelMessage}</label>
-                    <textarea
-                      rows={4}
-                      className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary transition-colors resize-none"
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit" disabled={isSending}
-                    className="w-full bg-primary text-white font-black py-6 rounded-2xl hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95 uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50"
-                  >
-                    {isSending && <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>}
-                    {isSending ? t.btnSending : t.btnSubmit}
-                  </button>
-                </form>
-              </div>
-            )}
-            {/* Footer Navigation */}
-            <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-            </div>
-          </div>
-        </section>
-
-        {/* Perk & Deadline Info */}
+        {/* Contact Info */}
         <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-16 mt-16">
           <div className="bg-white/5 p-10 rounded-[2.5rem] border border-white/10 relative overflow-hidden">
             <div className="relative z-10">
-              <h4 className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mb-4">{t.deadlineTitle}</h4>
-              <div className="text-4xl font-black text-secondary dark:text-white mb-4">{content.deadline}</div>
-              <p className="text-gray-500 dark:text-gray-400 font-bold">{content.deadlineDesc}</p>
+              <div className="text-4xl font-black text-secondary dark:text-white mb-4">
+                <a href="mailto:info@shm.aero" className="hover:text-primary transition-colors">info@shm.aero</a>
+              </div>
+              <p className="text-gray-500 dark:text-gray-400 font-bold">
+                {lang === "TR" ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "Please feel free to email us for any questions."}
+              </p>
             </div>
           </div>
         </div>

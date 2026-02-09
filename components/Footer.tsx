@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       address: "Sivrihisar Havacılık Merkezi Yeşilköy Mah. 26600 Sivrihisar / Eskişehir TÜRKİYE",
       rights: "TÜM HAKLARI SAKLIDIR.",
       social: "SOSYAL MEDYA",
-      mapBtn: "ULAŞIM"
+      mapBtn: "İLETİŞİM & ULAŞIM"
     },
     EN: {
       mission: "We are in the skies to inspire future aviators and elevate aviation culture to the highest level.",
@@ -41,6 +41,8 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
     // { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const, targetId: undefined },
     { name: lang === 'TR' ? 'SIKÇA SORULAN SORULAR' : 'FAQ', id: 'tickets' as const, targetId: 'faq' },
     { name: lang === 'TR' ? 'SPOTTER KAYDI' : 'SPOTTER REGISTRATION', id: 'spotter' as const, targetId: undefined },
+    { name: lang === 'TR' ? 'GÖNÜLLÜ BAŞVURUSU' : 'VOLUNTEER APPLICATION', id: 'volunteer' as const, targetId: undefined },
+
   ];
 
   const socialIconClass = "w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-white hover:text-secondary text-white";
@@ -143,7 +145,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               </a>
             </div>
             <button
-              onClick={() => onNavigate('transport')}
+              onClick={() => onNavigate('contact')}
               className="group flex items-center justify-between bg-white/5 border border-white/10 p-4 rounded-lg hover:bg-white hover:text-secondary transition-all w-full"
             >
               <span className="text-[11px] font-black tracking-widest uppercase">{content.mapBtn}</span>

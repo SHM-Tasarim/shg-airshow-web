@@ -210,7 +210,7 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
   return (
     <div className='bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 relative'>
       <div className='max-w-7xl mx-auto px-6 pt-16'>
-        <header className='mb-24 text-center'>
+        <header className='mb-40 text-center'>
           <h1 className='text-4xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter uppercase'>
             {content.title}
           </h1>

@@ -11,11 +11,11 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     title: lang === 'TR' ? "ÇÖZÜM ORTAKLARI" : "PARTNERS",
     institutionalSubtitle: lang === 'TR' ? "DEĞERLİ DESTEKLERİYLE" : "INSTITUTIONAL PARTNERS",
     companiesSubtitle: lang === 'TR' ? "ÇÖZÜM ORTAKLARIMIZ" : "SUPPORTERS",
-    alphabeticalHint: lang === 'TR' ? "(ALFABETİK SIRAYLA)" : "(IN ALPHABETICAL ORDER)",
-    fuelSponsorsTitle: lang === 'TR' ? "BİREYSEL YAKIT SPONSORLARI" : "INDIVIDUAL FUEL SPONSORS",
+    alphabeticalHint: lang === 'TR' ? "(Alfabetik Sırayla)" : "(In Alphabetical Order)",
+    fuelSponsorsTitle: lang === 'TR' ? "BİREYSEL YAKIT SPONSORLUĞU" : "INDIVIDUAL FUEL SPONSORSHIP",
     fuelSponsorsDonationInfo: lang === 'TR' 
       ? 'SHG Airshow 2026 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
-      : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2025, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
+      : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2026, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
     fuelSponsorsDonationContact: "info@shm.aero",
     fuelSponsorsDonationContactLabel: lang === 'TR'
       ? "Detaylı bilgi için:"
@@ -27,22 +27,19 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       ? "SHG Airshow 2026 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
       : "SHG Airshow 2026 gratefully presents 'Individual Fuel Sponsors':",
     fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(In alphabetical order by surname)",
-    back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
   };
 
   const institutionalLogos = [
-    { name: "Ulaştırma Bakanlığı", logo: "/images/ulastirma-bakanligi.avif" },
-    { name: "MSB", logo: "/images/msb.png" },
-    { name: "TSK", logo: "/images/tsk.png" },
-    { name: "THK", logo: "/images/thk.png" },
-    { name: "SHGM", logo: "/images/shgm.png" },
-    { name: "Eskişehir Valiliği", logo: "/images/esk-valiligi.png" },
-    { name: "Sivrihisar Kaymakamlığı", logo: "/images/siv-kay.png" },
-    { name: "Eskişehir BB", logo: "/images/es-bel.png" },
-    { name: "Sivrihisar Bel.", logo: "/images/siv-bel.png" },
-    { name: "Odunpazarı Bel.", logo: "/images/odun-paz-bel.svg" },
-    { name: "Tepebaşı Bel.", logo: "/images/esk-tep-bel.png" },
-    { name: "Et Bel.", logo: "/images/et-bel.png" },
+    { name: "T.C. ULAŞTIRMA VE ALTYAPI BAKANLIĞI", logo: "/images/ulastirma-bakanligi.avif" },
+    { name: "T.C. MİLLÎ SAVUNMA BAKANLIĞI", logo: "/images/msb.png" },
+    { name: "TÜRK SİLAHLI KUVVETLERİ", logo: "/images/tsk.png" },
+    { name: "TÜRK HAVA KUVVETLERİ", logo: "/images/thk.png" },
+    { name: "SİVİL HAVACILIK GENEL MÜDÜRLÜĞÜ", logo: "/images/shgm.png" },
+    { name: "T.C. ESKİŞEHİR VALİLİĞİ", logo: "/images/esk-valiligi.png" },
+    { name: "T.C. SİVRİHİSAR KAYMAKAMLIĞI", logo: "/images/siv-kay.png" },
+    { name: "ESKİŞEHİR BÜYÜKŞEHİR BELEDİYESİ", logo: "/images/es-bel.png" },
+    { name: "SİVRİHİSAR BELEDİYESİ", logo: "/images/siv-bel.png" },
+    { name: "TEPEBAŞI BELEDİYESİ", logo: "/images/esk-tep-bel.png" },
   ];
 
   const companyLogos = [
@@ -52,6 +49,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },
     { name: "Dükkan", logo: "/images/dukkan.png", link: "http://shop.msomuseum.com/" },
+    { name: "Dynon", logo: "/images/dynon.png", link: "https://dynonavionics.com/home.php" },
     { name: "Good Year", logo: "/images/goodyear.png", link: "https://www.goodyear.eu/tr_tr/consumer.html#/" },
     { name: "Google", logo: "/images/google.png", link: "https://www.google.com/" },
     { name: "Keskinler", logo: "/images/keskinler.png", link: "https://www.keskinlerinsaat.com.tr/" },
@@ -59,6 +57,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
     { name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
+    { name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
   ];
 
   const fuelSponsors = [
@@ -74,15 +73,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     return lastNameA.localeCompare(lastNameB);
   });
 
-  const columns: string[][] = [
-    fuelSponsors.slice(0, 8),
-    fuelSponsors.slice(8, 16),
-    fuelSponsors.slice(16, 24),
-    fuelSponsors.slice(24, 30)
-  ];
-
   return (
-    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
+    <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 font-display">
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
           src="/images/focke-spitfire.jpg" 
@@ -100,7 +92,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
           <div className="w-16 h-1 bg-primary"></div>
         </header>
 
-        {/* KISIM 1: Resmi Kurumlar */}
+        {/* KISIM 1: RESMİ KURUMLAR */}
         <section className="mb-24">
           <div className="flex items-center gap-6 mb-12">
             <h2 className="text-xl md:text-2xl font-black text-secondary dark:text-white uppercase tracking-widest">
@@ -109,50 +101,57 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
             <div className="flex-grow h-px bg-gray-100 dark:bg-white/5"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Flexbox ile ortaya hizalı grid */}
+          <div className="flex flex-wrap justify-center gap-6">
             {institutionalLogos.map((partner, idx) => (
-              <div 
+              <div
                 key={idx}
-                className="bg-gray-50 dark:bg-gray-900/40 p-8 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all group"
+                className="bg-[#0b1120] dark:bg-[#0b1120] rounded-2xl flex flex-col items-center border border-white/5 hover:border-primary/50 transition-all group overflow-hidden w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]"
               >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-24 w-auto object-contain transition-transform group-hover:scale-105"
-                />
+                {/* Logo Alanı — sabit yükseklik ile çizgiler hizalı */}
+                <div className="h-44 flex items-center justify-center w-full p-8">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-24 w-auto object-contain transition-transform group-hover:scale-110 duration-500"
+                  />
+                </div>
+
+                {/* Sabit Alt Bölüm */}
+                <div className="w-full pb-8">
+                  <div className="w-4/5 h-px bg-white/10 mx-auto mb-6"></div>
+                  <p className="text-center text-[10px] md:text-[11px] font-bold text-gray-300 uppercase tracking-[0.15em] leading-relaxed px-6">
+                    {partner.name}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* KISIM 2: Sponsor Şirketler */}
+        {/* KISIM 2: SPONSOR ŞİRKETLER */}
         <section className="mb-32">
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-12">
             <h2 className="text-xl md:text-2xl font-black text-secondary dark:text-white uppercase tracking-widest leading-none">
               {translations.companiesSubtitle}
             </h2>
-            <span className="text-primary font-black text-[10px] md:text-xs tracking-widest uppercase">
+            <span className="text-primary font-black text-[10px] md:text-xs tracking-widest">
               {translations.alphabeticalHint}
             </span>
             <div className="flex-grow h-px bg-gray-100 dark:bg-white/5 min-w-[50px]"></div>
           </div>
 
-          {/* Company Logos Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {companyLogos.map((company, idx) => {
               const cardContent = (
                 <div
-                  className="bg-gray-50 dark:bg-gray-900/40 p-6 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary shadow-sm hover:shadow-xl transition-all group min-h-[160px]"
+                  className="bg-gray-50 dark:bg-gray-900/40 p-6 rounded-2xl flex items-center justify-center border border-gray-100 dark:border-gray-800 hover:border-primary shadow-sm hover:shadow-xl transition-all group h-[160px]"
                 >
-                  {company.logo.includes('company') ? (
-                      <span className="text-gray-400 font-bold text-sm uppercase tracking-widest opacity-40 group-hover:opacity-100">{company.name}</span>
-                  ) : (
-                      <img
-                        src={company.logo}
-                        alt={company.name}
-                        className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
-                      />
-                  )}
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
               );
 
@@ -167,9 +166,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
           </div>
         </section>
 
-        {/* KISIM 3: Bireysel Yakıt Sponsorları */}
+        {/* KISIM 3: BİREYSEL YAKIT SPONSORLARI */}
         <section className="mb-32">
-          <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-10 md:p-20 shadow-2xl border border-white/5 relative overflow-hidden">
+          <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-8 md:p-20 shadow-2xl border border-white/5 relative overflow-hidden">
             <div className="absolute inset-0 opacity-5 pointer-events-none texture-bg"></div>
             
             <div className="relative z-10">
@@ -178,21 +177,15 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   {translations.fuelSponsorsTitle}
                 </h2>
                 
-                {/* Bağış Bilgi Kutusu */}
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-10 border border-white/10 max-w-3xl mx-auto">
-                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm md:text-lg leading-relaxed mb-4">
                     {translations.fuelSponsorsDonationInfo}
                   </p>
-                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm md:text-lg leading-relaxed mb-4">
                     {translations.fuelSponsorsDonationContactLabel}{' '}
-                    <a 
-                      href="mailto:info@shm.aero" 
-                      className="text-primary underline font-bold"
-                    >
-                      {translations.fuelSponsorsDonationContact}
-                    </a>
+                    <a href="mailto:info@shm.aero" className="text-primary underline font-bold tracking-widest hover:text-white transition-colors">info@shm.aero</a>
                   </p>
-                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm md:text-lg leading-relaxed">
                     {translations.fuelSponsorsDonationThanks}
                   </p>
                 </div>
@@ -205,22 +198,29 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8">
-                {columns.map((column, colIdx) => (
-                  <div key={colIdx} className="flex flex-col">
-                    {column.map((name, idx) => (
-                      <div 
-                        key={idx} 
-                        className="flex items-center gap-3 border-b border-white/5 py-3 group"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors flex-shrink-0"></span>
-                        <span className="text-white/80 group-hover:text-white transition-colors font-bold text-sm tracking-wide whitespace-nowrap">
-                          {name}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12">
+                {(() => {
+                  const colCount = 4;
+                  const perCol = Math.ceil(fuelSponsors.length / colCount);
+                  const columns = Array.from({ length: colCount }, (_, i) =>
+                    fuelSponsors.slice(i * perCol, (i + 1) * perCol)
+                  );
+                  return columns.map((col, colIdx) => (
+                    <div key={colIdx}>
+                      {col.map((name, idx) => (
+                        <div 
+                          key={idx} 
+                          className="flex items-center gap-3 border-b border-white/10 py-4 group"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0"></span>
+                          <span className="text-white/80 group-hover:text-white transition-colors font-bold text-sm tracking-wide">
+                            {name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
           </div>

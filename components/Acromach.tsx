@@ -12,7 +12,7 @@ const Acromach: React.FC<AcromachProps> = ({ lang, onNavigate }) => {
     TR: {
       tagline: "GÖKYÜZÜ DANSÇILARI - HAVA AKROBASİ GRUBU",
       title: "Acromach",
-      history: "Acromach, Türkiye’nin İlk Profesyonel Milli Akrobasi Pilotu Ali İsmet Öztürk tarafından kurulmuştur.",
+      history: "Gökyüzü Dansçıları - Hava Akrobasi Grubu, Acromach ismiyle İstanbul'da kurulmuştur.",
       legacy: "Ali İsmet Öztürk önderliğindeki Acromach Ekibi, Efsanevi Uçak “Mor Menekşe” ile 22 farklı ülkede 500’den fazla hava gösterisine katılmış, 859 gösteri uçuşunu hatasız ve arızasız olarak tamamlayarak 25 milyondan fazla seyirciye ulaşmıştır.",
       transition: "13 Eylül 2021 tarihinde SHG Airshow’da Profesyonel Akrobasi’den jübilesini yapan Ali İsmet Öztürk’ten sonra “Efsanevi Mor Menekşe” Mak Teknik’in özverili çalışmaları ile kapsamlı bir bakımdan geçti ve dış görünüşü değişti.",
       modernEra: "Mor Menekşe artık “Yeni Menekşe” olarak Türkiye’nin İlk Profesyonel Kadın Akrobasi Pilotu Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor.",

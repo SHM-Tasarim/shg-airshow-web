@@ -8,10 +8,11 @@ interface VolunteeringProps {
 
 const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
   const translations = {
-    title: lang === 'TR' ? "Gönüllü Tasviri" : "Volunteering Description",
+    title: lang === 'TR' ? "Gönüllü Başvurusu" : "Volunteer Application",
     intro: lang === 'TR' 
       ? "19-20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan SHG Airshow 2026 / Sivrihisar Hava Gösterileri Organizasyonunda gönüllü olarak görev almak isteyen arkadaşlarımızın; isim, soy isim, yaş ve iletişim bilgilerini içeren başvuru e-postasını 15 Temmuz 2026 tarihine kadar info@shm.aero adresine göndermeleri rica olunur."
       : "For those who wish to participate as a volunteer in the 11th SHG Airshow 2026 / Sivrihisar Airshow to be held on September 19–20, 2026, please send a business e-mail containing your name, surname, age and contact information to info@shm.aero by July 15, 2026.",
+    principlesTitle: lang === 'TR' ? "Gönüllü Tasviri" : "Volunteering Description",
     principles: lang === 'TR' 
       ? `"Gönüllü" sıfatıyla, SHG Airshow organizasyonlarında görev almak isteyen kişilerin, tecrübelerini, maddi ve manevi imkanlarını hiçbir karşılık beklemeden paylaşmaya niyetli ve istekli oldukları kabul edilir.
 
@@ -30,7 +31,6 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
     applyTitle: lang === 'TR' ? "Gönüllü Olmak İçin" : "To Apply as a Volunteer",
     applyBtn: lang === 'TR' ? "E-POSTA GÖNDER" : "SEND E-MAIL",
     emailSubject: lang === 'TR' ? "SHG Airshow 2026 Gönüllü Başvurusu" : "SHG Airshow 2026 Volunteer Application",
-    signature: lang === 'TR' ? "SHG Organizasyon Komitesi" : "SHG Organising Committee",
     back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
   };
 
@@ -47,6 +47,7 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
       </div>
 
       <div className="max-w-4xl mx-auto px-6 -mt-24 relative z-10">
+        {/* Header - Başlık SOLA yaslı kalmaya devam ediyor */}
         <header className="mb-20">
           <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 text-center md:text-left">
             {translations.title}<span className="text-primary">.</span>
@@ -61,15 +62,22 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
           <div className="w-20 h-1.5 bg-primary mt-8 mx-auto md:mx-0"></div>
         </header>
 
-        {/* Principles - Tek Metin Bloğu */}
+        {/* Principles Section */}
         <div className="mb-16">
+          {/* Başlık - Ortalanmış kalmaya devam ediyor */}
+          <h2 className="text-3xl md:text-4xl font-black text-secondary dark:text-white mb-8 text-center uppercase tracking-tight">
+            {translations.principlesTitle}
+          </h2>
+
           <div className="bg-gray-50 dark:bg-gray-900/40 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-white/5 shadow-xl">
-            <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium whitespace-pre-line">
+            {/* Sadece bu metin bloğu SOLA yaslandı (text-left) */}
+            <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium whitespace-pre-line text-left">
               {translations.principles}
             </p>
           </div>
         </div>
-        {/* Application CTA */}
+
+        {/* Application CTA - Ortalanmış */}
         <section className="mb-32 text-center">
           <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
             {translations.applyTitle}
@@ -84,8 +92,6 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
         </section>
 
         {/* Footer Navigation */}
-        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-        </div>
       </div>
     </div>
   );

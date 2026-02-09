@@ -1,5 +1,6 @@
 import React from "react";
 import { Language } from "../App";
+import Countdown from "./Countdown";
 
 interface HeroProps {
   onNavigate: (
@@ -33,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   };
 
   return (
-    <section className="relative mt-0 sm:mt-4 min-h-[70vh] md:min-h-[85vh] flex items-center justify-center text-center text-white overflow-hidden group shadow-2xl bg-secondary">
+    <section className="relative mt-0 min-h-[70vh] md:min-h-[85vh] flex flex-col items-center justify-center text-center text-white overflow-hidden group shadow-2xl bg-secondary">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-secondary">
         <video
           autoPlay
@@ -43,7 +44,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105"
         >
           {/* Video */}
-          <source src="/images/shg-airshow-2025-2.mp4" type="video/mp4" />
+          <source src="/images/home-video.mp4" type="video/mp4" />
           Tarayıcınız video etiketini desteklemiyor.
         </video>
 
@@ -51,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90"></div>
       </div>
 
-      <div className="relative z-10 px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 px-6 max-w-5xl mx-auto w-full flex flex-col items-center">
         <div className="text-[#DC2627] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 md:mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)] uppercase">
           {translations.supertitle}
         </div>
@@ -88,6 +89,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
             </span>
             {translations.program}
           </button> */}
+        </div>
+
+        {/* Geri Sayım Sayacı - Bilet Al Butonunun Altında */}
+        <div className="mt-8 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-20 duration-1000">
+          <Countdown targetDate="2026-09-19T10:00:00" lang={lang} />
         </div>
       </div>
 

@@ -193,20 +193,13 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
         </section>
 
 
-        {/* Live Map Area - GÜNCEL KONUM BİLGİSİ İLE */}
+        {/* Static Map Image */}
         <section className="mb-24">
-          <div className="w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
-            <iframe
-              title="Sivrihisar Havacılık Merkezi"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1543.8064625175332!2d31.484231403337173!3d39.297027976231945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cdfd073d852337%3A0xd2f34784f222f435!2sSivrihisar%20Havac%C4%B1l%C4%B1k%20Merkezi!5e0!3m2!1str!2str!4v1766698409372!5m2!1str!2str"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          <img
+            src="/images/map.png"
+            alt="Sivrihisar Havacılık Merkezi Haritası"
+            className="w-full h-auto"
+          />
         </section>
 
         <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">

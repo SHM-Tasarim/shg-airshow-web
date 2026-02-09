@@ -11,8 +11,8 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
     TR: {
       tagline: "NECATİ ARTAN TESİSLERİ",
       title: "Sivrihisar Havacılık Merkezi (S.H.M)",
-      history: "Sivrihisar Havacılık Merkezi S.H.M., Necati Artan Tesisleri, 2014 yılının Mart ayında Hava Parkı olarak faaliyetlerine başladı. Tesis, yaklaşık 1000 dönüm arazi üzerine kuruludur. Arazinin deniz seviyesinden yüksekliği 2790 feet’tir.",
-      runway: "Tesislerde 1810 m. uzunluğunda, 32 m. genişliğinde ana asfalt pist bulunmakta olup pist yönü 05’e 23’tür. Ana pistin yanında planör ve diğer hafif hava araçları için çim pist bulunuyor.",
+      history: "Sivrihisar Havacılık Merkezi (S.H.M.) / Necati Artan Tesisleri, 2014 yılında Hava Parkı olarak faaliyetlerine başladı. Tesis, yaklaşık 1000 dönüm arazi üzerine kuruludur.",
+      runway: "Tesislerde 1810 m. uzunluğunda, 32 m. genişliğinde ana asfalt pist bulunmaktadır ve pist yönü 05’e 23’tür. Ana pistin yanında planör ve diğer hafif hava araçları için çim pist bulunuyor.",
       activity: "''Batı Apronu” ve “Doğu Apronu” olmak üzere iki apron alanında yıl boyunca çeşitli havacılık faaliyetleri gerçekleşmektedir. S.H.M.'de uçuşların yanı sıra paraşüt atlayışları, uçuş eğitim okulları ve akademik birimlerin düzenlediği eğitimler ve kamplar ile model uçak eğitimleri, model uçak gösterileri, airshow ve akrobasi gösterileri de yapılmaktadır.",
       suitability: "Sportif havacılığın rahat yapıldığı bir yer olduğu gibi, paraşütçüler ve planörcüler için de çok uygundur.",
       technical: "TEKNİK BİLGİLER",

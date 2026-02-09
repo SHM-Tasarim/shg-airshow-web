@@ -41,7 +41,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
               <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 font-normal leading-relaxed">
                 {isTR ? (
                   <>
-                    Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa'da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı'nın efsanevi uçaklarından en modern hava taşıtlarına, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine kapılarını açıyor!
+                    Avrupa Hava Gösterileri Konseyi (EAC) tarafından Avrupa'da hava gösterileri listesine alınarak global bir marka tescili kazanan SHG Airshow; II. Dünya Savaşı'nın efsanevi uçaklarından en modern hava taşıtlarına, nefes kesen akrobasi gösterilerinden kol uçuşlarına uzanan eşsiz bir görsel şölenle ziyaretçilerine unutulmaz anlar yaşatıyor!
                   </>
                 ) : (
                   <>

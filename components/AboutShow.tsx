@@ -24,13 +24,14 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     TR: {
       title: "SHG Airshow",
       tagline: "Sivrihisar Hava Gösterileri",
-      archiveTitle: "GEÇMİŞ YILLAR",
+      archiveTitle: "SHG Airshow'un Geçmiş Yıllara Ait Web Siteleri",
       mainText: [
-        "Sivrihisar Havacılık Kulübü Derneği tarafından, her yıl Sivrihisar Havacılık Merkezi Necati Artan Tesisleri'nde uluslararası boyutta düzenlenen, \"Sivrihisar Hava Gösterileri\" / \"SHG Airshow\", her yaştan havacılık sevdalısına hitap eden bir organizasyon. \"Sivrihisar Hava Gösterileri\", havacılığın önemini vurgularken, özellikle gençlere ve çocuklara havacılık hakkında bilgi edinmek için birçok fırsat sunmakta. İlk kez 2015 yılında düzenlenen ve çok ilgi çeken organizasyon, her yıl daha da büyüyerek uluslararası alanda adını duyurdu. Bugün Uluslararası Hava Gösterilerinin bulunduğu beynelmilel takvimlerde de \"SHG Airshows\" adıyla yer almaktadır.",
-        "Sivrihisar Hava Gösterileri, ülkemizde sportif ve genel havacılığın gelişmesine katkı sağlamak, M.S.Ö. Hava ve Uzay Müzesi'ne ait tarihi değeri olan uçakları havacılık tutkunlarıyla buluşturmak ve havacılık kültürünü arttırmak adına her yıl on binlerce kişiyi bir araya getirmekte ve seyircilerine keyifli, heyecanlı anlar yaşatmakta.",
-        "İki gün boyunca devam eden Sivrihisar Hava Gösterileri'nde yer alan dünyaca ünlü gösteri pilotları, birbirinden heyecanlı uçuş gösterileri yapıyorlar ve izleyenleri hayretler içinde bırakıyorlar. Tarihi uçaklar, akrobasi uçakları, jet uçakları, helikopterler ve ilgi çekici daha birçok hava taşıtı hayranları ile buluşuyor. Bunun yanında planör, paramotor, model uçak gösterileri ve paraşüt atlayışları da gösterilere renk katıyor. M.S.Ö. Hava ve Uzay Müzesi'ne ait tarihi değeri olan uçaklar, hem statik hem de dinamik gösterileri ile havacılık tarihi hakkında bilgi sağlıyorlar. Gösteri pilotlarının yanı sıra birçok firma, uçuş okulu, üniversite ve havacılık ile ilgili kurumlar da bu organizasyona kendilerini tanıtmak için katılıyorlar.",
-        "Yabancı ülke firmaları, imal ettikleri sportif uçakları ve ürünlerini pazarlamak maksadıyla bu organizasyonda bulunuyorlar. Böylelikle, Sivrihisar Hava Gösterileri Organizasyonu \"Havacılık Fuarı\" kimliğine de sahip oluyor.",
-        "Sivrihisar Hava Gösterileri'nde, show günleri boyunca çalışan yaklaşık 100 kişilik gönüllü bir ekip de yer alıyor ve bu sayede organizasyon, havacılığın gelişmesi için katkıda bulunmak isteyen birçok kişiyi bir araya getirmiş oluyor. Ayrıca, Airshow'a katılan misafirlerin/katılımcıların çevredeki otellerde konaklamaları ve etkinlikte yiyecek-içecek stantlarının olması da, birçok yerel işletmeye fayda sağlıyor."
+        "Sivrihisar Havacılık Kulübü Derneği tarafından, her yıl Sivrihisar Havacılık Merkezi Necati Artan Tesisleri'nde uluslararası boyutta düzenlenen, \"Sivrihisar Hava Gösterileri\" / \"SHG Airshow\", her yaştan havacılık sevdalısına hitap eden bir organizasyon. \"Sivrihisar Hava Gösterileri\", havacılığın önemini vurgularken, özellikle gençlere ve çocuklara havacılık hakkında bilgi edinmek için birçok fırsat sunuyor. İlk kez 2015 yılında düzenlenen ve çok ilgi çeken organizasyon, her yıl daha da büyüyerek uluslararası alanda adını duyuruyor. Bugün Uluslararası Hava Gösterilerinin bulunduğu beynelmilel takvimlerde de \"SHG Airshows\" adıyla yer alıyor.",
+        "Sivrihisar Hava Gösterileri, ülkemizde sportif ve genel havacılığın gelişmesine katkı sağlamak, M.S.Ö. Hava ve Uzay Müzesi'ne ait tarihi değeri olan hava araçlarını, havacılık tutkunlarıyla buluşturmak ve havacılık kültürünü artırmak adına her yıl on binlerce kişiyi bir araya getirerek seyircilerine heyecan dolu, keyifli anlar yaşatıyor.",
+        "İki gün boyunca devam eden Sivrihisar Hava Gösterileri'nde yer alan dünyaca ünlü gösteri pilotları, birbirinden heyecanlı uçuş gösterileri gerçekleştirerek izleyicileri büyülüyor. Tarihi uçaklar, akrobasi uçakları, helikopterler, jet uçakları ve ilgi çekici daha birçok hava taşıtı hayranları ile buluşuyor. Bunun yanında planör, paramotor, model uçak gösterileri ve paraşüt atlayışları da gösterilere renk katıyor.",
+        "Gösteri pilotlarının yanı sıra birçok firma, uçuş okulu, üniversite ve havacılık ile ilgili kurumlar da bu organizasyona kendilerini tanıtmak için katılıyor.",
+        "Yabancı ülkelerden katılım sağlayan firmalar, imal ettikleri sportive uçakları ve ürünlerini pazarlamak maksadıyla bu organizasyonda bulunuyor. Böylelikle, Sivrihisar Hava Gösterileri Organizasyonu \"Havacılık Fuarı\" kimliğine de sahip oluyor.",
+        "Sivrihisar Hava Gösterileri'nde, show günleri boyunca çalışan yaklaşık 100 kişilik gönüllü bir ekip yer alıyor ve bu sayede organizasyon, havacılığın gelişmesi için katkıda bulunmak isteyen birçok kişiyi bir araya getirmiş oluyor. Ayrıca, Airshow'a katılan misafirler/katılımcılar çevredeki birçok yerel işletmeye fayda sağlıyor."
       ],
       back: "ANA SAYFAYA DÖN",
       explore: "WEB SİTESİ"
@@ -89,7 +90,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
         {/* Past Years Archive Area */}
         <div className="border-t border-gray-100 dark:border-white/5 pt-24 mb-32">
           <div className="mb-12">
-            <h2 className="text-4xl font-black text-secondary dark:text-white mb-2 uppercase tracking-tight">
+            <h2 className="text-4xl font-black text-secondary dark:text-white mb-2 tracking-tight">
               {content.archiveTitle}
             </h2>
             <p className="text-gray-400 font-medium text-sm tracking-wide">

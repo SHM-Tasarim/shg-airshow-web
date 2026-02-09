@@ -7,12 +7,31 @@ interface SpotterRegistrationProps {
 }
 
 const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavigate }) => {
+  // Turkish note için danışmadan kelimesini kırmızı yap
+  const renderNoteWithRedWords = (note: string) => {
+    if (lang === 'TR') {
+      let result = note;
+      result = result.replace(
+        /profesyonel fotoğraf makineleri/g,
+        '<span class="text-red-600">profesyonel fotoğraf makineleri</span>'
+      );
+      result = result.replace(
+        /danışmadan/g,
+        '<span class="text-red-600">danışmadan</span>'
+      );
+      return <span dangerouslySetInnerHTML={{ __html: result }} />;
+    }
+    return note;
+  };
+
   const content = {
     TR: {
       tagline: "HAVA FOTOĞRAFÇILIĞI",
       title: "Spotter Kaydı",
       greeting: `Sevgili "Spotter" arkadaşlarımız,`,
-      body1: `19–20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" organizasyonuna "SPOTTER" olarak katılmak isteyen arkadaşlarımızın, info@shm.aero adresine başvurularını göndermelerini rica ederiz.`,
+      body1: `19–20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" organizasyonuna "SPOTTER" olarak katılmak isteyen arkadaşlarımızın, `,
+      body1Email: "spotter@shm.aero",
+      body1After: ` adresine başvurularını göndermelerini rica ederiz.`,
       body2: "Başvuru içeriğinde aşağıdaki bilgilerin yer alması gerekmektedir:",
       requirements: [
         "Ad Soyad",
@@ -20,7 +39,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Doğum Tarihi",
         "İrtibat Bilgileri (telefon ve e\u2011posta)"
       ],
-      note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir.`,
+      note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makineleri kullanmaları, organizasyon günü spotter yelekleri ve yaka kartlarını danışmadan temin etmeleri gerekmektedir.`,
       applyTitle: "Spotter Başvurusu İçin",
       emailBtn: "E-POSTA GÖNDER",
       emailSubject: "SHG Airshow 2026 Spotter Kayıt Başvurusu",
@@ -30,7 +49,9 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       tagline: "AVIATION PHOTOGRAPHY",
       title: "Spotter Registration",
       greeting: `Dear "Spotter" friends,`,
-      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" to be held on September 19–20, 2026, please send your application to info@shm.aero.`,
+      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" to be held on September 19–20, 2026, please send your application to `,
+      body1Email: "spotter@shm.aero",
+      body1After: `.`,
       body2: "The following information must be included in the application:",
       requirements: [
         "Full Name",
@@ -77,6 +98,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
             </p>
             <p className="text-lg md:text-xl font-bold text-gray-800 dark:text-gray-100 leading-relaxed italic">
               {content.body1}
+              <span className="text-red-600">{content.body1Email}</span>
+              {content.body1After}
             </p>
           </div>
 
@@ -97,7 +120,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           </div>
 
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-bold border-l-4 border-primary pl-6">
-            {content.note}
+            {renderNoteWithRedWords(content.note)}
           </p>
 
           <p className="text-sm font-black tracking-widest text-gray-400 uppercase pt-8">
@@ -111,7 +134,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
             {content.applyTitle}
           </h3>
           <a 
-            href={`mailto:info@shm.aero?subject=${encodeURIComponent(content.emailSubject)}`} 
+            href={`mailto:spotter@shm.aero?subject=${encodeURIComponent(content.emailSubject)}`} 
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
           >
             <span className="material-icons text-2xl">send</span>

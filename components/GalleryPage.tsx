@@ -17,7 +17,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/tsk-1.jpg", year: "2025" },
     { src: "/images/tsk-2.jpg", year: "2025" },
     { src: "/images/semin-ozturk-sener-1.jpg", year: "2025" },
-    { src: "/images/pars-dede-2.jpg", year: "2025" },
+    //{ src: "/images/pars-dede-2.jpg", year: "2025" },
     { src: "/images/eurofighter-1.jpg", year: "2025" },
     { src: "/images/mig-1.jpg", year: "2025" },
     { src: "/images/soloturk-1.jpg", year: "2025" },
@@ -63,7 +63,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/turk-yildizlari-6.jpg", year: "2021" },
     { src: "/images/boeing-3.jpg", year: "2021" },
     { src: "/images/casa-2.jpg", year: "2021" },
-    { src: "/images/mor-menekse-1.jpg", year: "2021" },
+    //{ src: "/images/mor-menekse-1.jpg", year: "2021" },
     { src: "/images/sunucular.jpg", year: "2021" },
     { src: "/images/turk-yildizlari-7.jpg", year: "2021" },
     { src: "/images/mustang-2.jpg", year: "2021" },
@@ -87,7 +87,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/hurkus-3.jpg", year: "2021" },
     { src: "/images/t6-3.jpg", year: "2021" },
     { src: "/images/mustang-4.jpg", year: "2021" },
-    { src: "/images/boeing-5.jpg", year: "2021" },
+    //{ src: "/images/boeing-5.jpg", year: "2021" },
     { src: "/images/mor-menekse-4.jpg", year: "2021" },
     { src: "/images/turk-yildizlari-12.jpg", year: "2021" },
     { src: "/images/turk-yildizlari-13.jpg", year: "2021" },
@@ -97,8 +97,8 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/turk-yildizlari-15.jpg", year: "2021" },
     { src: "/images/ali-ismet-ozturk-3.jpg", year: "2021" },
     { src: "/images/jandarma-3.jpg", year: "2021" },
-    { src: "/images/ali-ismet-ozturk-4.jpg", year: "2021" },
-    { src: "/images/jandarma-4.jpg", year: "2021" },
+    //{ src: "/images/ali-ismet-ozturk-4.jpg", year: "2021" },
+    //{ src: "/images/jandarma-4.jpg", year: "2021" },
     { src: "/images/mor-menekse-6.jpg", year: "2021" },
     { src: "/images/dc3-2.jpg", year: "2020" },
     { src: "/images/mor-menekse-7.jpg", year: "2020" },
@@ -110,9 +110,9 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/ali-ismet-ozturk-5.jpg", year: "2020" },
     { src: "/images/195-1.jpg", year: "2020" },
     { src: "/images/soloturk-2.jpg", year: "2020" },
-    { src: "/images/jandarma-5.jpg", year: "2020" },
+    //{ src: "/images/jandarma-5.jpg", year: "2020" },
     { src: "/images/meeting.jpg", year: "2020" },
-    { src: "/images/vali-1.jpg", year: "2019" },
+    //{ src: "/images/vali-1.jpg", year: "2019" },
     { src: "/images/gyrocopter-2.jpg", year: "2019" },
     { src: "/images/thk-1.jpg", year: "2019" },
     { src: "/images/thk-2.jpg", year: "2019" },
@@ -139,14 +139,15 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
     { src: "/images/motors.jpg", year: "2019" },
     { src: "/images/planes-6.jpg", year: "2019" },
     { src: "/images/jandarma-7.jpg", year: "2019" },
-    { src: "/images/md500-3.jpg", year: "2018" },
-    { src: "/images/ali-ismet-ozturk-7.jpg", year: "2018" },
+    //{ src: "/images/md500-3.jpg", year: "2018" },
+    { src: "/images/md500-7.jpg", year: "2018" },
+    //{ src: "/images/ali-ismet-ozturk-7.jpg", year: "2018" },
     { src: "/images/rc-model-2.jpg", year: "2018" },
     { src: "/images/t6-mustang-2.jpg", year: "2018" },
     { src: "/images/catarina-1.jpg", year: "2018" },
     { src: "/images/mor-menekse-9.jpg", year: "2018" },
     { src: "/images/catarina-2.jpg", year: "2018" },
-    { src: "/images/t6-4.jpg", year: "2018" },
+    //{ src: "/images/t6-4.jpg", year: "2018" },
     { src: "/images/crew-2.jpg", year: "2018" },
     { src: "/images/gyrocopter-3.jpg", year: "2018" },
     { src: "/images/semin-ozturk-sener-2.jpg", year: "2018" },
@@ -196,7 +197,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ lang, onNavigate }) => {
       <div className="max-w-7xl mx-auto px-6 pt-16 relative z-10">
 
         {/* SADECE GALERİ BAŞLIĞI */}
-        <header className="text-center mb-24 relative px-4">
+        <header className="text-center mb-32 relative px-4">
           <h1 className="text-4xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 uppercase">
             {translations.title}
           </h1>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Countdown from "./components/Countdown";
 import ShowProgram from "./components/ShowProgram";
 import Highlights from "./components/Highlights";
 import Gallery from "./components/Gallery";
@@ -19,16 +18,17 @@ import Suggestions from "./components/Suggestions";
 import Stand from "./components/Stand";
 import AboutMSO from "./components/AboutMSO";
 import Acromach from "./components/Acromach";
+import AboutMachAir from "./components/AboutMachAir";
 import GalleryPage from "./components/GalleryPage";
 import MediaArchive from "./components/MediaArchive";
 import Schools from "./components/Schools";
-import LoadingScreen from "./components/LoadingScreen";
 import ActionBridge from "./components/ActionBridge";
 import Sponsor from "./components/Sponsor";
+import FAQ from "./components/FAQ";
 
 export type Language = "TR" | "EN";
 export type Theme = "light" | "dark";
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "gallery-page" | "media-archive" | "schools" | "sponsor";
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "mach" | "gallery-page" | "media-archive" | "schools" | "sponsor" | "faq";
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<View>("home");
@@ -36,9 +36,6 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>("dark");
   const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
   const [targetSectionId, setTargetSectionId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(() => {
-    return !sessionStorage.getItem('hasSeenLoadingScreen');
-  });
 
   const TARGET_DATE = "2026-09-19T10:00:00";
 
@@ -77,17 +74,12 @@ const App: React.FC = () => {
 
   const toggleLanguage = () => setLang((prev) => (prev === "TR" ? "EN" : "TR"));
   const toggleTheme = () => setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  const handleLoadingComplete = () => {
-    sessionStorage.setItem('hasSeenLoadingScreen', 'true');
-    setIsLoading(false);
-  };
 
   const renderContent = () => {
     if (currentView === "home") {
       return (
         <>
           <Hero onNavigate={navigateTo} lang={lang} />
-          <Countdown targetDate={TARGET_DATE} lang={lang} />
           <Gallery lang={lang} onNavigate={navigateTo} />
           <ActionBridge lang={lang} />
           <Highlights lang={lang} onNavigate={navigateTo} />
@@ -107,6 +99,7 @@ const App: React.FC = () => {
         {currentView === "stand" && <Stand lang={lang} onNavigate={navigateTo} />}
         {currentView === "museum" && <AboutMSO lang={lang} onNavigate={navigateTo} />}
         {currentView === "acromach" && <Acromach lang={lang} onNavigate={navigateTo} />}
+        {currentView === "mach" && <AboutMachAir lang={lang} onNavigate={navigateTo} />}
         {currentView === "program" && <ShowProgram lang={lang} onNavigate={navigateTo} />}
         {currentView === "participants" && <Participants lang={lang} targetId={targetParticipantId} />}
         {currentView === "partners" && <Partners lang={lang} onNavigate={navigateTo} />}
@@ -115,6 +108,7 @@ const App: React.FC = () => {
         {currentView === "media-archive" && <MediaArchive lang={lang} onNavigate={navigateTo} />}
         {currentView === "schools" && <Schools lang={lang} onNavigate={navigateTo} />}
         {currentView === "sponsor" && <Sponsor lang={lang} onNavigate={navigateTo} />}
+        {currentView === "faq" && <FAQ lang={lang} targetId={targetSectionId} />}
         
         {/* Alt Geri Dön Butonu (Sadece alt sayfalarda görünür) */}
         {currentView !== "contact" && (
@@ -136,13 +130,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark font-sans transition-colors duration-500">
-      {/* 1. YÜKLEME EKRANI */}
-      {isLoading && (
-        <LoadingScreen lang={lang} onComplete={handleLoadingComplete} targetDate={TARGET_DATE} />
-      )}
-
-      {/* 2. SABİT NAVİGASYON BAR (Header) */}
-      <header className={`fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md top-0 left-0 right-0 z-[60] shadow-sm transition-opacity duration-500 ${isLoading ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      {/* SABİT NAVİGASYON BAR (Header) */}
+      <header className="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md top-0 left-0 right-0 z-[60] shadow-sm">
         <Navbar
           onNavigate={navigateTo}
           currentView={currentView}
@@ -153,11 +142,9 @@ const App: React.FC = () => {
         />
       </header>
 
-      {/* 3. ANA İÇERİK ALANI */}
-      <div className={`flex flex-col flex-1 transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-
-        {/* Main etiketi padding-top (pt-20) ile menünün altında kalmasını sağlar */}
-        <main className="flex-grow pt-20">
+      {/* ANA İÇERİK ALANI */}
+      <div className="flex flex-col flex-1">
+        <main className="flex-grow pt-16 md:pt-24">
           {renderContent()}
         </main>
 
