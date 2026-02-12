@@ -31,7 +31,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       ) : (
         <>
           SHG AIRSHOW 2026 <br />{" "}
-          <span className="text-primary">Participants</span>
+          <span className="text-primary">PARTICIPANTS</span>
         </>
       ),
     subtitle: lang === "TR" ? "(Alfabetik Sırayla)" : "(in alphabetical order)",
