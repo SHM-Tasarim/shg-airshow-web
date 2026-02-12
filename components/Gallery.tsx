@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Language } from "../App";
 interface GalleryProps {
   lang: Language;
   onNavigate: (view: any) => void;
 }
 const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   const images = [
     {
-      src: "/images/kol-ucusu-4.jpg",
+      src: isMobile ? "/images/yatay-kol.png" : "/images/kol-ucusu-4.jpg",
       text: lang === "TR" ? "KATILIMCILAR" : "PARTICIPANTS",
       id: "participants",
       className: "md:col-span-1", 

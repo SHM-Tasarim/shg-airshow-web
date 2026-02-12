@@ -7,7 +7,6 @@ interface SpotterRegistrationProps {
 }
 
 const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavigate }) => {
-  // Turkish note için danışmadan kelimesini kırmızı yap
   const renderNoteWithRedWords = (note: string) => {
     if (lang === 'TR') {
       let result = note;
@@ -41,6 +40,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       ],
       note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makineleri kullanmaları, organizasyon günü spotter yelekleri ve yaka kartlarını danışmadan temin etmeleri gerekmektedir.`,
       applyTitle: "Spotter Başvurusu İçin",
+      commitmentBtn: "SPOTTER TAAHHÜTNAMESİ",
       emailBtn: "E-POSTA GÖNDER",
       emailSubject: "SHG Airshow 2026 Spotter Kayıt Başvurusu",
       back: "ANA SAYFAYA DÖN"
@@ -61,6 +61,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       ],
       note: `Our "SPOTTER" friends will be able to enter the organization with a ticket.`,
       applyTitle: "To Apply as a Spotter",
+      commitmentBtn: "SPOTTER COMMITMENT FORM",
       emailBtn: "SEND E-MAIL",
       emailSubject: "SHG Airshow 2026 Spotter Registration Application",
       back: "BACK TO HOME"
@@ -133,6 +134,19 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
             {content.applyTitle}
           </h3>
+
+          <a
+            href="/SHG 2026-Spotter Taahhutnamesi.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-secondary text-white font-black py-6 px-14 rounded-2xl hover:bg-gray-800 transition-all shadow-2xl shadow-secondary/30 active:scale-95 uppercase tracking-widest text-sm mb-6"
+          >
+            <span className="material-icons text-2xl">description</span>
+            {content.commitmentBtn}
+          </a>
+
+          <br />
+
           <a 
             href={`mailto:spotter@shm.aero?subject=${encodeURIComponent(content.emailSubject)}`} 
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"

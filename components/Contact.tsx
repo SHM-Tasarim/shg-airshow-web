@@ -21,7 +21,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       // Transport Eklemeleri
       landTitle: "Karadan Ulaşım",
       shmArrival: "S.H.M. Varış",
-      shmArrivalImage: "/images/ulasim.jpeg",
+      shmArrivalImage: "/images/ulasim.jpg",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",

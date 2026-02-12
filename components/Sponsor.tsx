@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Language } from "../App";
 
 interface SponsorProps {
@@ -46,6 +46,9 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     { year: "2024", h: 72 },
     { year: "2025", h: 76 }
   ];
+
+  // Mobile: 2.8x multiplier, Desktop: 4x
+  const barMultiplier = typeof window !== 'undefined' && window.innerWidth < 768 ? 2.8 : 4;
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
@@ -130,15 +133,15 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
         {/* 2. Grafik Bölümü */}
         <section className="mb-12">
-          <div className="bg-[#0a0f1a] rounded-[3rem] p-8 md:p-16 shadow-2xl border border-white/5 relative overflow-hidden">
-            <h2 className="text-2xl md:text-4xl font-black text-white text-center mb-16 tracking-tighter">
+          <div className="bg-[#0a0f1a] rounded-2xl md:rounded-[3rem] p-4 py-8 md:p-16 shadow-2xl border border-white/5 relative overflow-hidden">
+            <h2 className="text-lg md:text-4xl font-black text-white text-center mb-8 md:mb-16 tracking-tighter">
               {t.chartTitle}
             </h2>
 
-            <div className="relative h-[400px] w-full mt-10">
+            <div className="relative h-[280px] md:h-[400px] w-full mt-4 md:mt-10">
               
               {/* Y-Axis */}
-              <div className="absolute left-0 top-0 bottom-10 w-16 flex flex-col justify-between text-[10px] font-black text-white/30 text-right pr-4 border-r border-white/10">
+              <div className="absolute left-0 top-0 bottom-10 w-8 md:w-16 flex flex-col justify-between text-[8px] md:text-[10px] font-black text-white/30 text-right pr-1 md:pr-4 border-r border-white/10">
                 <span>8M+</span>
                 <span>70K</span>
                 <span>50K</span>
@@ -148,30 +151,30 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
               </div>
 
               {/* Grafik Alanı */}
-              <div className="absolute left-16 right-0 top-0 bottom-10">
+              <div className="absolute left-8 md:left-16 right-0 top-0 bottom-10">
                 <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
                   {[...Array(6)].map((_, i) => (
                     <div key={i} className="w-full h-px bg-white/5"></div>
                   ))}
                 </div>
 
-                <div className="w-full h-full flex items-end justify-around px-4 relative">
+                <div className="w-full h-full flex items-end justify-around px-0 md:px-4 relative">
                   {chartData.map((item, idx) => (
-                    <div key={idx} className="flex-1 flex flex-col items-center justify-end group relative z-10 mx-1 h-full">
+                    <div key={idx} className="flex-1 flex flex-col items-center justify-end group relative z-10 mx-[1px] md:mx-1 h-full">
                       <div
-                        className={`w-full max-w-[42px] rounded-t-sm transition-all duration-500 relative flex items-center justify-center
+                        className={`w-full max-w-[20px] md:max-w-[42px] rounded-t-sm transition-all duration-500 relative flex items-center justify-center
                           ${item.isPandemic
                             ? 'bg-slate-500 shadow-[0_0_15px_rgba(100,116,139,0.4)]'
                             : 'bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.3)]'}`}
-                        style={{ height: `${item.h * 4}px` }} 
+                        style={{ height: `${item.h * barMultiplier}px` }} 
                       >
                         {item.isPandemic && (
-                          <span className="text-white text-lg md:text-xl font-black rotate-180 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>
+                          <span className="text-white text-[8px] md:text-xl font-black rotate-180 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>
                             {t.pandemicText}
                           </span>
                         )}
                       </div>
-                      <div className="absolute -bottom-10 text-white/40 font-black text-[11px] tracking-wider group-hover:text-white transition-colors">
+                      <div className="absolute -bottom-7 md:-bottom-10 text-white/40 font-black text-[7px] md:text-[11px] tracking-wider group-hover:text-white transition-colors">
                         {item.year}
                       </div>
                     </div>
@@ -201,7 +204,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
             '/images/sponsor-6.png',
             '/images/seyirci-t.jpg',
             '/images/seyirci-1.jpg',
-            '/images/sunucular.jpg',
+            '/images/sponsor-21.png',
             '/images/sponsor-8.png',
             '/images/sponsor-9.png',
             '/images/sponsor-10.png',
@@ -249,34 +252,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const hoverIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const stopHoverScroll = useCallback(() => {
-    if (hoverIntervalRef.current) {
-      clearInterval(hoverIntervalRef.current);
-      hoverIntervalRef.current = null;
-    }
-  }, []);
-
-  const startHoverScroll = useCallback((direction: 'left' | 'right') => {
-    stopHoverScroll();
-    setActiveIndex((prev) =>
-      direction === 'left'
-        ? Math.max(0, prev - 1)
-        : Math.min(images.length - 1, prev + 1)
-    );
-    hoverIntervalRef.current = setInterval(() => {
-      setActiveIndex((prev) =>
-        direction === 'left'
-          ? Math.max(0, prev - 1)
-          : Math.min(images.length - 1, prev + 1)
-      );
-    }, 800);
-  }, [images.length, stopHoverScroll]);
-
-  useEffect(() => {
-    return () => stopHoverScroll();
-  }, [stopHoverScroll]);
+  const touchStartX = useRef<number | null>(null);
 
   // ESC ile lightbox kapat
   useEffect(() => {
@@ -293,37 +269,60 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
     };
   }, [lightboxSrc]);
 
+  // Touch swipe desteği
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        setActiveIndex((prev) => Math.min(images.length - 1, prev + 1));
+      } else {
+        setActiveIndex((prev) => Math.max(0, prev - 1));
+      }
+    }
+    touchStartX.current = null;
+  };
+
+  const handleCardClick = (index: number, src: string) => {
+    if (index === activeIndex) {
+      setLightboxSrc(src);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
   const offset = -(activeIndex * STEP);
 
   return (
     <>
-      <div className="relative w-full mx-auto overflow-hidden" ref={containerRef}>
+      <div
+        className="relative w-full mx-auto overflow-hidden"
+        ref={containerRef}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
 
-        {/* Sol hover bölgesi + ok */}
-        <div
-          onMouseEnter={() => startHoverScroll('left')}
-          onMouseLeave={stopHoverScroll}
-          className="absolute left-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center"
-        >
+        {/* Sol ok */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center pointer-events-none">
           <button
             onClick={() => setActiveIndex((prev) => Math.max(0, prev - 1))}
             disabled={activeIndex === 0}
-            className="w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
+            className="pointer-events-auto w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
           >
             <span className="material-icons text-secondary dark:text-white">chevron_left</span>
           </button>
         </div>
 
-        {/* Sağ hover bölgesi + ok */}
-        <div
-          onMouseEnter={() => startHoverScroll('right')}
-          onMouseLeave={stopHoverScroll}
-          className="absolute right-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center"
-        >
+        {/* Sağ ok */}
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center pointer-events-none">
           <button
             onClick={() => setActiveIndex((prev) => Math.min(images.length - 1, prev + 1))}
             disabled={activeIndex === images.length - 1}
-            className="w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
+            className="pointer-events-auto w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
           >
             <span className="material-icons text-secondary dark:text-white">chevron_right</span>
           </button>
@@ -344,7 +343,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
               return (
                 <div
                   key={index}
-                  onClick={() => setLightboxSrc(src)}
+                  onClick={() => handleCardClick(index, src)}
                   className="cursor-pointer transition-transform duration-500 flex-shrink-0 hover:scale-[1.03]"
                   style={{
                     width: `${CARD_WIDTH}px`,

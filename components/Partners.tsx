@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../App';
+import { link } from 'fs';
 
 interface PartnersProps {
   lang: Language;
@@ -44,7 +45,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
   const companyLogos = [
     { name: "Acromach", logo: "/images/acromach.png", link: "https://www.seminozturk.com/" },
-    { name: "Agense 190", logo: "/images/agense190-2.png" },
+    { name: "Agense 190", logo: "/images/agense190-2.png", link: "https://www.agense190.com/" },
     { name: "AirFlow Performance", logo: "/images/airflow.png", link: "https://airflowperformance.com/" },
     { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },

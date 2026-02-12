@@ -29,6 +29,7 @@ Volunteers cover all kinds of expenses arising from the performance of the dutie
 
 Even though they are not professional employees of SHG Airshow, volunteers are expected to fulfill their tasks "Professionally", no matter how simple the task is.`,
     applyTitle: lang === 'TR' ? "Gönüllü Olmak İçin" : "To Apply as a Volunteer",
+    commitmentBtn: lang === 'TR' ? "GÖNÜLLÜ TAAHHÜTNAMESİ" : "VOLUNTEER COMMITMENT FORM",
     applyBtn: lang === 'TR' ? "E-POSTA GÖNDER" : "SEND E-MAIL",
     emailSubject: lang === 'TR' ? "SHG Airshow 2026 Gönüllü Başvurusu" : "SHG Airshow 2026 Volunteer Application",
     back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
@@ -47,7 +48,7 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
       </div>
 
       <div className="max-w-4xl mx-auto px-6 -mt-24 relative z-10">
-        {/* Header - Başlık SOLA yaslı kalmaya devam ediyor */}
+        {/* Header */}
         <header className="mb-20">
           <h1 className="text-2xl md:text-7xl font-black text-secondary dark:text-white tracking-tighter leading-none mb-8 text-center md:text-left">
             {translations.title}<span className="text-primary">.</span>
@@ -64,24 +65,35 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
 
         {/* Principles Section */}
         <div className="mb-16">
-          {/* Başlık - Ortalanmış kalmaya devam ediyor */}
           <h2 className="text-3xl md:text-4xl font-black text-secondary dark:text-white mb-8 text-center uppercase tracking-tight">
             {translations.principlesTitle}
           </h2>
 
           <div className="bg-gray-50 dark:bg-gray-900/40 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-white/5 shadow-xl">
-            {/* Sadece bu metin bloğu SOLA yaslandı (text-left) */}
             <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-medium whitespace-pre-line text-left">
               {translations.principles}
             </p>
           </div>
         </div>
 
-        {/* Application CTA - Ortalanmış */}
+        {/* Application CTA */}
         <section className="mb-32 text-center">
           <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
             {translations.applyTitle}
           </h3>
+
+          <a
+            href="/SHG 2026-Gonullu Taahhutnamesi.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-4 bg-secondary text-white font-black py-6 px-14 rounded-2xl hover:bg-gray-800 transition-all shadow-2xl shadow-secondary/30 active:scale-95 uppercase tracking-widest text-sm mb-6"
+          >
+            <span className="material-icons text-2xl">description</span>
+            {translations.commitmentBtn}
+          </a>
+
+          <br />
+
           <a 
             href={`mailto:info@shm.aero?subject=${encodeURIComponent(translations.emailSubject)}`}
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
