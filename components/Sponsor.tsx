@@ -197,7 +197,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
         {/* Coverflow Gallery - Sponsor Photos */}
         <section className="mb-32">
           <CustomCoverflow images={[
-            '/images/sponsor-2.jpg',
+            '/images/sponsor-133.jpg',
             '/images/sponsor-4.jpg',
             '/images/sponsor-5.png',
             '/images/sponsor-6.png',
