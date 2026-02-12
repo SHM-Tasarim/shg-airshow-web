@@ -268,19 +268,8 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           </a>
         </section>
 
-        {/* Footer Navigation */}
-        <div className='pt-16 border-t border-gray-100 dark:border-white/5 text-center'>
-          <button
-            onClick={() => onNavigate("home")}
-            className='inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors'
-          >
-            <span className='material-icons text-lg'>arrow_back</span>
-            {content.back}
-          </button>
-        </div>
-
         {/* CTA Section */}
-        <section className="mt-32 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+        <section className="mt-32 mb-16 px-4 md:px-6 max-w-5xl mx-auto">
           <div className="relative py-8 md:py-12 px-4 md:px-8 bg-primary text-white text-center overflow-hidden rounded-xl md:rounded-2xl shadow-2xl">
             <div className="relative z-10">
               <button
@@ -292,6 +281,17 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
             </div>
           </div>
         </section>
+
+        {/* Footer Navigation */}
+        <div className='mt-24 pt-16 pb-32 border-t border-gray-100 dark:border-white/5 text-center'>
+          <button
+            onClick={() => onNavigate("home")}
+            className='inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors'
+          >
+            <span className='material-icons text-lg'>arrow_back</span>
+            {content.back}
+          </button>
+        </div>
       </div>
     </div>
   );
