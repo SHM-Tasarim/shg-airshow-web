@@ -23,14 +23,14 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       mapBtn: "İLETİŞİM & ULAŞIM"
     },
     EN: {
-      mission: "We are in the skies to inspire future aviators and elevate aviation culture to the highest level.",
+      mission: "The Meeting Point of World Aviation!",
       contact: "CONTACT",
       explore: "EXPLORE",
       addressLabel: "HEADQUARTERS",
       address: "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
       rights: "ALL RIGHTS RESERVED.",
       social: "SOCIAL MEDIA",
-      mapBtn: "GET DIRECTIONS"
+      mapBtn: "CONTACT & TRANSPORT"
     }
   }[lang];
 

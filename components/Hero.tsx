@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Language } from "../App";
 import Countdown from "./Countdown";
 
@@ -21,13 +21,42 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        setVideoFailed(true);
+      });
+    };
+
+    video.addEventListener('loadeddata', tryPlay);
+    video.addEventListener('error', () => setVideoFailed(true));
+
+    const timeout = setTimeout(() => {
+      if (video.paused) {
+        tryPlay();
+      }
+    }, 1000);
+
+    return () => {
+      video.removeEventListener('loadeddata', tryPlay);
+      video.removeEventListener('error', () => setVideoFailed(true));
+      clearTimeout(timeout);
+    };
+  }, []);
+
   const translations = {
     supertitle: "SHG AIRSHOW 2026",
     title:
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
-        : "Sivrihisar Hava Gösterileri",
-    badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 September 2026",
+        : "SIVRIHISAR AIRSHOW",
+    badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 Sept 2026",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÖSTERİ PROGRAMI" : "SHOW PROGRAM",
@@ -36,16 +65,25 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   return (
     <section className="relative mt-0 min-h-[70vh] md:min-h-[85vh] flex flex-col items-center justify-center text-center text-white overflow-hidden group shadow-2xl bg-secondary">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-secondary">
+
+        {/* Fallback poster */}
+        <img
+          src="/images/sponsor-2.jpg"
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoFailed ? 'opacity-100' : 'opacity-0'}`}
+        />
+
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105"
+          preload="auto"
+          poster="/images/sponsor-2.jpg"
+          className={`absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105 transition-opacity duration-700 ${videoFailed ? 'opacity-0' : 'opacity-100'}`}
         >
-          {/* Video */}
           <source src="/images/home-video.mp4" type="video/mp4" />
-          Tarayıcınız video etiketini desteklemiyor.
         </video>
 
         <div className="absolute inset-0 bg-secondary/65 group-hover:bg-secondary/55 transition-colors duration-1000"></div>
@@ -61,7 +99,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         </h1>
 
         <div className="mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-          <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-xl drop-shadow-md">
+          <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-base font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] shadow-xl drop-shadow-md whitespace-nowrap">
             <span>{translations.badgeDate}</span>
             <span className="hidden md:inline">/</span>
             <span>{translations.badgeLocation}</span>
@@ -91,13 +129,13 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           </button> */}
         </div>
 
-        {/* Geri Sayım Sayacı - Bilet Al Butonunun Altında */}
+        {/* Geri Sayım Sayacı */}
         <div className="mt-8 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-20 duration-1000">
           <Countdown targetDate="2026-09-19T10:00:00" lang={lang} />
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary via-secondary/60 to-transparent  lg:z-10 opacity-90"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary via-secondary/60 to-transparent lg:z-10 opacity-90"></div>
     </section>
   );
 };

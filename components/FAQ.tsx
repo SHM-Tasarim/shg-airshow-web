@@ -54,7 +54,7 @@ const FAQ: React.FC<FAQProps> = ({ lang, targetId, onNavigate }) => {
       a: lang === "TR" ? "Acil durumlarda müdahale etmek üzere güvenlik ve itfaiye ekipleri bulunmaktadır." : "Security and fire teams are present within the SHG area to ensure prompt and effective response in case of emergencies. ",
     },
     {
-      q: lang === "TR" ? "Engelli Ziyaretçi Hizmetleri Mevcut Mu?" : "DISABLED VISITOR SERVICES AVAILABLE?",
+      q: lang === "TR" ? "Engelli Ziyaretçi Hizmetleri Mevcut Mu?" : "ARE DISABLED VISITOR SERVICES AVAILABLE?",
       a: lang === "TR" ? "Engelli Ziyaretçilerimiz için giriş kolaylıkları sağlanmakta ve \"engelli tuvaletleri\" bulunmaktadır." : "At SHG, we provide entry conveniences for our disabled visitors and have 'disabled restrooms' available.",
     },
     {

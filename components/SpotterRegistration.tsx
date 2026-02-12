@@ -49,7 +49,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       tagline: "AVIATION PHOTOGRAPHY",
       title: "Spotter Registration",
       greeting: `Dear "Spotter" friends,`,
-      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" to be held on September 19–20, 2026, please send your application to `,
+      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Airshow" to be held on September 19–20, 2026, please send your application to `,
       body1Email: "spotter@shm.aero",
       body1After: `.`,
       body2: "The following information must be included in the application:",
@@ -72,8 +72,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 pb-32">
       {/* Hero Image */}
       <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden relative">
-        <img 
-          src="/images/spotter-2.jpg" 
+        <img
+          src="/images/spotter-2.jpg"
           className="w-full h-full object-cover"
           alt="Spotter Lens View"
         />
@@ -105,19 +105,19 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           </div>
 
           <div className="w-20 h-1.5 bg-primary mt-8 mx-auto md:mx-0"></div>
-          
+
           <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/5 shadow-inner">
             <p className="text-sm font-black tracking-widest text-primary mb-6 uppercase">
               {content.body2}
             </p>
-           <ul className="space-y-4">
-  {content.requirements.map((req, idx) => (
-    <li key={idx} className="flex items-start gap-4 group">
-      <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0 mt-2"></div>
-      <span className="text-lg font-bold text-gray-800 dark:text-gray-200 break-words">{req}</span>
-    </li>
-  ))}
-</ul>
+            <ul className="space-y-4">
+              {content.requirements.map((req, idx) => (
+                <li key={idx} className="flex items-start gap-4 group">
+                  <div className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0 mt-2"></div>
+                  <span className="text-lg font-bold text-gray-800 dark:text-gray-200 break-words">{req}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-bold border-l-4 border-primary pl-6">
@@ -147,8 +147,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
 
           <br />
 
-          <a 
-            href={`mailto:spotter@shm.aero?subject=${encodeURIComponent(content.emailSubject)}`} 
+          <a
+            href={`mailto:spotter@shm.aero?subject=${encodeURIComponent(content.emailSubject)}`}
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
           >
             <span className="material-icons text-2xl">send</span>

@@ -44,8 +44,8 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Image */}
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
-        <img 
-          src="/images/shm-apron.jpg" 
+        <img
+          src="/images/shm-apron.jpg"
           className="w-full h-full object-cover"
           alt="SHM Aerial View"
         />
@@ -83,17 +83,17 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
           {/* 2. RESİM ALANI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
-              <img 
-                src="/images/shm-photo-2.jpg" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Apron Activity" 
+              <img
+                src="/images/shm-photo-2.jpg"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Apron Activity"
               />
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
-              <img 
+              <img
                 src="/images/shm-photo-3.jpg"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Training" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Training"
               />
             </div>
           </div>
@@ -109,11 +109,11 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
           <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
             <span className="material-icons text-9xl">radar</span>
           </div>
-          
+
           <h2 className="text-xs font-black tracking-[0.4em] text-primary mb-10 uppercase border-b border-white/10 pb-4">
             {content.technical}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="space-y-6">
               <div className="flex flex-col">
@@ -125,14 +125,14 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
                 <span className="text-2xl font-black text-primary">131,625 MHz <span className="text-xs text-white/40 ml-2 font-bold uppercase">(Artan Kule)</span></span>
               </div>
             </div>
-            
+
             <div className="space-y-6">
               <div className="flex flex-col">
                 <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">{content.elev}</span>
                 <span className="text-2xl font-black italic">2790 FEET</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">İLETİŞİM</span>
+                <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">{lang === "TR" ? "İLETİŞİM" : "CONTACT"}</span>
                 <a href="tel:+902227243040" className="text-sm font-bold hover:text-primary transition-colors">+90 (222) 724 30 40 - 41</a>
                 <span className="text-sm font-medium text-gray-400">Fax: +90 (222) 724 30 11</span>
               </div>

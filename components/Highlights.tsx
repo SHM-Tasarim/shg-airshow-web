@@ -11,7 +11,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
     {
       title: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi" : "M.S.Ö. AIR AND SPACE MUSEUM",
       id: "museum",
-      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi" : "Turkiye's Flying Aviation Museum",
+      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi" : "Turkey's Flying Aviation Museum",
       image: "/images/mso-gri.jpg",
     },
     {
@@ -63,7 +63,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
               <h3 className="text-base font-extrabold text-gray-900 dark:text-white group-hover:text-primary transition-colors uppercase leading-tight min-h-[56px] flex items-center justify-center">
                 {item.title}
               </h3>
-              
+
               <p className="mt-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2 flex-grow">
                 {item.desc}
               </p>

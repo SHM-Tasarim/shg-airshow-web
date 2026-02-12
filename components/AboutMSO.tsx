@@ -30,7 +30,7 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
-      tagline: "TÜRKİYE'S FLYING AVIATION MUSEUM",
+      tagline: "TURKEY'S FLYING AVIATION MUSEUM",
       title: (
         <>
           M.S.Ö.<br />Air and Space Museum
@@ -56,8 +56,8 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Image */}
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
-        <img 
-          src="/images/mso-lobby.jpg" 
+        <img
+          src="/images/mso-lobby.jpg"
           className="w-full h-full object-cover"
           alt="M.S.Ö. Museum Aerial View"
         />
@@ -95,17 +95,17 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
           {/* 2. RESİM ALANI */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
-              <img 
-                src="/images/mso-dc3.jpg" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Museum Aircraft 1" 
+              <img
+                src="/images/mso-dc3.jpg"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Museum Aircraft 1"
               />
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
-              <img 
+              <img
                 src="/images/mso-mustang.jpg"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Museum Aircraft 2" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Museum Aircraft 2"
               />
             </div>
           </div>

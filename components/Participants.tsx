@@ -92,10 +92,10 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     },
     {
       id: "dc3",
-      name: lang === "TR" ? <>DOUGLAS DC-3<br/>"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br/>"TURKISH DELIGHT"</>,
-      desc: lang === "TR" 
-  ? `Normandiya Çıkartması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!` 
-  : `The 1940 Model DC-3 'Turkish Delight', brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of 'the oldest aircraft to travel the world'. This magnificent classic aircraft is with you at SHG Airshow!`,
+      name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
+      desc: lang === "TR"
+        ? `Normandiya Çıkartması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!`
+        : `The 1940 Model DC-3 'Turkish Delight', brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of 'the oldest aircraft to travel the world'. This magnificent classic aircraft is with you at SHG Airshow!`,
       image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
     },
@@ -216,7 +216,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "sivrihisar-havacilik-kulubu",
       name: lang === "TR" ? "SİVRİHİSAR HAVACILIK KULÜBÜ DERNEĞİ" : "SIVRIHISAR AVIATION CLUB ASSOCIATION",
-      desc: lang === "TR" ? "2013 yılında kurulan Sivrihisar Havacılık Kulübü Derneği, amatör ve profesyonel havacılara yönelik düzenlediği etkinlik ve organizasyonlar, eğitim programları ve akrobasi uçuşlarıyla her yaştan havacılık tutkunlarına ilham vererek Türkiye'de Havacılık Kültürü'nün gelişimine önemli katkılar sağlıyor." : " by the Sivrihisar Aviatio Club Association SHM has been bringing sky lovers together since 2013!",
+      desc: lang === "TR" ? "2013 yılında kurulan Sivrihisar Havacılık Kulübü Derneği, amatör ve profesyonel havacılara yönelik düzenlediği etkinlik ve organizasyonlar, eğitim programları ve akrobasi uçuşlarıyla her yaştan havacılık tutkunlarına ilham vererek Türkiye'de Havacılık Kültürü'nün gelişimine önemli katkılar sağlıyor." : "Founded in 2013, Sivrihisar Aviation Club Association inspires aviation enthusiasts of all ages through events, training programs, and aerobatic flights, making significant contributions to the development of aviation culture in Türkiye.",
       image: "/images/sivrihisar-havacilik-kulubu.jpg",
       url: "https://shm.aero/",
     },
@@ -240,7 +240,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/yeni-menekse.jpg",
       url: "https://www.seminozturk.com/",
     },
-    
+
   ];
 
   return (
@@ -266,7 +266,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
               className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
             >
               <div className={`flex flex-col ${isAirPark ? "lg:flex-row items-stretch" : (index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row")}`}>
-                
+
                 {/* --- IMAGE 1 (Standard left or AirPark left) --- */}
                 <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden lg:aspect-[16/10] lg:min-h-[300px]`}>
                   <img

@@ -18,7 +18,7 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
       back: "mach.aero"
     },
     EN: {
-      title: "Mach AVviation",
+      title: "Mach Aviation",
       history: "Mach Air was founded in 1989 by Ali İsmet Öztürk, Turkey's First Professional National Aerobatic Pilot.",
       legacy: "As a qualified general aviation operator with an AOC issued by the DGCA, Mach Air plays a pioneering role in the aviation industry with its reliability and expertise.",
       transition: "Operating at Istanbul Atatürk Airport for many years, Mach Air introduced innovations to Turkish civil aviation in general aviation, maintenance, film production, and flight training.",
@@ -32,8 +32,8 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* Hero Header */}
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
-        <img 
-          src="/images/mach-aviation-3.jpg" 
+        <img
+          src="/images/mach-aviation-3.jpg"
           className="w-full h-full object-cover"
           alt="Mach Air Header"
         />
@@ -68,18 +68,18 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
           {/* Visual Divider 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group relative border border-gray-100 dark:border-white/5">
-              <img 
-                src="/images/mach-1.jpg" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Technical Maintenance" 
+              <img
+                src="/images/mach-1.jpg"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Technical Maintenance"
               />
               <div className="absolute bottom-4 left-4 bg-black/50 text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-widest">1992 - Atatürk Havalimanı</div>
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group relative border border-gray-100 dark:border-white/5">
-              <img 
+              <img
                 src="/images/mach-3.jpg"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Operations" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Operations"
               />
               <div className="absolute bottom-4 left-4 bg-primary/80 text-white px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-widest">1996 - Dolmabahçe Sarayı</div>
             </div>
@@ -96,17 +96,17 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
           {/* YENİ EKLENEN FOTOĞRAF ALANI (Butondan Hemen Önce) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group relative border border-gray-100 dark:border-white/5">
-              <img 
-                src="/images/mach-5.jpg" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Mach Air Maintenance Team" 
+              <img
+                src="/images/mach-5.jpg"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Mach Air Maintenance Team"
               />
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group relative border border-gray-100 dark:border-white/5">
-              <img 
+              <img
                 src="/images/mach-6.jpg"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                alt="Mach Air Hangar" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="Mach Air Hangar"
               />
             </div>
           </div>
