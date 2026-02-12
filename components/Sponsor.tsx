@@ -223,9 +223,9 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
 
         {/* 3. İletişim */}
         <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-16">
-          <div className="bg-white/5 p-10 rounded-[2.5rem] border border-white/10 relative overflow-hidden">
+          <div className="bg-white/5 p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] border border-white/10 relative overflow-hidden">
             <div className="relative z-10">
-              <div className="text-4xl font-black text-secondary dark:text-white mb-4">
+              <div className="text-2xl md:text-4xl font-black text-secondary dark:text-white mb-4 break-all md:break-normal">
                 <a href="mailto:marketing@shm.aero" className="hover:text-primary transition-colors">marketing@shm.aero</a>
               </div>
               <p className="text-gray-500 dark:text-gray-400 font-bold">
@@ -244,15 +244,30 @@ interface CoverflowProps {
   images: string[];
 }
 
-const CARD_WIDTH = 420;
+const CARD_WIDTH_DESKTOP = 420;
 const CARD_GAP = 16;
-const STEP = CARD_WIDTH + CARD_GAP;
 
 const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const [cardWidth, setCardWidth] = useState(CARD_WIDTH_DESKTOP);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth < 640) {
+        setCardWidth(window.innerWidth - 48);
+      } else {
+        setCardWidth(CARD_WIDTH_DESKTOP);
+      }
+    };
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  const step = cardWidth + CARD_GAP;
 
   // ESC ile lightbox kapat
   useEffect(() => {
@@ -295,7 +310,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
     }
   };
 
-  const offset = -(activeIndex * STEP);
+  const offset = -(activeIndex * step);
 
   return (
     <>
@@ -334,7 +349,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
             className="flex transition-transform duration-500 ease-out"
             style={{
               gap: `${CARD_GAP}px`,
-              transform: `translateX(calc(50% - ${CARD_WIDTH / 2}px + ${offset}px))`,
+              transform: `translateX(calc(50% - ${cardWidth / 2}px + ${offset}px))`,
             }}
           >
             {images.map((src, index) => {
@@ -346,7 +361,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
                   onClick={() => handleCardClick(index, src)}
                   className="cursor-pointer transition-transform duration-500 flex-shrink-0 hover:scale-[1.03]"
                   style={{
-                    width: `${CARD_WIDTH}px`,
+                    width: `${cardWidth}px`,
                     transform: isActive ? 'scale(1)' : 'scale(0.85)',
                     zIndex: isActive ? 10 : 1,
                   }}

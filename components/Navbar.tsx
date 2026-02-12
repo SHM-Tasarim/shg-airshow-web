@@ -182,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({
               }}
               className="text-left px-8 py-4 font-bold uppercase text-[11px] text-gray-400 tracking-widest"
             >
-              {lang === "TR" ? "🌐 English" : "🌐 Türkçe"}
+              {lang === "TR" ? "🌐 ENGLISH" : "🌐 TÜRKÇE"}
             </button>
           </div>
         </div>

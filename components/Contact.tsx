@@ -10,7 +10,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
   const content = {
     TR: {
       tagline: "BİZE ULAŞIN",
-      title: "İLETİŞİM",
+      title: "İLETİŞİM & ULAŞIM",
       addressLabel: "ADRES",
       address:
         "Sivrihisar Havacılık Merkezi, Necati Artan Tesisleri, Sivrihisar / Eskişehir",
@@ -21,7 +21,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       // Transport Eklemeleri
       landTitle: "Karadan Ulaşım",
       shmArrival: "S.H.M. Varış",
-      shmArrivalImage: "/images/ulasim.jpg",
+      shmArrivalImage: "/images/ulasim-2.jpeg",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",
@@ -37,7 +37,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       tagline: "GET IN TOUCH",
-      title: "CONTACT",
+      title: "CONTACT & TRANSPORTATION",
       addressLabel: "ADDRESS",
       address:
         "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
@@ -48,7 +48,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       // Transport Eklemeleri
       landTitle: "Land Transportation",
       shmArrival: "S.H.M. Arrival",
-      shmArrivalImage: "/images/ulasim_en.jpeg",
+      shmArrivalImage: "/images/ulasim-2-en.png",
       airTitle: "Air Transportation",
       technical: {
         coords: "S.H.M. Coordinates",

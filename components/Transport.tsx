@@ -13,7 +13,7 @@ const Transport: React.FC<TransportProps> = ({ lang, onNavigate }) => {
       title: "Ulaşım",
       landTitle: "Karadan Ulaşım",
       //shmArrival: "S.H.M. Varış",
-      shmArrivalImage: "/images/ulasim.jpeg",
+      shmArrivalImage: "/images/ulasim-2.jpeg",
       //airshowArrival: "SHG AIRSHOW ALANINA ULAŞIM",
       //airshowArrivalImage: "/images/Yeni Yol - TR.jpeg",
       //landWarning: "SHG Airshow alanına ulaşım, yukarıda gösterilen yol üzerinden çift yönlü giriş ve çıkışlar şeklinde sağlanacaktır.\n Gösteri emniyeti sebebiyle, yol üzerinde araç parkına artık izin verilmeyecektir.",

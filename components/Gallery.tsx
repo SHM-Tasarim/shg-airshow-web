@@ -30,7 +30,7 @@ const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
     {
       src: "/images/otopark-deneme.jpg",
       text: lang === "TR" ? "İLETİŞİM\n&\nULAŞIM" : "TRANSPORTATION\n&\nCONTACT",
-      id: "transport",
+      id: "contact",
       className: "md:col-span-1",
     },
   ];
