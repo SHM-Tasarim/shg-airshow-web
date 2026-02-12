@@ -90,25 +90,25 @@ const App: React.FC = () => {
     return (
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
         {currentView === "contact" && <Contact lang={lang} onNavigate={navigateTo} />}
-        {currentView === "volunteer" && <Volunteer lang={lang} />}
-        {currentView === "suggestions" && <Suggestions lang={lang} />}
+        {currentView === "volunteer" && <Volunteer lang={lang} onNavigate={navigateTo} />}
+        {currentView === "suggestions" && <Suggestions lang={lang} onNavigate={navigateTo} />}
         {currentView === "spotter" && <SpotterRegistration lang={lang} onNavigate={navigateTo} />}
         {currentView === "transport" && <Transport lang={lang} onNavigate={navigateTo} />}
-        {currentView === "about" && <AboutShow lang={lang} />}
+        {currentView === "about" && <AboutShow lang={lang} onNavigate={navigateTo} />}
         {currentView === "shm" && <AboutSHM lang={lang} onNavigate={navigateTo} />}
         {currentView === "stand" && <Stand lang={lang} onNavigate={navigateTo} />}
         {currentView === "museum" && <AboutMSO lang={lang} onNavigate={navigateTo} />}
         {currentView === "acromach" && <Acromach lang={lang} onNavigate={navigateTo} />}
         {currentView === "mach" && <AboutMachAir lang={lang} onNavigate={navigateTo} />}
         {currentView === "program" && <ShowProgram lang={lang} onNavigate={navigateTo} />}
-        {currentView === "participants" && <Participants lang={lang} targetId={targetParticipantId} />}
+        {currentView === "participants" && <Participants lang={lang} targetId={targetParticipantId} onNavigate={(view) => navigateTo(view as View)} />}
         {currentView === "partners" && <Partners lang={lang} onNavigate={navigateTo} />}
         {currentView === "tickets" && <Tickets lang={lang} targetId={targetSectionId} />}
         {currentView === "gallery-page" && <GalleryPage lang={lang} onNavigate={navigateTo} />}
         {currentView === "media-archive" && <MediaArchive lang={lang} onNavigate={navigateTo} />}
         {currentView === "schools" && <Schools lang={lang} onNavigate={navigateTo} />}
         {currentView === "sponsor" && <Sponsor lang={lang} onNavigate={navigateTo} />}
-        {currentView === "faq" && <FAQ lang={lang} targetId={targetSectionId} />}
+        {currentView === "faq" && <FAQ lang={lang} targetId={targetSectionId} onNavigate={(view) => navigateTo(view as View)} />}
         
         {/* Alt Geri Dön Butonu (Sadece alt sayfalarda görünür) */}
         {currentView !== "contact" && (

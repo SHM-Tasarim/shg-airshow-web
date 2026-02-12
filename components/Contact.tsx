@@ -22,6 +22,8 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       landTitle: "Karadan Ulaşım",
       shmArrival: "S.H.M. Varış",
       shmArrivalImage: "/images/ulasim-2.jpeg",
+      shgArrival: "SHG AIRSHOW Alanına Varış",
+      shgArrivalImage: "/images/ulasim-3.jpeg",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",
@@ -49,6 +51,8 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       landTitle: "Land Transportation",
       shmArrival: "S.H.M. Arrival",
       shmArrivalImage: "/images/ulasim-2-en.png",
+      shgArrival: "Arrival to SHG Airshow Area",
+      shgArrivalImage: "/images/ulasim-3.jpeg",
       airTitle: "Air Transportation",
       technical: {
         coords: "S.H.M. Coordinates",
@@ -141,7 +145,8 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
             {content.landTitle}
           </h2>
 
-          <div className="bg-gray-50 dark:bg-gray-900/20 rounded-3xl p-6 md:p-10 border border-gray-100 dark:border-gray-800 shadow-inner">
+          {/* S.H.M. Varış */}
+          <div className="bg-gray-50 dark:bg-gray-900/20 rounded-3xl p-6 md:p-10 border border-gray-100 dark:border-gray-800 shadow-inner mb-8">
             <h3 className="text-xl font-black text-secondary dark:text-white mb-6 uppercase text-center tracking-widest">
               {content.shmArrival}
             </h3>
@@ -150,6 +155,20 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
                 src={content.shmArrivalImage}
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
                 alt="Karadan Ulaşım Haritası"
+              />
+            </div>
+          </div>
+
+          {/* SHG Airshow Alanına Varış */}
+          <div className="bg-gray-50 dark:bg-gray-900/20 rounded-3xl p-6 md:p-10 border border-gray-100 dark:border-gray-800 shadow-inner">
+            <h3 className="text-xl font-black text-secondary dark:text-white mb-6 uppercase text-center tracking-widest">
+              {content.shgArrival}
+            </h3>
+            <div className="rounded-2xl overflow-hidden shadow-2xl group">
+              <img
+                src={content.shgArrivalImage}
+                className="w-full h-auto transition-transform duration-700 group-hover:scale-[1.02]"
+                alt="SHG Airshow Alanına Varış Haritası"
               />
             </div>
           </div>
@@ -204,7 +223,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               <p className="text-white text-center text-sm md:text-base font-medium leading-relaxed max-w-2xl mb-4">
                 {content.airWarning}
               </p>
-              {/* Mail adresi satırı boyutu büyütüldü */}
               <p className="text-gray-400 text-center text-sm md:text-base font-medium mb-8">
                 {content.directorMailLabel}
                 <a href="mailto:aysan@mach.aero" className="text-primary font-bold hover:underline ml-1">
@@ -245,7 +263,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         </section>
 
         {/* Footer Navigation */}
-        <div className='pt-16 pb-24 border-t border-gray-100 dark:border-white/5 text-center'>
+        <div className='pt-16 border-t border-gray-100 dark:border-white/5 text-center'>
           <button
             onClick={() => onNavigate("home")}
             className='inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors'
@@ -254,6 +272,20 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
             {content.back}
           </button>
         </div>
+
+        {/* CTA Section */}
+        <section className="mt-32 px-4 max-w-5xl mx-auto pb-24">
+          <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative z-10">
+              <button
+                onClick={() => onNavigate?.("tickets")}
+                className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+              >
+                {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

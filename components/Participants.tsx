@@ -4,9 +4,10 @@ import { Language } from "../App";
 interface ParticipantsProps {
   lang: Language;
   targetId?: string | null;
+  onNavigate?: (view: 'tickets') => void;
 }
 
-const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
+const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate }) => {
   useEffect(() => {
     if (targetId) {
       const element = document.getElementById(targetId);
@@ -331,7 +332,10 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId }) => {
       <section className="mt-32 px-4 max-w-5xl mx-auto">
         <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
           <div className="relative z-10">
-            <button className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg">
+            <button
+              onClick={() => onNavigate?.('tickets')}
+              className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+            >
               {translations.cta.button}
             </button>
           </div>

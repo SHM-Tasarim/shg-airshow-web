@@ -224,6 +224,20 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
           items={masonryItems}
           itemRender={(itemInfo) => <ImageCard item={itemInfo.data} />}
         />
+
+        {/* CTA Section */}
+        <section className="mt-32 px-4 max-w-5xl mx-auto pb-24">
+          <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative z-10">
+              <button
+                onClick={() => onNavigate?.("tickets")}
+                className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+              >
+                {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* SAF GÖRSEL LIGHTBOX - Portal ile render ediliyor */}

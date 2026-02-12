@@ -118,9 +118,9 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-32">
-          <a 
-            href="https://msomuseum.com/" 
-            target="_blank" 
+          <a
+            href="https://msomuseum.com/"
+            target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-primary text-white font-black py-5 px-12 rounded-xl hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-sm"
           >
@@ -128,6 +128,20 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
           </a>
         </div>
       </div>
+
+      {/* CTA Section - max-w-5xl, container dışında */}
+      <section className="mt-32 px-4 max-w-5xl mx-auto pb-24">
+        <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
+          <div className="relative z-10">
+            <button
+              onClick={() => onNavigate?.("tickets")}
+              className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+            >
+              {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
