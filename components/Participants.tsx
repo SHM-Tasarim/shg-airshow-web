@@ -156,7 +156,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "t6-texan",
       name: "NORTH AMERICAN T-6G TEXAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T-6G Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "Türkiye's first civilian T-6G Harvard aircraft, brought by the M.S.Ö. Air and Space Museum, will be in your presence for a perfect show at SHG Airshow 2026.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Turkey, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
       image: "/images/t6-texan.jpg",
       url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
     },

@@ -53,7 +53,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Airshow" to be held on September 19–20, 2026, please send your application to `,
       body1Email: "spotter@shm.aero",
       body1After: `.`,
-      body2: "The following information must be included in the application:",
+      body2: "THE FOLLOWING INFORMATION MUST BE INCLUDED IN THE APPLICATION:",
       requirements: [
         "Full Name",
         "Turkish Republic ID Number",

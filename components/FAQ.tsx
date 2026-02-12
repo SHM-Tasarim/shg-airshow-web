@@ -21,7 +21,7 @@ const FAQ: React.FC<FAQProps> = ({ lang, targetId, onNavigate }) => {
   }, [targetId]);
 
   const translations = {
-    title: lang === "TR" ? "Sıkça Sorulan Sorular" : "Frequently Asked Questions",
+    title: lang === "TR" ? "Sıkça Sorulan Sorular" : "FREQUENTLY ASKED QUESTIONS",
   };
 
   const faqs = [

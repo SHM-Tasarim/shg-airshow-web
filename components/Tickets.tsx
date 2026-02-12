@@ -49,7 +49,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const pricing = [
     {
-      title: lang === "TR" ? "Günlük Bilet" : "Ticket",
+      title: lang === "TR" ? "Günlük Bilet" : "TICKET",
       features:
         lang === "TR"
           ? [
@@ -64,7 +64,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             ],
     },
     {
-      title: lang === "TR" ? "Günlük VIP Bilet" : "1-Day VIP Ticket",
+      title: lang === "TR" ? "Günlük VIP Bilet" : "1-DAY VIP TICKET",
       features:
         lang === "TR"
           ? [

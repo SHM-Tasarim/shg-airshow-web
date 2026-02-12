@@ -8,11 +8,11 @@ interface VolunteeringProps {
 
 const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
   const translations = {
-    title: lang === 'TR' ? "Gönüllü Başvurusu" : "Volunteer Application",
+    title: lang === 'TR' ? "Gönüllü Başvurusu" : "VOLUNTEER APPLICATION",
     intro: lang === 'TR'
       ? "19-20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan SHG Airshow 2026 / Sivrihisar Hava Gösterileri Organizasyonunda gönüllü olarak görev almak isteyen arkadaşlarımızın; isim, soy isim, yaş ve iletişim bilgilerini içeren başvuru e-postasını 15 Temmuz 2026 tarihine kadar info@shm.aero adresine göndermeleri rica olunur."
       : "For those who wish to participate as a volunteer in the 11th SHG Airshow 2026 / Sivrihisar Airshow to be held on September 19–20, 2026, please send a business e-mail containing your name, surname, age and contact information to info@shm.aero by July 15, 2026.",
-    principlesTitle: lang === 'TR' ? "Gönüllü Tasviri" : "Volunteering Description",
+    principlesTitle: lang === 'TR' ? "Gönüllü Tasviri" : "VOLUNEERING DESCRIPTION",
     principles: lang === 'TR'
       ? `"Gönüllü" sıfatıyla, SHG Airshow organizasyonlarında görev almak isteyen kişilerin, tecrübelerini, maddi ve manevi imkanlarını hiçbir karşılık beklemeden paylaşmaya niyetli ve istekli oldukları kabul edilir.
 
@@ -118,17 +118,6 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
           </div>
         </div>
       </section>
-
-      {/* Footer Navigation - Container dışında */}
-      <div className="pt-16 pb-8 border-t border-gray-100 dark:border-white/5 flex items-center justify-center mt-16 max-w-6xl mx-auto">
-        <button
-          onClick={() => onNavigate("home")}
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
-        >
-          <span className="material-icons text-lg">arrow_back</span>
-          {translations.back}
-        </button>
-      </div>
     </div>
   );
 };

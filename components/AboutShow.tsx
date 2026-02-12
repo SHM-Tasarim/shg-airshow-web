@@ -121,7 +121,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
         </div>
 
         {/* Footer Navigation */}
-        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="pt-18 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
         </div>
       </div>
 

@@ -47,7 +47,6 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     { year: "2025", h: 76 }
   ];
 
-  // Mobile: 2.8x multiplier, Desktop: 4x
   const barMultiplier = typeof window !== 'undefined' && window.innerWidth < 768 ? 2.8 : 4;
 
   return (
@@ -96,7 +95,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   </>
                 ) : (
                   <>
-                    Connect Your Brand with <span className="text-primary">"Our Audience"</span>
+                    CONNECT YOUR BRAND WITH <span className="text-primary">"OUR AUDIENCE"</span>
                     <br />
                     Today!
                   </>
@@ -266,11 +265,15 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
   const [cardWidth, setCardWidth] = useState(CARD_WIDTH_DESKTOP);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateWidth = () => {
-      if (window.innerWidth < 640) {
-        setCardWidth(window.innerWidth - 48);
+      const mobile = window.innerWidth < 640;
+      setIsMobile(mobile);
+      if (mobile) {
+        // Mobilde ekran genişliğinden yeterli margin bırak
+        setCardWidth(window.innerWidth - 80);
       } else {
         setCardWidth(CARD_WIDTH_DESKTOP);
       }
@@ -282,7 +285,6 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
 
   const step = cardWidth + CARD_GAP;
 
-  // ESC ile lightbox kapat
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setLightboxSrc(null);
@@ -297,7 +299,6 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
     };
   }, [lightboxSrc]);
 
-  // Touch swipe desteği
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -335,24 +336,24 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
       >
 
         {/* Sol ok */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center pointer-events-none">
+        <div className={`absolute left-0 top-0 bottom-0 z-20 flex items-center justify-center pointer-events-none ${isMobile ? 'w-10' : 'w-24'}`}>
           <button
             onClick={() => setActiveIndex((prev) => Math.max(0, prev - 1))}
             disabled={activeIndex === 0}
-            className="pointer-events-auto w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
+            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
           >
-            <span className="material-icons text-secondary dark:text-white">chevron_left</span>
+            <span className={`material-icons text-secondary dark:text-white ${isMobile ? 'text-lg' : 'text-2xl'}`}>chevron_left</span>
           </button>
         </div>
 
         {/* Sağ ok */}
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-20 flex items-center justify-center pointer-events-none">
+        <div className={`absolute right-0 top-0 bottom-0 z-20 flex items-center justify-center pointer-events-none ${isMobile ? 'w-10' : 'w-24'}`}>
           <button
             onClick={() => setActiveIndex((prev) => Math.min(images.length - 1, prev + 1))}
             disabled={activeIndex === images.length - 1}
-            className="pointer-events-auto w-12 h-12 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110"
+            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
           >
-            <span className="material-icons text-secondary dark:text-white">chevron_right</span>
+            <span className={`material-icons text-secondary dark:text-white ${isMobile ? 'text-lg' : 'text-2xl'}`}>chevron_right</span>
           </button>
         </div>
 
@@ -379,7 +380,7 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
                     zIndex: isActive ? 10 : 1,
                   }}
                 >
-                  <div className="w-full h-[260px] rounded-xl overflow-hidden shadow-2xl">
+                  <div className="w-full h-[200px] sm:h-[260px] rounded-xl overflow-hidden shadow-2xl">
                     <img
                       src={src}
                       alt={`Sponsor ${index + 1}`}
