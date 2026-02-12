@@ -19,7 +19,7 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       title: "Mach Aviation",
-      history: "Mach Air was founded in 1989 by Ali İsmet Öztürk, Turkey's First Professional National Aerobatic Pilot.",
+      history: "Mach Air was founded in 1989 by Ali İsmet Öztürk, Türkiye's First Professional National Aerobatic Pilot.",
       legacy: "As a qualified general aviation operator with an AOC issued by the DGCA, Mach Air plays a pioneering role in the aviation industry with its reliability and expertise.",
       transition: "Operating at Istanbul Atatürk Airport for many years, Mach Air introduced innovations to Turkish civil aviation in general aviation, maintenance, film production, and flight training.",
       modernEra: "Continuing its operations at Sivrihisar Aviation Center (S.H.M.) since 2013, Mach Air continues to preserve the aviation heritage with its professional technical team.",

@@ -18,12 +18,12 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       emailLabel: "E-POSTA",
       mapTitle: "KONUM",
       back: "ANA SAYFAYA DÖN",
-      // Transport Eklemeleri
       landTitle: "Karadan Ulaşım",
       shmArrival: "S.H.M. Varış",
       shmArrivalImage: "/images/ulasim-2.jpeg",
       shgArrival: "SHG AIRSHOW Alanına Varış",
       shgArrivalImage: "/images/ulasim-3.jpeg",
+      shgArrivalNote: "Gösteri emniyeti sebebiyle, yol üzerinde araç parkına izin verilmeyecektir.",
       airTitle: "Havadan Ulaşım",
       technical: {
         coords: "S.H.M. Koordinatları",
@@ -47,12 +47,12 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       emailLabel: "EMAIL",
       mapTitle: "LOCATION",
       back: "BACK TO HOME",
-      // Transport Eklemeleri
       landTitle: "Land Transportation",
       shmArrival: "S.H.M. Arrival",
       shmArrivalImage: "/images/ulasim-2-en.png",
       shgArrival: "Arrival to SHG Airshow Area",
       shgArrivalImage: "/images/ulasim-3.jpeg",
+      shgArrivalNote: "For show safety reasons, roadside parking will not be permitted.",
       airTitle: "Air Transportation",
       technical: {
         coords: "S.H.M. Coordinates",
@@ -171,6 +171,14 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
                 alt="SHG Airshow Alanına Varış Haritası"
               />
             </div>
+
+            {/* Kırmızı Uyarı Notu */}
+            <div className="mt-6 flex items-start gap-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800/40 rounded-xl p-4 md:p-5">
+              <span className="material-icons text-red-600 text-xl flex-shrink-0 mt-0.5">warning</span>
+              <p className="text-red-600 dark:text-red-400 font-bold text-sm md:text-base leading-relaxed">
+                {content.shgArrivalNote}
+              </p>
+            </div>
           </div>
         </section>
 
@@ -182,7 +190,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           </h2>
 
           <div className="bg-secondary dark:bg-black/40 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/5 relative overflow-hidden group">
-            {/* Arka plan dekoratif uçak ikonu */}
             <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
               <span className="material-icons text-[160px]">flight</span>
             </div>
@@ -218,7 +225,6 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               </div>
             </div>
 
-            {/* Bilgilendirme Metni ve Buton */}
             <div className="mt-12 flex flex-col items-center border-t border-white/10 pt-10 relative z-10">
               <p className="text-white text-center text-sm md:text-base font-medium leading-relaxed max-w-2xl mb-4">
                 {content.airWarning}
@@ -278,7 +284,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
           <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
             <div className="relative z-10">
               <button
-                onClick={() => onNavigate?.("tickets")}
+                onClick={() => onNavigate?.("tickets" as any)}
                 className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
               >
                 {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
