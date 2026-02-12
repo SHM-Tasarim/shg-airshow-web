@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Language } from "../App";
 
 interface TicketsProps {
@@ -7,6 +7,34 @@ interface TicketsProps {
 }
 
 const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        setVideoFailed(true);
+      });
+    };
+
+    video.addEventListener('loadeddata', tryPlay);
+    video.addEventListener('error', () => setVideoFailed(true));
+
+    const timeout = setTimeout(() => {
+      if (video.paused) {
+        tryPlay();
+      }
+    }, 1000);
+
+    return () => {
+      video.removeEventListener('loadeddata', tryPlay);
+      video.removeEventListener('error', () => setVideoFailed(true));
+      clearTimeout(timeout);
+    };
+  }, []);
 
   useEffect(() => {
     if (targetId === "faq") {
@@ -96,9 +124,25 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
       {/* Video Hero Section */}
       <section className="relative py-24 lg:py-36 text-center text-white overflow-hidden bg-secondary min-h-[75vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <video autoPlay muted loop playsInline className="absolute top-0 left-0 w-full h-full object-cover opacity-60">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/sponsor-2.jpg"
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${videoFailed ? 'opacity-0' : 'opacity-60'}`}
+          >
             <source src="/images/shg-bilet.mp4" type="video/mp4" />
           </video>
+          {videoFailed && (
+            <img
+              src="/images/sponsor-2.jpg"
+              alt="SHG Airshow"
+              className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-transparent to-secondary/90"></div>
         </div>
 
