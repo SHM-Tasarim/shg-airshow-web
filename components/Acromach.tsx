@@ -27,7 +27,7 @@ const Acromach: React.FC<AcromachProps> = ({ lang, onNavigate }) => {
     EN: {
       tagline: "SKY DANCERS - AEROBATIC TEAM",
       title: "Acromach",
-      history: "Acromach was founded by Ali İsmet Öztürk, Turkey's First Professional National Aerobatic Pilot.",
+      history: "Sky Dancers - Aerial Acrobatics Group, Acromach, was founded in Istanbul.",
       legacy: "Under the leadership of Ali İsmet Öztürk, the Acromach Team participated in more than 500 air shows in 22 different countries with the Legendary Aircraft 'Purple Violet', reaching more than 25 million spectators by completing 859 display flights flawlessly.",
       transition: "Following Ali İsmet Öztürk's jubilee on September 13, 2021, at SHG Airshow, 'Legendary Purple Violet' underwent extensive maintenance and its appearance changed with the dedicated work of Mak Teknik.",
       modernEra: "'Purple Violet' now continues its new adventures in the skies as 'New Violet' with Turkey's First Professional Female Aerobatic Pilot Semin Öztürk Şener.",

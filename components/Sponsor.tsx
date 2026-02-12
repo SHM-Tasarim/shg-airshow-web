@@ -17,9 +17,9 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
   }, []);
 
   const t = {
-    introText: isTR 
+    introText: isTR
       ? "SHG Airshow firma ve kuruluşlara; \"seyircilerimizle\" doğrudan iletişim kurarak, marka bilinirliğini artırmak ve yeni işbirlikleri için önemli fırsatlar sunuyor."
-      : "By directly interacting with \"Our Audience\", it offers significant opportunities for companies and organizations to increase brand awareness and establish new collaborations.",
+      : "SHG Airshow offers companies and organizations significant opportunities to increase brand awareness and establish new collaborations by directly interacting with \"Our Audience\".",
     
     chartTitle: isTR ? "Yıllara Göre SHG Seyirci Sayısı ve Erişim" : "SHG audience by years",
     pandemicText: isTR ? "Pandemi Sebebiyle Canlı Yayın" : "LIVE STREAM",
@@ -27,9 +27,9 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     liveStreamLabel: isTR ? 'CANLI YAYIN ERİŞİMİ' : 'LIVE STREAM REACH',
     digitalReachLabel: isTR ? 'DİJİTAL ERİŞİM' : 'DIGITAL REACH',
     
-    descriptionText: isTR 
+    descriptionText: isTR
       ? "Sivrihisar Hava Gösterileri, 2015 yılından bu yana her sene artan seyirci sayısı ve erişimiyle; TV, basın ve özellikle dijital mecralar aracılığıyla \"MARKANIZI\", ulusal ve uluslararası düzeyde geniş kitlelere ulaştırıyor."
-      : "Sivrihisar Airshows have been making an impact not only in Türkiye but internationally through TV, press, and especially the internet, with an increasing number of spectators and reach every year since 2015.",
+      : "Sivrihasar Airshows helps promote \"YOUR BRAND\" to wide audiences at both national and international levels through TV, press, and especially digital platforms, with an increasing number of spectators and reach every year since 2015.",
 
     emailFooterDesc: isTR ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "For any questions, please email us."
   };

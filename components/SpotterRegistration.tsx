@@ -60,7 +60,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Date of Birth",
         "Contact Information (phone and e-mail)"
       ],
-      note: `Our "SPOTTER" friends will be able to enter the organization with a ticket.`,
+      note: `Our "SPOTTER" friends will be able to enter the organization with a ticket. Spotters must use professional photography equipment and obtain spotter vests and lanyards from the registration desk.`,
       applyTitle: "To Apply as a Spotter",
       commitmentBtn: "SPOTTER COMMITMENT FORM",
       commitmentPdf: "/Spotter Commitment Form.pdf",
@@ -168,17 +168,6 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           </div>
         </div>
       </section>
-
-      {/* Footer Navigation - Container dışında */}
-      <div className="pt-16 pb-8 border-t border-gray-100 dark:border-white/5 flex items-center justify-center mt-16 max-w-6xl mx-auto">
-        <button
-          onClick={() => onNavigate("home")}
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
-        >
-          <span className="material-icons text-lg">arrow_back</span>
-          {content.back}
-        </button>
-      </div>
     </div>
   );
 };

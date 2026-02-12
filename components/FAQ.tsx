@@ -43,7 +43,7 @@ const FAQ: React.FC<FAQProps> = ({ lang, targetId, onNavigate }) => {
     },
     {
       q: lang === "TR" ? "Gelirken Getirmemiz Gerekenler Nelerdir?" : "WHAT DO YOU RECOMMEND BRINGING WITH YOU?",
-      a: lang === "TR" ? "Gösterileri konforlu seyredebilmek için güneş gözlüğü, şapka ve güneş kreminizi yanınızda bulundurmanızı öneririz. Ayrıca, sese aşırı hasssasiyeti olabilecek seyircilerimiz veya çocuklar için gerektiğinde kulanmak üzere sesi azaltıcı ekipman getirmenizi tavsiye ederiz." : "To fully enjoy the Sivrihisar Airshows, we recommend bringing sunglasses, a hat, and sunscreen with you.",
+      a: lang === "TR" ? "Gösterileri konforlu seyredebilmek için güneş gözlüğü, şapka ve güneş kreminizi yanınızda bulundurmanızı öneririz. Ayrıca, sese aşırı hasssasiyeti olabilecek seyircilerimiz veya çocuklar için gerektiğinde kulanmak üzere sesi azaltıcı ekipman getirmenizi tavsiye ederiz." : "To fully enjoy the Sivrihisar Airshows, we recommend bringing sunglasses, a hat, and sunscreen with you. We also recommend bringing noise-reducing equipment for visitors or children who may be overly sensitive to sound.",
     },
     {
       q: lang === "TR" ? "Bebek Bakım Odası var mı?" : "IS THERE A BABY CARE ROOM?",

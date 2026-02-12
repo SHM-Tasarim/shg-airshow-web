@@ -11,7 +11,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
     {
       title: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi" : "M.S.Ö. AIR AND SPACE MUSEUM",
       id: "museum",
-      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi" : "Turkey's Flying Aviation Museum",
+      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi" : "Türkiye's Flying Aviation Museum",
       image: "/images/mso-gri.jpg",
     },
     {

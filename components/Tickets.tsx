@@ -25,7 +25,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
       ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
-      : "Veterans, persons with disabilities, press card holders, and personnel of the Turkish Armed Forces (Air, Naval and Land Forces), General Command of Gendarmerie and General Directorate of Security Organization may enter free of charge upon presentation of their ID. Their accompanying family members are subject to entry fees.",
+      : "Children aged 6 and under enter free of charge. Veterans, persons with disabilities, press card holders, and personnel of the Turkish Armed Forces (Air, Naval and Land Forces), General Command of Gendarmerie and General Directorate of Security Organization may enter free of charge upon presentation of their ID. Their accompanying family members are subject to entry fees.",
     rulesText: lang === "TR"
       ? [
           "Doğal afetler, savaş, seferberlik, salgın hastalık, terör ihbarı gibi her türlü mücbir sebeplerle SHG Airshow'un kısmen ve/veya tamamen iptal edilmesi,",
@@ -79,10 +79,13 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             ]
           : [
               "Private Entrance",
+              "Fast access to Airshow",
+              "Opportunity to watch shows up close",
               "VIP seating area in shaded veranda and/or air-conditioned lounge",
-              "Access to VIP restrooms located in the lounge",
+              "Special VIP and disabled toilets",
               "A selection of Turkish cuisine and a rich buffet served from our exclusive VIP lounge kitchen",
               "Special parking and valet service",
+              "All Daily Ticket benefits included",
             ],
     },
   ];

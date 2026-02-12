@@ -33,7 +33,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         runwayLen: "Pist Uzunluğu",
         asphalt: "Asfalt"
       },
-      airWarning: "Havadan gelen trafiklerin, S.H.M. web sitesinde yer alan yaklaşma prosedürlerini incelemeleri ve Display Director Aysan Keskin ile temas kurularak SLOT alınması gerekmektedir.",
+      airWarning: "Havadan gelen trafiklerin, S.H.M. web sitesinde yer alan yaklaşma prosedürlerini incelemeleri ve Display Director Aysan Keskin ile temas kururarak SLOT alınması gerekmektedir.",
       directorMailLabel: "SHG Display Director mail adresi: ",
       visitWeb: "S.H.M. WEB SİTESİ",
     },
@@ -55,14 +55,14 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       shgArrivalNote: "For show safety reasons, roadside parking will not be permitted.",
       airTitle: "Air Transportation",
       technical: {
-        coords: "S.H.M. Coordinates",
+        coords: "S.H.M. COORDINATES",
         tower: "Artan Tower",
-        elev: "Elevation",
-        runwayDir: "Runway Directions",
-        runwayLen: "Runway Length",
+        elev: "ELEVATION",
+        runwayDir: "RUNWAY DIRECTIONS",
+        runwayLen: "RUNWAY LENGTH",
         asphalt: "Asphalt"
       },
-      airWarning: "Arriving air traffic must review the arrival procedures on the S.H.M. website and contact the Display Director.",
+      airWarning: "Arriving air traffic must review the arrival procedures on the S.H.M. website and contact Display Director Aysan Keskin to obtain a SLOT.",
       directorMailLabel: "SHG Display Director email: ",
       visitWeb: "S.H.M. OFFICIAL WEBSITE",
     },

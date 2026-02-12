@@ -9,6 +9,7 @@ interface AboutMachAirProps {
 const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
   const content = {
     TR: {
+      tagline: "MÜZE UÇAKLARININ YERİ",
       title: "Mach Aviation",
       history: "Mak Havacılık (Mach Air), 1989 yılında İstanbul Atatürk Havalimanı'nda kurulmuştur.",
       legacy: "Mach Air, Sivil Havacılık Genel Müdürlüğü tarafından onaylanmış AOC (İşletme Ruhsatı) belgesine sahip, yetkin ve güvenilir bir genel havacılık operatörü olarak havacılık sektöründe öncü rol oynamaktadır.",
@@ -18,12 +19,13 @@ const AboutMachAir: React.FC<AboutMachAirProps> = ({ lang, onNavigate }) => {
       back: "mach.aero"
     },
     EN: {
+      tagline: "THE HOME OF MUSEUM AIRCRAFT",
       title: "Mach Aviation",
-      history: "Mach Air was founded in 1989 by Ali İsmet Öztürk, Türkiye's First Professional National Aerobatic Pilot.",
-      legacy: "As a qualified general aviation operator with an AOC issued by the DGCA, Mach Air plays a pioneering role in the aviation industry with its reliability and expertise.",
-      transition: "Operating at Istanbul Atatürk Airport for many years, Mach Air introduced innovations to Turkish civil aviation in general aviation, maintenance, film production, and flight training.",
+      history: "Mach Air was founded in 1989 at Istanbul Atatürk Airport.",
+      legacy: "As a qualified general aviation operator with an AOC (Operating Certificate) issued by the DGCA (Directorate General of Civil Aviation), Mach Air plays a pioneering role in the aviation industry with its reliability and expertise.",
+      transition: "Operating at Istanbul Atatürk Airport for many years, Mach Air introduced innovations to Turkish civil aviation in general aviation, maintenance services, film production shoots, and flight training.",
       modernEra: "Continuing its operations at Sivrihisar Aviation Center (S.H.M.) since 2013, Mach Air continues to preserve the aviation heritage with its professional technical team.",
-      participation: "The maintenance and flight operation of the rare historical aircraft in the 'M.S.Ö. Air and Space Museum' inventory are meticulously carried out by Mach Air's expert technicians.",
+      participation: "Türkiye's Flying Aviation Museum 'M.S.Ö. Air and Space Museum' inventory's rare historical aircraft all maintenance and flight operations are meticulously carried out by Mach Air's expert technicians.",
       back: "mach.aero"
     }
   }[lang];

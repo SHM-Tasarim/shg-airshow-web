@@ -86,7 +86,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "tiger-moth",
       name: "DE HAVILLAND DH.82 TIGER MOTH",
-      desc: lang === "TR" ? "9 dalda Oscar ödül kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film 'The English Patient', is with you at SHG Airshow!",
+      desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film 'The English Patient', is with you at SHG Airshow!",
       image: "/images/tiger-moth-3.jpg",
       url: "https://msomuseum.com/de-havilland-dh.82-tiger-moth/",
     },
@@ -94,7 +94,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
-        ? `Normandiya Çıkartması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!`
+        ? `Normandiya Çıkarması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!`
         : `The 1940 Model DC-3 'Turkish Delight', brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of 'the oldest aircraft to travel the world'. This magnificent classic aircraft is with you at SHG Airshow!`,
       image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
@@ -148,7 +148,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     },
     {
       id: "p51-mustang",
-      name: "NORTH AMERICAN MUSTANG P-51 D",
+      name: "NORTH AMERICAN MUSTANG P-51D",
       desc: lang === "TR" ? "Ülkemize M.S.Ö. Hava ve Uzay Müzesi tarafından kazandırılan Ferocious Frankie, Türkiye'deki İlk ve Tek North American P-51D Mustang olma özelliğiyle Sivrihisar Semalarında!" : "Ferocious Frankie, brought to our country by the M.S.Ö. Air and Space Museum, is at SHG Airshow as the first and only North American P-51 Mustang in Türkiye!",
       image: "/images/mustang-p51d-3.jpg",
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/",
@@ -163,7 +163,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "t28-trojan",
       name: "NORTH AMERICAN T-28B TROJAN",
-      desc: lang === "TR" ? " ABD'de hem eğitim hem de savaş uçağı olarak görev yapan Trojan, SHG Airshow 2026'da muhteşem bir performans sergiliyor." : "The Trojan, the first US trainer aircraft with 'Tricycle Landing Gear', was also used as a fighter aircraft and will fascinate the audience at SHG Airshow 2026.",
+      desc: lang === "TR" ? " ABD'de hem eğitim hem de savaş uçağı olarak görev yapan Trojan, SHG Airshow 2026'da muhteşem bir performans sergiliyor." : "The Trojan, used both as a trainer and fighter aircraft in the United States, delivers a magnificent performance at SHG Airshow 2026.",
       image: "/images/t28b-trojan.jpg",
       url: "https://msomuseum.com/t-28b_trojan/",
     },
@@ -176,7 +176,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "gabriel-rieser",
       name: "GABRIEL ORLANDO RIESER",
-      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2026'da, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Experienced pilot of historical aircraft, flight instructor Gabriel RIESER will take the audience on a journey through history with his performances.",
+      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2026'da, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Gabriel, both the youngest and most talented pilot of Sivrihisar Airshows, is also a flight instructor. At SHG Airshow 2026, he takes the audience on a journey through history with his performance!",
       image: "/images/gabriel.jpg",
     },
     {
@@ -209,7 +209,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "sivrihisar-havacilik-kulubu-2",
       name: lang === "TR" ? <><span className="block">SİVRİHİSAR FORMASYON</span></> : <><span className="block">3-SHIP FORMATION FLIGHT</span></>,
-      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği bu yıl da, heyecan verici bir kol uçuşu ile gökyüzünde!" : "The main mission of the \"Women Aviators Association\" is to increase the aviation culture of \"Turkish Women\", to help all women interested in aviation, and to increase the number of female pilots as much as possible. Together with the \"Sivrihisar Aviation Club\", they will meet the audience for the second time this year with an exciting formation flight.",
+      desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği bu yıl da, heyecan verici bir kol uçuşu ile gökyüzünde!" : "Sivrihisar Aviation Club and Women Aviators Association are in the skies again this year with an exciting formation flight!",
       image: "/images/kol-ucusu-5.jpg",
       url: "https://shm.aero/",
     },
@@ -236,7 +236,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "pitts-s2s",
       name: lang === "TR" ? <>YENİ MENEKŞE <br /> ACROMACH S2S</> : <>NEW VIOLET <br /> ACROMACH S2S</>,
-      desc: lang === "TR" ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmalarından sonra \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor." : "The 'Legendary Purple Violet' took the name 'New Violet' after the dedicated work of Mak Teknik and continues its new adventures in the skies with Semin Öztürk Şener.",
+      desc: lang === "TR" ? "\"Efsanevi Mor Menekşe\" Mak Teknik'in özverili çalışmalarından sonra \"Yeni Menekşe\" adını aldı ve Semin Öztürk Şener ile göklerde yeni serüvenlerine devam ediyor." : "\"Legendary Purple Violet\" took the name \"New Violet\" after the dedicated work of Mak Teknik and continues its new adventures in the skies with Semin Öztürk Şener.",
       image: "/images/yeni-menekse.jpg",
       url: "https://www.seminozturk.com/",
     },

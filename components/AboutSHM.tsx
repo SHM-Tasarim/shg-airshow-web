@@ -32,8 +32,8 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
       suitability: "It is a location where sporting aviation can be practiced comfortably and is very suitable for parachutists and gliders.",
       technical: "TECHNICAL SPECIFICATIONS",
       frequency: "Frequency",
-      coords: "Coordinates",
-      elev: "Elevation",
+      coords: "COORDINATES",
+      elev: "ELEVATION",
       downloadPdf: "Click to download the AIP file",
       visitWeb: "OFFICIAL WEBSITE",
       back: "BACK TO HOME"
