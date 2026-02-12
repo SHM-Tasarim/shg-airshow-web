@@ -29,7 +29,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     
     descriptionText: isTR 
       ? "Sivrihisar Hava Gösterileri, 2015 yılından bu yana her sene artan seyirci sayısı ve erişimiyle; TV, basın ve özellikle dijital mecralar aracılığıyla \"MARKANIZI\", ulusal ve uluslararası düzeyde geniş kitlelere ulaştırıyor."
-      : "Sivrihisar Airshows have been making an impact not only in Turkey but internationally through TV, press, and especially the internet, with an increasing number of spectators and reach every year since 2015.",
+      : "Sivrihisar Airshows have been making an impact not only in Türkiye but internationally through TV, press, and especially the internet, with an increasing number of spectators and reach every year since 2015.",
 
     emailFooterDesc: isTR ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "For any questions, please email us."
   };
@@ -236,12 +236,12 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
         </div>
 
         {/* CTA Section */}
-        <section className="mt-32 px-4 max-w-5xl mx-auto pb-24">
-          <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
+        <section className="mt-32 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+          <div className="relative py-8 md:py-12 px-4 md:px-8 bg-primary text-white text-center overflow-hidden rounded-xl md:rounded-2xl shadow-2xl">
             <div className="relative z-10">
               <button
                 onClick={() => onNavigate?.("tickets")}
-                className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+                className="bg-white text-primary font-black py-4 md:py-6 px-8 md:px-20 rounded-lg md:rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.1em] md:tracking-[0.2em] text-base md:text-lg cursor-pointer w-full md:w-auto"
               >
                 {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
               </button>

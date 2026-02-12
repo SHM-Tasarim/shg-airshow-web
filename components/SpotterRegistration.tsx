@@ -41,6 +41,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makineleri kullanmaları, organizasyon günü spotter yelekleri ve yaka kartlarını danışmadan temin etmeleri gerekmektedir.`,
       applyTitle: "Spotter Başvurusu İçin",
       commitmentBtn: "SPOTTER TAAHHÜTNAMESİ",
+      commitmentPdf: "/SHG 2026-Spotter Taahhutnamesi.pdf",
       emailBtn: "E-POSTA GÖNDER",
       emailSubject: "SHG Airshow 2026 Spotter Kayıt Başvurusu",
       back: "ANA SAYFAYA DÖN"
@@ -62,6 +63,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       note: `Our "SPOTTER" friends will be able to enter the organization with a ticket.`,
       applyTitle: "To Apply as a Spotter",
       commitmentBtn: "SPOTTER COMMITMENT FORM",
+      commitmentPdf: "/Spotter Commitment Form.pdf",
       emailBtn: "SEND E-MAIL",
       emailSubject: "SHG Airshow 2026 Spotter Registration Application",
       back: "BACK TO HOME"
@@ -92,7 +94,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
 
         {/* Narrative Text */}
         <div className="space-y-8 mb-20">
-          {/* Intro Box  */}
+          {/* Intro Box */}
           <div className="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-6 rounded-r-3xl">
             <p className="text-2xl font-black text-gray-900 dark:text-white italic mb-4">
               {content.greeting}
@@ -123,20 +125,16 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
           <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 font-bold border-l-4 border-primary pl-6">
             {renderNoteWithRedWords(content.note)}
           </p>
-
-          <p className="text-sm font-black tracking-widest text-gray-400 uppercase pt-8">
-            {content.signature}
-          </p>
         </div>
 
         {/* Application CTA */}
-        <section className="mb-32 text-center">
+        <section className="mb-16 text-center">
           <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
             {content.applyTitle}
           </h3>
 
           <a
-            href="/SHG 2026-Spotter Taahhutnamesi.pdf"
+            href={content.commitmentPdf}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 bg-secondary text-white font-black py-6 px-14 rounded-2xl hover:bg-gray-800 transition-all shadow-2xl shadow-secondary/30 active:scale-95 uppercase tracking-widest text-sm mb-6"
@@ -155,24 +153,31 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
             {content.emailBtn}
           </a>
         </section>
+      </div>
 
-        {/* Footer Navigation */}
-        <div className="pt-16 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
-        </div>
-
-        {/* CTA Section */}
-        <section className="mt-32 px-4 max-w-5xl mx-auto pb-24">
-          <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
-            <div className="relative z-10">
-              <button
-                onClick={() => onNavigate?.("tickets")}
-                className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
-              >
-                {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
-              </button>
-            </div>
+      {/* CTA Section - Container dışında, tam genişlik */}
+      <section className="mt-32 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+        <div className="relative py-8 md:py-12 px-4 md:px-8 bg-primary text-white text-center overflow-hidden rounded-xl md:rounded-2xl shadow-2xl">
+          <div className="relative z-10">
+            <button
+              onClick={() => onNavigate?.("tickets" as any)}
+              className="bg-white text-primary font-black py-4 md:py-6 px-8 md:px-20 rounded-lg md:rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.1em] md:tracking-[0.2em] text-base md:text-lg cursor-pointer w-full md:w-auto"
+            >
+              {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
+
+      {/* Footer Navigation - Container dışında */}
+      <div className="pt-16 pb-8 border-t border-gray-100 dark:border-white/5 flex items-center justify-center mt-16 max-w-6xl mx-auto">
+        <button
+          onClick={() => onNavigate("home")}
+          className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
+        >
+          <span className="material-icons text-lg">arrow_back</span>
+          {content.back}
+        </button>
       </div>
     </div>
   );

@@ -30,6 +30,7 @@ Volunteers cover all kinds of expenses arising from the performance of the dutie
 Even though they are not professional employees of SHG Airshow, volunteers are expected to fulfill their tasks "Professionally", no matter how simple the task is.`,
     applyTitle: lang === 'TR' ? "Gönüllü Olmak İçin" : "To Apply as a Volunteer",
     commitmentBtn: lang === 'TR' ? "GÖNÜLLÜ TAAHHÜTNAMESİ" : "VOLUNTEER COMMITMENT FORM",
+    commitmentPdf: lang === 'TR' ? "/SHG 2026-Gonullu Taahhutnamesi.pdf" : "/Voluntary Commitment Form.pdf",
     applyBtn: lang === 'TR' ? "E-POSTA GÖNDER" : "SEND E-MAIL",
     emailSubject: lang === 'TR' ? "SHG Airshow 2026 Gönüllü Başvurusu" : "SHG Airshow 2026 Volunteer Application",
     back: lang === 'TR' ? "ANA SAYFAYA DÖN" : "BACK TO HOME"
@@ -77,13 +78,13 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
         </div>
 
         {/* Application CTA */}
-        <section className="mb-32 text-center">
+        <section className="mb-16 text-center">
           <h3 className="text-2xl md:text-3xl font-black text-secondary dark:text-white uppercase tracking-tight mb-8">
             {translations.applyTitle}
           </h3>
 
           <a
-            href="/SHG 2026-Gonullu Taahhutnamesi.pdf"
+            href={translations.commitmentPdf}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-4 bg-secondary text-white font-black py-6 px-14 rounded-2xl hover:bg-gray-800 transition-all shadow-2xl shadow-secondary/30 active:scale-95 uppercase tracking-widest text-sm mb-6"
@@ -102,23 +103,32 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
             {translations.applyBtn}
           </a>
         </section>
-
-        {/* Footer Navigation */}
       </div>
 
-      {/* CTA Section */}
-      <section className="mt-32 px-4 max-w-5xl mx-auto">
-        <div className="relative py-12 px-8 bg-primary text-white text-center overflow-hidden rounded-2xl shadow-2xl">
+      {/* CTA Section - Container dışında, tam genişlik */}
+      <section className="mt-32 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+        <div className="relative py-8 md:py-12 px-4 md:px-8 bg-primary text-white text-center overflow-hidden rounded-xl md:rounded-2xl shadow-2xl">
           <div className="relative z-10">
             <button
-              onClick={() => onNavigate?.("tickets")}
-              className="bg-white text-primary font-black py-6 px-20 rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.2em] text-lg cursor-pointer"
+              onClick={() => onNavigate?.("tickets" as any)}
+              className="bg-white text-primary font-black py-4 md:py-6 px-8 md:px-20 rounded-lg md:rounded-xl hover:bg-secondary hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl uppercase tracking-[0.1em] md:tracking-[0.2em] text-base md:text-lg cursor-pointer w-full md:w-auto"
             >
               {lang === "TR" ? "BİLET AL" : "BUY TICKET"}
             </button>
           </div>
         </div>
       </section>
+
+      {/* Footer Navigation - Container dışında */}
+      <div className="pt-16 pb-8 border-t border-gray-100 dark:border-white/5 flex items-center justify-center mt-16 max-w-6xl mx-auto">
+        <button
+          onClick={() => onNavigate("home")}
+          className="inline-flex items-center gap-2 text-gray-500 hover:text-primary font-bold uppercase text-xs tracking-[0.2em] transition-colors"
+        >
+          <span className="material-icons text-lg">arrow_back</span>
+          {translations.back}
+        </button>
+      </div>
     </div>
   );
 };
