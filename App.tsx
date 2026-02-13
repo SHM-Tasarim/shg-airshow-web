@@ -30,14 +30,33 @@ export type Language = "TR" | "EN";
 export type Theme = "light" | "dark";
 type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "mach" | "gallery-page" | "media-archive" | "schools" | "sponsor" | "faq";
 
+const VALID_VIEWS: View[] = ["home", "program", "participants", "tickets", "partners", "about", "shm", "spotter", "transport", "contact", "volunteer", "suggestions", "stand", "museum", "acromach", "mach", "gallery-page", "media-archive", "schools", "sponsor", "faq"];
+
+function getViewFromHash(): View {
+  const hash = window.location.hash.replace("#", "");
+  return VALID_VIEWS.includes(hash as View) ? (hash as View) : "home";
+}
+
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<View>("home");
+  const [currentView, setCurrentView] = useState<View>(getViewFromHash);
   const [lang, setLang] = useState<Language>("TR");
   const [theme, setTheme] = useState<Theme>("dark");
   const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
   const [targetSectionId, setTargetSectionId] = useState<string | null>(null);
 
   const TARGET_DATE = "2026-09-19T10:00:00";
+
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const view = getViewFromHash();
+      setCurrentView(view);
+      setTargetParticipantId(null);
+      setTargetSectionId(null);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   useEffect(() => {
     if (!targetParticipantId) {
@@ -58,6 +77,11 @@ const App: React.FC = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     setCurrentView(view);
+    // Update browser history so back button and refresh work
+    const newHash = view === "home" ? "" : `#${view}`;
+    if (window.location.hash !== (newHash || "#")) {
+      window.history.pushState(null, "", newHash || window.location.pathname);
+    }
     if (targetId) {
       if (view === "participants") {
         setTargetParticipantId(targetId);
