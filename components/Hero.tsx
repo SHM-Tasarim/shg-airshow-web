@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           playsInline
           preload="auto"
           poster="/images/sponsor-2.jpg"
-          className={`absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover scale-105 transition-opacity duration-700 ${videoFailed ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${videoFailed ? 'opacity-0' : 'opacity-100'}`}
         >
           <source src="/images/home-video.mp4" type="video/mp4" />
         </video>
