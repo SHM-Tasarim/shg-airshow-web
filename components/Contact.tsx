@@ -39,7 +39,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       tagline: "GET IN TOUCH",
-      title: "CONTACT & TRANSPORTATION",
+      title: "CONTACT & DIRECTIONS",
       addressLabel: "ADDRESS",
       address:
         "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
@@ -47,13 +47,13 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       emailLabel: "EMAIL",
       mapTitle: "LOCATION",
       back: "BACK TO HOME",
-      landTitle: "Land Transportation",
+      landTitle: "By Road",
       shmArrival: "S.H.M. ARRIVAL",
       shmArrivalImage: "/images/ulasim-2-en.png",
       shgArrival: "ARRIVAL TO SHG AIRSHOW AREA",
       shgArrivalImage: "/images/ulasim-3.jpeg",
       shgArrivalNote: "For show safety reasons, roadside parking will not be permitted.",
-      airTitle: "Air Transportation",
+      airTitle: "By Air",
       technical: {
         coords: "S.H.M. COORDINATES",
         tower: "Artan Tower",
@@ -115,10 +115,10 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               {content.phoneLabel}
             </h4>
             <a
-              href='tel:+902227113132'
+              href='tel:+902227203040-41'
               className='text-gray-900 dark:text-white font-black text-xl hover:text-primary transition-colors'
             >
-              +90 222 711 31 32
+              +90 222 720 30 40-41
             </a>
           </div>
 
@@ -210,7 +210,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               <div className="space-y-8">
                 <div>
                   <h4 className="text-[10px] font-black text-gray-400 tracking-[0.3em] uppercase mb-2">{content.technical.elev}</h4>
-                  <p className="text-2xl font-black text-white">2.790 Feet</p>
+                  <p className="text-2xl font-black text-white">2,790 Feet</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>

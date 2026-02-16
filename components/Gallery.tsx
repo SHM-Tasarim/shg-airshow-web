@@ -23,13 +23,13 @@ const Gallery: React.FC<GalleryProps> = ({ lang, onNavigate }) => {
     },
     {
       src: "/images/sponsor-3.jpg",
-      text: lang === "TR" ? "SPONSORLUK FIRSATLARI\nVE\nTANITIM & SATIŞ STANDLARI" : "SPONSORSHIP\nAND\nPROMOTION & SALES STAND OPPORTUNITIES",
+      text: lang === "TR" ? "SPONSORLUK FIRSATLARI\nVE\nTANITIM & SATIŞ STANDLARI" : "SPONSORSHIP OPPORTUNITIES\nAND\nPROMOTION & SALES BOOTH",
       id: "sponsor",
       className: "md:col-span-2",
     },
     {
       src: "/images/otopark-deneme.jpg",
-      text: lang === "TR" ? "İLETİŞİM\n&\nULAŞIM" : "TRANSPORTATION\n&\nCONTACT",
+      text: lang === "TR" ? "İLETİŞİM\n&\nULAŞIM" : "CONTACT & DIRECTIONS",
       id: "contact",
       className: "md:col-span-1",
     },

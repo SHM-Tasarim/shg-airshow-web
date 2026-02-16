@@ -21,12 +21,12 @@ const Navbar: React.FC<NavbarProps> = ({
     participants: lang === "TR" ? "KATILIMCILAR" : "PARTICIPANTS",
     partners: lang === "TR" ? "ÇÖZÜM ORTAKLARI" : "PARTNERS",
     tickets: lang === "TR" ? "BİLETLER" : "TICKETS",
-    contact: lang === "TR" ? "İLETİŞİM & ULAŞIM" : "CONTACT & TRANSPORT",
+    contact: lang === "TR" ? "İLETİŞİM & ULAŞIM" : "CONTACT & DIRECTIONS",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
     gallery: lang === "TR" ? "GALERİ" : "GALLERY",
     mediaArchive: lang === "TR" ? "MEDYA" : "MEDIA",
     faq: lang === "TR" ? "SIKÇA SORULAN SORULAR" : "FAQ",
-    spotter: lang === "TR" ? "SPOTTER KAYDI" : "SPOTTER",
+    spotter: lang === "TR" ? "SPOTTER KAYDI" : "SPOTTER REGISTRATION",
     volunteers: lang === "TR" ? "GÖNÜLLÜ BAŞVURUSU" : "VOLUNTEER APPLICATION",
   };
 

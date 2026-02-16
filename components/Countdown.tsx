@@ -67,11 +67,11 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, lang }) => {
           :
         </div>
         <TimeBlock value={timeLeft.hours} label={labels.hours} />
-        <div className="text-gray-300 dark:text-gray-600 text-xl sm:text-3xl font-black select-none lg:block hidden">
+        <div className="text-gray-300 dark:text-gray-600 text-xl sm:text-3xl font-black select-none">
           :
         </div>
         <TimeBlock value={timeLeft.minutes} label={labels.minutes} />
-        <div className="text-gray-300 dark:text-gray-600 text-xl sm:text-3xl font-black select-none lg:block hidden">
+        <div className="text-gray-300 dark:text-gray-600 text-xl sm:text-3xl font-black select-none">
           :
         </div>
         <TimeBlock value={timeLeft.seconds} label={labels.seconds} />

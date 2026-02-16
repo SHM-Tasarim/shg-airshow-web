@@ -170,7 +170,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "lee-proudfoot",
       name: "LEE PROUDFOOT",
-      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muaazam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51 D and Türkiye's oldest biplane Boeing Stearman performance.",
+      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51 D and Türkiye's oldest biplane Boeing Stearman performance.",
       image: "/images/lee.jpg",
     },
     {

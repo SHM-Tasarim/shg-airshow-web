@@ -31,16 +31,16 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   };
 
   const institutionalLogos = [
-    { name: "T.C. ULAŞTIRMA VE ALTYAPI BAKANLIĞI", logo: "/images/ulastirma-bakanligi.avif" },
-    { name: "T.C. MİLLÎ SAVUNMA BAKANLIĞI", logo: "/images/msb.png" },
-    { name: "TÜRK SİLAHLI KUVVETLERİ", logo: "/images/tsk.png" },
-    { name: "TÜRK HAVA KUVVETLERİ", logo: "/images/thk.png" },
-    { name: "SİVİL HAVACILIK GENEL MÜDÜRLÜĞÜ", logo: "/images/shgm.png" },
-    { name: "T.C. ESKİŞEHİR VALİLİĞİ", logo: "/images/esk-valiligi.png" },
-    { name: "T.C. SİVRİHİSAR KAYMAKAMLIĞI", logo: "/images/siv-kay.png" },
-    { name: "ESKİŞEHİR BÜYÜKŞEHİR BELEDİYESİ", logo: "/images/es-bel.png" },
-    { name: "SİVRİHİSAR BELEDİYESİ", logo: "/images/siv-bel.png" },
-    { name: "TEPEBAŞI BELEDİYESİ", logo: "/images/esk-tep-bel.png" },
+    { nameTR: "T.C. ULAŞTIRMA VE ALTYAPI BAKANLIĞI", nameEN: "REPUBLIC OF TÜRKİYE MINISTRY OF TRANSPORT AND INFRASTRUCTURE", logo: "/images/ulastirma-bakanligi.avif" },
+    { nameTR: "T.C. MİLLÎ SAVUNMA BAKANLIĞI", nameEN: "REPUBLIC OF TÜRKİYE MINISTRY OF NATIONAL DEFENCE", logo: "/images/msb.png" },
+    { nameTR: "TÜRK SİLAHLI KUVVETLERİ", nameEN: "TURKISH ARMED FORCES", logo: "/images/tsk.png" },
+    { nameTR: "TÜRK HAVA KUVVETLERİ", nameEN: "TURKISH AIR FORCE", logo: "/images/thk.png" },
+    { nameTR: "SİVİL HAVACILIK GENEL MÜDÜRLÜĞÜ", nameEN: "DIRECTORATE GENERAL OF CIVIL AVIATION", logo: "/images/shgm.png" },
+    { nameTR: "T.C. ESKİŞEHİR VALİLİĞİ", nameEN: "GOVERNORSHIP OF ESKİŞEHİR", logo: "/images/esk-valiligi.png" },
+    { nameTR: "T.C. SİVRİHİSAR KAYMAKAMLIĞI", nameEN: "DISTRICT GOVERNORSHIP OF SİVRİHİSAR", logo: "/images/siv-kay.png" },
+    { nameTR: "ESKİŞEHİR BÜYÜKŞEHİR BELEDİYESİ", nameEN: "ESKİŞEHİR METROPOLITAN MUNICIPALITY", logo: "/images/es-bel.png" },
+    { nameTR: "SİVRİHİSAR BELEDİYESİ", nameEN: "SİVRİHİSAR MUNICIPALITY", logo: "/images/siv-bel.png" },
+    { nameTR: "TEPEBAŞI BELEDİYESİ", nameEN: "TEPEBAŞI MUNICIPALITY", logo: "/images/esk-tep-bel.png" },
   ];
 
   const companyLogos = [
@@ -57,7 +57,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Ly-Con", logo: "/images/ly-con.png", link: "https://www.lycon.com/" },
     { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
-    { name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
+    //{ name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
     { name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
   ];
 
@@ -113,7 +113,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 <div className="h-44 flex items-center justify-center w-full p-8">
                   <img
                     src={partner.logo}
-                    alt={partner.name}
+                    alt={lang === 'TR' ? partner.nameTR : partner.nameEN}
                     className="max-h-24 w-auto object-contain transition-transform group-hover:scale-110 duration-500"
                   />
                 </div>
@@ -122,7 +122,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 <div className="w-full pb-8">
                   <div className="w-4/5 h-px bg-white/10 mx-auto mb-6"></div>
                   <p className="text-center text-[10px] md:text-[11px] font-bold text-gray-300 uppercase tracking-[0.15em] leading-relaxed px-6">
-                    {partner.name}
+                    {lang === 'TR' ? partner.nameTR : partner.nameEN}
                   </p>
                 </div>
               </div>

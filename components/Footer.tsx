@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       address: "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
       rights: "ALL RIGHTS RESERVED.",
       social: "SOCIAL MEDIA",
-      mapBtn: "CONTACT & TRANSPORT"
+      mapBtn: "CONTACT & DIRECTIONS"
     }
   }[lang];
 
@@ -94,9 +94,9 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               {content.contact}
             </h4>
             <div className="space-y-5">
-              <a href="tel:+902227243031" className="flex items-center gap-4 group">
+              <a href="tel:+902227243040-41" className="flex items-center gap-4 group">
                 <span className="material-icons text-primary group-hover:scale-110 transition-transform">phone_iphone</span>
-                <span className="text-sm font-bold text-gray-400 group-hover:text-white transition-colors">+90 222 724 30 31</span>
+                <span className="text-sm font-bold text-gray-400 group-hover:text-white transition-colors">+90 222 724 30 40-41</span>
               </a>
               <a href="mailto:shg.airshows@acromach.com" className="flex items-center gap-4 group">
                 <span className="material-icons text-primary group-hover:scale-110 transition-transform">alternate_email</span>

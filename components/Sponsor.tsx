@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Language } from "../App";
 
 interface SponsorProps {
@@ -31,7 +31,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       ? "Sivrihisar Hava Gösterileri, 2015 yılından bu yana her sene artan seyirci sayısı ve erişimiyle; TV, basın ve özellikle dijital mecralar aracılığıyla \"MARKANIZI\", ulusal ve uluslararası düzeyde geniş kitlelere ulaştırıyor."
       : "Sivrihasar Airshows helps promote \"YOUR BRAND\" to wide audiences at both national and international levels through TV, press, and especially digital platforms, with an increasing number of spectators and reach every year since 2015.",
 
-    emailFooterDesc: isTR ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "For any questions, please email us."
+    emailFooterDesc: isTR ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "For any questions, please e-mail us."
   };
 
   const chartData = [
@@ -73,9 +73,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
               </>
             ) : (
               <>
-                Sponsorship<br />
-                and Promotion & Sales Stand<br />
-                Opportunities
+                Sponsorship Opportunities<br />
+                and Promotion & Sales Booth<br />
               </>
             )}
           </h1>
@@ -267,12 +266,13 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
   const [cardWidth, setCardWidth] = useState(CARD_WIDTH_DESKTOP);
   const [isMobile, setIsMobile] = useState(false);
 
+  const total = images.length;
+
   useEffect(() => {
     const updateWidth = () => {
       const mobile = window.innerWidth < 640;
       setIsMobile(mobile);
       if (mobile) {
-        // Mobilde ekran genişliğinden yeterli margin bırak
         setCardWidth(window.innerWidth - 80);
       } else {
         setCardWidth(CARD_WIDTH_DESKTOP);
@@ -284,6 +284,14 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
   }, []);
 
   const step = cardWidth + CARD_GAP;
+
+  const goNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % total);
+  }, [total]);
+
+  const goPrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + total) % total);
+  }, [total]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -308,9 +316,9 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
     const diff = touchStartX.current - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
-        setActiveIndex((prev) => Math.min(images.length - 1, prev + 1));
+        goNext();
       } else {
-        setActiveIndex((prev) => Math.max(0, prev - 1));
+        goPrev();
       }
     }
     touchStartX.current = null;
@@ -324,7 +332,13 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
     }
   };
 
-  const offset = -(activeIndex * step);
+  const getRelativeOffset = (index: number): number => {
+
+    let diff = index - activeIndex;
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+  };
 
   return (
     <>
@@ -335,70 +349,66 @@ const CustomCoverflow: React.FC<CoverflowProps> = ({ images }) => {
         onTouchEnd={handleTouchEnd}
       >
 
-        {/* Sol ok */}
+        {/* Sol ok – always enabled (infinite) */}
         <div className={`absolute left-0 top-0 bottom-0 z-20 flex items-center justify-center pointer-events-none ${isMobile ? 'w-10' : 'w-24'}`}>
           <button
-            onClick={() => setActiveIndex((prev) => Math.max(0, prev - 1))}
-            disabled={activeIndex === 0}
-            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
+            onClick={goPrev}
+            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
           >
             <span className={`material-icons text-secondary dark:text-white ${isMobile ? 'text-lg' : 'text-2xl'}`}>chevron_left</span>
           </button>
         </div>
 
-        {/* Sağ ok */}
+        {/* Sağ ok – always enabled (infinite) */}
         <div className={`absolute right-0 top-0 bottom-0 z-20 flex items-center justify-center pointer-events-none ${isMobile ? 'w-10' : 'w-24'}`}>
           <button
-            onClick={() => setActiveIndex((prev) => Math.min(images.length - 1, prev + 1))}
-            disabled={activeIndex === images.length - 1}
-            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
+            onClick={goNext}
+            className={`pointer-events-auto bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all hover:scale-110 ${isMobile ? 'w-8 h-8' : 'w-12 h-12'}`}
           >
             <span className={`material-icons text-secondary dark:text-white ${isMobile ? 'text-lg' : 'text-2xl'}`}>chevron_right</span>
           </button>
         </div>
 
-        {/* Coverflow Track */}
-        <div className="py-8">
-          <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{
-              gap: `${CARD_GAP}px`,
-              transform: `translateX(calc(50% - ${cardWidth / 2}px + ${offset}px))`,
-            }}
-          >
-            {images.map((src, index) => {
-              const isActive = index === activeIndex;
+        {/* Coverflow Track – positioned relative to center */}
+        <div className="py-8 relative" style={{ minHeight: isMobile ? '230px' : '290px' }}>
+          {images.map((src, index) => {
+            const relOffset = getRelativeOffset(index);
+            const isActive = index === activeIndex;
 
-              return (
-                <div
-                  key={index}
-                  onClick={() => handleCardClick(index, src)}
-                  className="cursor-pointer transition-transform duration-500 flex-shrink-0 hover:scale-[1.03]"
-                  style={{
-                    width: `${cardWidth}px`,
-                    transform: isActive ? 'scale(1)' : 'scale(0.85)',
-                    zIndex: isActive ? 10 : 1,
-                  }}
-                >
-                  <div className="w-full h-[200px] sm:h-[260px] rounded-xl overflow-hidden shadow-2xl">
-                    <img
-                      src={src}
-                      alt={`Sponsor ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            const visibleRange = isMobile ? 2 : 4;
+            if (Math.abs(relOffset) > visibleRange) return null;
+
+            const translateX = relOffset * step;
+            const scale = isActive ? 1 : 0.85;
+            const opacity = Math.abs(relOffset) > (isMobile ? 1 : 2) ? 0.3 : 1;
+
+            return (
+              <div
+                key={index}
+                onClick={() => handleCardClick(index, src)}
+                className="cursor-pointer absolute top-8 flex-shrink-0"
+                style={{
+                  width: `${cardWidth}px`,
+                  left: '50%',
+                  transform: `translateX(calc(-50% + ${translateX}px)) scale(${scale})`,
+                  zIndex: isActive ? 10 : 5 - Math.abs(relOffset),
+                  transition: 'transform 0.5s ease, opacity 0.5s ease',
+                  opacity,
+                }}
+              >
+                <div className="w-full h-[200px] sm:h-[260px] rounded-xl overflow-hidden shadow-2xl">
+                  <img
+                    src={src}
+                    alt={`Sponsor ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* Sayaç */}
-        <div className="flex items-center justify-center gap-4 mt-2">
-          <span className="text-sm font-black text-gray-500 dark:text-gray-400 tabular-nums">
-            {activeIndex + 1} / {images.length}
-          </span>
-        </div>
       </div>
 
       {/* Lightbox */}
