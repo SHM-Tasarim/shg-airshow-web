@@ -53,7 +53,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
       ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
-      : "Children aged 6 and under enter free of charge. Veterans, persons with disabilities, press card holders, and personnel of the Turkish Armed Forces (Air, Naval and Land Forces), General Command of Gendarmerie and General Directorate of Security Organization may enter free of charge upon presentation of their ID. Their accompanying family members are subject to entry fees.",
+      : "Children aged 6 and under are free. Veterans, persons with disabilities, press card holders, Turkish Armed Forces (Air Force, Navy, and Army), General Command of Gendarmerie, and General Directorate of Security personnel may enter free of charge upon presentation of their ID. Accompanying family members are subject to the fee.",
     rulesText: lang === "TR"
       ? [
           "Doğal afetler, savaş, seferberlik, salgın hastalık, terör ihbarı gibi her türlü mücbir sebeplerle SHG Airshow'un kısmen ve/veya tamamen iptal edilmesi,",
@@ -65,19 +65,19 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
           "SHG Airshow bilet ücretleri iade kapsamı dışındadır.",
         ]
       : [
-          "In the event that SHG Airshow is partially or completely cancelled due to any force majeure reasons such as natural disasters, war, mobilization, pandemics, terror alerts,",
-          "Due to SHG Airshow being an aviation organization, partial or complete cancellation of the show due to any adverse weather conditions that may affect demonstration flights,",
-          "Inability of aircraft participating in SHG Airshow to reach SHM (Sivrihisar Aviation Center) due to technical malfunctions or health issues of personnel, and/or being unable to perform demonstration flights partially or completely during SHG Airshow for the stated reasons,",
-          "Partial or substantial changes to the SHG Airshow demonstration and flight program,",
-          "And/or other reasons similar to the conditions mentioned above occurring, resulting in partial or complete cancellation of SHG Airshow,",
-          "In such cases, ticket fees will not be refunded or changed.",
-          "SHG Airshow ticket fees are excluded from refund policies.",
+         "The partial and/or complete cancellation of the SHG Airshow due to any force majeure circumstances such as natural disasters, war, mobilization, epidemic diseases, or terrorist threats,",
+          "The partial and/or complete cancellation of the SHG Airshow due to any adverse weather conditions that may affect the demonstration flights, given that the SHG Airshow is an aviation event,",
+          "The inability of aircraft participating in the SHG Airshow to reach the S.H.M. (Sivrihisar Aviation Center) where the SHG Airshow is held due to reasons such as technical malfunctions and/or health problems that may arise among personnel, and/or their inability to perform demonstration flights partially and/or completely during the SHG Airshow despite reaching the venue due to the aforementioned reasons,",
+          "Partial and/or substantial changes to the SHG Airshow's show and flight program,",
+          "And/or the partial and/or complete cancellation of the SHG Airshow due to other reasons that may give rise to similar conditions as mentioned above,",
+          "In such cases, no refunds and/or changes will be made to ticket fees.",
+          "SHG Airshow ticket fees are not subject to refunds.",
         ],
   };
 
   const pricing = [
     {
-      title: lang === "TR" ? "Günlük Bilet" : "TICKET",
+      title: lang === "TR" ? "Günlük Bilet" : "DAILY TICKET",
       features:
         lang === "TR"
           ? [
@@ -92,7 +92,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             ],
     },
     {
-      title: lang === "TR" ? "Günlük VIP Bilet" : "1-DAY VIP TICKET",
+      title: lang === "TR" ? "Günlük VIP Bilet" : "DAILY VIP TICKET",
       features:
         lang === "TR"
           ? [
@@ -111,7 +111,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
               "Opportunity to watch shows up close",
               "VIP seating area in shaded veranda and/or air-conditioned lounge",
               "Special VIP and disabled toilets",
-              "A selection of Turkish cuisine and a rich buffet served from our exclusive VIP lounge kitchen",
+              "Buffet featuring Turkish cuisine",
               "Special parking and valet service",
               "All Daily Ticket benefits included",
             ],

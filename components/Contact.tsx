@@ -44,7 +44,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
       address:
         "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
       phoneLabel: "PHONE",
-      emailLabel: "EMAIL",
+      emailLabel: "E-MAIL",
       mapTitle: "LOCATION",
       back: "BACK TO HOME",
       landTitle: "By Road",
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         asphalt: "Asphalt"
       },
       airWarning: "Arriving air traffic must review the arrival procedures on the S.H.M. website and contact Display Director Aysan Keskin to obtain a SLOT.",
-      directorMailLabel: "SHG Display Director email: ",
+      directorMailLabel: "SHG Display Director e-mail: ",
       visitWeb: "S.H.M. OFFICIAL WEBSITE",
     },
   }[lang];
@@ -198,8 +198,8 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               <div className="space-y-8">
                 <div>
                   <h4 className="text-[10px] font-black text-gray-400 tracking-[0.3em] uppercase mb-2">{content.technical.coords}</h4>
-                  <p className="text-2xl font-black text-white font-mono">N 39°17'59.29''</p>
-                  <p className="text-2xl font-black text-white font-mono">E 31°29'38.50''</p>
+                  <p className="text-2xl font-black text-white font-mono">N 39°17'59.29"</p>
+                  <p className="text-2xl font-black text-white font-mono">E 31°29'38.50"</p>
                 </div>
                 <div>
                   <h4 className="text-[10px] font-black text-gray-400 tracking-[0.3em] uppercase mb-2">{content.technical.tower}</h4>

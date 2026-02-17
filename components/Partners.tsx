@@ -26,8 +26,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       : "With our gratitude, Sivrihisar Aviation Club Board of Directors",
     fuelSponsorsHeading: lang === 'TR' 
       ? "SHG Airshow 2026 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
-      : "SHG Airshow 2026 gratefully presents 'Individual Fuel Sponsors':",
-    fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(In alphabetical order by surname)",
+      : "SHG Airshow 2026 gratefully presents \"Individual Fuel Sponsors\":",
+    fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(IN ALPHABETICAL ORDER BY LAST NAME)",
   };
 
   const institutionalLogos = [

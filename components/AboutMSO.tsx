@@ -38,7 +38,7 @@ const Museum: React.FC<MuseumProps> = ({ lang, onNavigate }) => {
       ),
       history: "The T.C. Ministry of Culture and Tourism General Directorate of Cultural Assets and Museums Private M.S.Ö. Air and Space Museum took its place at Sivrihisar Aviation Center, Necati Artan Facilities in 2018.",
       collection: "Many aircraft with historic value in world aviation are exhibited in the museum.",
-      uniqueFeature: "The most important feature that distinguishes M.S.Ö. Air and Space Museum from other aviation museums in our country is that it is a 'Flying Museum'.",
+      uniqueFeature: "The most important feature that distinguishes M.S.Ö. Air and Space Museum from other aviation museums in our country is that it is a \"Flying Museum\".",
       machAir: "The sustainability of this special quality is ensured by the regular maintenance and technical support provided by Mach Air.",
       technical: "MUSEUM IDENTITY",
       status: "Status",

@@ -79,14 +79,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195 A Businessliner, güzelliği ile SHG Airshow 2026'da herkesi büyülüyor." : "The 1950 model Cessna 195 A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195A Businessliner, güzelliği ile SHG Airshow 2026'da herkesi büyülüyor." : "The 1950 model Cessna 195A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
       image: "/images/cessna-business-2.jpg",
       url: "https://msomuseum.com/cessna-195-a-businessliner/",
     },
     {
       id: "tiger-moth",
       name: "DE HAVILLAND DH.82 TIGER MOTH",
-      desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film 'The English Patient', is with you at SHG Airshow!",
+      desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film \"The English Patient\", is with you at SHG Airshow!",
       image: "/images/tiger-moth-3.jpg",
       url: "https://msomuseum.com/de-havilland-dh.82-tiger-moth/",
     },
@@ -95,7 +95,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
         ? `Normandiya Çıkarması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!`
-        : `The 1940 Model DC-3 'Turkish Delight', brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of 'the oldest aircraft to travel the world'. This magnificent classic aircraft is with you at SHG Airshow!`,
+        : `The 1940 Model DC-3 "Turkish Delight", brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of "the oldest aircraft to travel the world". This magnificent classic aircraft is with you at SHG Airshow!`,
       image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
     },
@@ -115,7 +115,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
-      desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of 'Turkish Women' and help all women interested in aviation, is at SHG Airshow 2026!",
+      desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2026!",
       image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
     },
@@ -156,7 +156,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "t6-texan",
       name: "NORTH AMERICAN T-6G TEXAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Turkey, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
       image: "/images/t6-texan.jpg",
       url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
     },
@@ -170,31 +170,31 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "lee-proudfoot",
       name: "LEE PROUDFOOT",
-      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51 D and Türkiye's oldest biplane Boeing Stearman performance.",
+      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51D and Türkiye's oldest biplane Boeing Stearman performance.",
       image: "/images/lee.jpg",
     },
     {
       id: "gabriel-rieser",
       name: "GABRIEL ORLANDO RIESER",
-      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2026'da, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Gabriel, both the youngest and most talented pilot of Sivrihisar Airshows, is also a flight instructor. At SHG Airshow 2026, he takes the audience on a journey through history with his performance!",
+      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2026'da, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Gabriel, the youngest and one of the most talented pilots of Sivrihisar Airshows, is also a flight instructor. At SHG Airshow 2026, he takes the audience on a journey through history with his performance!",
       image: "/images/gabriel.jpg",
     },
     {
       id: "fabian-schouten",
       name: "FABIAN SCHOUTEN",
-      desc: lang === "TR" ? "Havacılık kariyerine teknisyen olarak başlayan ve son 15 yıldır aktif pilotluk yapan Fabian, hava yollarında Kaptan Pilot olarak görev alıyor. Fabian 17 yıllık DC-3 tecrübesiyle, SHG Airshow 2026'da benzersiz bir gösteri uçuşu gerçekleştiriyor!" : "Fabian Schouten, serving as a captain pilot in airlines, is an aviator with 17 years of DC-3 experience; he started this adventure as a technician and has been an active pilot for the last 15 years. At SHG Airshow 2026, in the legendary DC-3 \"Turkish Delight\" in the skies with you!",
+      desc: lang === "TR" ? "Havacılık kariyerine teknisyen olarak başlayan ve son 15 yıldır aktif pilotluk yapan Fabian, hava yollarında Kaptan Pilot olarak görev alıyor. Fabian 17 yıllık DC-3 tecrübesiyle, SHG Airshow 2026'da benzersiz bir gösteri uçuşu gerçekleştiriyor!" : "Fabian, who began his aviation career as a technician and has been an active pilot for the past 15 years, serves as a Captain Pilot for airlines. With 17 years of DC-3 experience, Fabian is performing a unique demonstration flight at the SHG Airshow 2026!",
       image: "/images/fabian.jpg",
     },
     {
       id: "spitfire",
       name: "SUPERMARINE SPITFIRE MK.IX",
-      desc: lang === "TR" ? "22.777 adet üretilen ve bugün \"uçar vaziyette\" sadece 30 adet kalan Spitfire uçaklarından Mk.9 TE517, SHG Airshow 2026'da Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Out of 22,777 produced, only 30 Spitfires remain airworthy today. Mk.9 TE517 meets the audience at SHG Airshow 2026, equipped with our Glorious Air Force's 'Square Roundel' emblem!",
+      desc: lang === "TR" ? "22.777 adet üretilen ve bugün \"uçar vaziyette\" sadece 30 adet kalan Spitfire uçaklarından Mk.9 TE517, SHG Airshow 2026'da Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Out of 22,777 produced, only 30 Spitfires remain airworthy today. Mk.9 TE517 meets the audience at SHG Airshow 2026, equipped with our Glorious Air Force's \"Square Roundel\" emblem!",
       image: "/images/spitfire-mk-9.jpg",
       url: "https://msomuseum.com/spitfire-mk-9/",
     },
     {
       id: "pars-sener",
-      name: "PARS&DEDE AIRSHOW",
+      name: "PARS & DEDE AIRSHOW",
       desc: lang === "TR" ? "Pars Şener ilk hava gösterisi deneyimini 4 yaşındayken dedesi ve Türkiye'nin İlk Profesyonel Akrobasi Pilotu Ali İsmet Öztürk ile yaşadı. SHG Airshow 2026'da ise yine sürprizlerle yer alıyor!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
       image: "/images/pars-dede-1.jpg",
       url: "https://www.mach.aero/",
@@ -223,14 +223,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "vecihi-xiv",
       name: lang === "TR" ? "VECİHİ XIV (14)" : "VECIHI XIV (14)",
-      desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 95 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2026'da!" : "The replica of Türkiye's 'First Certified Aircraft' Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
+      desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 95 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2026'da!" : "The replica of Türkiye's \"First Certified Aircraft\" Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14-2.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
     },
     {
       id: "edward-yard",
       name: "EDWARD YARD",
-      desc: lang === "TR" ? "Standart Kategori Akrobasi Şampiyonu ve Boeing 777 tipi uçaklarında Pilot olan Edward, İngiltere'den S.H.M.'ye getirdiği Spitfire Mk.9 ile, bu sene de SHG Airshow 2026 seyircilerine unutulmaz bir gösteri uçuşu gerçekleştiriyor." : "Standard category aerobatics champion and B777 pilot Edward Yard will once again mesmerize the SHG Airshow audience with his Spitfire Mk.9, coming from England to SHM.",
+      desc: lang === "TR" ? "Standart Kategori Akrobasi Şampiyonu ve Boeing 777 tipi uçaklarında Pilot olan Edward, İngiltere'den S.H.M.'ye getirdiği Spitfire Mk.9 ile, bu sene de SHG Airshow 2026 seyircilerine unutulmaz bir gösteri uçuşu gerçekleştiriyor." : "“Standard category aerobatics champion and B777 pilot Edward Yard will once again captivate the SHG Airshow audience with his Spitfire Mk.9, coming from England to SHM.",
       image: "/images/edward.jpg",
     },
     {

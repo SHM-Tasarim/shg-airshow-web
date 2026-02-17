@@ -118,7 +118,7 @@ const AboutSHM: React.FC<AboutSHMProps> = ({ lang, onNavigate }) => {
             <div className="space-y-6">
               <div className="flex flex-col">
                 <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">{content.coords}</span>
-                <span className="text-lg font-bold font-mono tracking-tight">N 39°17'59.29'' | E 31°29'38.50''</span>
+                <span className="text-lg font-bold font-mono tracking-tight">N 39°17'59.29" | E 31°29'38.50"</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] text-gray-500 font-black tracking-widest uppercase mb-1">{content.frequency}</span>

@@ -29,9 +29,9 @@ const Acromach: React.FC<AcromachProps> = ({ lang, onNavigate }) => {
       title: "Acromach",
       history: "Sky Dancers - Aerial Acrobatics Group, Acromach, was founded in Istanbul.",
       legacy: "Under the leadership of Ali İsmet Öztürk, the Acromach Team participated in more than 500 air shows in 22 different countries with the Legendary Aircraft 'Purple Violet', reaching more than 25 million spectators by completing 859 display flights flawlessly.",
-      transition: "Following Ali İsmet Öztürk's jubilee on September 13, 2021, at SHG Airshow, 'Legendary Purple Violet' underwent extensive maintenance and its appearance changed with the dedicated work of Mak Teknik.",
-      modernEra: "'Purple Violet' now continues its new adventures in the skies as 'New Violet' with Turkey's First Professional Female Aerobatic Pilot Semin Öztürk Şener.",
-      participation: "Acromach has been performing professionally since 2015 at Sivrihisar Airshows, which is listed as 'SHG Airshows' in international calendars and is Turkey's only traditional airshow.",
+      transition: "Following Ali İsmet Öztürk's jubilee on September 13, 2021, at SHG Airshow, \"Legendary Purple Violet\" underwent extensive maintenance and its appearance changed with the dedicated work of Mak Teknik.",
+      modernEra: "\"Purple Violet\" now continues its new adventures in the skies as \"New Violet\" with Türkiye's First Professional Female Aerobatic Pilot Semin Öztürk Şener.",
+      participation: "Acromach has been performing professionally since 2015 at Sivrihisar Airshows, which is listed as \"SHG Airshows\" in international calendars and is Türkiye's only traditional airshow.",
       stats: [
         { label: "SPECTATORS", value: "25M+", icon: "groups" },
         { label: "DISPLAYS", value: "859", icon: "airplanemode_active" },

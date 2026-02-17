@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({
     partners: lang === "TR" ? "ÇÖZÜM ORTAKLARI" : "PARTNERS",
     tickets: lang === "TR" ? "BİLETLER" : "TICKETS",
     contact: lang === "TR" ? "İLETİŞİM & ULAŞIM" : "CONTACT & DIRECTIONS",
-    buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKETS",
+    buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     gallery: lang === "TR" ? "GALERİ" : "GALLERY",
     mediaArchive: lang === "TR" ? "MEDYA" : "MEDIA",
     faq: lang === "TR" ? "SIKÇA SORULAN SORULAR" : "FAQ",
@@ -98,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({
               {/* Dil butonu */}
               <button
                 onClick={onToggleLang}
-                className="text-gray-400 hover:text-white text-[11px] font-bold uppercase tracking-widest transition-colors"
+                className="text-white hover:text-primary text-[11px] font-bold uppercase tracking-widest transition-colors"
               >
                 {lang === "TR" ? "EN" : "TR"}
               </button>

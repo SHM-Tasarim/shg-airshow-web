@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       mission: "The Meeting Point of World Aviation!",
       contact: "CONTACT",
       explore: "EXPLORE",
-      addressLabel: "HEADQUARTERS",
+      addressLabel: "ADDRESS",
       address: "Sivrihisar Aviation Center, Necati Artan Facilities, Sivrihisar / Eskisehir",
       rights: "ALL RIGHTS RESERVED.",
       social: "SOCIAL MEDIA",
@@ -39,7 +39,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
     { name: lang === 'TR' ? 'KATILIMCILAR' : 'PARTICIPANTS', id: 'participants' as const, targetId: undefined },
     { name: lang === 'TR' ? 'ÇÖZÜM ORTAKLARI' : 'PARTNERS', id: 'partners' as const, targetId: undefined },
     // { name: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM', id: 'program' as const, targetId: undefined },
-    { name: lang === 'TR' ? 'SIKÇA SORULAN SORULAR' : 'FAQ', id: 'tickets' as const, targetId: 'faq' },
+    { name: lang === 'TR' ? 'SIKÇA SORULAN SORULAR' : 'FAQ', id: 'faq' as const, targetId: undefined },
     { name: lang === 'TR' ? 'SPOTTER KAYDI' : 'SPOTTER REGISTRATION', id: 'spotter' as const, targetId: undefined },
     { name: lang === 'TR' ? 'GÖNÜLLÜ BAŞVURUSU' : 'VOLUNTEER APPLICATION', id: 'volunteer' as const, targetId: undefined },
 
