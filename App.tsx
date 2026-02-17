@@ -25,12 +25,13 @@ import Schools from "./components/Schools";
 import ActionBridge from "./components/ActionBridge";
 import Sponsor from "./components/Sponsor";
 import FAQ from "./components/FAQ";
+import Airparkhotel from "./components/Airparkhotel";
 
 export type Language = "TR" | "EN";
 export type Theme = "light" | "dark";
-type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "mach" | "gallery-page" | "media-archive" | "schools" | "sponsor" | "faq";
+type View = "home" | "program" | "participants" | "tickets" | "partners" | "about" | "shm" | "spotter" | "transport" | "contact" | "volunteer" | "suggestions" | "stand" | "museum" | "acromach" | "mach" | "gallery-page" | "media-archive" | "schools" | "sponsor" | "faq" | "airparkhotel";
 
-const VALID_VIEWS: View[] = ["home", "program", "participants", "tickets", "partners", "about", "shm", "spotter", "transport", "contact", "volunteer", "suggestions", "stand", "museum", "acromach", "mach", "gallery-page", "media-archive", "schools", "sponsor", "faq"];
+const VALID_VIEWS: View[] = ["home", "program", "participants", "tickets", "partners", "about", "shm", "spotter", "transport", "contact", "volunteer", "suggestions", "stand", "museum", "acromach", "mach", "gallery-page", "media-archive", "schools", "sponsor", "faq", "airparkhotel"];
 
 function getViewFromHash(): View {
   const hash = window.location.hash.replace("#", "");
@@ -133,7 +134,8 @@ const App: React.FC = () => {
         {currentView === "schools" && <Schools lang={lang} onNavigate={navigateTo} />}
         {currentView === "sponsor" && <Sponsor lang={lang} onNavigate={navigateTo} />}
         {currentView === "faq" && <FAQ lang={lang} targetId={targetSectionId} onNavigate={(view) => navigateTo(view as View)} />}
-        
+        {currentView === "airparkhotel" && <Airparkhotel lang={lang} onNavigate={(view) => navigateTo(view as View)} />}
+
         {/* Alt Geri Dön Butonu (Sadece alt sayfalarda görünür) */}
         {currentView !== "contact" && (
           <div className="max-w-6xl mx-auto px-6 pb-24">

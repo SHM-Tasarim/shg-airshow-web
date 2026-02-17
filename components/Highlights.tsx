@@ -60,7 +60,7 @@ const Highlights: React.FC<HighlightsProps> = ({ lang, onNavigate }) => {
     },
     {
       title: lang === "TR" ? "AirParkHotel" : "AirParkHotel",
-      id: "home",
+      id: "airparkhotel",
       desc:
         lang === "TR"
           ? "Üzerinden Spitfire Geçen TEK Otel"
