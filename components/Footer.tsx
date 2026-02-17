@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
       contact: "İLETİŞİM",
       explore: "KEŞFET",
       addressLabel: "ADRES",
-      address: "Sivrihisar Havacılık Merkezi Yeşilköy Mah. 26600 Sivrihisar / Eskişehir TÜRKİYE",
+      address: "Sivrihisar Havacılık Merkezi Yeşilköy Mah. 26600 Sivrihisar / Eskişehir",
       rights: "TÜM HAKLARI SAKLIDIR.",
       social: "SOSYAL MEDYA",
       mapBtn: "İLETİŞİM & ULAŞIM"
