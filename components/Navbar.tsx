@@ -138,7 +138,11 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
             <button
               onClick={() => onNavigate("tickets")}
-              className="bg-primary text-white font-black text-[11px] px-4 py-2.5 rounded-2xl uppercase tracking-tight whitespace-nowrap active:scale-95 transition-all"
+              className={`bg-primary text-white font-black rounded-2xl uppercase tracking-tight whitespace-nowrap active:scale-95 transition-all ${
+                lang === "EN"
+                  ? "text-[10px] px-3 py-2"
+                  : "text-[11px] px-4 py-2.5"
+              }`}
             >
               {translations.buyTicket}
             </button>
