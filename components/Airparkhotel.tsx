@@ -10,7 +10,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
   const content = {
     TR: {
       tagline: "",
-      title: "AirPark Hotel",
+      title: "AirParkHotel",
       p1: "Sivrihisar Havacılık Merkezi’nin gelişimine katkı sağlayan otel, havacılık sektörünün yanında turizm alanında da önemli bir hizmet noktası olmayı hedefliyor.",
       p2: "AirParkHotel, iç mekan tasarımında tercih edilen modern renk paleti ve şık dizaynı ile konfor ve estetiği bir araya getiriyor.",
       p3: "Konaklama için AirParkHotel ile temas kurabilirsiniz.",
@@ -24,7 +24,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
     },
     EN: {
       tagline: "",
-      title: "AirPark Hotel",
+      title: "AirParkHotel",
       p1: "Contributing to the development of the Sivrihisar Aviation Center, the hotel aims to be a prominent service destination in both the tourism and aviation sectors.",
       p2: "In its interior design, AirParkHotel brings comfort and aesthetics together with its preferred modern color palette and stylish layout.",
       p3: "For accommodation, you can contact AirParkHotel.",
@@ -80,14 +80,14 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
               <img
                 src="/images/aph-view.jpg" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                alt="AirPark Hotel Room"
+                alt="AirParkHotel Room"
               />
             </div>
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
               <img
                 src="/images/aph-room.jpg" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                alt="AirPark Hotel Interior"
+                alt="AirParkHotel Interior"
               />
             </div>
           </div>
