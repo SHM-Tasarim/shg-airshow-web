@@ -45,7 +45,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
         <picture>
           <source media="(min-width: 768px)" srcSet="/images/aph-header-2.jpg" />
           <img
-            src="/images/aph-4.jpg"
+            src="/images/aph-5.jpg"
             className="w-full h-full object-cover md:object-contain"
             alt="AirPark Hotel Hero"
           />
