@@ -11,8 +11,8 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
     TR: {
       tagline: "",
       title: "AirParkHotel",
-      p1: "Sivrihisar Havacılık Merkezi’nin gelişimine katkı sağlayan otel, havacılık sektörünün yanında turizm alanında da önemli bir hizmet noktası olmayı hedefliyor.",
-      p2: "AirParkHotel, iç mekan tasarımında tercih edilen modern renk paleti ve şık dizaynı ile konfor ve estetiği bir araya getiriyor.",
+      p1: "Üzerinden Spitfire Geçen TEK Otel",
+      p2: "Sivrihisar Havacılık Merkezi'nin gelişimine katkı sağlayan AirParkHotel, havacılık sektörünün yanında turizm alanında da önemli bir hizmet noktası olmayı hedefliyor.<br /><br />AirParkHotel, iç mekan tasarımında tercih edilen modern renk paleti ve şık dizaynı ile konfor ve estetiği bir araya getiriyor.",
       p3: "Konaklama için AirParkHotel ile temas kurabilirsiniz.",
       infoTitle: "OTEL BİLGİLERİ",
       checkin: "",
@@ -25,8 +25,8 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
     EN: {
       tagline: "",
       title: "AirParkHotel",
-      p1: "Contributing to the development of the Sivrihisar Aviation Center, the hotel aims to be a prominent service destination in both the tourism and aviation sectors.",
-      p2: "In its interior design, AirParkHotel brings comfort and aesthetics together with its preferred modern color palette and stylish layout.",
+      p1: "The Only Hotel Where Spitfires Fly Over",
+      p2: "The AirParkHotel, which contributes to the development of Sivrihisar Aviation Center, aims to be an important service point in the tourism sector as well as the aviation sector. AirParkHotel combines comfort and aesthetics with its modern color palette and stylish design chosen for its interior.",
       p3: "For accommodation, you can contact AirParkHotel.",
       infoTitle: "HOTEL INFORMATION",
       checkin: "Check-in",
@@ -41,12 +41,15 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500">
       {/* 1. HERO IMAGE AREA (Sayfa başındaki ana fotoğraf) */}
-      <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
-        <img
-          src="/images/aph-header.jpg" 
-          className="w-full h-full object-cover"
-          alt="AirPark Hotel Hero"
-        />
+      <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative bg-gray-100 dark:bg-gray-800">
+        <picture>
+          <source media="(min-width: 768px)" srcSet="/images/aph-header-2.jpg" />
+          <img
+            src="/images/aph-4.jpg"
+            className="w-full h-full object-cover md:object-contain"
+            alt="AirPark Hotel Hero"
+          />
+        </picture>
         {/* Fotoğrafın üzerine yumuşak geçiş sağlayan gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent"></div>
       </div>
@@ -70,15 +73,13 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
           </p>
 
           {/* P2: Detay Metni */}
-          <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 font-medium">
-            {content.p2}
-          </p>
+          <div className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 font-medium" dangerouslySetInnerHTML={{ __html: content.p2 }} />
 
           {/* 2. RESİM ALANI - Galeri Görünümü */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
             <div className="rounded-2xl overflow-hidden h-[300px] shadow-xl group">
               <img
-                src="/images/aph-view.jpg" 
+                src="/images/aph-3.jpg" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 alt="AirParkHotel Room"
               />
