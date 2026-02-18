@@ -62,17 +62,17 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   ];
 
   const fuelSponsors = [
-    "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Fatma COŞKUN", "Kibar COŞKUN",
-    "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
-    "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
-    "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN",
-    "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
-    "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
-  ].sort((a, b) => {
-    const lastNameA = a.split(' ').pop() || '';
-    const lastNameB = b.split(' ').pop() || '';
-    return lastNameA.localeCompare(lastNameB);
-  });
+  "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Fatma COŞKUN", "Kibar COŞKUN",
+  "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
+  "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
+  "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN",
+  "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
+  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
+].sort((a, b) => {
+  const lastNameA = a.split(' ').pop() || '';
+  const lastNameB = b.split(' ').pop() || '';
+  return lastNameA.localeCompare(lastNameB);
+});
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 font-display">
