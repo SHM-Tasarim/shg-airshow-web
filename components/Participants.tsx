@@ -91,6 +91,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://msomuseum.com/de-havilland-dh.82-tiger-moth/",
     },
     {
+      id: "bernie",
+      name: "BERNHARD DIEHL",
+      desc: lang === "TR" ? "Alman akrobasi takımı üyesi ve Boeing 747 tipi uçaklarında Pilot olan Bernhard 8000'i aşkın uçuş saati tecrübesi ile SHG Airshow 2026'da!" : "Bernhard, a member of the German aerobatic team and pilot on Boeing 747 aircraft, is at SHG Airshow 2026 with over 8000 hours of flight experience!",
+      image: "/images/bernie.jpg",
+      url: "",
+    },
+    {
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
