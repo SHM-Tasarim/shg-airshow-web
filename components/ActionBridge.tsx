@@ -45,7 +45,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
                   </>
                 ) : (
                   <>
-                    SHG Airshow, registered as a global brand by being listed among European airshows by the European Airshow Council (EAC), creates unforgettable moments for visitors with a unique visual spectacle ranging from the legendary aircraft of World War II to the most modern air vehicles, from breathtaking aerobatic displays to formation flights.
+                    SHG Airshow, registered as a global brand by being listed among European airshows by The European Airshow Council (EAC), creates unforgettable moments for visitors with a unique visual spectacle ranging from the legendary aircraft of World War II to the most modern air vehicles, from breathtaking aerobatic displays to formation flights.
                   </>
                 )}
               </p>

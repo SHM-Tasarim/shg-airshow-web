@@ -33,7 +33,7 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
         runwayLen: "Pist Uzunluğu",
         asphalt: "Asfalt"
       },
-      airWarning: "Havadan gelen trafiklerin, S.H.M. web sitesinde yer alan yaklaşma prosedürlerini incelemeleri ve Display Director Aysan Keskin ile temas kururarak SLOT alınması gerekmektedir.",
+      airWarning: "Havadan gelen trafiklerin, S.H.M. web sitesinde yer alan yaklaşma prosedürlerini incelemeleri ve Display Director Aysan Keskin ile temas kururak SLOT alınması gerekmektedir.",
       directorMailLabel: "SHG Display Director mail adresi: ",
       visitWeb: "S.H.M. WEB SİTESİ",
     },

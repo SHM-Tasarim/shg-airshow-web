@@ -21,8 +21,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       ? "SHG Airshow firma ve kuruluşlara; \"seyircilerimizle\" doğrudan iletişim kurarak, marka bilinirliğini artırmak ve yeni işbirlikleri için önemli fırsatlar sunuyor."
       : "SHG Airshow offers companies and organizations significant opportunities to increase brand awareness and establish new collaborations by directly interacting with \"Our Audience\".",
     
-    chartTitle: isTR ? "Yıllara Göre SHG Seyirci Sayısı ve Erişim" : "SHG audience by years",
-    pandemicText: isTR ? "Pandemi Sebebiyle Canlı Yayın" : "LIVE STREAM",
+    chartTitle: isTR ? "Yıllara Göre SHG Seyirci Sayısı ve Erişim" : "SHG Audience Numbers and Reach by Year",
+    pandemicText: isTR ? "Pandemi Sebebiyle Canlı Yayın" : "Live Broadcast Due to the Pandemic",
 
     liveStreamLabel: isTR ? 'CANLI YAYIN ERİŞİMİ' : 'LIVE STREAM REACH',
     digitalReachLabel: isTR ? 'DİJİTAL ERİŞİM' : 'DIGITAL REACH',
@@ -109,7 +109,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-3xl border border-gray-100 dark:border-white/10 space-y-4 self-start shadow-xl">
               <h3 className="text-lg font-black text-secondary dark:text-white uppercase tracking-widest mb-2 text-center">
                 SHG AIRSHOW<br />
-                {isTR ? 'REKLAM EŞDEĞERİ' : 'AD EQUIVALENT'}
+                {isTR ? 'SEYİRCİ ERİŞİMİ' : 'AUDIENCE REACH'}
               </h3>
               <div className="flex items-center gap-4 p-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
                 <span className="material-icons text-primary text-3xl">sensors</span>
@@ -160,7 +160,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
                   {chartData.map((item, idx) => (
                     <div key={idx} className="flex-1 flex flex-col items-center justify-end group relative z-10 mx-[1px] md:mx-1 h-full">
                       <div
-                        className={`w-full max-w-[20px] md:max-w-[42px] rounded-t-sm transition-all duration-500 relative flex items-center justify-center
+                        className={`w-full max-w-[10px] md:max-w-[42px] rounded-t-sm transition-all duration-500 relative flex items-center justify-center
                           ${item.isPandemic
                             ? 'bg-slate-500 shadow-[0_0_15px_rgba(100,116,139,0.4)]'
                             : 'bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.3)]'}`}
@@ -216,6 +216,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
             '/images/sponsor-18.png',
             '/images/sponsor-19.png',
             '/images/sponsor-20.png',
+            '/images/sponsor-21.png',
+            '/images/sponsor-22.png',
           ]} />
         </section>
 

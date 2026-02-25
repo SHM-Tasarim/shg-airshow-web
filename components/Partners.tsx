@@ -46,6 +46,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   const companyLogos = [
     { name: "Acromach", logo: "/images/acromach.png", link: "https://www.seminozturk.com/" },
     { name: "Agense 190", logo: "/images/agense190-2.png", link: "https://www.agense190.com/" },
+    { name: "AirParkHotel", logo: "/images/airpark.png", link: "https://www.airparkhotel.com/" },
     { name: "AirFlow Performance", logo: "/images/airflow.png", link: "https://airflowperformance.com/" },
     { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },
@@ -57,6 +58,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Ly-Con", logo: "/images/ly-con.png", link: "https://www.lycon.com/" },
     { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
+    { name: "Sivrihisar Havacılık Kulübü Derneği", logo: "/images/sivhav-2.png", link: "https://shm.aero" },
     //{ name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
     { name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
   ];

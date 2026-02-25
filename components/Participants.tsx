@@ -195,7 +195,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "spitfire",
       name: "SUPERMARINE SPITFIRE MK.IX",
-      desc: lang === "TR" ? "22.777 adet üretilen ve bugün \"uçar vaziyette\" sadece 30 adet kalan Spitfire uçaklarından Mk.9 TE517, SHG Airshow 2026'da Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Out of 22,777 produced, only 30 Spitfires remain airworthy today. Mk.9 TE517 meets the audience at SHG Airshow 2026, equipped with our Glorious Air Force's \"Square Roundel\" emblem!",
+      desc: lang === "TR" ? "Bugün dünyada \"uçabilir vaziyette\" sadece 30 adet kalan Spitfire Mk.9, Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Today, our Spitfire Mk.9—one of only about 30 still airworthy worldwide—meets the audience adorned with the “Kare Fors” emblem of the Turkish Air Force.",
       image: "/images/spitfire-mk-9.jpg",
       url: "https://msomuseum.com/spitfire-mk-9/",
     },
