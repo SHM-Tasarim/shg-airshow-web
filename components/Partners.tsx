@@ -29,7 +29,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       : "SHG Airshow 2026 gratefully presents \"Individual Fuel Sponsors\":",
     fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(IN ALPHABETICAL ORDER BY LAST NAME)",
     donationInfo: lang === 'TR'
-      ? "Silahlı kuvvetlerimizi ve emniyet teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
+      ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
       : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
   };
 
@@ -54,7 +54,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },
     { name: "Dükkan", logo: "/images/dukkan.png", link: "http://shop.msomuseum.com/" },
-    { name: "Dynon", logo: "/images/dynon.png", link: "https://dynonavionics.com/home.php" },
+    //{ name: "Dynon", logo: "/images/dynon.png", link: "https://dynonavionics.com/home.php" },
     { name: "Good Year", logo: "/images/goodyear.png", link: "https://www.goodyear.eu/tr_tr/consumer.html#/" },
     { name: "Google", logo: "/images/google.png", link: "https://www.google.com/" },
     { name: "Keskinler", logo: "/images/keskinler.png", link: "https://www.keskinlerinsaat.com.tr/" },
@@ -63,7 +63,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
     { name: "Sivrihisar Havacılık Kulübü Derneği", logo: "/images/sivhav-2.png", link: "https://shm.aero" },
     //{ name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
-    { name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
+    //{ name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
   ];
 
   const fuelSponsors = [
@@ -136,7 +136,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
         </section>
 
         {/* KISIM 2: SPONSOR ŞİRKETLER */}
-        <section className="mb-32">
+        <section className="mb-12">
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-12">
             <h2 className="text-xl md:text-2xl font-black text-secondary dark:text-white uppercase tracking-widest leading-none">
               {translations.companiesSubtitle}
@@ -174,19 +174,22 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
 
         {/* KISIM 3: BİREYSEL YAKIT SPONSORLARI */}
         <section className="mb-32">
+          {/* Önce donationInfo için ayrı dikdörtgen */}
+          <div className="bg-secondary dark:bg-black/40 rounded-2xl p-8 md:p-12 mt-8 mb-12 border border-white/5">
+            <p className="text-white/80 text-sm md:text-base leading-relaxed font-semibold text-center">
+              {translations.donationInfo}
+            </p>
+          </div>
+
           <div className="bg-secondary dark:bg-black/40 rounded-[3rem] p-8 md:p-20 shadow-2xl border border-white/5 relative overflow-hidden">
             <div className="absolute inset-0 opacity-5 pointer-events-none texture-bg"></div>
-            
-            <div className="relative z-10">
-              <p className="text-primary text-sm md:text-base leading-relaxed font-semibold italic mb-12 max-w-3xl mx-auto text-center">
-                {translations.donationInfo}
-              </p>
 
+            <div className="relative z-10">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">
                   {translations.fuelSponsorsTitle}
                 </h2>
-                
+
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-10 border border-white/10 max-w-3xl mx-auto">
                   <p className="text-gray-300 text-sm md:text-lg leading-relaxed mb-4">
                     {translations.fuelSponsorsDonationInfo}
@@ -218,8 +221,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   return columns.map((col, colIdx) => (
                     <div key={colIdx}>
                       {col.map((name, idx) => (
-                        <div 
-                          key={idx} 
+                        <div
+                          key={idx}
                           className="flex items-center gap-3 border-b border-white/10 py-4 group"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0"></span>

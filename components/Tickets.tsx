@@ -55,7 +55,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
       ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
       : "Children aged 6 and under are free. Veterans, persons with disabilities, press card holders, Turkish Armed Forces (Air Force, Navy, and Army), General Command of Gendarmerie, and General Directorate of Security personnel may enter free of charge upon presentation of their ID. Accompanying family members are subject to the fee.",
     donationText: lang === "TR"
-      ? "Silahlı kuvvetlerimizi ve emniyet teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
+      ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
       : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
     rulesText: lang === "TR"
       ? [
@@ -157,7 +157,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-10">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {pricing.map((tier, idx) => (
@@ -192,10 +192,12 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
       {/* Donation Section */}
       <section className="py-10 lg:py-14 bg-white dark:bg-background-dark">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto p-8 lg:p-12 text-center">
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
-              {translations.donationText}
-            </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-gray-900/50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800">
+              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-center">
+                {translations.donationText}
+              </p>
+            </div>
           </div>
         </div>
       </section>

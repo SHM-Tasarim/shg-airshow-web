@@ -35,6 +35,9 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
         </>
       ),
     subtitle: lang === "TR" ? "(Alfabetik Sırayla)" : "(in alphabetical order)",
+    donationText: lang === "TR"
+      ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
+      : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
     cta: {
       button: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     },
@@ -265,6 +268,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       <section className="max-w-7xl mx-auto px-4 grid gap-12 lg:gap-16">
         {participants.map((p, index) => {
           const isAirPark = p.id === "airparkhotel";
+          const isYeniMenekse = p.id === "pitts-s2s";
 
           return (
             <div
@@ -275,10 +279,10 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
               <div className={`flex flex-col ${isAirPark ? "lg:flex-row items-stretch" : (index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row")}`}>
 
                 {/* --- IMAGE 1 (Standard left or AirPark left) --- */}
-                <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden lg:aspect-[16/10] lg:min-h-[300px]`}>
+                <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden ${isYeniMenekse ? "lg:aspect-[4/3] lg:min-h-[350px]" : "lg:aspect-[16/10] lg:min-h-[300px]"}`}>
                   <img
                     alt={typeof p.name === 'string' ? p.name : 'participant'}
-                    className="w-full h-auto object-contain lg:absolute lg:inset-0 lg:h-full lg:object-cover transition-all duration-1000 lg:scale-105 lg:group-hover:scale-110 saturate-[0.8] group-hover:saturate-100"
+                    className={`w-full h-auto object-contain lg:absolute lg:inset-0 lg:h-full transition-all duration-1000 ${isYeniMenekse ? "lg:object-contain lg:scale-125" : "lg:object-cover lg:scale-105"} lg:group-hover:scale-110 saturate-[0.8] group-hover:saturate-100`}
                     src={p.image}
                     loading="lazy"
                   />
@@ -336,7 +340,16 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       </section>
 
       {/* CTA Section */}
-      <section className="mt-32 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+      <section className="mt-8 px-4 md:px-6 max-w-5xl mx-auto pb-24">
+        {/* Donation Section */}
+        <div className="mb-6">
+          <div className="bg-white dark:bg-gray-900/50 rounded-3xl p-6 md:p-10 shadow-xl border border-gray-100 dark:border-gray-800">
+            <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-center">
+              {translations.donationText}
+            </p>
+          </div>
+        </div>
+
         <div className="relative py-8 md:py-12 px-4 md:px-8 bg-primary text-white text-center overflow-hidden rounded-xl md:rounded-2xl shadow-2xl">
           <div className="relative z-10">
             <button
