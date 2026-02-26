@@ -36,8 +36,8 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       ),
     subtitle: lang === "TR" ? "(Alfabetik Sırayla)" : "(in alphabetical order)",
     donationText: lang === "TR"
-      ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
-      : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
+      ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatlarımızı temsil eden Hava Gösteri Unsurlarının, SHG Airshow’a katılmaları halinde, net bilet gelirlerimizin bir kısmı ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır…"
+      : "If the Air Demonstration Units representing our Armed Forces and Police Organization participate in SHG Airshow, a portion of our net ticket revenues is donated to the respective institutions’ assistance foundations...",
     cta: {
       button: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     },
