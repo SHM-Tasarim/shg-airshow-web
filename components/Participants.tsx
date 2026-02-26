@@ -101,6 +101,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "",
     },
     {
+      id: "jan",
+      name: "JAN DIEHL",
+      desc: lang === "TR" ? "Jan Diehl, bir Alman havayolunda CRJ 900 tipi uçaklarında First Officer olarak görev yapmaktadır. Klasik tarihi uçaklara, akrobasiye büyük bir tutkusu olan ve Extra uçağı ile pek çok yarışma deneyimi de bulunan Jan, SHG Airshow 2026’da!" : "Jan Diehl serves as First Officer on CRJ 900 aircraft for a German airline. Jan, who has a great passion for classic historic aircraft and aerobatics and has extensive competition experience with his Extra aircraft, will be at the SHG Airshow 2026!",
+      image: "/images/jan.jpg",
+      url: "",
+    },
+    {
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
