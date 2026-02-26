@@ -28,6 +28,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       ? "SHG Airshow 2026 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
       : "SHG Airshow 2026 gratefully presents \"Individual Fuel Sponsors\":",
     fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(IN ALPHABETICAL ORDER BY LAST NAME)",
+    donationInfo: lang === 'TR'
+      ? "Silahlı kuvvetlerimizi ve emniyet teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
+      : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
   };
 
   const institutionalLogos = [
@@ -175,6 +178,10 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
             <div className="absolute inset-0 opacity-5 pointer-events-none texture-bg"></div>
             
             <div className="relative z-10">
+              <p className="text-primary text-sm md:text-base leading-relaxed font-semibold italic mb-12 max-w-3xl mx-auto text-center">
+                {translations.donationInfo}
+              </p>
+
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">
                   {translations.fuelSponsorsTitle}

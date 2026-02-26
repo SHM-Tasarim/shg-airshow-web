@@ -49,11 +49,14 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
-    addToCart: lang === "TR" ? "Bilet Al" : "BUY TICKET",
+    addToCart: lang === "TR" ? "YAKINDA SATIŞTA" : "COMING SOON",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
       ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
       : "Children aged 6 and under are free. Veterans, persons with disabilities, press card holders, Turkish Armed Forces (Air Force, Navy, and Army), General Command of Gendarmerie, and General Directorate of Security personnel may enter free of charge upon presentation of their ID. Accompanying family members are subject to the fee.",
+    donationText: lang === "TR"
+      ? "Silahlı kuvvetlerimizi ve emniyet teşkilatımızı temsil eden Hava Gösteri unsurlarının Sivrihisar Hava Gösterileri'ne katılmaları halinde net gelirlerimizin belli bir yüzdesi ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır."
+      : "When air show elements representing our armed forces and security organizations participate in the Sivrihisar Air Shows, a certain percentage of our net revenues is donated to the solidarity foundations of the respective institutions.",
     rulesText: lang === "TR"
       ? [
           "Doğal afetler, savaş, seferberlik, salgın hastalık, terör ihbarı gibi her türlü mücbir sebeplerle SHG Airshow'un kısmen ve/veya tamamen iptal edilmesi,",
@@ -65,7 +68,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
           "SHG Airshow bilet ücretleri iade kapsamı dışındadır.",
         ]
       : [
-         "The partial and/or complete cancellation of the SHG Airshow due to any force majeure circumstances such as natural disasters, war, mobilization, epidemic diseases, or terrorist threats,",
+          "The partial and/or complete cancellation of the SHG Airshow due to any force majeure circumstances such as natural disasters, war, mobilization, epidemic diseases, or terrorist threats,",
           "The partial and/or complete cancellation of the SHG Airshow due to any adverse weather conditions that may affect the demonstration flights, given that the SHG Airshow is an aviation event,",
           "The inability of aircraft participating in the SHG Airshow to reach the S.H.M. (Sivrihisar Aviation Center) where the SHG Airshow is held due to reasons such as technical malfunctions and/or health problems that may arise among personnel, and/or their inability to perform demonstration flights partially and/or completely during the SHG Airshow despite reaching the venue due to the aforementioned reasons,",
           "Partial and/or substantial changes to the SHG Airshow's show and flight program,",
@@ -120,7 +123,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   return (
     <div className="font-display overflow-x-hidden bg-white dark:bg-background-dark transition-colors duration-500">
-      
+
       {/* Video Hero Section */}
       <section className="relative py-24 lg:py-36 text-center text-white overflow-hidden bg-secondary min-h-[75vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -186,6 +189,17 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
         </div>
       </section>
 
+      {/* Donation Section */}
+      <section className="py-10 lg:py-14 bg-white dark:bg-background-dark">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto p-8 lg:p-12 text-center">
+            <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+              {translations.donationText}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Ticket Rules Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900/30">
         <div className="container mx-auto px-4 lg:px-8">
@@ -193,7 +207,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             <h2 className="text-2xl lg:text-4xl font-black mb-6 text-secondary dark:text-white uppercase tracking-tight text-center">
               {translations.rulesTitle}
             </h2>
-            
+
             <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-center mb-10 max-w-3xl mx-auto">
               {translations.freeEntryText}
             </p>
@@ -201,12 +215,10 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             <div className="bg-white dark:bg-gray-900/50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800">
               <ul className="space-y-6">
                 {translations.rulesText.map((item, idx) => {
-                  // İlk 5 madde için (0,1,2,3,4) madde işareti göster, son 2 madde için gösterme
                   const showBullet = idx < 5;
-                  
                   return (
-                    <li 
-                      key={idx} 
+                    <li
+                      key={idx}
                       className={`text-gray-700 dark:text-gray-300 font-medium leading-relaxed text-sm lg:text-base flex items-start ${!showBullet ? 'mt-8 font-bold text-secondary dark:text-white' : ''}`}
                     >
                       {showBullet && (
@@ -221,6 +233,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };
