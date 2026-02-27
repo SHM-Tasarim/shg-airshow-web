@@ -49,7 +49,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
-    addToCart: lang === "TR" ? "YAKINDA SATIŞTA" : "COMING SOON",
+    addToCart: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     vipAddToCart: lang === "TR" ? "Daha sonra satışa sunulacaktır" : "WILL BE AVAILABLE LATER",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
@@ -181,7 +181,10 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95">
+                <button
+                  className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95"
+                  onClick={() => window.open("https://biletinial.com/tr-tr/etkinlik/shg-airshow-sivrihisar-hava-gosterileri", "_blank")}
+                >
                   {idx === 1 ? translations.vipAddToCart : translations.addToCart}
                 </button>
               </div>
