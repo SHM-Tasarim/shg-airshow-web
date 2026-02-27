@@ -351,7 +351,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
         {/* Donation Section */}
         <div className="mb-6">
           <div className="bg-white dark:bg-gray-900/50 rounded-3xl p-6 md:p-10 shadow-xl border border-gray-100 dark:border-gray-800">
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-center">
+            <p className="text-base text-white font-medium leading-relaxed text-center">
               {translations.donationText}
             </p>
           </div>

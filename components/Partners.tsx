@@ -176,7 +176,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
         <section className="mb-32">
           {/* Önce donationInfo için ayrı dikdörtgen */}
           <div className="bg-secondary dark:bg-black/40 rounded-2xl p-8 md:p-12 mt-8 mb-12 border border-white/5">
-            <p className="text-white/80 text-sm md:text-base leading-relaxed font-semibold text-center">
+            <p className="text-white text-base leading-relaxed font-semibold text-center">
               {translations.donationInfo}
             </p>
           </div>

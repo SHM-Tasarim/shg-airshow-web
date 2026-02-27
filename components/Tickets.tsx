@@ -194,7 +194,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white dark:bg-gray-900/50 rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 dark:border-gray-800">
-              <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-center">
+              <p className="text-base md:text-lg text-white font-medium leading-relaxed text-center">
                 {translations.donationText}
               </p>
             </div>
