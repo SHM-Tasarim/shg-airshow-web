@@ -50,6 +50,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
     addToCart: lang === "TR" ? "YAKINDA SATIŞTA" : "COMING SOON",
+    vipAddToCart: lang === "TR" ? "Daha sonra satışa sunulacaktır" : "WILL BE AVAILABLE LATER",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
       ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
@@ -181,7 +182,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
                   ))}
                 </ul>
                 <button className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95">
-                  {translations.addToCart}
+                  {idx === 1 ? translations.vipAddToCart : translations.addToCart}
                 </button>
               </div>
             ))}
