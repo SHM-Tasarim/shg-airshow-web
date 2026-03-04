@@ -45,7 +45,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "T.C. Kimlik Numarası",
         "Doğum Tarihi",
         "İrtibat Bilgileri (telefon ve e\u2011posta)",
-        "İmzalı Spotter Taahhütnamesi Aşağıdaki butona basarak dosyayı indirebilirsiniz.)"
+        "İmzalı Spotter Taahhütnamesi (Aşağıdaki butona basarak dosyayı indirebilirsiniz.)"
       ],
       note: `"Spotter" arkadaşlarımız organizasyona biletli olarak giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makinesi kullanmaları gerekmektedir. Spotter yelekleri ve yaka kartları, organizasyon günü show alanında bulunan Danışma’dan teslim alınacaktır.`,
       applyTitle: "Spotter Başvurusu İçin",
