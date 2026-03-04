@@ -8,19 +8,27 @@ interface SpotterRegistrationProps {
 
 const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavigate }) => {
   const renderNoteWithRedWords = (note: string) => {
+    let result = note;
     if (lang === 'TR') {
-      let result = note;
       result = result.replace(
-        /profesyonel fotoğraf makineleri/g,
-        '<span class="text-red-600">profesyonel fotoğraf makineleri</span>'
+        /profesyonel fotoğraf makinesi/g,
+        '<span class="text-red-600">profesyonel fotoğraf makinesi</span>'
       );
       result = result.replace(
-        /danışmadan/g,
-        '<span class="text-red-600">danışmadan</span>'
+        /Danışma/g,
+        '<span class="text-red-600">Danışma</span>'
       );
-      return <span dangerouslySetInnerHTML={{ __html: result }} />;
+    } else {
+      result = result.replace(
+        /professional camera/g,
+        '<span class="text-red-600">professional camera</span>'
+      );
+      result = result.replace(
+        /Consultation desk/g,
+        '<span class="text-red-600">Consultation desk</span>'
+      );
     }
-    return note;
+    return <span dangerouslySetInnerHTML={{ __html: result }} />;
   };
 
   const content = {
@@ -36,9 +44,10 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Ad Soyad",
         "T.C. Kimlik Numarası",
         "Doğum Tarihi",
-        "İrtibat Bilgileri (telefon ve e\u2011posta)"
+        "İrtibat Bilgileri (telefon ve e\u2011posta)",
+        "İmzalı Spotter Taahhütnamesi Aşağıdaki butona basarak dosyayı indirebilirsiniz.)"
       ],
-      note: `"SPOTTER" arkadaşlarımız organizasyona biletli giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makineleri kullanmaları, organizasyon günü spotter yelekleri ve yaka kartlarını danışmadan temin etmeleri gerekmektedir.`,
+      note: `"Spotter" arkadaşlarımız organizasyona biletli olarak giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makinesi kullanmaları gerekmektedir. Spotter yelekleri ve yaka kartları, organizasyon günü show alanında bulunan Danışma’dan teslim alınacaktır.`,
       applyTitle: "Spotter Başvurusu İçin",
       commitmentBtn: "SPOTTER TAAHHÜTNAMESİ",
       commitmentPdf: "/SHG 2026-Spotter Taahhutnamesi.pdf",
@@ -58,9 +67,10 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Full Name",
         "Turkish Republic ID Number",
         "Date of Birth",
-        "Contact Information (phone and e-mail)"
+        "Contact Information (phone and e-mail)",
+        "Signed Spotter Commitment Form (You can download the file by clicking the button below.)"
       ],
-      note: `Our "SPOTTER" friends will be able to enter the organization with a ticket. Spotters must use professional photography equipment and obtain spotter vests and lanyards from the registration desk.`,
+      note: `"Spotter" friends will be able to enter the organization with a ticket. Spotters are required to use a professional camera. Spotter vests and badges will be available for pickup on the day of the event at the Consultation desk located in the show area.`,
       applyTitle: "To Apply as a Spotter",
       commitmentBtn: "SPOTTER COMMITMENT FORM",
       commitmentPdf: "/Spotter Commitment Form.pdf",
