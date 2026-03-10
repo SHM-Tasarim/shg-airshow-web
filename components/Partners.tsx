@@ -49,8 +49,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   const companyLogos = [
     { name: "Acromach", logo: "/images/acromach.png", link: "https://www.seminozturk.com/" },
     { name: "Agense 190", logo: "/images/agense190-2.png", link: "https://www.agense190.com/" },
-    { name: "AirParkHotel", logo: "/images/airpark.png", link: "https://www.airparkhotel.com/" },
     { name: "AirFlow Performance", logo: "/images/airflow.png", link: "https://airflowperformance.com/" },
+    { name: "AirParkHotel", logo: "/images/airpark.png", link: "https://www.airparkhotel.com/" },
     { name: "Barry Controls", logo: "/images/barry-controls.png", link: "https://hutchinsonai.com/" },
     { name: "Cinema Pink", logo: "/images/cinemapink.png", link: "https://cinemapink.com.tr/" },
     { name: "Dükkan", logo: "/images/dukkan.png", link: "http://shop.msomuseum.com/" },

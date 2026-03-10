@@ -105,6 +105,29 @@ const App: React.FC = () => {
       return (
         <>
           <Hero onNavigate={navigateTo} lang={lang} />
+
+          {/* Sponsorlar Bölümü - YORUMDA
+          <section className="bg-secondary py-16 md:py-20">
+            <div className="max-w-6xl mx-auto px-6">
+              <div className="flex flex-col items-center">
+                <span className="inline-block py-2 px-8 bg-[#cfaa67] text-secondary font-bold uppercase tracking-[0.3em] text-sm md:text-base rounded-full shadow-lg mb-10 border-2 border-[#cfaa67]/50">
+                  {lang === "TR" ? "Paydaş Sponsor" : "ECO AD Spot"}
+                </span>
+
+                <div className="flex items-center justify-center">
+                  <div className="relative bg-[#cfaa67]/20 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-8 py-4 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                    <img
+                      src={`/images/mytechnic-logo.png`}
+                      alt="Sponsor"
+                      className="h-16 md:h-20 w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          */}
+
           <Gallery lang={lang} onNavigate={navigateTo} />
           <ActionBridge lang={lang} />
           <Highlights lang={lang} onNavigate={navigateTo} />

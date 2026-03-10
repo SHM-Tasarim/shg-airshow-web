@@ -45,6 +45,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
 
   const participants = [
     {
+      id: "turk-yildizlari",
+      name: "TÜRK YILDIZLARI",
+      desc: lang === "TR" ? "Türkiye'nin gökyüzündeki milli takımı Türk Yıldızları, nefes kesen ve gurur veren muhteşem gösterisiyle SHG Airshow 2026'da gökyüzünü fethetmeye geliyor!" : "Türkiye's national team in the sky, the Turkish Stars, is coming to SHG Airshow 2026 to conquer the skies with their breathtaking and proud magnificent performance!",
+      image: "/images/ty.jpg",
+    },
+    {
       id: "acromach",
       name: "ACROMACH",
       desc: lang === "TR" ? "Acromach Gökyüzü Dansçıları - Hava Akrobasi Grubu SHG Airshow 2026'da!" : "Acromach Sky Dancers - Aerial Aerobatics Group at SHG Airshow 2026!",
