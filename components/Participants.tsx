@@ -273,23 +273,75 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
         <h1 className="text-5xl md:text-7xl font-black text-secondary dark:text-white leading-tight tracking-tighter mb-4 uppercase">
           {translations.title}
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-base md:text-lg italic">
-          {translations.subtitle}
-        </p>
       </div>
 
       <section className="max-w-7xl mx-auto px-4 grid gap-12 lg:gap-16">
-        {participants.map((p, index) => {
+        {/* First Participant: Türk Yıldızları */}
+        {(() => {
+          const first = participants[0];
+          const isAirPark = first.id === "airparkhotel";
+          const isYeniMenekse = first.id === "pitts-s2s";
+
+          return (
+            <div
+              key={first.id}
+              id={first.id}
+              className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
+            >
+              <div className={`flex flex-col ${isAirPark ? "lg:flex-row items-stretch" : "lg:flex-row"}`}>
+                <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden ${isYeniMenekse ? "lg:aspect-[4/3] lg:min-h-[350px]" : "lg:aspect-[16/10] lg:min-h-[300px]"}`}>
+                  <img
+                    alt={typeof first.name === 'string' ? first.name : 'participant'}
+                    className={`w-full h-auto object-contain lg:absolute lg:inset-0 lg:h-full transition-all duration-1000 ${isYeniMenekse ? "lg:object-contain lg:scale-125" : "lg:object-cover lg:scale-105"} lg:group-hover:scale-110 saturate-[0.8] group-hover:saturate-100`}
+                    src={first.image}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                </div>
+                <div className={`flex-1 p-8 lg:p-12 xl:p-16 flex flex-col justify-center relative z-10 ${isAirPark ? "text-center items-center" : ""}`}>
+                  <div className={`absolute top-0 ${isAirPark ? "left-1/2 -translate-x-1/2" : "right-8"} text-[120px] md:text-[180px] font-black text-gray-100 dark:text-white/[0.03] select-none pointer-events-none group-hover:text-primary/[0.05] transition-colors duration-700 leading-none`}>
+                    01
+                  </div>
+                  <div className="relative z-20">
+                    <h3 className="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-6 tracking-tighter leading-tight group-hover:text-primary transition-colors duration-300">
+                      {first.name}
+                    </h3>
+                    <p className={`text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl font-medium ${isAirPark ? "mx-auto" : "border-l-2 border-primary/20 pl-6 group-hover:border-primary"} transition-colors`}>
+                      {first.desc}
+                    </p>
+                    <div className={`mt-10 flex items-center ${isAirPark ? "justify-center" : ""}`}>
+                      {first.url && (
+                        <a href={first.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-xs font-black tracking-[0.2em] text-secondary dark:text-white group/btn hover:text-primary transition-colors">
+                          <span className="w-10 h-0.5 bg-primary group-hover/btn:w-16 transition-all duration-300"></span>
+                          {lang === "TR" ? "DETAYLI BİLGİ" : "DETAILS"}
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Alphabetical Order Text */}
+        <div className="mt-4 mb-4 text-center">
+          <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-base md:text-lg italic">
+            {translations.subtitle}
+          </p>
+        </div>
+
+        {/* Rest of Participants */}
+        {participants.slice(1).map((p, index) => {
           const isAirPark = p.id === "airparkhotel";
           const isYeniMenekse = p.id === "pitts-s2s";
-
           return (
             <div
               key={p.id}
               id={p.id}
               className="group relative bg-white/5 dark:bg-gray-800/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 hover:border-primary/30 scroll-mt-32"
             >
-              <div className={`flex flex-col ${isAirPark ? "lg:flex-row items-stretch" : (index % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row")}`}>
+              <div className={`flex flex-col ${isAirPark ? "lg:flex-row items-stretch" : ((index + 1) % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row")}`}>
 
                 {/* --- IMAGE 1 (Standard left or AirPark left) --- */}
                 <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden ${isYeniMenekse ? "lg:aspect-[4/3] lg:min-h-[350px]" : "lg:aspect-[16/10] lg:min-h-[300px]"}`}>
@@ -306,7 +358,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
                 <div className={`flex-1 p-8 lg:p-12 xl:p-16 flex flex-col justify-center relative z-10 ${isAirPark ? "text-center items-center" : ""}`}>
                   {/* Number HUD */}
                   <div className={`absolute top-0 ${isAirPark ? "left-1/2 -translate-x-1/2" : "right-8"} text-[120px] md:text-[180px] font-black text-gray-100 dark:text-white/[0.03] select-none pointer-events-none group-hover:text-primary/[0.05] transition-colors duration-700 leading-none`}>
-                    {(index + 1).toString().padStart(2, "0")}
+                    {(index + 2).toString().padStart(2, "0")}
                   </div>
 
                   <div className="relative z-20">
