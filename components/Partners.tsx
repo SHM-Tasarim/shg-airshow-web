@@ -66,6 +66,17 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     //{ name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
   ];
 
+  // Türkçe harf sırası: A-B-C-Ç-D-E-F-G-Ğ-H-I-İ-J-K-L-M-N-O-Ö-P-R-S-Ş-T-U-Ü-V-Y-Z
+  const turkishOrder: Record<string, number> = {
+    'A': 1, 'B': 2, 'C': 3, 'Ç': 4, 'D': 5, 'E': 6, 'F': 7, 'G': 8, 'Ğ': 9, 'H': 10,
+    'I': 11, 'İ': 12, 'J': 13, 'K': 14, 'L': 15, 'M': 16, 'N': 17, 'O': 18, 'Ö': 19,
+    'P': 20, 'R': 21, 'S': 22, 'Ş': 23, 'T': 24, 'U': 25, 'Ü': 26, 'V': 27, 'Y': 28, 'Z': 29
+  };
+
+  const getTurkishSortKey = (name: string): number[] => {
+    return name.toUpperCase().split('').map(char => turkishOrder[char] || 30);
+  };
+
   const fuelSponsors = [
   "Füsun ALTIIŞIK", "Nazik ÇAKIR", "Ali DEMİR", "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Nurullah BOŞDURMAZ",
   "Fatma COŞKUN", "Kibar COŞKUN", "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
@@ -74,17 +85,18 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
   "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
   ].sort((a, b) => {
-  const lastNameA = a.split(' ').pop() || '';
-  const lastNameB = b.split(' ').pop() || '';
-  const normalizeTurkish = (str: string) => str
-    .replace(/Ç/g, 'C').replace(/ç/g, 'c')
-    .replace(/Ğ/g, 'G').replace(/ğ/g, 'g')
-    .replace(/İ/g, 'I').replace(/ı/g, 'i')
-    .replace(/Ö/g, 'O').replace(/ö/g, 'o')
-    .replace(/Ş/g, 'S').replace(/ş/g, 's')
-    .replace(/Ü/g, 'U').replace(/ü/g, 'u');
-  return normalizeTurkish(lastNameA).localeCompare(normalizeTurkish(lastNameB));
-});
+    const lastNameA = a.split(' ').pop() || '';
+    const lastNameB = b.split(' ').pop() || '';
+    const keyA = getTurkishSortKey(lastNameA);
+    const keyB = getTurkishSortKey(lastNameB);
+
+    for (let i = 0; i < Math.max(keyA.length, keyB.length); i++) {
+      const valA = keyA[i] ?? 30;
+      const valB = keyB[i] ?? 30;
+      if (valA !== valB) return valA - valB;
+    }
+    return 0;
+  });
 
   return (
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 font-display">
