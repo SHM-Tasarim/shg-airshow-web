@@ -73,10 +73,10 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
   "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
   "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
-].sort((a, b) => {
+  ].sort((a, b) => {
   const lastNameA = a.split(' ').pop() || '';
   const lastNameB = b.split(' ').pop() || '';
-  return lastNameA.localeCompare(lastNameB);
+  return lastNameA.localeCompare(lastNameB, 'tr');
 });
 
   return (
