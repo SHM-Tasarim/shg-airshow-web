@@ -67,10 +67,10 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   ];
 
   const fuelSponsors = [
-  "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Fatma COŞKUN", "Kibar COŞKUN",
-  "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
+  "Füsun ALTIIŞIK", "Nazik ÇAKIR", "Ali DEMİR", "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Nurullah BOŞDURMAZ",
+  "Fatma COŞKUN", "Kibar COŞKUN", "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
   "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
-  "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN",
+  "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
   "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
   "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
 ].sort((a, b) => {
