@@ -19,7 +19,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
       checkout: "",
       location: "Konum",
       contact: "İLETİŞİM",
-      visitWeb: "TEL: +90 532 416 71 33",
+      visitWeb: "AIRPARKHOTEL.COM",
       buyTicket: "BİLET AL"
     },
     EN: {
@@ -33,7 +33,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
       checkout: "Check-out",
       location: "Location",
       contact: "CONTACT",
-      visitWeb: "PHONE: +90 532 416 71 33",
+      visitWeb: "AIRPARKHOTEL.COM",
       buyTicket: "BUY TICKET"
     }
   }[lang];
@@ -43,7 +43,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
       {/* 1. HERO IMAGE AREA (Sayfa başındaki ana fotoğraf) */}
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative bg-gray-100 dark:bg-gray-800">
         <picture>
-          <source media="(min-width: 768px)" srcSet="/images/aph-header-2.jpg" />
+          <source media="(min-width: 768px)" srcSet="/images/aph-header-2.png" />
           <img
             src="/images/aph-5.jpg"
             className="w-full h-full object-cover md:object-contain"
@@ -102,7 +102,7 @@ const Airparkhotel: React.FC<AirparkhotelProps> = ({ lang, onNavigate }) => {
         {/* Bilgi ve Rezervasyon Butonu */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-32">
           <a
-            //href="https://shm.aero/iletisim" 
+            href="https://www.airparkhotel.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-primary text-white font-black py-5 px-12 rounded-xl hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-sm"

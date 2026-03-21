@@ -63,6 +63,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       desc: lang === "TR" ? "Üzerinden Spitfire geçen TEK otel, SHG Airshow 2026'da!" : "AirParkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2026!",
       image: "/images/aph-4.jpg",
       secondaryImage: "/images/aph-3.jpg",
+      url: "https://www.airparkhotel.com/",
     },
     {
       id: "antonov-an2",
@@ -84,6 +85,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       desc: lang === "TR" ? "Türkiye'nin uçar durumdaki En Yaşlı Çift Kanatlı Tayyareleri olan 1940 ve 1943 yapımı Boeing Stearman A75N1, seyircileri adeta zaman makinesinde bir yolculuğa çıkarıyor." : "Türkiye's oldest airworthy biplanes, the 1940 and 1943 Boeing Stearman A75N1, will take the audience on a journey in a time machine.",
       image: "/images/boeing-stearman.jpg",
       url: "https://msomuseum.com/a75n1-pt-17-boeing-stearman/",
+    },
+    {
+      id: "oguzhan-cabıoglu",
+      name: "OĞUZHAN CABIOĞLU",
+      desc: lang === "TR" ? "2009 yılından bu yana ER-AH Uçuş Okulu’nda uçuş eğitmeni ve akrobasi pilotu olarak görev yapan, 12 farklı uçak deneyimine sahip ve aynı zamanda Türkiye’nin en genç ilaçlama pilotu olan Oğuzhan Cabıoğlu, SHG Airshow 2026’da EXTRA 300L Akrobasi uçağı ile izleyicileriyle buluşuyor!" : "Oğuzhan Cabıoğlu, who has been serving as a flight instructor and aerobatic pilot at ER-AH Flight School since 2009, has experience with 12 different aircraft and is also Türkiye's youngest crop-dusting pilot. He will meet the audience at SHG Airshow 2026 with his EXTRA 300L Aerobatic aircraft!",
+      image: "/images/oguzhan-cabioglu.jpeg",
     },
     {
       id: "cessna-business",
