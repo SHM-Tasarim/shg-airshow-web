@@ -66,6 +66,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://www.airparkhotel.com/",
     },
     {
+      id: "fevziak",
+      name: "FEVZİ AK",
+      desc: lang === "TR" ? "Fevzi AK, Gordiyon Havacılık Genel Müdürü Eğitmen Pilot Fevzi AK BRM Aero Bristell Gösterisi ile SHG Airshow 2026'da!" : "Fevzi AK, General Manager and Instructor Pilot of Gordiyon Aviation, is at SHG Airshow 2026 with his BRM Aero Bristell Performance!",
+      image: "/images/fevzi-ak.jpg",
+    },
+    {
       id: "antonov-an2",
       name: "ANTONOV AN-2",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1957 model Antonov AN-2, dünya çapında askeri ve sivil alanda uzun yıllar havacılığa hizmet etti. Dünyanın En Büyük Çift Kanatlı Uçağı olan Annie / Annushka SHG Airshow'da!" : "The 1957 model Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
@@ -154,6 +160,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       name: "TOM van HOORN",
       desc: lang === "TR" ? "Boeing 777 tipi uçaklarında Kaptan Pilot olan Tom, 41 yılı aşkın havayolu tecrübesi ve 16 yıllık DC-3 uçuş eğitmenliğiyle, efsanevi DC-3 \"Turkish Delight\" ile SHG Airshow 2026'da gökyüzünde!" : "Tom van Hoorn, captain pilot on the Boeing 777, with over 41 years of airline experience and 16 years of DC-3 flight instructor experience, will be in the skies at SHG Airshow 2026 with the legendary DC-3 \"Turkish Delight\"!",
       image: "/images/tom.jpg",
+    },
+    {
+      id: "ugur-icbak",
+      name: "UĞUR İÇBAK",
+      desc: lang === "TR" ? "1986 yılında gökyüzü serüvenine başlayan Uğur İçbak, görüntü ve hava görüntü yönetmeni olarak; Eşkıya, İstanbul Kanatlarımın Altında, Anadolu Kartalları gibi Türk sinemasının unutulmaz yapımlarında, ve bunun yanı sıra, Charlie’s Angels ve Kraven the Hunter gibi uluslararası filmlerde imzası bulunan bir isim. SHG Airshow 2026’da Piper Super Cub uçağı ile o da gökyüzünde!" : "Ugur ICBAK, who started his sky adventures in 1986 as a cinematographer and aerial director, has left his mark in unforgettable Turkish cinema productions like Eşkıya, İstanbul Kanatlarımın Altında, and Anadolu Kartalları, as well as internationally recognized films such as Charlie’s Angels and Kraven the Hunter. At SHG Airshow 2026, he will be flying in a Piper Super Cub!",
+      image: "/images/ugur-icbak.jpg",
     },
     {
       id: "senan",

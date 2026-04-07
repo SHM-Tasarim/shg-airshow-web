@@ -59,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
     badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 Sept 2026",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
-    program: lang === "TR" ? "GÖSTERİ PROGRAMI" : "SHOW PROGRAM",
+    program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
   };
 
   return (
@@ -117,16 +117,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
             {translations.buyTicket}
           </button>
 
-          {/* GÖSTERİ PROGRAMI BUTONU */}
-          {/*  <button
+          <button
             onClick={() => onNavigate("program")}
-            className="bg-primary text-white font-extrabold py-4 px-12 rounded-md hover:bg-red-700 transition-all hover:scale-105 active:scale-95 shadow-2xl uppercase text-sm tracking-widest border border-primary/20 flex items-center justify-center gap-2 group/btn"
+            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-3 group/btn2"
           >
-            <span className="material-icons text-lg group-hover/btn:translate-x-1 transition-transform">
-              flight_takeoff
+            <span className="material-icons text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
+              event
             </span>
             {translations.program}
-          </button> */}
+          </button>
         </div>
 
         {/* Geri Sayım Sayacı */}
