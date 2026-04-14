@@ -83,7 +83,12 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
   "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
   "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
-  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ"
+  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ",
+  // YENİ EKLENENLER
+  "Akif DELİCAN", "Harun DELİCAN", "Bahattin AYDIN", "Ayten ÖZEL", "İbrahim Bilgin ÖZPAK",
+  "Gizem ÖZBAY", "Kemal ÖZTÜRK", "Seher ÖZİPEK", "Hasan KARACAOVA",
+  "Seyit Kamil ÖZCAN", "Menekşe ÇAKIR", "Ahmet KARAKÜÇÜK", "Turgut DALGIÇ", "Emine HASER",
+  "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN"
   ].sort((a, b) => {
     const lastNameA = a.split(' ').pop() || '';
     const lastNameB = b.split(' ').pop() || '';
