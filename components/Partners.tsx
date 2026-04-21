@@ -74,7 +74,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   };
 
   const getTurkishSortKey = (name: string): number[] => {
-    return name.toUpperCase().split('').map(char => turkishOrder[char] || 30);
+    return name.toLocaleUpperCase('tr').split('').map(char => turkishOrder[char] || 30);
   };
 
   const fuelSponsors = [
@@ -88,7 +88,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Akif DELİCAN", "Harun DELİCAN", "Bahattin AYDIN", "Ayten ÖZEL", "İbrahim Bilgin ÖZPAK",
   "Gizem ÖZBAY", "Kemal ÖZTÜRK", "Seher ÖZİPEK", "Hasan KARACAOVA",
   "Seyit Kamil ÖZCAN", "Menekşe ÇAKIR", "Ahmet KARAKÜÇÜK", "Turgut DALGIÇ", "Emine HASER",
-  "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN"
+  "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN",
+  "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ"
   ].sort((a, b) => {
     const lastNameA = a.split(' ').pop() || '';
     const lastNameB = b.split(' ').pop() || '';
