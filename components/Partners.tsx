@@ -91,17 +91,27 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN",
   "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ"
   ].sort((a, b) => {
-    const lastNameA = a.split(' ').pop() || '';
-    const lastNameB = b.split(' ').pop() || '';
-    const keyA = getTurkishSortKey(lastNameA);
-    const keyB = getTurkishSortKey(lastNameB);
+    const partsA = a.split(' ');
+    const partsB = b.split(' ');
+    const lastNameA = partsA.pop() || '';
+    const lastNameB = partsB.pop() || '';
+    const firstNameA = partsA.join(' ');
+    const firstNameB = partsB.join(' ');
 
-    for (let i = 0; i < Math.max(keyA.length, keyB.length); i++) {
-      const valA = keyA[i] ?? 30;
-      const valB = keyB[i] ?? 30;
-      if (valA !== valB) return valA - valB;
-    }
-    return 0;
+    const compareKeys = (keyA: number[], keyB: number[]) => {
+      for (let i = 0; i < Math.max(keyA.length, keyB.length); i++) {
+        // Eksik karakter (kısa string) 0 olarak işlenir → kısa olan öne gelir.
+        const valA = keyA[i] ?? 0;
+        const valB = keyB[i] ?? 0;
+        if (valA !== valB) return valA - valB;
+      }
+      return 0;
+    };
+
+    const lastCmp = compareKeys(getTurkishSortKey(lastNameA), getTurkishSortKey(lastNameB));
+    if (lastCmp !== 0) return lastCmp;
+
+    return compareKeys(getTurkishSortKey(firstNameA), getTurkishSortKey(firstNameB));
   });
 
   return (
