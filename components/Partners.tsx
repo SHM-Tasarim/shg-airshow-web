@@ -89,7 +89,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Gizem ÖZBAY", "Kemal ÖZTÜRK", "Seher ÖZİPEK", "Hasan KARACAOVA",
   "Seyit Kamil ÖZCAN", "Menekşe ÇAKIR", "Ahmet KARAKÜÇÜK", "Turgut DALGIÇ", "Emine HASER",
   "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN",
-  "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ"
+  "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ",
+  "Selim Doğan ÖZEL"
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
