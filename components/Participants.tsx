@@ -106,6 +106,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://msomuseum.com/cessna-195-a-businessliner/",
     },
     {
+      id: "corsair",
+      name: "CHANCE - VOUGHT F 4 - 5NL CORSAIR",
+      desc: lang === "TR" ? "İkinci Dünya Savaşı'nın en tanınmış avcı uçaklarından, kendine has \"ters martı\" kanatlarıyla efsaneleşen Vought F4U Corsair, Türkiye semalarında ilk defa SHG Airshow 2026'da uçacak!" : "The famous Vought F4U Corsair, known for its distinctive \"upside-down seagull\" wings, will make its debut in Türkiye's skies at the SHG Airshow 2026!",
+      image: "/images/corsair.jpg",
+    },
+    {
       id: "tiger-moth",
       name: "DE HAVILLAND DH.82 TIGER MOTH",
       desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film \"The English Patient\", is with you at SHG Airshow!",
