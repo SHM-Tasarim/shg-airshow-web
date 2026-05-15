@@ -78,7 +78,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   };
 
   const fuelSponsors = [
-  "Füsun ALTIIŞIK", "Nazik ÇAKIR", "Ali DEMİR", "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Nurullah BOŞDURMAZ",
+  "Füsun ALTINIŞIK", "Nazik ÇAKIR", "Ali DEMİR", "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Nurullah BOŞDURMAZ",
   "Fatma COŞKUN", "Kibar COŞKUN", "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
   "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
   "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrunnisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
@@ -90,7 +90,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Seyit Kamil ÖZCAN", "Menekşe ÇAKIR", "Ahmet KARAKÜÇÜK", "Turgut DALGIÇ", "Emine HASER",
   "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN",
   "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ",
-  "Selim Doğan ÖZEL"
+  "Selim Doğan ÖZEL",
+  // 2026-05 Eklenenler
+  "Asiye SÜZER", "Cengiz YAVUZ", "Mustafa KARACAOVA", "Özcan ÇAKIR"
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
