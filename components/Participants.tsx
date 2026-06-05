@@ -133,6 +133,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "",
     },
     {
+      id: "david-friedrich",
+      name: "DAVID FRIEDRICH",
+      desc: lang === "TR" ? "Dünya Planör Akrobasi Şampiyonası'na katılan, DHL'de A300-600 Kaptan Pilotu olan ve yaklaşık 5000 uçuş saatine sahip David Friedrich, SHG Airshow 2026'da!" : "A World Aerobatic Gliding Championship competitor and A300-600 Captain at DHL with around 5000 flight hours, David Friedrich is at SHG Airshow 2026!",
+      image: "/images/david-friedrich.jpeg",
+    },
+    {
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
@@ -160,6 +166,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2026!",
       image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
+    },
+    {
+      id: "hurkus",
+      name: "TAI / TUSAŞ HÜRKUŞ",
+      desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
+      image: "/images/hurkus.jpeg",
     },
     {
       id: "tom-van-hoorn",
