@@ -106,7 +106,7 @@ const App: React.FC = () => {
         <>
           <Hero onNavigate={navigateTo} lang={lang} />
 
-          {/* Sponsorlar Bölümü - YORUMDA
+          {/* Sponsorlar Bölümü */}
           <section className="bg-secondary py-16 md:py-20">
             <div className="max-w-6xl mx-auto px-6">
               <div className="flex flex-col items-center">
@@ -126,7 +126,6 @@ const App: React.FC = () => {
               </div>
             </div>
           </section>
-          */}
 
           <Gallery lang={lang} onNavigate={navigateTo} />
           <ActionBridge lang={lang} />
