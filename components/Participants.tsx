@@ -99,6 +99,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/oguzhan-cabioglu.jpeg",
     },
     {
+      id: "oguzhan-yararcan",
+      name: "OĞUZHAN YARARCAN",
+      desc: lang === "TR" ? "Akrobasi ve havayolu pilotu Kaptan Oğuzhan Yararcan, SHG Airshow 2026'da tarihi uçakların pilotlarından biri olarak usta pilotajıyla seyircilere unutulmaz anlar yaşatacak!" : "Aerobatic and airline pilot Captain Oğuzhan Yararcan, as one of the pilots of the historic aircraft, will give the audience unforgettable moments with his masterful piloting at SHG Airshow 2026!",
+      image: "/images/oguzhan-yararcan.png",
+    },
+    {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195A Businessliner, güzelliği ile SHG Airshow 2026'da herkesi büyülüyor." : "The 1950 model Cessna 195A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
