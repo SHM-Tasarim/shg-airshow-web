@@ -111,18 +111,18 @@ const App: React.FC = () => {
             <div className="max-w-6xl mx-auto px-6">
               <div className="flex flex-col items-center">
                 <span className="inline-block py-2 px-8 bg-[#cfaa67] text-secondary font-bold uppercase tracking-[0.3em] text-sm md:text-base rounded-full shadow-lg mb-10 border-2 border-[#cfaa67]/50">
-                  {lang === "TR" ? "Paydaş Sponsor" : "ECO AD Spot"}
+                  {lang === "TR" ? "Paydaş Sponsorlar" : "ECO AD Spot"}
                 </span>
 
                 <div className="flex flex-wrap items-center justify-center gap-6">
-                  <div className="relative w-56 h-32 md:w-64 md:h-36 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-3 py-2 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-3 py-2 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
                     <img
                       src={`/images/mach-air-logo.png`}
                       alt="Mach Air Aviation"
                       className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-110"
                     />
                   </div>
-                  <div className="relative w-56 h-32 md:w-64 md:h-36 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-8 py-4 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-8 py-4 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
                     <img
                       src={`/images/mytechnic-logo.png`}
                       alt="Sponsor"
