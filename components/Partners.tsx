@@ -92,7 +92,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ",
   "Selim Doğan ÖZEL",
   // 2026-05 Eklenenler
-  "Asiye SÜZER", "Cengiz YAVUZ", "Mustafa KARACAOVA", "Özcan ÇAKIR", "Serkan ÖZKAN"
+  "Asiye SÜZER", "Cengiz YAVUZ", "Mustafa KARACAOVA", "Özcan ÇAKIR", "Serkan ÖZKAN",
+  "Adile Ayşe YURDAŞ"
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
