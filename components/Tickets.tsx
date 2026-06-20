@@ -183,7 +183,12 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
                 </ul>
                 <button
                   className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95"
-                  onClick={() => window.open("https://biletinial.com/tr-tr/etkinlik/shg-airshow-sivrihisar-hava-gosterileri", "_blank")}
+                  onClick={() => {
+                    if (typeof (window as any).fbq === "function") {
+                      (window as any).fbq("track", "InitiateCheckout", { content_name: "SHG Airshow 2026", currency: "TRY" });
+                    }
+                    window.open("https://biletinial.com/tr-tr/etkinlik/shg-airshow-sivrihisar-hava-gosterileri", "_blank");
+                  }}
                 >
                   {idx === 1 ? translations.vipAddToCart : translations.addToCart}
                 </button>
