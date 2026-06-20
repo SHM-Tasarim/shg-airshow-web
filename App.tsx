@@ -129,6 +129,13 @@ const App: React.FC = () => {
                       className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
                     />
                   </div>
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-8 py-4 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                    <img
+                      src={`/images/stakeholder-logo-3.png`}
+                      alt="Sponsor"
+                      className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-125"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
