@@ -160,12 +160,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/dukkan.jpg",
       url: "https://shop.msomuseum.com/",
     },
-    {
-      id: "andy-goodall",
-      name: "ANDY GOODALL",
-      desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2026'da seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2026 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
-      image: "/images/andy.jpg",
-    },
+    // {
+    //   id: "andy-goodall",
+    //   name: "ANDY GOODALL",
+    //   desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2026'da seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2026 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
+    //   image: "/images/andy.jpg",
+    // },
     {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
@@ -173,12 +173,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
     },
-    {
-      id: "hurkus",
-      name: "TAI / TUSAŞ HÜRKUŞ",
-      desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
-      image: "/images/hurkus.jpeg",
-    },
+    // {
+    //   id: "hurkus",
+    //   name: "TAI / TUSAŞ HÜRKUŞ",
+    //   desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
+    //   image: "/images/hurkus.jpeg",
+    // },
     {
       id: "tom-van-hoorn",
       name: "TOM van HOORN",
@@ -219,13 +219,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/mustang-p51d-3.jpg",
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/",
     },
-    {
-      id: "t6-texan",
-      name: "NORTH AMERICAN T-6G TEXAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
-      image: "/images/t6-texan.jpg",
-      url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
-    },
+    // {
+    //   id: "t6-texan",
+    //   name: "NORTH AMERICAN T-6G TEXAN",
+    //   desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
+    //   image: "/images/t6-texan.jpg",
+    //   url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
+    // },
     {
       id: "t28-trojan",
       name: "NORTH AMERICAN T-28B TROJAN",
