@@ -10,8 +10,8 @@ const Volunteering: React.FC<VolunteeringProps> = ({ lang, onNavigate }) => {
   const translations = {
     title: lang === 'TR' ? "Gönüllü Başvurusu" : "Volunteer Application",
     intro: lang === 'TR'
-      ? "19-20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan SHG Airshow 2026 / Sivrihisar Hava Gösterileri Organizasyonunda gönüllü olarak görev almak isteyen arkadaşlarımızın; isim, soy isim, yaş ve iletişim bilgilerini içeren başvuru e-postasını 15 Temmuz 2026 tarihine kadar info@shm.aero adresine göndermeleri rica olunur."
-      : "For those who wish to participate as a volunteer in the 11th SHG Airshow 2026 / Sivrihisar Airshow to be held on September 19–20, 2026, please send a business e-mail containing your name, surname, age, and contact information to info@shm.aero by July 15, 2026.",
+      ? "19-20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan SHG Airshow 2026 / Sivrihisar Hava Gösterileri Organizasyonunda gönüllü olarak görev almak isteyen arkadaşlarımızın; isim, soy isim, yaş ve iletişim bilgilerini içeren başvuru e-postasını 15 Temmuz 2026 tarihine kadar volunteer@shm.aero adresine göndermeleri rica olunur."
+      : "For those who wish to participate as a volunteer in the 11th SHG Airshow 2026 / Sivrihisar Airshow to be held on September 19–20, 2026, please send a business e-mail containing your name, surname, age, and contact information to volunteer@shm.aero by July 15, 2026.",
     principlesTitle: lang === 'TR' ? "Gönüllü Tasviri" : "VOLUNTEERING DESCRIPTION",
     principles: lang === 'TR'
       ? `"Gönüllü" sıfatıyla, SHG Airshow organizasyonlarında görev almak isteyen kişilerin, tecrübelerini, maddi ve manevi imkanlarını hiçbir karşılık beklemeden paylaşmaya niyetli ve istekli oldukları kabul edilir.
@@ -96,7 +96,7 @@ Even though they are not professional employees of SHG Airshow, volunteers are e
           <br />
 
           <a
-            href={`mailto:info@shm.aero?subject=${encodeURIComponent(translations.emailSubject)}`}
+            href={`mailto:volunteer@shm.aero?subject=${encodeURIComponent(translations.emailSubject)}`}
             className="inline-flex items-center gap-4 bg-primary text-white font-black py-6 px-14 rounded-2xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/30 active:scale-95 uppercase tracking-widest text-sm"
           >
             <span className="material-icons text-2xl">send</span>
