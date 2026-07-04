@@ -31,11 +31,11 @@ const FAQ: React.FC<FAQProps> = ({ lang, targetId, onNavigate }) => {
     },
     {
       q: lang === "TR" ? "Çocuklar için yaş sınırı var mı?" : "IS THERE AN AGE LIMIT FOR CHILDREN?",
-      a: lang === "TR" ? "6 yaş ve altı çocuklar ücretsizdir." : "Our event is suitable for all age groups; children aged 6 and under are free of charge.",
+      a: lang === "TR" ? "12 yaş ve altı çocuklar ücretsizdir." : "Our event is suitable for all age groups; children aged 12 and under are free of charge.",
     },
     {
       q: lang === "TR" ? "Otopark mevcut mu?" : "IS PARKING AVAILABLE?",
-      a: lang === "TR" ? "Mevcuttur. Ayrıca, VIP bilet alan seyircilerimiz için özel giriş ve otopark alanları ayrılmıştır." : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our VIP ticket holders.",
+      a: lang === "TR" ? "Mevcuttur. Ayrıca, CIP bilet alan seyircilerimiz için özel giriş ve otopark alanları ayrılmıştır." : "There are free parking areas available at the event venue. Additionally, a dedicated parking area is reserved for our CIP ticket holders.",
     },
     {
       q: lang === "TR" ? "Nasıl Ulaşım Sağlayabilirim?" : "HOW CAN I GET THERE?",

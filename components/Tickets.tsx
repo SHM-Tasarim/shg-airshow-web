@@ -50,11 +50,11 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
     addToCart: lang === "TR" ? "BİLET AL" : "BUY TICKET",
-    vipAddToCart: lang === "TR" ? "Daha sonra satışa sunulacaktır" : "WILL BE AVAILABLE LATER",
+    vipAddToCart: lang === "TR" ? "Çok Yakında Satışta" : "COMING SOON",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
-      ? "6 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
-      : "Children aged 6 and under are free. Veterans, persons with disabilities, press card holders, Turkish Armed Forces (Air Force, Navy, and Army), General Command of Gendarmerie, and General Directorate of Security personnel may enter free of charge upon presentation of their ID. Accompanying family members are subject to the fee.",
+      ? "12 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
+      : "Children aged 12 and under are free. Veterans, persons with disabilities, press card holders, Turkish Armed Forces (Air Force, Navy, and Army), General Command of Gendarmerie, and General Directorate of Security personnel may enter free of charge upon presentation of their ID. Accompanying family members are subject to the fee.",
     donationText: lang === "TR"
       ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatlarımızı temsil eden Hava Gösteri Unsurlarının, SHG Airshow’a katılmaları halinde, net bilet gelirlerimizin bir kısmı ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır…"
       : "If the Air Demonstration Units representing our Armed Forces and Police Organization participate in SHG Airshow, a portion of our net ticket revenues is donated to the respective institutions’ assistance foundations...",
@@ -96,28 +96,23 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             ],
     },
     {
-      title: lang === "TR" ? "Günlük VIP Bilet" : "DAILY VIP TICKET",
-      features:
+      title: lang === "TR" ? "Günlük CIP Bilet" : "DAILY CIP TICKET",
+      ribbon: lang === "TR" ? "Sınırlı Sayıda!" : "LIMITED!",
+      description:
         lang === "TR"
           ? [
-              "VIP alanına özel giriş",
-              "Airshow'a hızlı ulaşım",
-              "Gösterileri yakından izleme imkanı",
-              "Gölgeli verandada ve klimalı VIP salonunda oturma alanı",
-              "Özel VIP ve engelli tuvaletleri",
-              "Türk Mutfağından sunulan ikram büfesi",
-              "Özel otopark ve vale hizmeti",
-              "Günlük Bilet'teki tüm imkanlar",
+              "SHG Airshow’un ayrıcalıklı dünyasını keşfetmek isteyen misafirlerimiz için hazırlanan sınırlı sayıdaki CIP Bilet, hava gösterilerini en konforlu ve en özel şekilde deneyimleme fırsatı sunuyor.",
+              "CIP Bilet sahibi misafirlerimiz, kendilerine özel giriş noktasını kullanarak araçlarını VIP otoparkına park edebilir ve gösteri alanına hızlı ve rahat bir şekilde ulaşabilirler.",
+              "Gösteri hattına en yakın noktada konumlandırılan, özel olarak tasarlanmış CIP oturma alanı ise hava gösterilerini en etkileyici açıdan izleme ayrıcalığı sunuyor.",
+              "Gün boyunca misafirlerimiz, CIP misafirlerine özel gölgeli veranda veya kapalı salonda dinlenebilir, özenle hazırlanmış ikram büfesinden faydalanabilirler. Kapalı salon içerisinde yer alan ve engelli kullanımına uygun olarak tasarlanan tuvaletler de organizasyon boyunca maksimum konfor sağlıyor.",
+              "CIP Bilet sahibi misafirlerimiz, tüm bu ayrıcalıkların yanı sıra günlük bilet kapsamında sunulan gösteri alanındaki tüm hizmet ve imkanlardan da yararlanabiliyorlar.",
             ]
           : [
-              "Private Entrance",
-              "Fast access to Airshow",
-              "Opportunity to watch shows up close",
-              "VIP seating area in shaded veranda and/or air-conditioned lounge",
-              "Special VIP and disabled toilets",
-              "Buffet featuring Turkish cuisine",
-              "Special parking and valet service",
-              "All Daily Ticket benefits included",
+              "Prepared for guests who wish to discover the exclusive world of SHG Airshow, the limited-number CIP Ticket offers the opportunity to experience the aerial displays in the most comfortable and exclusive way.",
+              "CIP ticket holders can use their dedicated entrance point to park their vehicles in the VIP parking area and reach the show area quickly and comfortably.",
+              "Positioned at the closest point to the display line, the specially designed CIP seating area offers the privilege of watching the aerial displays from the most impressive angle.",
+              "Throughout the day, our guests can relax on the shaded veranda or in the indoor lounge reserved for CIP guests, and enjoy the carefully prepared catering buffet. The restrooms located inside the indoor lounge, designed for accessible use, also provide maximum comfort throughout the event.",
+              "In addition to all these privileges, CIP ticket holders can also benefit from all the services and facilities offered in the show area within the scope of the daily ticket.",
             ],
     },
   ];
@@ -164,23 +159,50 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
             {pricing.map((tier, idx) => (
               <div
                 key={idx}
-                className="group flex flex-col p-8 lg:p-12 rounded-3xl bg-white dark:bg-gray-900/50 border-2 border-gray-100 dark:border-gray-800 shadow-xl transition-all duration-500 hover:border-primary hover:bg-primary/[0.03] dark:hover:bg-primary/[0.05] hover:-translate-y-2"
+                className="group relative overflow-hidden flex flex-col p-8 lg:p-12 rounded-3xl bg-white dark:bg-gray-900/50 border-2 border-gray-100 dark:border-gray-800 shadow-xl transition-all duration-500 hover:border-primary hover:bg-primary/[0.03] dark:hover:bg-primary/[0.05] hover:-translate-y-2"
               >
-                <h3 className="text-2xl lg:text-3xl font-black mb-6 text-gray-900 dark:text-white uppercase tracking-tight group-hover:text-primary transition-colors">
+                {tier.ribbon && (
+                  <div className="pointer-events-none absolute right-4 top-4 lg:right-6 lg:top-6 z-20 -rotate-[8deg]">
+                    <div className="relative flex h-20 w-20 lg:h-24 lg:w-24 items-center justify-center overflow-hidden rounded-full bg-[radial-gradient(circle_at_35%_30%,#fbe08a_0%,#e6b422_45%,#c99700_100%)] shadow-[0_6px_26px_rgba(180,120,0,0.65)] animate-badge-beat">
+                      <div className="absolute inset-y-0 left-0 w-1/3 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.9),transparent)] animate-badge-shine"></div>
+                      <div className="relative flex h-[86%] w-[86%] items-center justify-center rounded-full border border-[#8a6508]">
+                        <span className="px-1.5 text-center font-black italic uppercase leading-tight tracking-tight text-[#4a3200] text-[13px] lg:text-[15px]">
+                          {tier.ribbon}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <h3 className={`text-2xl lg:text-3xl font-black mb-6 text-gray-900 dark:text-white uppercase tracking-tight group-hover:text-primary transition-colors ${tier.ribbon ? 'pr-28 lg:pr-32' : ''}`}>
                   {tier.title}
                 </h3>
-                <ul className="space-y-4 lg:space-y-5 mb-12 flex-grow">
-                  {tier.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="flex items-start gap-3 lg:gap-4">
-                      <span className="material-icons text-xl lg:text-2xl text-primary">
-                        check_circle
-                      </span>
-                      <span className="text-gray-600 dark:text-gray-400 font-semibold leading-tight text-sm lg:text-base">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {tier.features ? (
+                  <ul className="space-y-4 lg:space-y-5 mb-12 flex-grow">
+                    {tier.features.map((feature, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-3 lg:gap-4">
+                        <span className="material-icons text-xl lg:text-2xl text-primary">
+                          check_circle
+                        </span>
+                        <span className="text-gray-600 dark:text-gray-400 font-semibold leading-tight text-sm lg:text-base">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <ul className="space-y-4 lg:space-y-5 mb-12 flex-grow">
+                    {tier.description!.map((para, pIdx) => (
+                      <li key={pIdx} className="flex items-start gap-3 lg:gap-4">
+                        <span className="material-icons text-xl lg:text-2xl text-primary shrink-0">
+                          check_circle
+                        </span>
+                        <span className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-sm lg:text-base">
+                          {para}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <button
                   className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95"
                   onClick={() => {

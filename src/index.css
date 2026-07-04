@@ -11,6 +11,19 @@
 
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-display: "Manrope", sans-serif;
+
+  --animate-badge-beat: badge-beat 1.5s ease-in-out infinite;
+  --animate-badge-shine: badge-shine 2.6s ease-in-out infinite;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes badge-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.09); }
+}
+
+@keyframes badge-shine {
+  0% { transform: translateX(-260%) skewX(-20deg); }
+  45%, 100% { transform: translateX(420%) skewX(-20deg); }
+}
