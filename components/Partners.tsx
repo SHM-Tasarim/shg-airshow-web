@@ -61,6 +61,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Ly-Con", logo: "/images/ly-con.png", link: "https://www.lycon.com/" },
     { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
+    { name: "Power App", logo: "/images/powerapp.png", link: "https://www.powerapp.com.tr/", imgClass: "max-h-48" },
     { name: "Sivrihisar Havacılık Kulübü Derneği", logo: "/images/sivhav-2.png", link: "https://shm.aero" },
     //{ name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
     //{ name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
@@ -195,7 +196,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="max-h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                    className={`${company.imgClass ?? 'max-h-32'} w-auto object-contain transition-transform duration-500 group-hover:scale-110`}
                   />
                 </div>
               );

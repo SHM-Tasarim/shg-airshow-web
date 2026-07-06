@@ -234,6 +234,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://msomuseum.com/t-28b_trojan/",
     },
     {
+      id: "power-app",
+      name: "POWER APP",
+      desc: lang === "TR" ? "Sürprizlerle dolu Power App Kenworth Tırı ve Simülatörü SHG Airshow 2026'da!" : "Power App's Kenworth Truck and Simulator, full of surprises, at SHG Airshow 2026!",
+      image: "/images/power-tir.png",
+      url: "https://www.powerapp.com.tr/",
+    },
+    {
       id: "lee-proudfoot",
       name: "LEE PROUDFOOT",
       desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51D and Türkiye's oldest biplane Boeing Stearman performance.",

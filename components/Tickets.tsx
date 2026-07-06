@@ -212,7 +212,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
                     window.open("https://biletinial.com/tr-tr/etkinlik/shg-airshow-sivrihisar-hava-gosterileri", "_blank");
                   }}
                 >
-                  {idx === 1 ? translations.vipAddToCart : translations.addToCart}
+                  {translations.addToCart}
                 </button>
               </div>
             ))}
