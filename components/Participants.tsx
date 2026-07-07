@@ -167,6 +167,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     //   image: "/images/andy.jpg",
     // },
     {
+      id: "focke-wulf-190",
+      name: "FOCKE WULF 190",
+      desc: lang === "TR" ? "II. Dünya Savaşı'nın efsanevi avcı uçaklarından Focke Wulf 190, Türk Hava Kuvvetleri envanterinden ayrılışından tam 79 yıl sonra, Şanlı Hava Kuvvetlerimizin Kare Forsuyla donatılmış olarak SHG Airshow 2026'da Türkiye semalarındaki yerini alıyor." : "One of the legendary fighter aircraft of World War II, the Focke Wulf 190 takes its place in Türkiye's skies at SHG Airshow 2026 — a full 79 years after leaving the Turkish Air Force inventory — adorned with the \"Kare Fors\" emblem of our glorious Air Force.",
+      image: "/images/fw-190.png",
+    },
+    {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
       desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2026!",
