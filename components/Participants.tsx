@@ -173,6 +173,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/fw-190.png",
     },
     {
+      id: "klaus-plasa",
+      name: "KLAUS PLASA",
+      desc: lang === "TR" ? "Warbird dünyasının deneyimli isimlerinden Alman Test Pilotu Klaus Plasa, SHG Airshow 2026’da Focke Wulf 190 ile tarihi bir gösteri uçuşuna imza atıyor. Havacılık tutkunları, Klaus Plasa’nın kumandasında Fw 190’ın yeniden Türk semalarındaki eşsiz uçuşuna tanıklık etme fırsatı bulacak." : "One of the experienced names in the warbird world, German test pilot Klaus Plasa will perform a historic demonstration flight with the Focke Wulf 190 at SHG Airshow 2026. Aviation enthusiasts will have the chance to witness the Fw 190's unique flight once again in Türkiye's skies under Klaus Plasa's command.",
+      image: "/images/klaus-plasa.png",
+    },
+    {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
       desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2026!",
