@@ -71,13 +71,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       desc: lang === "TR" ? "Fevzi AK, Gordiyon Havacılık Genel Müdürü Eğitmen Pilot Fevzi AK BRM Aero Bristell Gösterisi ile SHG Airshow 2026'da!" : "Fevzi AK, General Manager and Instructor Pilot of Gordiyon Aviation, is at SHG Airshow 2026 with his BRM Aero Bristell Performance!",
       image: "/images/fevzi-ak.jpg",
     },
-    {
-      id: "antonov-an2",
-      name: "ANTONOV AN-2",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1957 model Antonov AN-2, dünya çapında askeri ve sivil alanda uzun yıllar havacılığa hizmet etti. Dünyanın En Büyük Çift Kanatlı Uçağı olan Annie / Annushka SHG Airshow'da!" : "The 1957 model Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
-      image: "/images/antonov-an2.jpg",
-      url: "https://msomuseum.com/antonov-an-2/",
-    },
+    // {
+    //   id: "antonov-an2",
+    //   name: "ANTONOV AN-2",
+    //   desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1957 model Antonov AN-2, dünya çapında askeri ve sivil alanda uzun yıllar havacılığa hizmet etti. Dünyanın En Büyük Çift Kanatlı Uçağı olan Annie / Annushka SHG Airshow'da!" : "The 1957 model Antonov AN-2 in the M.S.Ö. Air and Space Museum inventory has been used by many military and civilian users worldwide. Annie / Annushka, the world's largest biplane, is at SHG Airshow!",
+    //   image: "/images/antonov-an2.jpg",
+    //   url: "https://msomuseum.com/antonov-an-2/",
+    // },
     {
       id: "uh1h",
       name: "BELL UH-1H (HUEY)",
