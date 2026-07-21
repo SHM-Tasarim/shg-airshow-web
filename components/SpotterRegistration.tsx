@@ -15,8 +15,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         '<span class="text-red-600">profesyonel fotoğraf makinesi</span>'
       );
       result = result.replace(
-        /Danışma/g,
-        '<span class="text-red-600">Danışma</span>'
+        /Spotter Çadırı/g,
+        '<span class="text-red-600">Spotter Çadırı</span>'
       );
     } else {
       result = result.replace(
@@ -24,8 +24,8 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         '<span class="text-red-600">professional camera</span>'
       );
       result = result.replace(
-        /Consultation desk/g,
-        '<span class="text-red-600">Consultation desk</span>'
+        /Spotter Tent/g,
+        '<span class="text-red-600">Spotter Tent</span>'
       );
     }
     return <span dangerouslySetInnerHTML={{ __html: result }} />;
@@ -47,7 +47,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "İrtibat Bilgileri (telefon ve e\u2011posta)",
         "İmzalı Spotter Taahhütnamesi (Aşağıdaki butona basarak dosyayı indirebilirsiniz.)"
       ],
-      note: `"Spotter" arkadaşlarımız organizasyona biletli olarak giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makinesi kullanmaları gerekmektedir. Spotter yelekleri ve yaka kartları, organizasyon günü show alanında bulunan Danışma’dan teslim alınacaktır.`,
+      note: `"Spotter" arkadaşlarımız organizasyona biletli olarak giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makinesi kullanmaları gerekmektedir. Spotter yelekleri ve yaka kartları, organizasyon günü show alanında bulunan Spotter Çadırı’ndan teslim alınacaktır.`,
       applyTitle: "Spotter Başvurusu İçin",
       commitmentBtn: "SPOTTER TAAHHÜTNAMESİ",
       commitmentPdf: "/SHG 2026-Spotter Taahhutnamesi.pdf",
@@ -70,7 +70,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
         "Contact Information (phone and e-mail)",
         "Signed Spotter Commitment Form (You can download the file by clicking the button below.)"
       ],
-      note: `"Spotter" friends will be able to enter the organization with a ticket. Spotters are required to use a professional camera. Spotter vests and badges will be available for pickup on the day of the event at the Consultation desk located in the show area.`,
+      note: `"Spotter" friends will be able to enter the organization with a ticket. Spotters are required to use a professional camera. Spotter vests and badges will be available for pickup on the day of the event at the Spotter Tent located in the show area.`,
       applyTitle: "To Apply as a Spotter",
       commitmentBtn: "SPOTTER COMMITMENT FORM",
       commitmentPdf: "/Spotter Commitment Form.pdf",

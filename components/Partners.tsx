@@ -94,7 +94,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Selim Doğan ÖZEL",
   // 2026-05 Eklenenler
   "Asiye SÜZER", "Cengiz YAVUZ", "Mustafa KARACAOVA", "Özcan ÇAKIR", "Serkan ÖZKAN",
-  "Adile Ayşe YURDAŞ"
+  "Adile Ayşe YURDAŞ",
+  // 2026-07 Eklenenler
+  "Şerife ÖZCAN", "Selim KUMRULUOĞLU", "Celalettin Emre YİĞİT", "Ferah TOLUNAY"
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');

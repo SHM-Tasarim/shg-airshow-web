@@ -171,6 +171,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       name: "FOCKE WULF 190",
       desc: lang === "TR" ? "II. Dünya Savaşı'nın efsanevi avcı uçaklarından Focke Wulf 190, Türk Hava Kuvvetleri envanterinden ayrılışından tam 79 yıl sonra, Şanlı Hava Kuvvetlerimizin Kare Forsuyla donatılmış olarak SHG Airshow 2026'da Türkiye semalarındaki yerini alıyor." : "One of the legendary fighter aircraft of World War II, the Focke Wulf 190 takes its place in Türkiye's skies at SHG Airshow 2026 — a full 79 years after leaving the Turkish Air Force inventory — adorned with the \"Kare Fors\" emblem of our glorious Air Force.",
       image: "/images/fw-190.png",
+      url: "https://msomuseum.com/focke-wulf-190/",
     },
     {
       id: "klaus-plasa",
