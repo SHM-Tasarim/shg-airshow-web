@@ -99,12 +99,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/oguzhan-cabioglu.jpeg",
     },
     {
-      id: "oguzhan-yararcan",
-      name: "OĞUZHAN YARARCAN",
-      desc: lang === "TR" ? "Akrobasi ve havayolu pilotu Kaptan Oğuzhan Yararcan, SHG Airshow 2026'da tarihi uçakların pilotlarından biri olarak usta pilotajıyla seyircilere unutulmaz anlar yaşatacak!" : "Aerobatic and airline pilot Captain Oğuzhan Yararcan, as one of the pilots of the historic aircraft, will give the audience unforgettable moments with his masterful piloting at SHG Airshow 2026!",
-      image: "/images/oguzhan-yararcan.png",
-    },
-    {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
       desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195A Businessliner, güzelliği ile SHG Airshow 2026'da herkesi büyülüyor." : "The 1950 model Cessna 195A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
@@ -139,12 +133,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "",
     },
     {
-      id: "david-friedrich",
-      name: "DAVID FRIEDRICH",
-      desc: lang === "TR" ? "Dünya Planör Akrobasi Şampiyonası'na katılan, DHL'de A300-600 Kaptan Pilotu olan ve yaklaşık 5000 uçuş saatine sahip David Friedrich, SHG Airshow 2026'da!" : "A World Aerobatic Gliding Championship competitor and A300-600 Captain at DHL with around 5000 flight hours, David Friedrich is at SHG Airshow 2026!",
-      image: "/images/david-friedrich.jpeg",
-    },
-    {
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
       desc: lang === "TR"
@@ -160,12 +148,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/dukkan.jpg",
       url: "https://shop.msomuseum.com/",
     },
-    // {
-    //   id: "andy-goodall",
-    //   name: "ANDY GOODALL",
-    //   desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2026'da seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2026 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
-    //   image: "/images/andy.jpg",
-    // },
     {
       id: "focke-wulf-190",
       name: "FOCKE WULF 190",
@@ -174,11 +156,17 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://msomuseum.com/focke-wulf-190/",
     },
     {
-      id: "klaus-plasa",
-      name: "KLAUS PLASA",
-      desc: lang === "TR" ? "Warbird dünyasının deneyimli isimlerinden Alman Test Pilotu Klaus Plasa, SHG Airshow 2026’da Focke Wulf 190 ile tarihi bir gösteri uçuşuna imza atıyor. Havacılık tutkunları, Klaus Plasa’nın kumandasında Fw 190’ın yeniden Türk semalarındaki eşsiz uçuşuna tanıklık etme fırsatı bulacak." : "One of the experienced names in the warbird world, German test pilot Klaus Plasa will perform a historic demonstration flight with the Focke Wulf 190 at SHG Airshow 2026. Aviation enthusiasts will have the chance to witness the Fw 190's unique flight once again in Türkiye's skies under Klaus Plasa's command.",
-      image: "/images/klaus-plasa.png",
+      id: "david-friedrich",
+      name: "DAVID FRIEDRICH",
+      desc: lang === "TR" ? "Dünya Planör Akrobasi Şampiyonası'na katılan, DHL'de A300-600 Kaptan Pilotu olan ve yaklaşık 5000 uçuş saatine sahip David Friedrich, SHG Airshow 2026'da!" : "A World Aerobatic Gliding Championship competitor and A300-600 Captain at DHL with around 5000 flight hours, David Friedrich is at SHG Airshow 2026!",
+      image: "/images/david-friedrich.jpeg",
     },
+    // {
+    //   id: "andy-goodall",
+    //   name: "ANDY GOODALL",
+    //   desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2026'da seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2026 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
+    //   image: "/images/andy.jpg",
+    // },
     {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
@@ -186,12 +174,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
     },
-    // {
-    //   id: "hurkus",
-    //   name: "TAI / TUSAŞ HÜRKUŞ",
-    //   desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
-    //   image: "/images/hurkus.jpeg",
-    // },
     {
       id: "tom-van-hoorn",
       name: "TOM van HOORN",
@@ -247,6 +229,26 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://msomuseum.com/t-28b_trojan/",
     },
     {
+      id: "semin-ozturk",
+      name: "SEMİN ÖZTÜRK ŞENER",
+      desc: lang === "TR" ? "İlk gösteri uçuşunu SHG Airshow 2015'te gerçekleştiren Türkiye'nin İlk Profesyonel Kadın Akrobasi ve İlk Sivil Türk Kadın Helikopter Pilotu Semin Öztürk Şener, muhteşem akrobasi gösterisi ile SHG Airshow 2026'da!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
+      image: "/images/semin-ozturk-sener.jpg",
+      url: "https://www.seminozturk.com/",
+    },
+    {
+      id: "pars-sener",
+      name: "PARS & DEDE AIRSHOW",
+      desc: lang === "TR" ? "Pars Şener ilk hava gösterisi deneyimini 4 yaşındayken dedesi ve Türkiye'nin İlk Profesyonel Akrobasi Pilotu Ali İsmet Öztürk ile yaşadı. SHG Airshow 2026'da ise yine sürprizlerle yer alıyor!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
+      image: "/images/pars-dede-1.jpg",
+      url: "https://www.mach.aero/",
+    },
+    {
+      id: "klaus-plasa",
+      name: "KLAUS PLASA",
+      desc: lang === "TR" ? "Warbird dünyasının deneyimli isimlerinden Alman Test Pilotu Klaus Plasa, SHG Airshow 2026’da Focke Wulf 190 ile tarihi bir gösteri uçuşuna imza atıyor. Havacılık tutkunları, Klaus Plasa’nın kumandasında Fw 190’ın yeniden Türk semalarındaki eşsiz uçuşuna tanıklık etme fırsatı bulacak." : "One of the experienced names in the warbird world, German test pilot Klaus Plasa will perform a historic demonstration flight with the Focke Wulf 190 at SHG Airshow 2026. Aviation enthusiasts will have the chance to witness the Fw 190's unique flight once again in Türkiye's skies under Klaus Plasa's command.",
+      image: "/images/klaus-plasa.png",
+    },
+    {
       id: "power-app",
       name: "POWER APP",
       desc: lang === "TR" ? "Sürprizlerle dolu Power App Kenworth Tırı ve Simülatörü SHG Airshow 2026'da!" : "Power App's Kenworth Truck and Simulator, full of surprises, at SHG Airshow 2026!",
@@ -272,27 +274,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/fabian.jpg",
     },
     {
-      id: "spitfire",
-      name: "SUPERMARINE SPITFIRE MK.IX",
-      desc: lang === "TR" ? "Bugün dünyada \"uçabilir vaziyette\" sadece 30 adet kalan Spitfire Mk.9, Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Today, our Spitfire Mk.9—one of only about 30 still airworthy worldwide—meets the audience adorned with the “Kare Fors” emblem of the Turkish Air Force.",
-      image: "/images/spitfire-mk-9.jpg",
-      url: "https://msomuseum.com/spitfire-mk-9/",
-    },
-    {
-      id: "pars-sener",
-      name: "PARS & DEDE AIRSHOW",
-      desc: lang === "TR" ? "Pars Şener ilk hava gösterisi deneyimini 4 yaşındayken dedesi ve Türkiye'nin İlk Profesyonel Akrobasi Pilotu Ali İsmet Öztürk ile yaşadı. SHG Airshow 2026'da ise yine sürprizlerle yer alıyor!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
-      image: "/images/pars-dede-1.jpg",
-      url: "https://www.mach.aero/",
-    },
-    {
-      id: "semin-ozturk",
-      name: "SEMİN ÖZTÜRK ŞENER",
-      desc: lang === "TR" ? "İlk gösteri uçuşunu SHG Airshow 2015'te gerçekleştiren Türkiye'nin İlk Profesyonel Kadın Akrobasi ve İlk Sivil Türk Kadın Helikopter Pilotu Semin Öztürk Şener, muhteşem akrobasi gösterisi ile SHG Airshow 2026'da!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
-      image: "/images/semin-ozturk-sener.jpg",
-      url: "https://www.seminozturk.com/",
-    },
-    {
       id: "sivrihisar-havacilik-kulubu-2",
       name: lang === "TR" ? <><span className="block">SİVRİHİSAR FORMASYON</span></> : <><span className="block">3-SHIP FORMATION FLIGHT</span></>,
       desc: lang === "TR" ? "Sivrihisar Havacılık Kulübü ve Havacı Kadınlar Derneği bu yıl da, heyecan verici bir kol uçuşu ile gökyüzünde!" : "Sivrihisar Aviation Club and Women Aviators Association are in the skies again this year with an exciting formation flight!",
@@ -307,11 +288,30 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://shm.aero/",
     },
     {
+      id: "spitfire",
+      name: "SUPERMARINE SPITFIRE MK.IX",
+      desc: lang === "TR" ? "Bugün dünyada \"uçabilir vaziyette\" sadece 30 adet kalan Spitfire Mk.9, Şanlı Hava Kuvvetleri'mizin \"Kare Fors\" amblemi ile donatılmış şekilde izleyicilerle buluşuyor!" : "Today, our Spitfire Mk.9—one of only about 30 still airworthy worldwide—meets the audience adorned with the “Kare Fors” emblem of the Turkish Air Force.",
+      image: "/images/spitfire-mk-9.jpg",
+      url: "https://msomuseum.com/spitfire-mk-9/",
+    },
+    // {
+    //   id: "hurkus",
+    //   name: "TAI / TUSAŞ HÜRKUŞ",
+    //   desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
+    //   image: "/images/hurkus.jpeg",
+    // },
+    {
       id: "vecihi-xiv",
       name: lang === "TR" ? "VECİHİ XIV (14)" : "VECIHI XIV (14)",
       desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 95 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2026'da!" : "The replica of Türkiye's \"First Certified Aircraft\" Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14-2.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
+    },
+    {
+      id: "oguzhan-yararcan",
+      name: "OĞUZHAN YARARCAN",
+      desc: lang === "TR" ? "Akrobasi ve havayolu pilotu Kaptan Oğuzhan Yararcan, SHG Airshow 2026'da tarihi uçakların pilotlarından biri olarak usta pilotajıyla seyircilere unutulmaz anlar yaşatacak!" : "Aerobatic and airline pilot Captain Oğuzhan Yararcan, as one of the pilots of the historic aircraft, will give the audience unforgettable moments with his masterful piloting at SHG Airshow 2026!",
+      image: "/images/oguzhan-yararcan.png",
     },
     {
       id: "edward-yard",
