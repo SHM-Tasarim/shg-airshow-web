@@ -59,7 +59,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
     badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 Sept 2026",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
-    program: lang === "TR" ? "ÇOK YAKINDA" : "COMING SOON",
+    program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
+    comingSoon: lang === "TR" ? "ÇOK YAKINDA" : "COMING SOON",
   };
 
   return (
@@ -120,12 +121,17 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
           <button
             type="button"
             disabled
-            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.3)] cursor-not-allowed"
+            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl uppercase text-lg md:text-xl tracking-widest flex flex-col items-center justify-center gap-1 shadow-[0_0_30px_rgba(255,255,255,0.3)] cursor-not-allowed"
           >
-            <span className="material-icons text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
-              event
+            <span className="flex items-center justify-center gap-3">
+              <span className="material-icons text-xl md:text-2xl">
+                event
+              </span>
+              {translations.program}
             </span>
-            {translations.program}
+            <span className="text-xs md:text-sm tracking-[0.3em] text-primary">
+              {translations.comingSoon}
+            </span>
           </button>
         </div>
 
