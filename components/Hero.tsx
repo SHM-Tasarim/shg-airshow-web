@@ -118,20 +118,20 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
             {translations.buyTicket}
           </button>
 
-          <button
-            onClick={() => onNavigate("program")}
-            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex flex-col items-center justify-center gap-1 group/btn2"
-          >
-            <span className="flex items-center justify-center gap-3">
+          <div className="flex flex-col items-center gap-3">
+            <button
+              onClick={() => onNavigate("program")}
+              className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-3 group/btn2 w-full"
+            >
               <span className="material-icons text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
                 event
               </span>
               {translations.program}
-            </span>
-            <span className="mt-1 px-3 py-1 rounded-full bg-primary text-white text-sm md:text-base font-extrabold tracking-[0.2em] shadow-md">
+            </button>
+            <span className="px-4 py-1.5 rounded-full bg-primary text-white text-sm md:text-base font-extrabold uppercase tracking-[0.2em] shadow-md">
               {translations.comingSoon}
             </span>
-          </button>
+          </div>
         </div>
 
         {/* Geri Sayım Sayacı */}
