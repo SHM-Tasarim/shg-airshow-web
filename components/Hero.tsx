@@ -128,7 +128,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
               </span>
               {translations.program}
             </button>
-            <span className="px-4 py-1.5 rounded-full bg-primary text-white text-sm md:text-base font-extrabold uppercase tracking-[0.2em] shadow-md">
+            <span className="text-primary text-lg md:text-xl font-extrabold uppercase tracking-[0.3em]">
               {translations.comingSoon}
             </span>
           </div>
