@@ -149,12 +149,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/fw-190.png",
       url: "https://msomuseum.com/focke-wulf-190/",
     },
-    {
-      id: "david-friedrich",
-      name: "DAVID FRIEDRICH",
-      desc: lang === "TR" ? "Dünya Planör Akrobasi Şampiyonası'na katılan, DHL'de A300-600 Kaptan Pilotu olan ve yaklaşık 5000 uçuş saatine sahip David Friedrich, SHG Airshow 2026'da!" : "A World Aerobatic Gliding Championship competitor and A300-600 Captain at DHL with around 5000 flight hours, David Friedrich is at SHG Airshow 2026!",
-      image: "/images/david-friedrich.jpeg",
-    },
     // {
     //   id: "andy-goodall",
     //   name: "ANDY GOODALL",
