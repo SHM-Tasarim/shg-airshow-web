@@ -43,25 +43,13 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
           {translations.title}
         </h1>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-          {programs.map((program, idx) => (
-            <button
-              key={idx}
-              type="button"
-              disabled
-              className="group flex flex-col items-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-8 transition-all duration-300 w-full sm:w-auto cursor-not-allowed"
-            >
-              <span className="material-icons text-4xl sm:text-6xl text-gray-400 group-hover:text-primary transition-colors">
-                event_note
-              </span>
-              <span className="text-lg sm:text-2xl font-extrabold text-gray-900 dark:text-white uppercase tracking-wider">
-                {program.label}
-              </span>
-              <span className="flex items-center gap-1 sm:gap-2 text-primary font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
-                {translations.view}
-              </span>
-            </button>
-          ))}
+        <div className="flex flex-col items-center justify-center gap-6 py-16">
+          <span className="material-icons text-6xl sm:text-7xl text-primary">
+            schedule
+          </span>
+          <span className="text-2xl sm:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-[0.2em]">
+            {lang === 'TR' ? 'ÇOK YAKINDA' : 'COMING SOON'}
+          </span>
         </div>
 
         {/* CTA Section */}
