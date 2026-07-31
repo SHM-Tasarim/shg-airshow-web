@@ -45,9 +45,6 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
           <div className="group flex flex-col items-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-10 w-full sm:w-auto">
-            <span className="material-icons text-4xl sm:text-6xl text-primary">
-              schedule
-            </span>
             <span className="text-2xl sm:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-[0.2em]">
               {lang === 'TR' ? 'ÇOK YAKINDA' : 'COMING SOON'}
             </span>
