@@ -110,7 +110,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         <div className="flex flex-col sm:flex-row justify-center gap-6 animate-in fade-in slide-in-from-bottom-16 duration-1000">
           <button
             onClick={() => onNavigate("tickets")}
-            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-3 group/btn"
+            className="w-full sm:w-auto bg-white text-secondary font-extrabold py-5 px-6 sm:px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-3 group/btn"
           >
             <span className="material-icons text-xl md:text-2xl group-hover/btn:rotate-12 transition-transform">
               local_activity
@@ -120,15 +120,15 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
 
           <button
             type="button"
-            className="bg-white text-secondary font-extrabold py-5 px-14 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.3)] uppercase text-lg md:text-xl tracking-widest flex flex-col items-center justify-center gap-1 group/btn2 cursor-default"
+            className="w-full sm:w-auto bg-white text-secondary font-extrabold py-5 px-6 sm:px-14 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.3)] uppercase text-lg md:text-xl tracking-widest flex flex-col items-center justify-center gap-1 group/btn2 cursor-default"
           >
-            <span className="flex items-center justify-center gap-3">
-              <span className="material-icons text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
+            <span className="flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap text-sm sm:text-lg md:text-xl tracking-wide sm:tracking-widest">
+              <span className="material-icons text-lg sm:text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
                 event
               </span>
               {translations.program}
             </span>
-            <span className="text-base md:text-lg font-black tracking-[0.25em] text-primary">
+            <span className="text-sm sm:text-base md:text-lg font-black tracking-[0.25em] text-primary">
               {translations.comingSoon}
             </span>
           </button>
