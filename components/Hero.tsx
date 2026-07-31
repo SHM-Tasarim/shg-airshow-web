@@ -128,7 +128,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
               </span>
               {translations.program}
             </span>
-            <span className="text-sm md:text-base font-black tracking-[0.3em] text-primary">
+            <span className="text-base md:text-lg font-black tracking-[0.25em] text-primary">
               {translations.comingSoon}
             </span>
           </button>
