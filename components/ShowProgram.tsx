@@ -12,7 +12,7 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
     title: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM',
     sep19: lang === 'TR' ? '19 EYLÜL 2026' : '19 SEPTEMBER 2026',
     sep20: lang === 'TR' ? '20 EYLÜL 2026' : '20 SEPTEMBER 2026',
-    view: lang === 'TR' ? 'PROGRAMI GÖRÜNTÜLE' : 'VIEW PROGRAM',
+    view: lang === 'TR' ? 'ÇOK YAKINDA' : 'COMING SOON',
     close: lang === 'TR' ? 'Kapat' : 'Close',
   };
 
@@ -48,8 +48,8 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
             <button
               key={idx}
               type="button"
-              onClick={() => setActive(idx)}
-              className="group flex flex-col items-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-8 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+              disabled
+              className="group flex flex-col items-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-8 transition-all duration-300 w-full sm:w-auto cursor-not-allowed"
             >
               <span className="material-icons text-4xl sm:text-6xl text-gray-400 group-hover:text-primary transition-colors">
                 event_note
