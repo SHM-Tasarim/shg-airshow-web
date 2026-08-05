@@ -84,7 +84,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
   "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrun Nisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
   "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
-  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİM", "Sertan YILMAZ",
+  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİMLİ", "Sertan YILMAZ",
   // YENİ EKLENENLER
   "Akif DELİCAN", "Harun DELİCAN", "Bahattin AYDIN", "Ayten ÖZEL", "İbrahim Bilgin ÖZPAK",
   "Gizem ÖZBAY", "Kemal ÖZTÜRK", "Seher ÖZİPEK", "Hasan KARACAOVA",
@@ -98,7 +98,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   // 2026-07 Eklenenler
   "Şerife ÖZCAN", "Selim KUMRULUOĞLU", "Celalettin Emre YİĞİT", "Ferah TOLUNAY",
   // 2026-07 Eklenenler (2. parti)
-  "Arif CEMAL", "Cumhur AŞICI", "Bahar KARACAOVA"
+  "Arif CEMAL", "Cumhur AŞICI", "Bahar KARACAOVA",
+  // 2026-08 Eklenenler
+  "Kenan AYDIN"
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
