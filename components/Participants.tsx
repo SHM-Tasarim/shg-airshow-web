@@ -244,6 +244,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       url: "https://www.powerapp.com.tr/",
     },
     {
+      id: "lee-vecihi-maxon",
+      name: "LEE VECİHİ MAXON",
+      desc: lang === "TR"
+        ? <>Vecihi Hürkuş’un hayallerinden biri olan Vecihi XIV (14), yıllar sonra torunu Lee Vecihi Maxon’un uçuşuyla, Sivrihisar Hava Gösterileri’nde yeniden gökyüzüyle buluşuyor.<br />Bir dedenin gökyüzüne bıraktığı miras, nesiller sonra torununun uçuşuyla SHG 2026’da yeniden hayat buluyor.</>
+        : <>Vecihi XIV (14), one of Vecihi Hürkuş’s dreams, meets the sky once again years later through the flight of his grandson Lee Vecihi Maxon at the Sivrihisar Airshow.<br />A legacy a grandfather left to the skies comes back to life generations later through his grandson’s flight at SHG 2026.</>,
+      image: "/images/lee-vecihi-maxon.jpeg",
+    },
+    {
       id: "lee-proudfoot",
       name: "LEE PROUDFOOT",
       desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51D and Türkiye's oldest biplane Boeing Stearman performance.",
@@ -294,12 +302,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 95 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2026'da!" : "The replica of Türkiye's \"First Certified Aircraft\" Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14-2.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
-    },
-    {
-      id: "oguzhan-yararcan",
-      name: "OĞUZHAN YARARCAN",
-      desc: lang === "TR" ? "Akrobasi ve havayolu pilotu Kaptan Oğuzhan Yararcan, SHG Airshow 2026'da tarihi uçakların pilotlarından biri olarak usta pilotajıyla seyircilere unutulmaz anlar yaşatacak!" : "Aerobatic and airline pilot Captain Oğuzhan Yararcan, as one of the pilots of the historic aircraft, will give the audience unforgettable moments with his masterful piloting at SHG Airshow 2026!",
-      image: "/images/oguzhan-yararcan.png",
     },
     {
       id: "edward-yard",
