@@ -202,13 +202,13 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/mustang-p51d-3.jpg",
       url: "https://msomuseum.com/north-american-p-51d-mustang-ferocious-frankie/",
     },
-    // {
-    //   id: "t6-texan",
-    //   name: "NORTH AMERICAN T-6G TEXAN",
-    //   desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
-    //   image: "/images/t6-texan.jpg",
-    //   url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
-    // },
+    {
+      id: "t6-texan",
+      name: "NORTH AMERICAN T-6G TEXAN",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
+      image: "/images/t6-texan.jpg",
+      url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
+    },
     {
       id: "t28-trojan",
       name: "NORTH AMERICAN T-28B TROJAN",
@@ -245,10 +245,10 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     },
     {
       id: "lee-vecihi-maxon",
-      name: "LEE VECİHİ MAXON",
+      name: "LEE VECİHİ MAXSON",
       desc: lang === "TR"
-        ? <>Vecihi Hürkuş’un hayallerinden biri olan Vecihi XIV (14), yıllar sonra torunu Lee Vecihi Maxon’un uçuşuyla, Sivrihisar Hava Gösterileri’nde yeniden gökyüzüyle buluşuyor.<br />Bir dedenin gökyüzüne bıraktığı miras, nesiller sonra torununun uçuşuyla SHG 2026’da yeniden hayat buluyor.</>
-        : <>Vecihi XIV (14), one of Vecihi Hürkuş’s dreams, meets the sky once again years later through the flight of his grandson Lee Vecihi Maxon at the Sivrihisar Airshow.<br />A legacy a grandfather left to the skies comes back to life generations later through his grandson’s flight at SHG 2026.</>,
+        ? <>Vecihi Hürkuş’un hayallerinden biri olan Vecihi XIV (14), yıllar sonra torunu Lee Vecihi Maxson’un uçuşuyla, Sivrihisar Hava Gösterileri’nde yeniden gökyüzüyle buluşuyor.<br />Bir dedenin gökyüzüne bıraktığı miras, nesiller sonra torununun uçuşuyla SHG 2026’da yeniden hayat buluyor.</>
+        : <>Vecihi XIV (14), one of Vecihi Hürkuş’s dreams, meets the sky once again years later through the flight of his grandson Lee Vecihi Maxson at the Sivrihisar Airshow.<br />A legacy a grandfather left to the skies comes back to life generations later through his grandson’s flight at SHG 2026.</>,
       image: "/images/lee-vecihi-maxon.jpeg",
     },
     {
