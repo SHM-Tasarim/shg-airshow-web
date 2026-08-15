@@ -128,11 +128,11 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     },
     {
       id: "dc3",
-      name: lang === "TR" ? <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</> : <>DOUGLAS DC-3<br />"TURKISH DELIGHT"</>,
+      name: lang === "TR" ? <>DOUGLAS DC-3</> : <>DOUGLAS DC-3</>,
       desc: lang === "TR"
-        ? `Normandiya Çıkarması'nda hava bombardıman görevine gönderilen 1940 yapımı, "İlk ve Tek DC-3", M.S.Ö. Hava ve Uzay Müzesi envanterinde "Turkish Delight" ismiyle yer alıyor. 2017'de tam bir dünya turunu tamamlayarak "Dünyayı Dolaşan En Yaşlı Uçak" ünvanını alan "Turkish Delight" SHG Airshow 2026'da gökyüzünde!`
-        : `The 1940 Model DC-3 "Turkish Delight", brought to Turkish aviation by the M.S.Ö. Air and Space Museum, successfully completed a full world tour in 2017 and received the title of "the oldest aircraft to travel the world". This magnificent classic aircraft is with you at SHG Airshow!`,
-      image: "/images/dc3.jpg",
+        ? `M.S.Ö. Hava ve Uzay Müzesi'nin 1939 model DC-3 / C-47 tipi uçağı, o yılların "Devlet Hava Yolları – Turkish Airlines" boyamasıyla uçuşlarına devam ediyor.\nYeni güzelliğiyle ilk kez SHG Airshow 2026'da yer alan bu efsane, izleyenlerin gözlerini kamaştırıyor!`
+        : `The M.S.Ö. Air and Space Museum's 1939 model DC-3 / C-47 aircraft continues its flights in the "State Airlines – Turkish Airlines" livery of those years.\nAppearing for the first time with its new look at SHG Airshow 2026, this legend dazzles all who watch!`,
+      image: "/images/dc3-thy.png",
       url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
     },
     {
@@ -359,7 +359,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
                     <h3 className="text-3xl md:text-5xl font-black text-secondary dark:text-white mb-6 tracking-tighter leading-tight group-hover:text-primary transition-colors duration-300">
                       {first.name}
                     </h3>
-                    <p className={`text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl font-medium ${isAirPark ? "mx-auto" : "border-l-2 border-primary/20 pl-6 group-hover:border-primary"} transition-colors`}>
+                    <p className={`text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl font-medium whitespace-pre-line ${isAirPark ? "mx-auto" : "border-l-2 border-primary/20 pl-6 group-hover:border-primary"} transition-colors`}>
                       {first.desc}
                     </p>
                     <div className={`mt-10 flex items-center ${isAirPark ? "justify-center" : ""}`}>
@@ -419,7 +419,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
                       {p.name}
                     </h3>
 
-                    <p className={`text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl font-medium ${isAirPark ? "mx-auto" : "border-l-2 border-primary/20 pl-6 group-hover:border-primary"} transition-colors`}>
+                    <p className={`text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl font-medium whitespace-pre-line ${isAirPark ? "mx-auto" : "border-l-2 border-primary/20 pl-6 group-hover:border-primary"} transition-colors`}>
                       {p.desc}
                     </p>
 
