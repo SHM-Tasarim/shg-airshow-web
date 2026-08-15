@@ -133,7 +133,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
         ? `M.S.Ö. Hava ve Uzay Müzesi'nin 1939 model DC-3 / C-47 tipi uçağı, o yılların "Devlet Hava Yolları – Turkish Airlines" boyamasıyla uçuşlarına devam ediyor.\nYeni güzelliğiyle ilk kez SHG Airshow 2026'da yer alan bu efsane, izleyenlerin gözlerini kamaştırıyor!`
         : `The M.S.Ö. Air and Space Museum's 1939 model DC-3 / C-47 aircraft continues its flights in the "State Airlines – Turkish Airlines" livery of those years.\nAppearing for the first time with its new look at SHG Airshow 2026, this legend dazzles all who watch!`,
       image: "/images/dc3-thy.png",
-      url: "https://msomuseum.com/douglas-dc-3-turkish-delight/",
+      url: "https://msomuseum.com/douglas-dc-3/",
     },
     {
       id: "dukkan",
