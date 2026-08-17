@@ -12,7 +12,7 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
     title: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM',
     sep19: lang === 'TR' ? '19 EYLÜL 2026' : '19 SEPTEMBER 2026',
     sep20: lang === 'TR' ? '20 EYLÜL 2026' : '20 SEPTEMBER 2026',
-    view: lang === 'TR' ? 'ÇOK YAKINDA' : 'COMING SOON',
+    view: lang === 'TR' ? 'PROGRAMI GÖRÜNTÜLE' : 'VIEW PROGRAM',
     close: lang === 'TR' ? 'Kapat' : 'Close',
   };
 
@@ -44,11 +44,24 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
         </h1>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-          <div className="group flex flex-col items-center justify-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-10 w-full sm:w-auto text-center">
-            <span className="text-2xl sm:text-4xl font-extrabold text-gray-900 dark:text-white uppercase tracking-[0.15em] sm:tracking-[0.2em] whitespace-nowrap text-center pl-[0.15em] sm:pl-[0.2em]">
-              {lang === 'TR' ? 'ÇOK YAKINDA' : 'COMING SOON'}
-            </span>
-          </div>
+          {programs.map((program, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => setActive(idx)}
+              className="group flex flex-col items-center gap-2 sm:gap-4 bg-white dark:bg-gray-900/40 border-2 border-gray-200 dark:border-gray-800 rounded-xl sm:rounded-2xl p-4 sm:p-8 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 w-full sm:w-auto cursor-pointer"
+            >
+              <span className="material-icons text-4xl sm:text-6xl text-gray-400 group-hover:text-primary transition-colors">
+                event_note
+              </span>
+              <span className="text-lg sm:text-2xl font-extrabold text-gray-900 dark:text-white uppercase tracking-wider">
+                {program.label}
+              </span>
+              <span className="flex items-center gap-1 sm:gap-2 text-primary font-bold text-xs sm:text-sm uppercase tracking-[0.2em]">
+                {translations.view}
+              </span>
+            </button>
+          ))}
         </div>
 
         {/* CTA Section */}

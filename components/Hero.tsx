@@ -60,7 +60,6 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
-    comingSoon: lang === "TR" ? "ÇOK YAKINDA" : "COMING SOON",
   };
 
   return (
@@ -120,16 +119,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
 
           <button
             type="button"
-            className="w-full sm:w-auto bg-white text-secondary font-extrabold py-5 px-6 sm:px-14 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.3)] uppercase text-lg md:text-xl tracking-widest flex flex-col items-center justify-center gap-1 group/btn2 cursor-default"
+            onClick={() => onNavigate("program")}
+            className="w-full sm:w-auto bg-white text-secondary font-extrabold py-5 px-6 sm:px-14 rounded-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] uppercase text-lg md:text-xl tracking-widest flex items-center justify-center gap-2 sm:gap-3 group/btn2"
           >
-            <span className="flex items-center justify-center gap-2 sm:gap-3 whitespace-nowrap text-sm sm:text-lg md:text-xl tracking-wide sm:tracking-widest">
-              <span className="material-icons text-lg sm:text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
-                event
-              </span>
-              {translations.program}
+            <span className="material-icons text-lg sm:text-xl md:text-2xl group-hover/btn2:rotate-12 transition-transform">
+              event
             </span>
-            <span className="text-sm sm:text-base md:text-lg font-black tracking-[0.25em] text-primary">
-              {translations.comingSoon}
+            <span className="whitespace-nowrap text-sm sm:text-lg md:text-xl tracking-wide sm:tracking-widest">
+              {translations.program}
             </span>
           </button>
         </div>
