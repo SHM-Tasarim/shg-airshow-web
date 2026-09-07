@@ -119,7 +119,7 @@ const App: React.FC = () => {
                     <img
                       src={`/images/mach-air-logo.png`}
                       alt="Mach Air Aviation"
-                      className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-110"
+                      className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-125"
                     />
                   </div>
                   <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#cfaa67]/10 backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-8 py-4 flex items-center justify-center hover:bg-[#cfaa67]/30 transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
@@ -134,6 +134,13 @@ const App: React.FC = () => {
                       src={`/images/stakeholder-logo-3.png`}
                       alt="Sponsor"
                       className="w-full h-full object-cover rounded-[10px] opacity-90 group-hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-transparent backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-3 py-2 flex items-center justify-center hover:bg-transparent transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group overflow-hidden">
+                    <img
+                      src={`/images/pg.png`}
+                      alt="Sponsor"
+                      className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-[1.2]"
                     />
                   </div>
                 </div>
