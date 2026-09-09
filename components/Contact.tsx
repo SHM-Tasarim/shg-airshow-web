@@ -115,10 +115,10 @@ const Contact: React.FC<ContactProps> = ({ lang, onNavigate }) => {
               {content.phoneLabel}
             </h4>
             <a
-              href='tel:+902227203040-41'
+              href='tel:+902227243040-41'
               className='text-gray-900 dark:text-white font-black text-xl hover:text-primary transition-colors'
             >
-              +90 222 720 30 40-41
+              +90 (222) 724 30 40 – 41
             </a>
           </div>
 
