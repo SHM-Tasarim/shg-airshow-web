@@ -143,6 +143,20 @@ const App: React.FC = () => {
                       className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-[1.2]"
                     />
                   </div>
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#0A1427] backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-6 py-4 flex items-center justify-center hover:bg-[#0A1427] transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                    <img
+                      src={`/images/sultan-su-logo.png`}
+                      alt="Sultan Su"
+                      className="max-h-full max-w-full w-auto object-contain opacity-90 group-hover:opacity-100 transition-all duration-300 scale-75"
+                    />
+                  </div>
+                  <div className="relative w-44 h-24 md:w-52 md:h-28 bg-[#0A1427] backdrop-blur-sm border-2 border-[#cfaa67]/40 rounded-xl px-6 py-4 flex items-center justify-center hover:bg-[#0A1427] transition-all duration-300 hover:shadow-[0_0_25px_rgba(207,166,103,0.4)] hover:border-[#cfaa67] group">
+                    <img
+                      src={`/images/ofis-tekin-logo.png`}
+                      alt="Ofis Tekin"
+                      className="max-h-full max-w-full w-auto object-contain transition-all duration-300"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
