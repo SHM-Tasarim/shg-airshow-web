@@ -87,7 +87,7 @@
 
   .groups { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; align-items: start; }
   .group { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-  .group h3 { margin: 0; padding: 8px 12px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .group h3 { margin: 0; padding: 8px 12px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; }
   .group ul { list-style: none; margin: 0; padding: 6px 0; }
   .group li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: center; padding: 5px 12px; font-size: 14px; }
   .group li + li { border-top: 1px solid var(--line); }
@@ -101,6 +101,18 @@
   .empty { color: var(--ink-2); padding: 12px 0; }
   footer { padding: 0 16px 24px; color: var(--ink-2); font-size: 12px; }
   @media (prefers-reduced-motion: reduce) { .hint { transition: none; } }
+
+  /* Mobil: öğeler üst üste binmesin */
+  @media (max-width: 560px) {
+    .brand h1 { font-size: 20px; }
+    .rev { font-size: 12px; padding: 2px 6px; }
+    /* Başlık + arama alt alta gelsin (başlık daralıp bölünmesin) */
+    .legend-head { flex-direction: column; align-items: stretch; gap: 10px; }
+    .legend-head h2 { flex: none; }
+    .search { flex: none; width: 100%; }
+    /* İpucu yazısı, zoom butonlarıyla çakışmasın diye üstte dursun */
+    .hint { top: 10px; bottom: auto; max-width: calc(100% - 20px); }
+  }
 </style>
 </head>
 <body>
@@ -176,9 +188,11 @@
   // ---- Legend render + filter
   const groupsEl = document.getElementById('groups');
   const fold = s => s.toLocaleLowerCase('tr').replace(/İ/g,'i').replace(/ı/g,'i').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ö/g,'o').replace(/ç/g,'c');
+  // Başlıkları dile göre büyüt: Türkçe kısım tr, İngilizce kısım en (İngilizcede noktalı İ olmasın)
+  const upTitle = t => t.split(' / ').map((p, i) => i === 0 ? p.toLocaleUpperCase('tr') : p.toLocaleUpperCase('en')).join(' / ');
   DATA.forEach(g => {
     const sec = document.createElement('div'); sec.className = 'group g-' + g.id; sec.dataset.g = g.id;
-    sec.innerHTML = '<h3>' + g.title + '</h3><ul>' + g.items.map(([n, tr, en]) =>
+    sec.innerHTML = '<h3>' + upTitle(g.title) + '</h3><ul>' + g.items.map(([n, tr, en]) =>
       '<li data-k="' + fold(n + ' ' + tr + ' ' + (en || '')) + '"><b>' + n + '</b><span>' + tr + (en ? '<em>' + en + '</em>' : '') + '</span></li>').join('') + '</ul>';
     groupsEl.appendChild(sec);
   });
