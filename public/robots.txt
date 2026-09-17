@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /alan-yerlesim/
 
 Sitemap: https://www.shgairshow.com/sitemap.xml
