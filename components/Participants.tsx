@@ -363,7 +363,14 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       </div>
 
       <section className="max-w-7xl mx-auto px-4 grid gap-12 lg:gap-16">
-        {/* First Participant: Türk Yıldızları */}
+        {/* Alphabetical Order Text */}
+        <div className="mt-4 mb-4 text-center">
+          <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-base md:text-lg italic">
+            {translations.subtitle}
+          </p>
+        </div>
+
+        {/* First Participant */}
         {(() => {
           const first = participants[0];
           const isAirPark = first.id === "airparkhotel";
@@ -410,13 +417,6 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
             </div>
           );
         })()}
-
-        {/* Alphabetical Order Text */}
-        <div className="mt-4 mb-4 text-center">
-          <p className="text-gray-500 dark:text-gray-400 font-bold tracking-tight text-base md:text-lg italic">
-            {translations.subtitle}
-          </p>
-        </div>
 
         {/* Rest of Participants */}
         {participants.slice(1).map((p, index) => {

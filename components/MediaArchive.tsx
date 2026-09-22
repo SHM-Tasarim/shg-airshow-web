@@ -17,6 +17,20 @@ const MediaArchive: React.FC<MediaArchiveProps> = ({ lang, onNavigate }) => {
 
   // TÃžm gÃ¶rseller (Tek liste, sÄ±ralÄ±)
   const mediaItems: MediaItem[] = [
+    // 2026 Items
+    { src: "/images/SHG2026Haber12.png" },
+    { src: "/images/SHG2026Haber1.jpg" },
+    { src: "/images/SHG2026Haber2.jpg" },
+    { src: "/images/SHG2026Haber3.jpg" },
+    { src: "/images/SHG2026Haber4.jpg" },
+    { src: "/images/SHG2026Haber5.jpg" },
+    { src: "/images/SHG2026Haber6.jpg" },
+    { src: "/images/SHG2026Haber7.jpg" },
+    { src: "/images/SHG2026Haber8.jpg" },
+    { src: "/images/SHG2026Haber9.jpg" },
+    { src: "/images/SHG2026Haber10.jpg" },
+    { src: "/images/SHG2026Haber11.jpg" },
+
     // 2025 Items
     { src: "/images/SHG2025Haber9.jpg" },
     { src: "/images/SHG2025Haber8.jpg" },

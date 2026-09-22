@@ -61,7 +61,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     { name: "Ly-Con", logo: "/images/ly-con.png", link: "https://www.lycon.com/" },
     { name: "Mach Aviation", logo: "/images/mach.png", link: "http://www.mach.aero/" },
     { name: "M.S.Ö. Havacılık ve Uzay Müzesi", logo: "/images/mso-2.png", link: "https://msomuseum.com/" },
-    { name: "Power App", logo: "/images/powerapp.png", link: "https://www.powerapp.com.tr/", imgClass: "max-h-48" },
+    //{ name: "Power App", logo: "/images/powerapp.png", link: "https://www.powerapp.com.tr/", imgClass: "max-h-48" },
     { name: "Sivrihisar Havacılık Kulübü Derneği", logo: "/images/sivhav-2.png", link: "https://shm.aero" },
     //{ name: "Ofis Tekin", logo: "/images/ofis-tekin.png", link: "https://ofistekin.com/" },
     //{ name: "Trig", logo: "/images/trig-logo.png", link: "https://trig-avionics.com/" },
@@ -79,28 +79,9 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
   };
 
   const fuelSponsors = [
-  "Füsun ALTINIŞIK", "Nazik ÇAKIR", "Ali DEMİR", "Hanife AZGUN", "Ali AYDIN", "Hayrunnisa BOSTAN", "Nurullah BOŞDURMAZ",
-  "Fatma COŞKUN", "Kibar COŞKUN", "Özlem DİKMEN", "Ahmet Can DURUOĞLU", "Mustafa Naim DURUOĞLU", "Selma DÜZGÜN", "Atiye Nilgün GÖKÇEK",
-  "Masal KOZAK", "Güler OSMANOĞLU", "Mustafa Ali OSMANOĞLU", "Yılmaz OSMANOĞLU", "Hacer ÖZDEMİR", "İsmet ÖZİPEK",
-  "Sevgi ÖZSOY", "Belkıs ÖZTÜRK", "Ali Haydar SUYABAKAN", "Hayrun Nisa ŞEN", "Sibel ŞEN", "Hayrunnisa URAZ",
-  "Ahmet TAYGUN", "Candan Esra TAYGUN", "Ali İsmet TEKİN", "Ceyda TEKİN", "Süheyla TEKİN",
-  "Şermin TEKİN", "Nimet ULUSOY", "Ali Sadi ÜNSAL", "Elçin VERİMLİ", "Sertan YILMAZ",
-  // YENİ EKLENENLER
-  "Akif DELİCAN", "Harun DELİCAN", "Bahattin AYDIN", "Ayten ÖZEL", "İbrahim Bilgin ÖZPAK",
-  "Gizem ÖZBAY", "Kemal ÖZTÜRK", "Seher ÖZİPEK", "Hasan KARACAOVA",
-  "Seyit Kamil ÖZCAN", "Menekşe ÇAKIR", "Ahmet KARAKÜÇÜK", "Turgut DALGIÇ", "Emine HASER",
-  "Hasan ŞAHİN", "Mehmet ŞAHİN", "Hatice ŞAHİN",
-  "Necla KARA", "Adviye ŞAHİN", "Gülnur ÖZCAN", "İhsan ARINÇ",
-  "Selim Doğan ÖZEL",
-  // 2026-05 Eklenenler
-  "Asiye SÜZER", "Cengiz YAVUZ", "Mustafa KARACAOVA", "Özcan ÇAKIR", "Serkan ÖZKAN",
-  "Adile Ayşe YURDAŞ",
-  // 2026-07 Eklenenler
-  "Şerife ÖZCAN", "Selim KUMRULUOĞLU", "Celalettin Emre YİĞİT", "Ferah TOLUNAY",
-  // 2026-07 Eklenenler (2. parti)
-  "Arif CEMAL", "Cumhur AŞICI", "Bahar KARACAOVA",
-  // 2026-08 Eklenenler
-  "Kenan AYDIN"
+    // 2027 Bireysel Yakıt Sponsorları — isimleri buraya ekle ("Ad SOYAD" biçiminde).
+    // Sıralama OTOMATİK: aşağıdaki .sort() isimleri SOYADINA göre (Türkçe alfabe), sonra ada göre dizer.
+    // Hangi sırayla eklersen ekle, ekranda doğru alfabetik sıraya girer.
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
@@ -129,7 +110,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     <div className="bg-white dark:bg-background-dark min-h-screen transition-colors duration-500 font-display">
       <div className="w-full h-[45vh] md:h-[65vh] overflow-hidden relative">
         <img 
-          src="/images/focke-spitfire.jpg" 
+          src="/images/focke-spitfire-2027.jpg"
           className="w-full h-full object-cover"
           alt="Partnership Background"
         />
@@ -249,12 +230,14 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   </p>
                 </div>
 
+                {/* Bireysel yakıt sponsoru başlığı — liste boş olduğu için geçici gizlendi
                 <p className="text-xl text-gray-400 font-bold max-w-2xl mx-auto leading-relaxed">
                   {translations.fuelSponsorsHeading}
                 </p>
                 <p className="text-primary font-black tracking-widest text-[10px] uppercase mt-4">
                   {translations.fuelSponsorsSort}
                 </p>
+                */}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12">
