@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               <Logo className="h-14 w-auto" />
               <div className="flex flex-col">
                 <span className="font-black text-xl tracking-tighter leading-none uppercase">SHG AIRSHOW</span>
-                <span className="text-primary font-black text-2xl tracking-tighter leading-none">2026</span>
+                <span className="text-primary font-black text-2xl tracking-tighter leading-none">2027</span>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium pr-4">

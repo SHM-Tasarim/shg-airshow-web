@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Ana Sayfa -->
   <url>
     <loc>https://www.shgairshow.com/</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.shgairshow.com/images/shg-airshow-2027.png</image:loc>
+      <image:title>SHG Airshow 2027 Logo</image:title>
+      <image:caption>SHG Airshow 2027 - Sivrihisar Hava Gösterileri</image:caption>
+    </image:image>
   </url>
 
   <!-- Etkinlik Bilgileri -->
   <url>
     <loc>https://www.shgairshow.com/#about</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#program</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#participants</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#tickets</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,25 +43,25 @@
   <!-- Kurumsal -->
   <url>
     <loc>https://www.shgairshow.com/#shm</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#museum</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#acromach</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#mach</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -63,19 +69,19 @@
   <!-- Ziyaretçi Bilgileri -->
   <url>
     <loc>https://www.shgairshow.com/#transport</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#faq</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#airparkhotel</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -83,31 +89,31 @@
   <!-- Kayıt ve Başvuru -->
   <url>
     <loc>https://www.shgairshow.com/#spotter</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#volunteer</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#schools</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#stand</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#sponsor</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -115,13 +121,13 @@
   <!-- Medya -->
   <url>
     <loc>https://www.shgairshow.com/#gallery-page</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#media-archive</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -129,13 +135,13 @@
   <!-- İletişim -->
   <url>
     <loc>https://www.shgairshow.com/#contact</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.shgairshow.com/#suggestions</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -143,7 +149,7 @@
   <!-- Partnerler -->
   <url>
     <loc>https://www.shgairshow.com/#partners</loc>
-    <lastmod>2026-05-12</lastmod>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

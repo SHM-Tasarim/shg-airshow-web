@@ -51,12 +51,12 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
   }, []);
 
   const translations = {
-    supertitle: "SHG AIRSHOW 2026",
+    supertitle: "SHG AIRSHOW 2027",
     title:
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
         : "Sivrihisar Hava Gösterileri",
-    badgeDate: lang === "TR" ? "19-20 Eylül 2026" : "19-20 Sept 2026",
+    badgeDate: lang === "TR" ? "18-19 Eylül 2027" : "18-19 Sept 2027",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
@@ -117,6 +117,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
             {translations.buyTicket}
           </button>
 
+          {/* Günlük Gösteri Programı butonu — 2027 için geçici olarak gizlendi
           <button
             type="button"
             onClick={() => onNavigate("program")}
@@ -129,11 +130,12 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
               {translations.program}
             </span>
           </button>
+          */}
         </div>
 
         {/* Geri Sayım Sayacı */}
         <div className="mt-8 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-20 duration-1000">
-          <Countdown targetDate="2026-09-19T10:00:00" lang={lang} />
+          <Countdown targetDate="2027-09-18T10:00:00" lang={lang} />
         </div>
       </div>
 

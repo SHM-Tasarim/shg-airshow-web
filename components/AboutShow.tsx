@@ -8,6 +8,7 @@ interface AboutShowProps {
 
 const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
   const pastYears = [
+    { year: "2026", url: "/2026/" },
     { year: "2025", url: "https://www.shgairshow2025.com/" },
     { year: "2024", url: "https://www.shgairshow2024.com/" },
     { year: "2023", url: "https://www.shgairshow2023.com/" },

@@ -38,7 +38,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
       {/* Telemetry Ticker Top */}
       <div className="absolute top-0 left-0 right-0 py-2 bg-primary/20 backdrop-blur-sm border-b border-primary/30 overflow-hidden whitespace-nowrap z-30">
         <div className="inline-block animate-marquee font-mono text-[10px] tracking-[0.5em] text-primary font-black uppercase">
-         SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026 SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026
+         SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027 SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
               {content.desc}
             </p>
             <div className="mt-6 flex items-center justify-center md:justify-end gap-3 text-[10px] font-black text-primary tracking-[0.4em] uppercase opacity-60 group-hover:opacity-100 transition-opacity">
-               19-20 EYLÜL 2026 &nbsp;|&nbsp; 19-20 SEPTEMBER 2026
+               18-19 EYLÜL 2027 &nbsp;|&nbsp; 18-19 SEPTEMBER 2027
                <span className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,1)]"></span>
             </div>
           </div>
@@ -71,7 +71,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
       {/* Telemetry Ticker Bottom */}
       <div className="absolute bottom-0 left-0 right-0 py-2 bg-primary/20 backdrop-blur-sm border-t border-primary/30 overflow-hidden whitespace-nowrap z-30">
         <div className="inline-block animate-marquee-reverse font-mono text-[10px] tracking-[0.5em] text-primary font-black uppercase">
-         SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026 SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026SİVRİHİSAR HAVA GÖSTERİLERİ 2026 / SHG AIRSHOW 2026
+         SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027 SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027SİVRİHİSAR HAVA GÖSTERİLERİ 2027 / SHG AIRSHOW 2027
         </div>
       </div>
 

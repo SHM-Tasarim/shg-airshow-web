@@ -13,7 +13,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     TR: {
       title: "Tanıtım ve Satış Standları",
 
-      standIntroTitle: "SHG AIRSHOW 2026",
+      standIntroTitle: "SHG AIRSHOW 2027",
       standIntroText: " \"Seyircilerimizle\" doğrudan etikileşim kurarak firma ve kuruluşlara, marka bilinirliğini arttırtmak ve yeni işbirlikleri için önemli fırsatlar sunuyor.",
 
       // sponsorTitle: "SPONSORLUK",
@@ -41,7 +41,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       //   { label: "GÜNCEL SEYİRCİ", value: "68.000", icon: "trending_up" }
       // ],
       stats: [],
-      deadline: "15 Ağustos 2026",
+      deadline: "15 Ağustos 2027",
       deadlineDesc: "Yoğunluk sebebiyle katılım durumunuzu bu tarihe kadar bildirmenizi rica ederiz.",
       back: "ANA SAYFAYA DÖN",
       applyBtn: "E-POSTA GÖNDER",
@@ -50,7 +50,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
     EN: {
       title: "Commercial Opportunities",
 
-      standIntroTitle: "SHG AIRSHOW 2026",
+      standIntroTitle: "SHG AIRSHOW 2027",
       standIntroText: "Recognized as a global brand by being listed among airshows in Europe by the European Airshow Council (EAC), SHG Airshow opens its doors to visitors with a unique visual feast ranging from legendary aircraft of World War II to the most modern air vehicles, breathtaking aerobatic displays to formation flights!",
 
       hierarchyTitle: "COMMERCIAL OPPORTUNITIES",
@@ -81,7 +81,7 @@ const Stand: React.FC<StandProps> = ({ lang, onNavigate }) => {
       //   { label: "CURRENT SPECTATORS", value: "68,000", icon: "trending_up" }
       // ],
       stats: [],
-      deadline: "August 15, 2026",
+      deadline: "August 15, 2027",
       deadlineDesc: "Please notify your participation status by this date due to high demand.",
       back: "BACK TO HOME",
       applyBtn: "SEND E-MAIL",

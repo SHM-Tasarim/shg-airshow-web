@@ -65,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <div className="ml-5 lg:ml-8 flex flex-col justify-center relative z-20">
               <span className="font-extrabold text-base md:text-xl lg:text-[22px] tracking-tight text-white uppercase leading-none whitespace-nowrap">
                 SHG AIRSHOW{" "}
-                <span className="text-primary">2026</span>
+                <span className="text-primary">2027</span>
               </span>
               <span className="hidden sm:block text-[8px] lg:text-[9px] tracking-[0.3em] text-gray-400 font-bold uppercase mt-1.5">
                 Sivrihisar Hava Gösterileri

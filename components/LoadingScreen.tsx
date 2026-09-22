@@ -80,7 +80,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, lang, targetD
         {/* Branding */}
         <div className="text-center mb-6 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-tight uppercase whitespace-nowrap">
-            SHG AIRSHOW 2026
+            SHG AIRSHOW 2027
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight uppercase mt-2 whitespace-nowrap">
             Sivrihisar Hava Gösterileri

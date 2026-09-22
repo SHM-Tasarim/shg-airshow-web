@@ -45,7 +45,7 @@ const App: React.FC = () => {
   const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
   const [targetSectionId, setTargetSectionId] = useState<string | null>(null);
 
-  const TARGET_DATE = "2026-09-19T10:00:00";
+  const TARGET_DATE = "2027-09-18T10:00:00";
 
   // Handle browser back/forward buttons
   useEffect(() => {
@@ -106,7 +106,7 @@ const App: React.FC = () => {
         <>
           <Hero onNavigate={navigateTo} lang={lang} />
 
-          {/* Sponsorlar Bölümü */}
+          {/* Paydaş Sponsorlar bölümü — 2027 için geçici olarak gizlendi (yorumda)
           <section className="bg-secondary py-16 md:py-20">
             <div className="max-w-6xl mx-auto px-6">
               <div className="flex flex-col items-center">
@@ -161,6 +161,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </section>
+          */}
 
           <Gallery lang={lang} onNavigate={navigateTo} />
           <ActionBridge lang={lang} />

@@ -36,7 +36,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       tagline: "HAVA FOTOĞRAFÇILIĞI",
       title: "Spotter Kaydı",
       greeting: `Sevgili "Spotter" arkadaşlarımız,`,
-      body1: `19–20 Eylül 2026 tarihlerinde 11'incisi düzenlenecek olan "SHG Airshow 2026 / Sivrihisar Hava Gösterileri" organizasyonuna "SPOTTER" olarak katılmak isteyen arkadaşlarımızın, `,
+      body1: `18–19 Eylül 2027 tarihlerinde 12'ncisi düzenlenecek olan "SHG Airshow 2027 / Sivrihisar Hava Gösterileri" organizasyonuna "SPOTTER" olarak katılmak isteyen arkadaşlarımızın, `,
       body1Email: "spotter@shm.aero",
       body1After: ` adresine başvurularını göndermelerini rica ederiz.`,
       body2: "Başvuru içeriğinde aşağıdaki bilgilerin yer alması gerekmektedir:",
@@ -50,16 +50,16 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       note: `"Spotter" arkadaşlarımız organizasyona biletli olarak giriş yapabileceklerdir. Spotterların profesyonel fotoğraf makinesi kullanmaları gerekmektedir. Spotter yelekleri ve yaka kartları, organizasyon günü show alanında bulunan Spotter Çadırı’ndan teslim alınacaktır.`,
       applyTitle: "Spotter Başvurusu İçin",
       commitmentBtn: "SPOTTER TAAHHÜTNAMESİ",
-      commitmentPdf: "/SHG 2026-Spotter Taahhutnamesi.pdf",
+      commitmentPdf: "/SHG 2027-Spotter Taahhutnamesi.pdf",
       emailBtn: "E-POSTA GÖNDER",
-      emailSubject: "SHG Airshow 2026 Spotter Kayıt Başvurusu",
+      emailSubject: "SHG Airshow 2027 Spotter Kayıt Başvurusu",
       back: "ANA SAYFAYA DÖN"
     },
     EN: {
       tagline: "AVIATION PHOTOGRAPHY",
       title: "Spotter Registration",
       greeting: `Dear "Spotter" friends,`,
-      body1: `For those who wish to participate as a "SPOTTER" in the 11th "SHG Airshow 2026 / Sivrihisar Airshow" to be held on September 19–20, 2026, please send your application to `,
+      body1: `For those who wish to participate as a "SPOTTER" in the 12th "SHG Airshow 2027 / Sivrihisar Airshow" to be held on September 18–19, 2027, please send your application to `,
       body1Email: "spotter@shm.aero",
       body1After: `.`,
       body2: "THE FOLLOWING INFORMATION MUST BE INCLUDED IN THE APPLICATION:",
@@ -75,7 +75,7 @@ const SpotterRegistration: React.FC<SpotterRegistrationProps> = ({ lang, onNavig
       commitmentBtn: "SPOTTER COMMITMENT FORM",
       commitmentPdf: "/Spotter Commitment Form.pdf",
       emailBtn: "SEND E-MAIL",
-      emailSubject: "SHG Airshow 2026 Spotter Registration Application",
+      emailSubject: "SHG Airshow 2027 Spotter Registration Application",
       back: "BACK TO HOME"
     }
   }[lang];

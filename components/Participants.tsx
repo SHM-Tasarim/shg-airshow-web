@@ -25,12 +25,12 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     title:
       lang === "TR" ? (
         <>
-          SHG AIRSHOW 2026 <br />{" "}
+          SHG AIRSHOW 2027 <br />{" "}
           <span className="text-primary">Katılımcıları</span>
         </>
       ) : (
         <>
-          SHG AIRSHOW 2026 <br />{" "}
+          SHG AIRSHOW 2027 <br />{" "}
           <span className="text-primary">PARTICIPANTS</span>
         </>
       ),
@@ -44,33 +44,37 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
   };
 
   const participants = [
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "turk-yildizlari",
       name: "TÜRK YILDIZLARI",
-      desc: lang === "TR" ? "Türkiye’nin gökyüzündeki milli takımı Türk Yıldızları, nefes kesici ve gurur veren muhteşem gösterisiyle SHG Airshow 2026’da gökyüzünü fethetmeye geliyor!" : "Türkiye's national aerobatic team, the Turkish Stars, is coming to conquer the skies at SHG Airshow 2026 with their breathtaking and pride-inducing magnificent performance!",
+      desc: lang === "TR" ? "Türkiye’nin gökyüzündeki milli takımı Türk Yıldızları, nefes kesici ve gurur veren muhteşem gösterisiyle SHG Airshow 2027’de gökyüzünü fethetmeye geliyor!" : "Türkiye's national aerobatic team, the Turkish Stars, is coming to conquer the skies at SHG Airshow 2027 with their breathtaking and pride-inducing magnificent performance!",
       image: "/images/ty.jpg",
     },
+    */
     {
       id: "acromach",
       name: "ACROMACH",
-      desc: lang === "TR" ? "Acromach Gökyüzü Dansçıları - Hava Akrobasi Grubu SHG Airshow 2026'da!" : "Acromach Sky Dancers - Aerial Aerobatics Group at SHG Airshow 2026!",
+      desc: lang === "TR" ? "Acromach Gökyüzü Dansçıları - Hava Akrobasi Grubu SHG Airshow 2027'de!" : "Acromach Sky Dancers - Aerial Aerobatics Group at SHG Airshow 2027!",
       image: "/images/aio-sos.jpg",
       url: "https://www.seminozturk.com/",
     },
     {
       id: "airparkhotel",
       name: "AirParkHotel",
-      desc: lang === "TR" ? "Üzerinden Spitfire geçen TEK otel, SHG Airshow 2026'da!" : "AirParkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2026!",
+      desc: lang === "TR" ? "Üzerinden Spitfire geçen TEK otel, SHG Airshow 2027'de!" : "AirParkHotel, the ONLY hotel in the world with a Spitfire flying over it, is at SHG Airshow 2027!",
       image: "/images/aph-4.jpg",
       secondaryImage: "/images/aph-3.jpg",
       url: "https://www.airparkhotel.com/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "fevziak",
       name: "FEVZİ AK",
-      desc: lang === "TR" ? "Fevzi AK, Gordiyon Havacılık Genel Müdürü Eğitmen Pilot Fevzi AK BRM Aero Bristell Gösterisi ile SHG Airshow 2026'da!" : "Fevzi AK, General Manager and Instructor Pilot of Gordiyon Aviation, is at SHG Airshow 2026 with his BRM Aero Bristell Performance!",
+      desc: lang === "TR" ? "Fevzi AK, Gordiyon Havacılık Genel Müdürü Eğitmen Pilot Fevzi AK BRM Aero Bristell Gösterisi ile SHG Airshow 2027'de!" : "Fevzi AK, General Manager and Instructor Pilot of Gordiyon Aviation, is at SHG Airshow 2027 with his BRM Aero Bristell Performance!",
       image: "/images/fevzi-ak.jpg",
     },
+    */
     // {
     //   id: "antonov-an2",
     //   name: "ANTONOV AN-2",
@@ -92,106 +96,116 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       image: "/images/boeing-stearman.jpg",
       url: "https://msomuseum.com/a75n1-pt-17-boeing-stearman/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "oguzhan-cabıoglu",
       name: "OĞUZHAN CABIOĞLU",
-      desc: lang === "TR" ? "2009 yılından bu yana ER-AH Uçuş Okulu’nda uçuş eğitmeni ve akrobasi pilotu olarak görev yapan, 12 farklı uçak deneyimine sahip ve aynı zamanda Türkiye’nin en genç ilaçlama pilotu olan Oğuzhan Cabıoğlu, SHG Airshow 2026’da EXTRA 300L Akrobasi uçağı ile izleyicileriyle buluşuyor!" : "Oğuzhan Cabıoğlu, who has been serving as a flight instructor and aerobatic pilot at ER-AH Flight School since 2009, has experience with 12 different aircraft and is also Türkiye's youngest crop-dusting pilot. He will meet the audience at SHG Airshow 2026 with his EXTRA 300L Aerobatic aircraft!",
+      desc: lang === "TR" ? "2009 yılından bu yana ER-AH Uçuş Okulu’nda uçuş eğitmeni ve akrobasi pilotu olarak görev yapan, 12 farklı uçak deneyimine sahip ve aynı zamanda Türkiye’nin en genç ilaçlama pilotu olan Oğuzhan Cabıoğlu, SHG Airshow 2027’de EXTRA 300L Akrobasi uçağı ile izleyicileriyle buluşuyor!" : "Oğuzhan Cabıoğlu, who has been serving as a flight instructor and aerobatic pilot at ER-AH Flight School since 2009, has experience with 12 different aircraft and is also Türkiye's youngest crop-dusting pilot. He will meet the audience at SHG Airshow 2027 with his EXTRA 300L Aerobatic aircraft!",
       image: "/images/oguzhan-cabioglu.jpeg",
     },
+    */
     {
       id: "cessna-business",
       name: "CESSNA 195A BUSINESSLINER",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195A Businessliner, güzelliği ile SHG Airshow 2026'da herkesi büyülüyor." : "The 1950 model Cessna 195A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi envanterinde bulunan 1950 yapımı Cessna 195A Businessliner, güzelliği ile SHG Airshow 2027'de herkesi büyülüyor." : "The 1950 model Cessna 195A Businessliner from the M.S.Ö. Air and Space Museum collection will enchant you with its beauty at SHG Airshow.",
       image: "/images/cessna-business-2.jpg",
       url: "https://msomuseum.com/cessna-195-a-businessliner/",
     },
     {
       id: "tiger-moth",
       name: "DE HAVILLAND DH.82 TIGER MOTH",
-      desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2026'da hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film \"The English Patient\", is with you at SHG Airshow!",
+      desc: lang === "TR" ? "9 dalda Oscar ödülü kazanan \"The English Patient\" (İngiliz Hasta) filminde yer alan T7471 seri no'lu Tiger Moth, SHG Airshow 2027'de hayranlarıyla buluşuyor!" : "The Tiger Moth with serial number T7471, featured in the 9-time Oscar-winning film \"The English Patient\", is with you at SHG Airshow!",
       image: "/images/tiger-moth-3.jpg",
       url: "https://msomuseum.com/de-havilland-dh.82-tiger-moth/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "bernie",
       name: "BERNHARD DIEHL",
-      desc: lang === "TR" ? "Alman akrobasi takımı üyesi ve Boeing 747 tipi uçaklarında Pilot olan Bernhard 8000'i aşkın uçuş saati tecrübesi ile SHG Airshow 2026'da!" : "Bernhard, a member of the German aerobatic team and pilot on Boeing 747 aircraft, is at SHG Airshow 2026 with over 8000 hours of flight experience!",
+      desc: lang === "TR" ? "Alman akrobasi takımı üyesi ve Boeing 747 tipi uçaklarında Pilot olan Bernhard 8000'i aşkın uçuş saati tecrübesi ile SHG Airshow 2027'de!" : "Bernhard, a member of the German aerobatic team and pilot on Boeing 747 aircraft, is at SHG Airshow 2027 with over 8000 hours of flight experience!",
       image: "/images/bernie.jpg",
       url: "",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "jan",
       name: "JAN DIEHL",
-      desc: lang === "TR" ? "Jan Diehl, bir Alman havayolunda CRJ 900 tipi uçaklarında First Officer olarak görev yapmaktadır. Klasik tarihi uçaklara, akrobasiye büyük bir tutkusu olan ve Extra uçağı ile pek çok yarışma deneyimi de bulunan Jan, SHG Airshow 2026’da!" : "Jan Diehl serves as First Officer on CRJ 900 aircraft for a German airline. Jan, who has a great passion for classic historic aircraft and aerobatics and has extensive competition experience with his Extra aircraft, will be at the SHG Airshow 2026!",
+      desc: lang === "TR" ? "Jan Diehl, bir Alman havayolunda CRJ 900 tipi uçaklarında First Officer olarak görev yapmaktadır. Klasik tarihi uçaklara, akrobasiye büyük bir tutkusu olan ve Extra uçağı ile pek çok yarışma deneyimi de bulunan Jan, SHG Airshow 2027’de!" : "Jan Diehl serves as First Officer on CRJ 900 aircraft for a German airline. Jan, who has a great passion for classic historic aircraft and aerobatics and has extensive competition experience with his Extra aircraft, will be at the SHG Airshow 2027!",
       image: "/images/jan.jpg",
       url: "",
     },
+    */
     {
       id: "dc3",
       name: lang === "TR" ? <>DOUGLAS DC-3</> : <>DOUGLAS DC-3</>,
       desc: lang === "TR"
-        ? `M.S.Ö. Hava ve Uzay Müzesi'nin 1939 model DC-3 / C-47 tipi uçağı, o yılların "Devlet Hava Yolları – Turkish Airlines" boyamasıyla uçuşlarına devam ediyor.\nYeni güzelliğiyle ilk kez SHG Airshow 2026'da yer alan bu efsane, izleyenlerin gözlerini kamaştırıyor!`
-        : `The M.S.Ö. Air and Space Museum's 1939 model DC-3 / C-47 aircraft continues its flights in the "State Airlines – Turkish Airlines" livery of those years.\nAppearing for the first time with its new look at SHG Airshow 2026, this legend dazzles all who watch!`,
-      image: "/images/dc3-thy.png",
+        ? `M.S.Ö. Hava ve Uzay Müzesi'nin 1939 model DC-3 / C-47 tipi uçağı, o yılların "Devlet Hava Yolları – Turkish Airlines" boyamasıyla uçuşlarına devam ediyor.\nYeni güzelliğiyle SHG Airshow 2027'de yer alan bu efsane, izleyenlerin gözlerini kamaştırıyor!`
+        : `The M.S.Ö. Air and Space Museum's 1939 model DC-3 / C-47 aircraft continues its flights in the "State Airlines – Turkish Airlines" livery of those years.\nAppearing with its new look at SHG Airshow 2027, this legend dazzles all who watch!`,
+      image: "/images/dc3.jpg",
       url: "https://msomuseum.com/douglas-dc-3/",
     },
     {
       id: "dukkan",
       name: lang === "TR" ? "DÜKKAN" : "DÜKKAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nde bulunan tarihi hava araçlarından ilham alınarak hazırlanan eşsiz koleksiyonlarıyla DÜKKAN, SHG Airshow 2026'da yer alıyor!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow 2026!",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nde bulunan tarihi hava araçlarından ilham alınarak hazırlanan eşsiz koleksiyonlarıyla DÜKKAN, SHG Airshow 2027'de yer alıyor!" : "The SHOP, with its unique clothing and accessories related to the historical aircraft of the M.S.Ö. Air and Space Museum, is at SHG Airshow 2027!",
       image: "/images/dukkan.jpg",
       url: "https://shop.msomuseum.com/",
     },
     {
       id: "focke-wulf-190",
       name: "FOCKE WULF 190",
-      desc: lang === "TR" ? "II. Dünya Savaşı'nın efsanevi avcı uçaklarından Focke Wulf 190, Türk Hava Kuvvetleri envanterinden ayrılışından tam 79 yıl sonra, Şanlı Hava Kuvvetlerimizin Kare Forsuyla donatılmış olarak SHG Airshow 2026'da Türkiye semalarındaki yerini alıyor." : "One of the legendary fighter aircraft of World War II, the Focke Wulf 190 takes its place in Türkiye's skies at SHG Airshow 2026 — a full 79 years after leaving the Turkish Air Force inventory — adorned with the \"Kare Fors\" emblem of our glorious Air Force.",
+      desc: lang === "TR" ? "II. Dünya Savaşı'nın efsanevi avcı uçaklarından Focke Wulf 190, Türk Hava Kuvvetleri envanterinden ayrılışından tam 80 yıl sonra, Şanlı Hava Kuvvetlerimizin Kare Forsuyla donatılmış olarak SHG Airshow 2027'de Türkiye semalarındaki yerini alıyor." : "One of the legendary fighter aircraft of World War II, the Focke Wulf 190 takes its place in Türkiye's skies at SHG Airshow 2027 — a full 80 years after leaving the Turkish Air Force inventory — adorned with the \"Kare Fors\" emblem of our glorious Air Force.",
       image: "/images/fw-190.png",
       url: "https://msomuseum.com/focke-wulf-190/",
     },
     // {
     //   id: "andy-goodall",
     //   name: "ANDY GOODALL",
-    //   desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2026'da seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2026 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
+    //   desc: lang === "TR" ? "2019'dan beri Sivrihisar Hava Gösterileri'nde uçan Pilot ve Paraşüt Eğitmeni Andy, yine heyecan dolu uçuş gösterileriyle SHG Airshow 2027'de seyircilerinin huzurunda!" : "Pilot and skydiving instructor Andy GOODALL is at SHG Airshow 2027 with T-6G Texan \"Happy Hour\" and Tiger Moth performance!",
     //   image: "/images/andy.jpg",
     // },
     {
       id: "women-aviators",
       name: lang === "TR" ? "HAVACI KADINLAR DERNEĞİ" : "WOMEN AVIATORS ASSOCIATION",
-      desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2026'da!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2026!",
+      desc: lang === "TR" ? "Asıl vazifesi, Türk Kadınının havacılık kültürünü artırmak olan, havacılığa merak duyan bütün kadınlara yardımcı olmayı ve kadın uçucu sayısını mümkün olduğu kadar artırmayı hedefleyen Havacı Kadınlar Derneği, SHG Airshow 2027'de!" : "The Women Aviators Association, whose noble mission is to increase the aviation culture of \"Turkish Women\" and help all women interested in aviation, is at SHG Airshow 2027!",
       image: "/images/havkad-stand.jpg",
       url: "https://www.havacikadinlar.org/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "tom-van-hoorn",
       name: "TOM van HOORN",
-      desc: lang === "TR" ? "Boeing 777 tipi uçaklarında Kaptan Pilot olan Tom, 41 yılı aşkın havayolu tecrübesi ve 16 yıllık DC-3 uçuş eğitmenliğiyle, efsanevi DC-3 \"Turkish Delight\" ile SHG Airshow 2026'da gökyüzünde!" : "Tom van Hoorn, captain pilot on the Boeing 777, with over 41 years of airline experience and 16 years of DC-3 flight instructor experience, will be in the skies at SHG Airshow 2026 with the legendary DC-3 \"Turkish Delight\"!",
+      desc: lang === "TR" ? "Boeing 777 tipi uçaklarında Kaptan Pilot olan Tom, 41 yılı aşkın havayolu tecrübesi ve 16 yıllık DC-3 uçuş eğitmenliğiyle, efsanevi DC-3 \"Turkish Delight\" ile SHG Airshow 2027'de gökyüzünde!" : "Tom van Hoorn, captain pilot on the Boeing 777, with over 41 years of airline experience and 16 years of DC-3 flight instructor experience, will be in the skies at SHG Airshow 2027 with the legendary DC-3 \"Turkish Delight\"!",
       image: "/images/tom.jpg",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "ugur-icbak",
       name: "UĞUR İÇBAK",
-      desc: lang === "TR" ? "1986 yılında gökyüzü serüvenine başlayan Uğur İçbak, görüntü ve hava görüntü yönetmeni olarak; Eşkıya, İstanbul Kanatlarımın Altında, Anadolu Kartalları gibi Türk sinemasının unutulmaz yapımlarında, ve bunun yanı sıra, Charlie’s Angels ve Kraven the Hunter gibi uluslararası filmlerde imzası bulunan bir isim. SHG Airshow 2026’da Piper Super Cub uçağı ile o da gökyüzünde!" : "Ugur ICBAK, who started his sky adventures in 1986 as a cinematographer and aerial director, has left his mark in unforgettable Turkish cinema productions like Eşkıya, İstanbul Kanatlarımın Altında, and Anadolu Kartalları, as well as internationally recognized films such as Charlie’s Angels and Kraven the Hunter. At SHG Airshow 2026, he will be flying in a Piper Super Cub!",
+      desc: lang === "TR" ? "1986 yılında gökyüzü serüvenine başlayan Uğur İçbak, görüntü ve hava görüntü yönetmeni olarak; Eşkıya, İstanbul Kanatlarımın Altında, Anadolu Kartalları gibi Türk sinemasının unutulmaz yapımlarında, ve bunun yanı sıra, Charlie’s Angels ve Kraven the Hunter gibi uluslararası filmlerde imzası bulunan bir isim. SHG Airshow 2027’de Piper Super Cub uçağı ile o da gökyüzünde!" : "Ugur ICBAK, who started his sky adventures in 1986 as a cinematographer and aerial director, has left his mark in unforgettable Turkish cinema productions like Eşkıya, İstanbul Kanatlarımın Altında, and Anadolu Kartalları, as well as internationally recognized films such as Charlie’s Angels and Kraven the Hunter. At SHG Airshow 2027, he will be flying in a Piper Super Cub!",
       image: "/images/ugur-icbak.jpg",
     },
+    */
     {
       id: "senan",
       name: lang === "TR" ? "LOKANTA SENAN" : "LOKANTA SENAN",
-      desc: lang === "TR" ? "Enfes lezzetleri ve zengin menüsüyle Lokanta Senan SHG Airshow 2026'da!" : "Lokanta Senan is at SHG Airshow 2026 with its delicious flavors and rich menu!",
+      desc: lang === "TR" ? "Enfes lezzetleri ve zengin menüsüyle Lokanta Senan SHG Airshow 2027'de!" : "Lokanta Senan is at SHG Airshow 2027 with its delicious flavors and rich menu!",
       image: "/images/lokanta-senan.jpg",
       url: "https://www.lokantasenan.com/",
     },
     {
       id: "mach",
       name: "MACH AVIATION",
-      desc: lang === "TR" ? "1989 yılından bu yana Sivil ve Genel Havacılık sektöründe hizmet veren Mach Aviation SHG Airshow 2026'da!" : "Mach Aviation, serving the civil and general aviation sector since 1989, is at SHG Airshow 2026.",
+      desc: lang === "TR" ? "1989 yılından bu yana Sivil ve Genel Havacılık sektöründe hizmet veren Mach Aviation SHG Airshow 2027'de!" : "Mach Aviation, serving the civil and general aviation sector since 1989, is at SHG Airshow 2027.",
       image: "/images/mach-aviation.jpg",
       url: "https://www.mach.aero/",
     },
     {
       id: "museum",
       name: lang === "TR" ? "M.S.Ö. HAVA ve UZAY MÜZESİ" : "M.S.Ö. AIR AND SPACE MUSEUM",
-      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi olan M.S.Ö. Hava ve Uzay Müzesi, Dünya Havacılığı açısından tarihi değere sahip hava araçları ile SHG Airshow 2026'da!" : "Türkiye's Flying Aviation Museum, M.S.Ö. Air and Space Museum, is at SHG Airshow 2026 with its many aircraft of historical value for world aviation!",
+      desc: lang === "TR" ? "Türkiye'nin Uçan Havacılık Müzesi olan M.S.Ö. Hava ve Uzay Müzesi, Dünya Havacılığı açısından tarihi değere sahip hava araçları ile SHG Airshow 2027'de!" : "Türkiye's Flying Aviation Museum, M.S.Ö. Air and Space Museum, is at SHG Airshow 2027 with its many aircraft of historical value for world aviation!",
       image: "/images/mso-lobby.jpg",
       url: "https://msomuseum.com/",
     },
@@ -205,70 +219,88 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     {
       id: "t6-texan",
       name: "NORTH AMERICAN T-6G TEXAN",
-      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2026'da görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2026.",
+      desc: lang === "TR" ? "M.S.Ö. Hava ve Uzay Müzesi'nin kazandırdığı Türkiye'nin İlk Sivil T\u20116G\u00A0Harvard uçağı, SHG Airshow 2027'de görsel bir şölen sunuyor." : "The first civilian T-6G Harvard aircraft in Türkiye, brought by the M.S.Ö. Air and Space Museum, offers a visual feast at SHG Airshow 2027.",
       image: "/images/t6-texan.jpg",
       url: "https://msomuseum.com/north-american-t-6g-happy-hour/",
     },
     {
       id: "t28-trojan",
       name: "NORTH AMERICAN T-28B TROJAN",
-      desc: lang === "TR" ? " ABD'de hem eğitim hem de savaş uçağı olarak görev yapan Trojan, SHG Airshow 2026'da muhteşem bir performans sergiliyor." : "The Trojan, used both as a trainer and fighter aircraft in the United States, delivers a magnificent performance at SHG Airshow 2026.",
+      desc: lang === "TR" ? " ABD'de hem eğitim hem de savaş uçağı olarak görev yapan Trojan, SHG Airshow 2027'de muhteşem bir performans sergiliyor." : "The Trojan, used both as a trainer and fighter aircraft in the United States, delivers a magnificent performance at SHG Airshow 2027.",
       image: "/images/t28b-trojan.jpg",
       url: "https://msomuseum.com/t-28b_trojan/",
     },
     {
+      id: "nu-d36",
+      name: "Nu.D-36 (Alan 2)",
+      desc: lang === "TR" ? "1936 model Nu.D-36 (Alan 2) tipi “Uçar Durumdaki” replika, Nuri Demirağ ve Selahattin R. Alan Beylerin manevi huzurunda ve tam 91 yıl sonra SHG Airshow 2027'de seyirciyle buluşuyor." : "The “airworthy” replica of the 1936 model Nu.D-36 (Alan 2) meets the audience at SHG Airshow 2027 — a full 91 years later — in the spiritual presence of Nuri Demirağ and Selahattin R. Alan.",
+      image: "/images/nu-d36.jpg",
+    },
+    {
       id: "semin-ozturk",
       name: "SEMİN ÖZTÜRK ŞENER",
-      desc: lang === "TR" ? "İlk gösteri uçuşunu SHG Airshow 2015'te gerçekleştiren Türkiye'nin İlk Profesyonel Kadın Akrobasi ve İlk Sivil Türk Kadın Helikopter Pilotu Semin Öztürk Şener, muhteşem akrobasi gösterisi ile SHG Airshow 2026'da!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2026 with her magnificent performance!",
+      desc: lang === "TR" ? "İlk gösteri uçuşunu SHG Airshow 2015'te gerçekleştiren Türkiye'nin İlk Profesyonel Kadın Akrobasi ve İlk Sivil Türk Kadın Helikopter Pilotu Semin Öztürk Şener, muhteşem akrobasi gösterisi ile SHG Airshow 2027'de!" : "Türkiye's first professional female aerobatic pilot Semin Öztürk Şener will take your breath away at SHG Airshow 2027 with her magnificent performance!",
       image: "/images/semin-ozturk-sener.jpg",
       url: "https://www.seminozturk.com/",
     },
     {
       id: "pars-sener",
       name: "PARS & DEDE AIRSHOW",
-      desc: lang === "TR" ? "Pars Şener ilk hava gösterisi deneyimini 4 yaşındayken dedesi ve Türkiye'nin İlk Profesyonel Akrobasi Pilotu Ali İsmet Öztürk ile yaşadı. SHG Airshow 2026'da ise yine sürprizlerle yer alıyor!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2026, he will be before the audience with a surprise show!",
+      desc: lang === "TR" ? "Pars Şener ilk hava gösterisi deneyimini 4 yaşındayken dedesi ve Türkiye'nin İlk Profesyonel Akrobasi Pilotu Ali İsmet Öztürk ile yaşadı. SHG Airshow 2027'de ise yine sürprizlerle yer alıyor!" : "Pars Şener had his first airshow experience at age 4 with his grandfather and Türkiye's first professional aerobatic pilot Ali İsmet Öztürk. Now at SHG Airshow 2027, he will be before the audience with a surprise show!",
       image: "/images/pars-dede-1.jpg",
       url: "https://www.mach.aero/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "klaus-plasa",
       name: "KLAUS PLASA",
-      desc: lang === "TR" ? "Warbird dünyasının deneyimli isimlerinden Alman Test Pilotu Klaus Plasa, SHG Airshow 2026’da Focke Wulf 190 ile tarihi bir gösteri uçuşuna imza atıyor. Havacılık tutkunları, Klaus Plasa’nın kumandasında Fw 190’ın yeniden Türk semalarındaki eşsiz uçuşuna tanıklık etme fırsatı bulacak." : "One of the experienced names in the warbird world, German test pilot Klaus Plasa will perform a historic demonstration flight with the Focke Wulf 190 at SHG Airshow 2026. Aviation enthusiasts will have the chance to witness the Fw 190's unique flight once again in Türkiye's skies under Klaus Plasa's command.",
+      desc: lang === "TR" ? "Warbird dünyasının deneyimli isimlerinden Alman Test Pilotu Klaus Plasa, SHG Airshow 2027’de Focke Wulf 190 ile tarihi bir gösteri uçuşuna imza atıyor. Havacılık tutkunları, Klaus Plasa’nın kumandasında Fw 190’ın yeniden Türk semalarındaki eşsiz uçuşuna tanıklık etme fırsatı bulacak." : "One of the experienced names in the warbird world, German test pilot Klaus Plasa will perform a historic demonstration flight with the Focke Wulf 190 at SHG Airshow 2027. Aviation enthusiasts will have the chance to witness the Fw 190's unique flight once again in Türkiye's skies under Klaus Plasa's command.",
       image: "/images/klaus-plasa.png",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "power-app",
       name: "POWER APP",
-      desc: lang === "TR" ? "Sürprizlerle dolu Power App Kenworth Tırı ve Simülatörü SHG Airshow 2026'da!" : "Power App's Kenworth Truck and Simulator, full of surprises, at SHG Airshow 2026!",
+      desc: lang === "TR" ? "Sürprizlerle dolu Power App Kenworth Tırı ve Simülatörü SHG Airshow 2027'de!" : "Power App's Kenworth Truck and Simulator, full of surprises, at SHG Airshow 2027!",
       image: "/images/power-tir.png",
       url: "https://www.powerapp.com.tr/",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "lee-vecihi-maxon",
       name: "LEE VECİHİ MAXSON",
       desc: lang === "TR"
-        ? <>Vecihi Hürkuş’un hayallerinden biri olan Vecihi XIV (14), yıllar sonra torunu Lee Vecihi Maxson’un uçuşuyla, Sivrihisar Hava Gösterileri’nde yeniden gökyüzüyle buluşuyor.<br />Bir dedenin gökyüzüne bıraktığı miras, nesiller sonra torununun uçuşuyla SHG 2026’da yeniden hayat buluyor.</>
-        : <>Vecihi XIV (14), one of Vecihi Hürkuş’s dreams, meets the sky once again years later through the flight of his grandson Lee Vecihi Maxson at the Sivrihisar Airshow.<br />A legacy a grandfather left to the skies comes back to life generations later through his grandson’s flight at SHG 2026.</>,
+        ? <>Vecihi Hürkuş’un hayallerinden biri olan Vecihi XIV (14), yıllar sonra torunu Lee Vecihi Maxson’un uçuşuyla, Sivrihisar Hava Gösterileri’nde yeniden gökyüzüyle buluşuyor.<br />Bir dedenin gökyüzüne bıraktığı miras, nesiller sonra torununun uçuşuyla SHG 2027’de yeniden hayat buluyor.</>
+        : <>Vecihi XIV (14), one of Vecihi Hürkuş’s dreams, meets the sky once again years later through the flight of his grandson Lee Vecihi Maxson at the Sivrihisar Airshow.<br />A legacy a grandfather left to the skies comes back to life generations later through his grandson’s flight at SHG 2027.</>,
       image: "/images/lee-vecihi-maxon.jpeg",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "lee-proudfoot",
       name: "LEE PROUDFOOT",
-      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2026'da hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2026 with both the Mustang P-51D and Türkiye's oldest biplane Boeing Stearman performance.",
+      desc: lang === "TR" ? "1993 yılından beri Mustang P-51D \"Ferocious Frankie\" ile uçan Muazzam Tecrübeli Pilot Lee, SHG Airshow 2027'de hayranlarıyla buluşuyor." : "Lee PROUDFOOT, who has been flying the Mustang P-51 D \"Ferocious Frankie\" since 1993, meets his fans at SHG Airshow 2027 with both the Mustang P-51D and Türkiye's oldest biplane Boeing Stearman performance.",
       image: "/images/lee.jpg",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "gabriel-rieser",
       name: "GABRIEL ORLANDO RIESER",
-      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2026'da, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Gabriel, the youngest and one of the most talented pilots of Sivrihisar Airshows, is also a flight instructor. At SHG Airshow 2026, he takes the audience on a journey through history with his performance!",
+      desc: lang === "TR" ? "Sivrihisar Hava Gösterileri'nin hem en genç hem de yetenekli pilotu Gabriel; aynı zamanda uçuş eğitmenliği yapıyor. SHG Airshow 2027'de, gösteri uçuşuyla seyircileri tarihte bir yolculuğa çıkarıyor." : "Gabriel, the youngest and one of the most talented pilots of Sivrihisar Airshows, is also a flight instructor. At SHG Airshow 2027, he takes the audience on a journey through history with his performance!",
       image: "/images/gabriel.jpg",
     },
+    */
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "fabian-schouten",
       name: "FABIAN SCHOUTEN",
-      desc: lang === "TR" ? "Havacılık kariyerine teknisyen olarak başlayan ve son 15 yıldır aktif pilotluk yapan Fabian, hava yollarında Kaptan Pilot olarak görev alıyor. Fabian 17 yıllık DC-3 tecrübesiyle, SHG Airshow 2026'da benzersiz bir gösteri uçuşu gerçekleştiriyor!" : "Fabian, who began his aviation career as a technician and has been an active pilot for the past 15 years, serves as a Captain Pilot for airlines. With 17 years of DC-3 experience, Fabian is performing a unique demonstration flight at the SHG Airshow 2026!",
+      desc: lang === "TR" ? "Havacılık kariyerine teknisyen olarak başlayan ve son 15 yıldır aktif pilotluk yapan Fabian, hava yollarında Kaptan Pilot olarak görev alıyor. Fabian 17 yıllık DC-3 tecrübesiyle, SHG Airshow 2027'de benzersiz bir gösteri uçuşu gerçekleştiriyor!" : "Fabian, who began his aviation career as a technician and has been an active pilot for the past 15 years, serves as a Captain Pilot for airlines. With 17 years of DC-3 experience, Fabian is performing a unique demonstration flight at the SHG Airshow 2027!",
       image: "/images/fabian.jpg",
     },
+    */
     {
       id: "sivrihisar-havacilik-kulubu-2",
       name: lang === "TR" ? <><span className="block">SİVRİHİSAR FORMASYON</span></> : <><span className="block">3-SHIP FORMATION FLIGHT</span></>,
@@ -293,22 +325,24 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
     // {
     //   id: "hurkus",
     //   name: "TAI / TUSAŞ HÜRKUŞ",
-    //   desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2026'da gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2026!",
+    //   desc: lang === "TR" ? "TUSAŞ tarafından geliştirilen Türkiye'nin ilk milli ve özgün tasarım eğitim uçağı TAI / TUSAŞ HÜRKUŞ, SHG Airshow 2027'de gökyüzünde!" : "TAI / TUSAŞ HÜRKUŞ, Türkiye's first national and indigenously designed training aircraft developed by Turkish Aerospace (TUSAŞ), takes to the skies at SHG Airshow 2027!",
     //   image: "/images/hurkus.jpeg",
     // },
     {
       id: "vecihi-xiv",
       name: lang === "TR" ? "VECİHİ XIV (14)" : "VECIHI XIV (14)",
-      desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 95 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2026'da!" : "The replica of Türkiye's \"First Certified Aircraft\" Vecihi XIV (14) is at SHG Airshow 2026 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
+      desc: lang === "TR" ? "Büyük Türk Havacısı Vecihi Hürkuş tarafından inşa edilen ve uçurulan Vecihi XIV (14) tipi uçağın,  M.S.Ö. Hava ve Uzay Müzesi ile Sivrihisar Havacılık Kulübü'nün ortak çalışması olarak, uçar durumda bir replikasının imalat projesi 2025 yılında başarıyla tamamlandı. Tam 96 yıl sonra yeniden gökyüzüyle buluşan Vecihi XIV (14) Replikası, Sivrihisar Hava Gösterileri 2027'de!" : "The replica of Türkiye's \"First Certified Aircraft\" Vecihi XIV (14) is at SHG Airshow 2027 through the work of M.S.Ö. Air and Space Museum and Sivrihisar Aviation Club!",
       image: "/images/vecihi-14-2.jpg",
       url: "https://msomuseum.com/vecihi-XIV-14/",
     },
+    /* 2027 için beklemede — açıklanınca aç
     {
       id: "edward-yard",
       name: "EDWARD YARD",
-      desc: lang === "TR" ? "Standart Kategori Akrobasi Şampiyonu ve Boeing 777 tipi uçaklarında Pilot olan Edward, İngiltere'den S.H.M.'ye getirdiği Spitfire Mk.9 ile, bu sene de SHG Airshow 2026 seyircilerine unutulmaz bir gösteri uçuşu gerçekleştiriyor." : "“Standard category aerobatics champion and B777 pilot Edward Yard will once again captivate the SHG Airshow audience with his Spitfire Mk.9, coming from England to SHM.",
+      desc: lang === "TR" ? "Standart Kategori Akrobasi Şampiyonu ve Boeing 777 tipi uçaklarında Pilot olan Edward, İngiltere'den S.H.M.'ye getirdiği Spitfire Mk.9 ile, bu sene de SHG Airshow 2027 seyircilerine unutulmaz bir gösteri uçuşu gerçekleştiriyor." : "“Standard category aerobatics champion and B777 pilot Edward Yard will once again captivate the SHG Airshow audience with his Spitfire Mk.9, coming from England to SHM.",
       image: "/images/edward.jpg",
     },
+    */
     {
       id: "pitts-s2s",
       name: lang === "TR" ? <>YENİ MENEKŞE <br /> ACROMACH S2S</> : <>NEW VIOLET <br /> ACROMACH S2S</>,
@@ -388,6 +422,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
         {participants.slice(1).map((p, index) => {
           const isAirPark = p.id === "airparkhotel";
           const isYeniMenekse = p.id === "pitts-s2s";
+          const isDc3 = p.id === "dc3";
           return (
             <div
               key={p.id}
@@ -400,7 +435,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
                 <div className={`${isAirPark ? "lg:w-1/4" : "lg:w-1/2 xl:w-2/5"} w-full relative overflow-hidden ${isYeniMenekse ? "lg:aspect-[4/3] lg:min-h-[350px]" : "lg:aspect-[16/10] lg:min-h-[300px]"}`}>
                   <img
                     alt={typeof p.name === 'string' ? p.name : 'participant'}
-                    className={`w-full h-auto object-contain lg:absolute lg:inset-0 lg:h-full transition-all duration-1000 ${isYeniMenekse ? "lg:object-contain lg:scale-125" : "lg:object-cover lg:scale-105"} lg:group-hover:scale-110 saturate-[0.8] group-hover:saturate-100`}
+                    className={`w-full h-auto object-contain lg:absolute lg:inset-0 lg:h-full transition-all duration-1000 ${isYeniMenekse ? "lg:object-contain lg:scale-125" : isDc3 ? "lg:object-cover" : "lg:object-cover lg:scale-105"} ${isDc3 ? "" : "lg:group-hover:scale-110"} saturate-[0.8] group-hover:saturate-100`}
                     src={p.image}
                     loading="lazy"
                   />

@@ -49,7 +49,7 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
-    addToCart: lang === "TR" ? "BİLET AL" : "BUY TICKET",
+    addToCart: lang === "TR" ? "Çok Yakında Satışta" : "COMING SOON",
     vipAddToCart: lang === "TR" ? "Çok Yakında Satışta" : "COMING SOON",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
@@ -204,13 +204,8 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
                   </ul>
                 )}
                 <button
-                  className="w-full bg-primary text-white py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] hover:bg-red-700 transition-all shadow-xl shadow-primary/20 active:scale-95"
-                  onClick={() => {
-                    if (typeof (window as any).fbq === "function") {
-                      (window as any).fbq("track", "InitiateCheckout", { content_name: "SHG Airshow 2026", currency: "TRY" });
-                    }
-                    window.open("https://biletinial.com/tr-tr/etkinlik/shg-airshow-sivrihisar-hava-gosterileri", "_blank");
-                  }}
+                  disabled
+                  className="w-full bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-300 py-4 lg:py-5 rounded-2xl font-black uppercase text-xs lg:text-sm tracking-[0.2em] cursor-not-allowed"
                 >
                   {translations.addToCart}
                 </button>

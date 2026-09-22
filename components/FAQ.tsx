@@ -27,7 +27,7 @@ const FAQ: React.FC<FAQProps> = ({ lang, targetId, onNavigate }) => {
   const faqs = [
     {
       q: lang === "TR" ? "Nereden Bilet Satın Alabilirim?" : "HOW TO BUY TICKETS?",
-      a: lang === "TR" ? "Biletinizi; SHG Airshow 2026 resmi web sitesinden, \"biletinial\" dijital platformlarından ve organizasyon günlerinde kapıda bulunan SHG gişelerimizden satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via e-mail, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
+      a: lang === "TR" ? "Biletinizi; SHG Airshow 2027 resmi web sitesinden, \"biletinial\" dijital platformlarından ve organizasyon günlerinde kapıda bulunan SHG gişelerimizden satın alabilirsiniz." : "To ensure a smooth entry process to the SHG Airshow, we recommend downloading your tickets prior to the event. You can access your tickets via e-mail, SMS, or the Biletinial mobile app. Additionally, you can purchase tickets at our SHG ticket booths located on-site during the event days.",
     },
     {
       q: lang === "TR" ? "Çocuklar için yaş sınırı var mı?" : "IS THERE AN AGE LIMIT FOR CHILDREN?",

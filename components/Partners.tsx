@@ -15,8 +15,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     alphabeticalHint: lang === 'TR' ? "(Alfabetik Sırayla)" : "(In Alphabetical Order)",
     fuelSponsorsTitle: lang === 'TR' ? "BİREYSEL YAKIT SPONSORLUĞU" : "INDIVIDUAL FUEL SPONSORSHIP",
     fuelSponsorsDonationInfo: lang === 'TR' 
-      ? 'SHG Airshow 2026 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
-      : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2026, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
+      ? 'SHG Airshow 2027 için "BİREYSEL YAKIT SPONSORU" olmak isterseniz, dilediğiniz miktarı Sivrihisar Havacılık Kulübü\'ne bağışta bulunabilirsiniz ve sizin de adınız aşağıda yayınlanabilir.'
+      : 'If you would like to become an "INDIVIDUAL FUEL SPONSOR" for SHG Airshow 2027, you can donate any amount to Sivrihisar Aviation Club and your name can also be published below.',
     fuelSponsorsDonationContact: "info@shm.aero",
     fuelSponsorsDonationContactLabel: lang === 'TR'
       ? "Detaylı bilgi için:"
@@ -25,8 +25,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
       ? "Teşekkürlerimizle, Sivrihisar Havacılık Kulübü Yönetim Kurulu"
       : "With our gratitude, Sivrihisar Aviation Club Board of Directors",
     fuelSponsorsHeading: lang === 'TR' 
-      ? "SHG Airshow 2026 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
-      : "SHG Airshow 2026 gratefully presents \"Individual Fuel Sponsors\":",
+      ? "SHG Airshow 2027 \"Bireysel Yakıt Sponsorlarını\" şükranla sunar:" 
+      : "SHG Airshow 2027 gratefully presents \"Individual Fuel Sponsors\":",
     fuelSponsorsSort: lang === 'TR' ? "(Soyadına göre alfabetik sırayla)" : "(IN ALPHABETICAL ORDER BY LAST NAME)",
     donationInfo: lang === 'TR'
       ? "Silahlı Kuvvetlerimizi ve Emniyet Teşkilatlarımızı temsil eden Hava Gösteri Unsurlarının, SHG Airshow’a katılmaları halinde, net bilet gelirlerimizin bir kısmı ilgili kurumların yardımlaşma vakıflarına bağışlanmaktadır…"
