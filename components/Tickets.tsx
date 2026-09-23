@@ -49,8 +49,8 @@ const Tickets: React.FC<TicketsProps> = ({ lang, targetId }) => {
 
   const translations = {
     title: lang === "TR" ? "BİLETLER" : "TICKETS",
-    addToCart: lang === "TR" ? "Çok Yakında Satışta" : "COMING SOON",
-    vipAddToCart: lang === "TR" ? "Çok Yakında Satışta" : "COMING SOON",
+    addToCart: lang === "TR" ? "Yakında Satışta" : "COMING SOON",
+    vipAddToCart: lang === "TR" ? "Yakında Satışta" : "COMING SOON",
     rulesTitle: lang === "TR" ? "BİLETLERLE İLGİLİ İSTİSNAİ KONULAR" : "EXCEPTIONAL CONDITIONS REGARDING TICKETS",
     freeEntryText: lang === "TR"
       ? "12 yaş ve altı çocuklar ücretsizdir. Gazi, engelli, basın kartı sahipleri, Türk Silahlı Kuvvetleri (Hava, Deniz ve Kara Kuvvetleri), Jandarma Genel Komutanlığı ve Emniyet Genel Müdürlüğü Teşkilatı Personeli, kimlik ibraz etmek kaydıyla şahsen ücretsiz giriş yapabilirler. Beraberindeki aile fertleri ise ücrete tabidir."
