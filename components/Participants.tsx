@@ -235,6 +235,7 @@ const Participants: React.FC<ParticipantsProps> = ({ lang, targetId, onNavigate 
       name: "Nu.D-36 (Alan 2)",
       desc: lang === "TR" ? "1936 model Nu.D-36 (Alan 2) tipi “Uçar Durumdaki” replika, Nuri Demirağ ve Selahattin R. Alan Beylerin manevi huzurunda ve tam 91 yıl sonra SHG Airshow 2027'de seyirciyle buluşuyor." : "The “airworthy” replica of the 1936 model Nu.D-36 (Alan 2) meets the audience at SHG Airshow 2027 — a full 91 years later — in the spiritual presence of Nuri Demirağ and Selahattin R. Alan.",
       image: "/images/nu-d36.jpg",
+      url: lang === "TR" ? "https://msomuseum.com/nu-d-36/" : "https://msomuseum.com/en/nu-d-36/",
     },
     {
       id: "semin-ozturk",
