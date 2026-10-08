@@ -61,7 +61,7 @@ const ActionBridge: React.FC<ActionBridgeProps> = ({ lang }) => {
               {content.desc}
             </p>
             <div className="mt-6 flex items-center justify-center md:justify-end gap-3 text-[10px] font-black text-primary tracking-[0.4em] uppercase opacity-60 group-hover:opacity-100 transition-opacity">
-               18-19 EYLÜL 2027 &nbsp;|&nbsp; 18-19 SEPTEMBER 2027
+               21-22 AĞUSTOS 2027 &nbsp;|&nbsp; 21-22 AUGUST 2027
                <span className="w-2 h-2 bg-primary rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,1)]"></span>
             </div>
           </div>

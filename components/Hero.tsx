@@ -56,7 +56,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
         : "Sivrihisar Hava Gösterileri",
-    badgeDate: lang === "TR" ? "18-19 Eylül 2027" : "18-19 Sept 2027",
+    badgeDate: lang === "TR" ? "21-22 Ağustos 2027" : "21-22 Aug 2027",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
@@ -99,10 +99,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
         </h1>
 
         <div className="mb-12 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-          <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] shadow-xl drop-shadow-md">
-            <span>{translations.badgeDate}</span>
+          <span className="inline-flex flex-col md:flex-row items-center justify-center gap-0 md:gap-2 py-2 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] md:text-base lg:text-lg xl:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.25em] lg:tracking-[0.3em] xl:tracking-[0.4em] shadow-xl drop-shadow-md">
+            <span className="whitespace-nowrap">{translations.badgeDate}</span>
             <span className="hidden md:inline">/</span>
-            <span>{translations.badgeLocation}</span>
+            <span className="whitespace-nowrap">{translations.badgeLocation}</span>
           </span>
         </div>
 
@@ -135,7 +135,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
 
         {/* Geri Sayım Sayacı */}
         <div className="mt-8 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-20 duration-1000">
-          <Countdown targetDate="2027-09-18T10:00:00" lang={lang} />
+          <Countdown targetDate="2027-08-21T10:00:00" lang={lang} />
         </div>
       </div>
 
