@@ -10,7 +10,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
   const pastYears = [
     { year: "2026", url: "/2026/" },
     { year: "2025", url: "/2025/" },
-    { year: "2024", url: "https://www.shgairshow2024.com/" },
+    { year: "2024", url: "/2024/" },
     { year: "2023", url: "https://www.shgairshow2023.com/" },
     { year: "2022", url: "https://shmaero.wixsite.com/shg2022" },
     { year: "2021", url: "https://shmaero.wixsite.com/shgairshow2021" },
