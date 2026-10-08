@@ -13,7 +13,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     { year: "2024", url: "/2024/" },
     { year: "2023", url: "https://www.shgairshow2023.com/" },
     { year: "2022", url: "/2022/" },
-    { year: "2021", url: "https://shmaero.wixsite.com/shgairshow2021" },
+    { year: "2021", url: "/2021/" },
     { year: "2020", url: "https://www.shgairshow2020.com/" },
     { year: "2019", url: "https://shmaero.wixsite.com/shg2019" },
     { year: "2018", url: "https://shmaero.wixsite.com/shg2018" },
