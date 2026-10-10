@@ -10,8 +10,8 @@ const ShowProgram: React.FC<ShowProgramProps> = ({ lang, onNavigate }) => {
 
   const translations = {
     title: lang === 'TR' ? 'GÖSTERİ PROGRAMI' : 'SHOW PROGRAM',
-    day1: lang === 'TR' ? '21 AĞUSTOS 2027' : '21 AUGUST 2027',
-    day2: lang === 'TR' ? '22 AĞUSTOS 2027' : '22 AUGUST 2027',
+    day1: lang === 'TR' ? '4 EYLÜL 2027' : '4 SEPTEMBER 2027',
+    day2: lang === 'TR' ? '5 EYLÜL 2027' : '5 SEPTEMBER 2027',
     soon: lang === 'TR' ? 'YAKINDA' : 'COMING SOON',
   };
 

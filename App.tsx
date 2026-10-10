@@ -45,7 +45,7 @@ const App: React.FC = () => {
   const [targetParticipantId, setTargetParticipantId] = useState<string | null>(null);
   const [targetSectionId, setTargetSectionId] = useState<string | null>(null);
 
-  const TARGET_DATE = "2027-08-21T10:00:00";
+  const TARGET_DATE = "2027-09-04T10:00:00";
 
   // Handle browser back/forward buttons
   useEffect(() => {

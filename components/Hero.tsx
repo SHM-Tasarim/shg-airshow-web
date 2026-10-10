@@ -56,7 +56,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
       lang === "TR"
         ? "Sivrihisar Hava Gösterileri"
         : "Sivrihisar Hava Gösterileri",
-    badgeDate: lang === "TR" ? "21-22 Ağustos 2027" : "21-22 Aug 2027",
+    badgeDate: lang === "TR" ? "4-5 Eylül 2027" : "4-5 Sept 2027",
     badgeLocation: lang === "TR" ? "Sivrihisar Havacılık Merkezi" : "SIVRIHISAR AVIATION CENTER",
     buyTicket: lang === "TR" ? "BİLET AL" : "BUY TICKET",
     program: lang === "TR" ? "GÜNLÜK GÖSTERİ PROGRAMI" : "DAILY SHOW PROGRAM",
@@ -135,7 +135,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate, lang }) => {
 
         {/* Geri Sayım Sayacı */}
         <div className="mt-8 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-20 duration-1000">
-          <Countdown targetDate="2027-08-21T10:00:00" lang={lang} />
+          <Countdown targetDate="2027-09-04T10:00:00" lang={lang} />
         </div>
       </div>
 
