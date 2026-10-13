@@ -11,13 +11,13 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     { year: "2026", url: "/2026/" },
     { year: "2025", url: "/2025/" },
     { year: "2024", url: "/2024/" },
-    { year: "2023", url: "https://www.shgairshow2023.com/" },
+    { year: "2023", url: "/2023/" },
     { year: "2022", url: "/2022/" },
     { year: "2021", url: "/2021/" },
-    { year: "2020", url: "https://www.shgairshow2020.com/" },
-    { year: "2019", url: "https://shmaero.wixsite.com/shg2019" },
-    { year: "2018", url: "https://shmaero.wixsite.com/shg2018" },
-    { year: "2017", url: "https://shmaero.wixsite.com/shg-airshow-2017" },
+    { year: "2020", url: "/2020/" },
+    { year: "2019", url: "/2019/" },
+    { year: "2018", url: "/2018/" },
+    { year: "2017", url: "/2017/" },
     { year: "2015", url: "https://shmaero.wixsite.com/shg2015" },
   ];
 
