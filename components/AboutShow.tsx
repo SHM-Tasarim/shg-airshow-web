@@ -18,7 +18,7 @@ const AboutShow: React.FC<AboutShowProps> = ({ lang, onNavigate }) => {
     { year: "2019", url: "/2019/" },
     { year: "2018", url: "/2018/" },
     { year: "2017", url: "/2017/" },
-    { year: "2015", url: "https://shmaero.wixsite.com/shg2015" },
+    { year: "2015", url: "/2015/" },
   ];
 
   const content = {
