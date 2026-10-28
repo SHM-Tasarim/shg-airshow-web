@@ -31,6 +31,10 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
       ? "Sivrihisar Hava Gösterileri, 2015 yılından bu yana her sene artan seyirci sayısı ve erişimiyle; TV, basın ve özellikle dijital mecralar aracılığıyla \"MARKANIZI\", ulusal ve uluslararası düzeyde geniş kitlelere ulaştırıyor."
       : "Sivrihasar Airshows helps promote \"YOUR BRAND\" to wide audiences at both national and international levels through TV, press, and especially digital platforms, with an increasing number of spectators and reach every year since 2015.",
 
+    standDisclaimer: isTR
+      ? ["Organizasyon alanındaki stand açan firmalar, kendi adlarına ve bağımsız olarak faaliyet gösterir;", "SHG Airshow organizasyonunu temsil etmezler.", "Standlarda satılan ürün ve sunulan hizmetlere ilişkin tüm sorumluluk ilgili stand açan firmaya aittir."]
+      : ["Exhibiting companies in the event area operate independently and on their own behalf;", "they do not represent the SHG Airshow organization.", "All responsibility for products sold and services offered at the booths lies with the respective exhibiting company."],
+
     emailFooterDesc: isTR ? "Lütfen her türlü sorularınız için mail atabilirsiniz." : "For any questions, please e-mail us."
   };
 
@@ -44,7 +48,8 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
     { year: "2022", h: 70 },
     { year: "2023", h: 72 },
     { year: "2024", h: 72 },
-    { year: "2025", h: 76 }
+    { year: "2025", h: 76 },
+    { year: "2026", h: 80 }
   ];
 
   const barMultiplier = typeof window !== 'undefined' && window.innerWidth < 768 ? 2.8 : 4;
@@ -121,7 +126,7 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
               <div className="flex items-center gap-4 p-4 bg-white dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-sm">
                 <span className="material-icons text-primary text-3xl">trending_up</span>
                 <div>
-                  <div className="text-2xl font-black text-secondary dark:text-white leading-none">7 M+</div>
+                  <div className="text-2xl font-black text-secondary dark:text-white leading-none">9 M+</div>
                   <div className="text-sm font-bold text-white tracking-widest uppercase mt-1">{t.digitalReachLabel}</div>
                 </div>
               </div>
@@ -222,6 +227,11 @@ const Sponsor: React.FC<SponsorProps> = ({ lang, onNavigate }) => {
         </section>
 
         {/* 3. İletişim */}
+        <p className="text-center text-sm md:text-base text-gray-500 dark:text-gray-400 font-semibold italic mx-auto mb-6 px-4">
+          {t.standDisclaimer.map((line, i) => (
+            <span key={i} className="block">{line}</span>
+          ))}
+        </p>
         <div className="grid grid-cols-1 text-center lg:grid-cols-1 gap-8 mb-16">
           <div className="bg-white/5 p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] border border-white/10 relative overflow-hidden">
             <div className="relative z-10">

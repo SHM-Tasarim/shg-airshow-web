@@ -91,6 +91,15 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     "CEYDA TEKİN",
     "ŞERMİN TEKİN",
     "SÜHEYLA TEKİN",
+    "CENGİZ YAVUZ",
+    "SEVGİ ÖZSOY",
+    "NİMET ULUSOY",
+    "SERKAN ÖZKAN",
+    "ŞERİFE ÖZCAN",
+    "GÜLNUR ÖZCAN",
+    "FERAH TOLUNAY",
+    "SİBEL ŞEN",
+    "ALİ SADİ ÜNSAL",
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
@@ -249,18 +258,29 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                 */}
               </div>
 
-              <div className="max-w-md mx-auto w-full">
-                {fuelSponsors.map((name, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-3 border-b border-white/10 py-4 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0"></span>
-                    <span className="text-white/80 group-hover:text-white transition-colors font-bold text-sm tracking-wide">
-                      {name}
-                    </span>
-                  </div>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12">
+                {(() => {
+                  const colCount = 4;
+                  const perCol = Math.ceil(fuelSponsors.length / colCount);
+                  const columns = Array.from({ length: colCount }, (_, i) =>
+                    fuelSponsors.slice(i * perCol, (i + 1) * perCol)
+                  );
+                  return columns.map((col, colIdx) => (
+                    <div key={colIdx}>
+                      {col.map((name, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-center gap-3 border-b border-white/10 py-4 group"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover:scale-150 transition-transform flex-shrink-0"></span>
+                          <span className="text-white/80 group-hover:text-white transition-colors font-bold text-sm tracking-wide">
+                            {name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ));
+                })()}
               </div>
             </div>
           </div>
