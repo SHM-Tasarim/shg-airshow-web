@@ -248,14 +248,17 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
                   </p>
                 </div>
 
-                {/* Bireysel yakıt sponsoru başlığı — liste boş olduğu için geçici gizlendi
-                <p className="text-xl text-gray-400 font-bold max-w-2xl mx-auto leading-relaxed">
-                  {translations.fuelSponsorsHeading}
-                </p>
-                <p className="text-primary font-black tracking-widest text-[10px] uppercase mt-4">
-                  {translations.fuelSponsorsSort}
-                </p>
-                */}
+                {/* Bireysel yakıt sponsoru başlığı — liste boşken otomatik gizlenir */}
+                {fuelSponsors.length > 0 && (
+                  <>
+                    <p className="text-xl text-gray-400 font-bold max-w-2xl mx-auto leading-relaxed">
+                      {translations.fuelSponsorsHeading}
+                    </p>
+                    <p className="text-primary font-black tracking-widest text-[10px] uppercase mt-4">
+                      {translations.fuelSponsorsSort}
+                    </p>
+                  </>
+                )}
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12">
