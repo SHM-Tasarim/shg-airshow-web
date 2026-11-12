@@ -83,7 +83,7 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     // Sıralama OTOMATİK: aşağıdaki .sort() isimleri SOYADINA göre (Türkçe alfabe), sonra ada göre dizer.
     // Hangi sırayla eklersen ekle, ekranda doğru alfabetik sıraya girer.
     "ALİ AYDIN",
-    "HAYRÜNNISA BOSTAN",
+    "HAYRÜNNİSA BOSTAN",
     "MASAL KOZAK",
     "İSMET ÖZİPEK",
     "ALİ HAYDAR SUYABAKAN",
@@ -100,6 +100,8 @@ const Partners: React.FC<PartnersProps> = ({ lang, onNavigate }) => {
     "FERAH TOLUNAY",
     "SİBEL ŞEN",
     "ALİ SADİ ÜNSAL",
+    "ALİ KAYRA TEKİN",
+    "DİLRUBA TEKİN",
   ].sort((a, b) => {
     const partsA = a.split(' ');
     const partsB = b.split(' ');
